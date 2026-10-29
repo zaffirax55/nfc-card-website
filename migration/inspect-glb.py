@@ -15,3 +15,5 @@ for p in sorted(Path('src/v36_2/assets/models').glob('*.glb')):
  print(p.name,'bytes',len(data),'images',len(imgs),'materials',len(mats),'meshes',len(meshes),'names',[m.get('name') for m in mats[:6]])
  print(' image',[(i.get('mimeType'),i.get('name')) for i in imgs[:6]])
  print(' material samples',[(m.get('pbrMetallicRoughness',{}).get('baseColorFactor'),m.get('pbrMetallicRoughness',{}).get('baseColorTexture')) for m in mats[:4]])
+
+# source inspection
