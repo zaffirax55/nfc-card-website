@@ -1,0 +1,119 @@
+/* NFC CARD Mobile Experience v1 — source-only, no commerce changes. */
+@media (max-width: 800px) {
+ html { scroll-padding-top: 118px; }
+ body { min-width: 0; overflow-x: clip; }
+ .wrap { width: calc(100% - 32px); max-width: 100%; }
+ .header-row { gap: 8px; min-width: 0; }
+ .header-actions { gap: 2px; min-width: 0; }
+ .header .logo { flex-shrink: 0; }
+ .header .logo img { max-height: 44px; object-fit: contain; }
+ .header .icon-btn { flex-shrink: 0; min-width: 44px; min-height: 44px; }
+ .header .order-header { min-height: 44px; }
+ .hero { padding: 30px 0 34px; }
+ .hero-grid { min-width: 0; gap: 20px; }
+ .hero h1 { font-size: clamp(2.15rem, 8.8vw, 3.45rem); line-height: 1.08; overflow-wrap: break-word; }
+ .hero-copy > p { font-size: 1rem; line-height: 1.65; }
+ .purpose-links { gap: 8px; margin-top: 22px; }
+ .purpose-link { padding: 12px 10px; min-height: 72px; overflow-wrap: anywhere; }
+ .hero-visual { aspect-ratio: 1.18; height: auto; min-height: 0; }
+ .section { padding: 36px 0; }
+ .section-heading { align-items: flex-start; gap: 10px; }
+ .product-grid, .cart-layout, .product-layout, .form-layout { min-width: 0; }
+ .product-card { min-width: 0; }
+ .card-image { max-width: 100%; }
+ .card-body { min-width: 0; }
+ .card-bottom { flex-wrap: wrap; }
+ .product-card .nfc-glb-button { margin-top: 14px; width: 100%; min-height: 48px; border-radius: 9px; font-size: 15px; }
+ .product-summary, .product-summary fieldset, .config-form, .cart-line, .summary-box, .form-card { min-width: 0; }
+ .product-summary h1, .page-head h1 { overflow-wrap: anywhere; }
+ .gallery .nfc-glb-button { display: flex; width: 100%; min-height: 48px; margin-top: 10px; background: #202327; color: #fff; border-radius: 8px; }
+ .gallery-main .nfc-glb-button { position: absolute; bottom: 12px; left: 12px; z-index: 6; width: calc(100% - 24px); margin: 0; }
+ .gallery-main .gallery-zoom-label { bottom: 70px; }
+ .gallery-main .nfc-glb-button:hover { background: #343941; }
+ .filter-row { min-width: 0; }
+ .filter-row .field { min-width: 0; }
+ .field input, .field select, .field textarea { font-size: 16px; }
+ .button, button, a { -webkit-tap-highlight-color: transparent; }
+ .button { min-height: 48px; }
+ .footer-grid > * { min-width: 0; }
+}
+@media (max-width: 520px) {
+ .header-row { width: calc(100% - 24px); display: flex; flex-wrap: wrap; justify-content: space-between; min-height: 0; padding: 8px 0; gap: 3px 8px; }
+ .header .logo { width: clamp(105px, 29vw, 138px); }
+ .header-actions { flex: 1 1 auto; justify-content: flex-end; margin: 0; flex-wrap: nowrap; gap: 1px; }
+ .header .language a { min-width: 31px; min-height: 44px; padding: 0 2px; font-size: 11px; }
+ .header .order-header { padding: 9px 10px; font-size: 11px; max-width: 118px; }
+ .header .icon-btn { padding: 6px; min-width: 38px; }
+ .header .mobile-menu { min-width: 44px; }
+ .header-row > .desktop-nav { display: none; }
+ .wrap { width: calc(100% - 28px); }
+ .page-head { padding: 14px 0 22px; }
+ .page-head h1 { font-size: clamp(2rem, 9vw, 2.7rem); }
+ .hero { padding: 22px 0 30px; }
+ .hero h1 { font-size: clamp(2rem, 9vw, 2.9rem); }
+ .hero-copy > p { font-size: 15px; }
+ .purpose-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+ .purpose-link { min-width: 0; font-size: 12px; padding: 10px 7px; min-height: 76px; }
+ .purpose-link span { font-size: 11px; overflow-wrap: anywhere; }
+ .hero-visual { aspect-ratio: 1.15; height: auto; }
+ .hero-tag { left: 10px; right: 10px; bottom: 10px; padding: 9px 11px; gap: 6px; font-size: 11px; }
+ .section-heading { display: block; }
+ .section-heading h2 { font-size: 1.65rem; margin-bottom: 9px; }
+ .section-heading p { font-size: 14px; }
+ .product-grid { grid-template-columns: 1fr; gap: 18px; }
+ .product-card .card-image { aspect-ratio: 1.25; height: auto; min-height: 225px; }
+ .product-card .card-body { padding: 18px; }
+ .product-card h3 { font-size: 20px; }
+ .product-card .card-bottom > .price { font-size: 21px; }
+ .filters { padding: 15px; margin-bottom: 18px; }
+ .filter-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+ .filter-row > .field:first-child { grid-column: 1 / -1; }
+ .filter-row .field label { font-size: 12px; }
+ .product-summary { padding: 19px 16px; }
+ .product-summary h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); }
+ .product-quick { padding: 16px; }
+ .gallery-main { aspect-ratio: 1.05; }
+ .cart-line { padding: 16px; }
+ .cart-line .line-fields { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+ .cart-line .line-fields > * { min-width: 0; }
+ .form-card { padding: 19px 16px; }
+ .footer-grid { grid-template-columns: 1fr 1fr; gap: 18px 12px; }
+ .footer nav a { overflow-wrap: anywhere; }
+}
+@media(max-width: 374px) {
+ .header-row { display: grid; grid-template-columns: 1fr; }
+ .header-actions { width: 100%; justify-content: space-between; }
+ .header .order-header { flex: 1; max-width: none; }
+ .purpose-links { grid-template-columns: 1fr 1fr; }
+ .purpose-link:last-child { grid-column: 1 / -1; }
+ .filter-row { grid-template-columns: 1fr; }
+ .filter-row > .field:first-child { grid-column: auto; }
+ .gallery-main { aspect-ratio: 1; }
+}
+@media(max-width: 800px) {
+ dialog.nfc-glb-dialog { width: min(100vw - 16px, 620px) !important; max-width: none !important; max-height: calc(100dvh - 20px) !important; border-radius: 18px !important; }
+ .nfc-glb-dialog .nfc-glb-container { height: min(82dvh, 650px); max-height: calc(100dvh - 20px); padding: 14px !important; gap: 8px; }
+ .nfc-glb-dialog .nfc-glb-bar { min-height: 44px; }
+ .nfc-glb-dialog .nfc-glb-title { font-size: 14px; }
+ .nfc-glb-dialog .nfc-glb-close { min-height: 44px; padding: 8px 16px; }
+ .nfc-glb-dialog .nfc-glb-stage { min-height: 0; overflow: hidden !important; }
+ .nfc-glb-dialog .nfc-glb-stage model-viewer { touch-action: pan-y; }
+ .nfc-glb-dialog .nfc-glb-faces { left: 8px; top: 8px; gap: 5px; }
+ .nfc-glb-dialog .nfc-glb-faces button { min-height: 40px; font-size: 12px; padding: 7px 10px; }
+ .nfc-glb-dialog .nfc-glb-variants { bottom: 7px; }
+ .nfc-glb-dialog .nfc-glb-variants button { min-height: 40px; padding: 7px 10px; }
+ .nfc-glb-dialog .nfc-glb-hint { font-size: 12px; line-height: 1.4; }
+}
+@media(max-width: 520px) {
+ .nfc-glb-dialog .nfc-glb-container { height: min(77dvh, 580px); }
+ .nfc-glb-dialog .nfc-glb-stage model-viewer { width: 100% !important; height: 100% !important; }
+ .nfc-glb-dialog .nfc-glb-faces { top: 7px; }
+ .nfc-glb-dialog .nfc-glb-variants { position: absolute; bottom: 4px; }
+}
+@media(max-height: 610px) and (max-width: 800px) {
+ .nfc-glb-dialog .nfc-glb-container { height: calc(100dvh - 24px); }
+ .nfc-glb-dialog .nfc-glb-hint { display: none; }
+}
+@media(prefers-reduced-motion: reduce) {
+ .nfc-glb-dialog *, .product-card .nfc-glb-button { transition-duration: 0s !important; }
+}
