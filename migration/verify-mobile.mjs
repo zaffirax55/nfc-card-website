@@ -34,7 +34,7 @@ for(const width of widths){
  if(width===390){
    await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    const transitionSupport=await page.evaluate(()=>typeof document.startViewTransition==='function');
-   await page.locator('.desktop-nav a[href$="/solutions/"],.hero a[href$="/solutions/"],a[href$="/solutions/"]').first().click();
+   await page.locator('a[href$="/solutions/"]:visible').first().click();
    await page.waitForURL('**/solutions/');
    await page.locator('.product-card a[href*="/solutions/"]').first().click();
    await page.waitForURL('**/solutions/*/');
