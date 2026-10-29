@@ -43,6 +43,35 @@ jobs:
           NFC_PUBLICATION_MODE: PUBLIC_PREVIEW
           NFC_TELEGRAM_ENABLED: 'false'
         run: npm run build
+      - name: Checkout isolated OptiDigital 3D copy
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          ref: optidigital-3d-preview
+          path: optidigital-copy
+          persist-credentials: false
+      - name: Build and mount OptiDigital 3D as a separate preview
+        run: |
+          cd optidigital-copy
+          npm run designer:build
+          cd ..
+          mkdir -p site/optidigital-3d
+          cp -a optidigital-copy/work/designer-preview-v36_2/nfc-card-website/. site/optidigital-3d/
+          python - <<'PY'
+          from pathlib import Path
+          root=Path('site/optidigital-3d')
+          count=0
+          for p in root.rglob('*'):
+              if p.is_file() and p.suffix in {'.html','.mjs','.js','.css','.xml','.txt','.json'}:
+                  raw=p.read_text(encoding='utf-8')
+                  edited=raw.replace('https://optidigitalagent.github.io','https://zaffirax55.github.io').replace('/nfc-card-website/','/nfc-card-website/optidigital-3d/')
+                  if edited != raw:
+                      p.write_text(edited,encoding='utf-8')
+                      count+=1
+          assert (root/'assets/models/review-standard.glb').is_file()
+          assert len(list((root/'assets/models').glob('*.glb')))==12
+          assert (root/'assets/model-viewer.min.js').is_file()
+          print('Published OptiDigital 3D preview assets; rewritten files:',count)
+          PY
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
