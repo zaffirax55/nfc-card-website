@@ -27,3 +27,17 @@
     animation: none!important;
   }
 }
+
+
+/* Mobile-only transition tune: quicker visual continuity on touch devices. */
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){
+ @supports(view-transition-name:root){
+  ::view-transition-old(root){animation:nfc-mobile-route-out 145ms ease-in both}
+  ::view-transition-new(root){animation:nfc-mobile-route-in 265ms cubic-bezier(.22,.8,.2,1) both}
+  @keyframes nfc-mobile-route-out{from{opacity:1}to{opacity:.3}}
+  @keyframes nfc-mobile-route-in{
+    from{opacity:.25;transform:translate3d(0,9px,0)}
+    to{opacity:1;transform:translate3d(0,0,0)}
+  }
+ }
+}
