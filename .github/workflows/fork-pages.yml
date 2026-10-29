@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Native smooth route transitions: catalog, products, cart, and history navigation
+# Mobile animations v2: touch feedback, elegant card entrance, smoother route and 3D dialogs
 
 on:
   push:
