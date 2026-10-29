@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Restore colored front face for all OptiDigital 3D models (2026-10-29)
+# Enable GLB texture blob rendering after Chromium WebGL verification (2026-10-29)
 
 on:
   push:
