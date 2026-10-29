@@ -16,3 +16,5 @@ dialog.nfc-glb-dialog::backdrop{background:#090909b9;backdrop-filter:blur(5px)}
 .nfc-glb-dialog .nfc-glb-variants{position:absolute;bottom:8px;left:8px;right:8px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;z-index:4}
 .nfc-glb-dialog .nfc-glb-variants button{background:#fff;border:1px solid #ddd;border-radius:999px;padding:8px 12px;cursor:pointer}
 @media(max-width:520px){dialog.nfc-glb-dialog{width:96vw!important;border-radius:16px!important}.nfc-glb-dialog .nfc-glb-container{height:min(75dvh,540px);padding:12px!important}.nfc-glb-dialog .nfc-glb-variants{bottom:4px;gap:4px}.nfc-glb-dialog .nfc-glb-variants button{padding:6px 9px;font-size:12px}}
+
+.nfc-glb-dialog .nfc-glb-faces{position:absolute;left:10px;top:10px;display:flex;gap:6px;z-index:5}.nfc-glb-dialog .nfc-glb-faces button{border:1px solid #d5d5d5;background:#fff;border-radius:99px;padding:7px 12px;cursor:pointer;color:#1c1c1c;font-size:12px}.nfc-glb-dialog .nfc-glb-faces button[aria-pressed="true"]{background:#202020;color:#fff;border-color:#202020}
