@@ -1,4 +1,5 @@
 name: Deploy fork preview to GitHub Pages
+# Refresh standalone OptiDigital 3D modal and camera orientation
 
 on:
   push:
