@@ -10,7 +10,7 @@ await page.goto(url,{waitUntil:'domcontentloaded'});
 await page.locator('[data-glb-model]').first().click();
 await page.locator('model-viewer').waitFor({timeout:20000});
 const result=await page.locator('model-viewer').evaluate(async el=>{
- const loaded=await Promise.race([new Promise(resolve=>{el.addEventListener('load',()=>resolve('loaded'),{once:true});el.addEventListener('error',()=>resolve('error'),{once:true})}),new Promise(resolve=>setTimeout(()=>resolve('timeout'),15000))]);
+ const loaded=el.loaded?'loaded':await Promise.race([new Promise(resolve=>{el.addEventListener('load',()=>resolve('loaded'),{once:true});el.addEventListener('error',()=>resolve('error'),{once:true})}),new Promise(resolve=>setTimeout(()=>resolve('timeout'),15000))]);
  return {loaded,src:el.src,orbit:el.getCameraOrbit?.(),width:el.clientWidth,height:el.clientHeight,model:!!el.model,materials:el.model?.materials?.length};
 });
 console.log('VIEWER RESULT',JSON.stringify(result));
