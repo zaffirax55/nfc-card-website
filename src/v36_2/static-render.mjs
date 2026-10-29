@@ -4,7 +4,7 @@ import {BASE,esc,metadataHTML} from './seo.mjs';
 import {translate} from './i18n.mjs';
 import {BUILD_CONFIG} from './build-config.mjs';
 import {isPreview,validateBuildConfig} from './release-policy.mjs';
-export const PREVIEW_CSP="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'";
+export const PREVIEW_CSP="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' blob:; form-action 'none'; base-uri 'none'; object-src 'none'";
 export function renderStaticDocument(locale,route,options={}){
  const config=validateBuildConfig(options.config||BUILD_CONFIG),body=renderSiteBody(locale,route,{...options,config});
  // Native JSON modules (locale dictionaries and confirmed contacts) are also
