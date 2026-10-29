@@ -1,0 +1,13 @@
+name: Inspect original GLB textures
+on:
+  push:
+    branches: [optidigital-3d-preview]
+    paths: ['migration/inspect-glb.py']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python migration/inspect-glb.py
