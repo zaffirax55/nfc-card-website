@@ -1,0 +1,48 @@
+/* NFC CARD Motion + Polish v1: restrained graphite/silver, fast compositor effects. */
+:root{--nfc-accent:#387fbd;--nfc-ink:#181e26;--nfc-surface:#fff;--nfc-hairline:#d7dfe4}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(180deg,#fafbfb 0,#f6f7f6 480px,#f7f7f4 100%)}
+.header{box-shadow:0 8px 25px rgba(16,28,39,.035);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.header .logo img{transition:transform .3s ease}
+.header .logo:hover img{transform:translateY(-1px)}
+.button,.nfc-glb-button{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease}
+.button:hover,.nfc-glb-button:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(14,24,34,.14)}
+.button:active,.nfc-glb-button:active{transform:translateY(0);box-shadow:none}
+.product-card{border-color:#dce3e7;box-shadow:0 4px 18px rgba(18,27,36,.04);transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease,border-color .28s ease}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(18,27,36,.11);border-color:#b8c9d3}
+.product-card .card-image{background:radial-gradient(circle at 52% 38%,#f8fafb 0%,#e8edef 77%);isolation:isolate}
+.product-card .card-image img{transition:transform .42s cubic-bezier(.2,.75,.2,1)}
+.product-card:hover .card-image img{transform:translateY(-3px) scale(1.035)}
+.product-card .nfc-glb-button{border-color:#a4bac8;background:#f3f7f9;color:#1a374b}
+.product-card .nfc-glb-button:hover{background:#203d50;color:white;border-color:#203d50}
+.hero-visual,.home-b-product-stage,.feature{box-shadow:0 16px 38px rgba(19,31,42,.085)}
+.hero-tag{backdrop-filter:blur(10px)}
+.section-heading h2,.page-head h1{letter-spacing:-.045em}
+.badge{background:#e7eff4;color:#294559}
+.product-summary,.filters,.summary-box,.form-card{box-shadow:0 4px 18px rgba(16,28,40,.035)}
+a:focus-visible,button:focus-visible{outline:3px solid #3279b1;outline-offset:3px}
+@media(hover:hover) and (pointer:fine){
+ .purpose-link,.thumb,.icon-btn{transition:background-color .2s ease,border-color .2s ease,transform .2s ease}
+ .purpose-link:hover,.thumb:hover{transform:translateY(-2px)}
+}
+@media(min-width:801px){
+ .home-b-hero-copy h1,.hero-copy h1{max-width:16ch}
+ .section{padding-block:clamp(52px,5vw,76px)}
+}
+@media(max-width:800px){
+ .product-card:hover{transform:none}
+ .button:hover,.nfc-glb-button:hover{transform:none;box-shadow:none}
+ .product-card .card-image img{transform:none!important}
+ .header{backdrop-filter:none}
+ .section{padding-block:36px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .nfc-motion-in{animation:nfc-appear .64s cubic-bezier(.18,.73,.25,1) both}
+ @keyframes nfc-appear{from{opacity:.25;transform:translate3d(0,17px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+ .product-grid .product-card:nth-child(2).nfc-motion-in{animation-delay:65ms}
+ .product-grid .product-card:nth-child(3).nfc-motion-in{animation-delay:110ms}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
