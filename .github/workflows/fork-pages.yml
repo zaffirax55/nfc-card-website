@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Enable GLB texture blob rendering after Chromium WebGL verification (2026-10-29)
+# Mobile experience v1, six viewport and route browser checks
 
 on:
   push:
