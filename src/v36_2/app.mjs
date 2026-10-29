@@ -55,7 +55,35 @@ function announce(text){document.querySelector('#announcer').textContent=text;}
 function toast(text){document.querySelector('.toast')?.remove();announce(text);if(path==='/thank-you/')return;const div=document.createElement('div');div.className='toast';div.setAttribute('role','status');div.textContent=text;document.body.append(div);setTimeout(()=>div.remove(),2600);}
 function readRoute(){let decoded;try{decoded=decodeURI(location.pathname)}catch{decoded=location.pathname}let p=decoded.replace(/\/+/g,'/');if(p===BASE)p='/';else if(p.startsWith(BASE+'/'))p=p.slice(BASE.length);const match=p.match(/^\/(en|pl)(?:\/|$)/);locale=match?.[1]||'uk';if(match)p=p.slice(3)||'/';path=p.endsWith('/')?p:p+'/';const reviewQuery=new URLSearchParams(location.search);homeComposition='b';navigationMode='guided';if(path==='/services/design/'||path==='/collections/branded/'){const id=reviewQuery.get('entry');serviceIdentityInvalid=!!id&&!eligibleDesignProducts.some(p=>p.id===id);serviceEntryId=eligibleDesignProducts.some(p=>p.id===id)?id:'';}}
 function visualQuery(){return '';}
-function navigate(target,{replace=false,focus=true}={}){document.querySelector('.toast')?.remove();const previous=path;if(replace)history.replaceState({},'',target);else history.pushState({},'',target);readRoute();if(previous!==path){detailDraft={quantity:1,destination:'',notes:''};detailMenuStatus='existing';detailIntent='card_order';detailVariant=menuVariants[0];}galleryIndex=0;formErrors=[];render();scrollTo(0,0);requestAnimationFrame(resolveAnchor);if(focus)document.querySelector('main')?.focus({preventScroll:true});}
+// Native same-document transitions retain the working cart, forms and client router.
+const transitionAllowed=()=>typeof document.startViewTransition==='function'&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+let activeNavigation=null;
+function routeUpdate(update,{scrollTop=false,focus=false}={}){
+  if(activeNavigation){activeNavigation.skipTransition();activeNavigation=null;}
+  const commit=()=>{
+    update();
+    if(scrollTop)scrollTo({top:0,left:0,behavior:'instant'});
+    requestAnimationFrame(resolveAnchor);
+    if(focus)document.querySelector('main')?.focus({preventScroll:true});
+  };
+  if(!transitionAllowed()){commit();return;}
+  const view=document.startViewTransition(commit);
+  activeNavigation=view;
+  view.finished.catch(()=>{}).finally(()=>{if(activeNavigation===view)activeNavigation=null;});
+}
+function navigate(target,{replace=false,focus=true}={}){
+ const dest=new URL(target,location.href);
+ const oldRoute=location.pathname+location.search;
+ const nextRoute=dest.pathname+dest.search;
+ const change=()=>{document.querySelector('.toast')?.remove();const previous=path;
+  if(replace)history.replaceState({},'',target);else history.pushState({},'',target);
+  readRoute();
+  if(previous!==path){detailDraft={quantity:1,destination:'',notes:''};detailMenuStatus='existing';detailIntent='card_order';detailVariant=menuVariants[0];}
+  galleryIndex=0;formErrors=[];render();
+ };
+ if(oldRoute===nextRoute){change();requestAnimationFrame(resolveAnchor);return;}
+ routeUpdate(change,{scrollTop:true,focus});
+}
 function resolveAnchor(){const alias=path.includes('/team-kit/')?'business-orders':path.includes('/multi-location/')?'branches':'';const id=location.hash.slice(1)||alias;if(id)document.getElementById(id)?.scrollIntoView({block:'start'});}
 function link(p,label,cls='',extra=''){return `<a href="${url(p)}" class="${cls}" ${extra}>${label}</a>`;}
 function header(){return `<a class="skip" href="#main">${t('skip')}</a><header class="header"><div class="wrap header-row">${link('/',`<img src="/nfc-card-website/assets/logo.svg" width="1600" height="420" alt="NFC CARD">`,'logo')}<nav class="desktop-nav" aria-label="${t('menu')}">${link('/solutions/',t('catalog'))}${link('/services/design/',t('designRequest'))}${link('/what-is-nfc-card/',t('how'))}${link('/about/',t('about'))}${link('/faq/',t('help'))}</nav><div class="header-actions"><div class="language" role="group" aria-label="${t('languages')}">${languages()}</div>${link('/search/',svg('search'),'icon-btn',`aria-label="${t('search')}"`)}${link('/cart/',`${svg('cart')}<span class="count">${cart.reduce((n,l)=>n+(Number.isInteger(l.quantity)?l.quantity:0),0)}</span>`,'icon-btn',`aria-label="${t('cart')}: ${cart.length}"`)}${link(cart.length?'/cart/':'/order/',t('order'),'button order-header')}<button class="icon-btn mobile-menu" data-action="menu" aria-label="${t('menu')}" aria-haspopup="dialog">${svg('menu')}</button></div></div></header>`;}
@@ -195,6 +223,6 @@ document.addEventListener('change',e=>{const el=e.target;if(el.id==='preview-fau
 document.addEventListener('input',e=>{if(e.target.closest('#request-form')&&!lock())snapshotContact(e.target.closest('form'));if(e.target.closest('#product-config'))syncDetailDraft();if(e.target.id==='quantity')updateDetailPrice();});
 
 document.addEventListener('keydown',e=>{const thumb=e.target.closest('.thumb');if(thumb&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const buttons=[...document.querySelectorAll('.thumb')],index=buttons.indexOf(thumb),next=(index+(e.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[next].click();}});
-addEventListener('popstate',()=>{readRoute();render();});
+addEventListener('popstate',()=>routeUpdate(()=>{readRoute();render();},{scrollTop:true,focus:true}));
 readRoute();render({hydrate:true});if(location.hash||path.includes('/team-kit/')||path.includes('/multi-location/'))requestAnimationFrame(resolveAnchor);
 }
