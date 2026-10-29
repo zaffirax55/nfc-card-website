@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Motion + polish v1: lazy imagery, lightweight scroll animation and UI refinement
+# Native smooth route transitions: catalog, products, cart, and history navigation
 
 on:
   push:
