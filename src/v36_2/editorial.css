@@ -1,0 +1,35 @@
+/* Owner v36: readable information hierarchy, no new art direction. */
+.editorial-page{padding-bottom:40px;overflow-wrap:anywhere}
+.editorial-intro{max-width:100%;margin-bottom:22px}
+.editorial-intro>p{max-width:78ch;font-size:1.125rem;line-height:1.65}
+.editorial-section.prose{max-width:none;border-top:1px solid #cbd0d4;padding:25px 0 18px;margin:0}
+.editorial-section h2,.editorial-faq-group h2,.editorial-design-bases>h2{font-size:clamp(1.3rem,2.1vw,1.7rem);line-height:1.3;margin:0 0 16px;max-width:45ch}
+.editorial-section p,.editorial-section li,.editorial-faq-group p,.editorial-design-base p{font-size:1rem;line-height:1.65;max-width:82ch}
+.editorial-section p{margin:0 0 14px}.editorial-section li{padding:0 0 9px 4px}.editorial-section ol{padding-left:24px}
+.editorial-founder{float:right;width:29%;max-width:280px;margin:0 0 28px 36px}
+.editorial-founder img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;object-position:top;background:#e5e8ea}
+.editorial-founder figcaption,.editorial-product-photo figcaption{font-size:1rem;line-height:1.55;color:#424b54;margin-top:9px}
+.editorial-actions{clear:both;margin:25px 0 0;padding:22px 0;border-top:1px solid #cbd0d4;align-items:center}
+.editorial-actions a,.editorial-product-links a{min-height:44px;display:inline-flex;align-items:center}
+.editorial-product-links{padding:20px 0;gap:12px 24px}
+.editorial-product-photo{margin:18px 0 26px;max-width:420px}
+.editorial-product-photo img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;background:#e5e8ea}
+.editorial-media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:18px;margin:24px 0 32px}
+.editorial-media-placeholder{min-width:0;margin:0;border:1px dashed #aeb7be;background:#edf0f2}
+.editorial-media-placeholder-face{min-height:90px;background:#e5e8ea;border-bottom:1px solid #cbd0d4}
+.editorial-media-placeholder figcaption{padding:14px;font-size:1rem;line-height:1.5}
+.editorial-media-placeholder figcaption strong{font-size:1rem}.editorial-media-placeholder figcaption p{font-size:1rem;line-height:1.5;margin:7px 0 0;color:#49545e}
+.editorial-faq-group{margin:28px 0 36px}.editorial-faq-group .faq-list{max-width:none}
+.editorial-faq-group summary{font-size:1rem;min-height:48px;display:list-item;line-height:1.55;padding:15px 24px 15px 2px;cursor:pointer}
+.editorial-faq-group details>div{padding:0 2px 17px;max-width:85ch}.editorial-faq-group details p{margin:9px 0}
+.editorial-design-bases{padding:25px 0;border-top:1px solid #cbd0d4}
+.editorial-base-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.editorial-design-base{min-width:0;border:1px solid #cbd0d4;padding:20px;display:flex;flex-direction:column;align-items:flex-start;background:#fff}
+.editorial-design-base h3{font-size:1.2rem;line-height:1.4;margin:0 0 12px}.editorial-design-base p{margin:0 0 14px}.editorial-design-base .design-base-price{font-weight:600}
+.editorial-design-base .button{margin-top:auto;max-width:100%;white-space:normal;text-align:left;min-height:48px;line-height:1.45}
+.editorial-design-base [aria-current=true]{outline:2px solid #171b1f;outline-offset:3px}
+.editorial-design-next.prose{max-width:none;padding:25px 0;border-top:1px solid #cbd0d4}
+.editorial-design-next h2{font-size:1.5rem}.editorial-design-next p{font-size:1rem;line-height:1.65}
+.editorial-page a:focus-visible,.editorial-page summary:focus-visible{outline:3px solid #235b80;outline-offset:4px}
+@media(max-width:850px){.editorial-base-grid{grid-template-columns:1fr}.editorial-design-base{padding:18px}.editorial-founder{width:32%;margin-left:22px}}
+@media(max-width:600px){.editorial-intro>p{font-size:1rem}.editorial-founder{float:none;width:100%;max-width:220px;margin:0 0 24px}.editorial-founder img{max-height:275px}.editorial-section.prose{padding:22px 0 15px}.editorial-media-grid{grid-template-columns:1fr;gap:14px}.editorial-media-placeholder-face{min-height:65px}.editorial-actions .button{width:100%;min-height:48px;white-space:normal;text-align:center}.editorial-actions{gap:12px}.editorial-design-base .button{width:100%}}

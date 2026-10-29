@@ -173,7 +173,7 @@ def test_s3_adapter_has_private_headers_random_keys_no_public_acl():
 def test_production_configuration_fails_closed():
     for values in [{},{'NFC_ENV':'production','NFC_PUBLIC_ORIGIN':'http://127.0.0.1:8767'},{'NFC_ENV':'production','NFC_PUBLIC_ORIGIN':'https://example.test','NFC_TELEGRAM_ENABLED':'true'}]:
         with pytest.raises(ValueError):configure(values)
-@pytest.mark.parametrize('variant,quantity,amount',[('standard','1',1500),('standard','2',2600),('branded','1',2000),('branded','2',2600),('branded','more',None)])
+@pytest.mark.parametrize('variant,quantity,amount',[('standard','1',1500),('standard','2',2600),('branded','1',2000),('branded','2',3600),('branded','more',None)])
 def test_postgres_canonical_commerce_and_idempotency(repo,variant,quantity,amount):
     from server.leads import MockNotifier
     notifier=MockNotifier(fail=True);svc=PostgresLeadService(repo,secret=SECRET,mode='test',notifier=notifier);p=lead_payload(variant=variant,quantity=quantity,displayed_price=1)

@@ -1,0 +1,129 @@
+{
+  "method": "Actual owned4196 GET-only Chromium: client schema/filtered result parity, legacy hub context, native FAQ keys and service-block viewport paint",
+  "checks": [
+    {
+      "name": "uk client ItemList matches filtered physical results",
+      "status": "PASS",
+      "observed": {
+        "default": 6,
+        "instagram": 1,
+        "zero": 0
+      }
+    },
+    {
+      "name": "uk legacy service hub preserves allowed entry query",
+      "status": "PASS",
+      "observed": {
+        "context": true
+      }
+    },
+    {
+      "name": "uk Delivery FAQ keyboard opens and stays visible",
+      "status": "PASS",
+      "observed": {
+        "enter": true,
+        "space": true
+      }
+    },
+    {
+      "name": "uk separate service block screenshot 390",
+      "status": "PASS",
+      "observed": {
+        "notProduct": true,
+        "width": 390
+      }
+    },
+    {
+      "name": "uk separate service block screenshot 1440",
+      "status": "PASS",
+      "observed": {
+        "notProduct": true,
+        "width": 1440
+      }
+    },
+    {
+      "name": "en client ItemList matches filtered physical results",
+      "status": "PASS",
+      "observed": {
+        "default": 6,
+        "instagram": 1,
+        "zero": 0
+      }
+    },
+    {
+      "name": "en legacy service hub preserves allowed entry query",
+      "status": "PASS",
+      "observed": {
+        "context": true
+      }
+    },
+    {
+      "name": "en Delivery FAQ keyboard opens and stays visible",
+      "status": "PASS",
+      "observed": {
+        "enter": true,
+        "space": true
+      }
+    },
+    {
+      "name": "en separate service block screenshot 390",
+      "status": "PASS",
+      "observed": {
+        "notProduct": true,
+        "width": 390
+      }
+    },
+    {
+      "name": "en separate service block screenshot 1440",
+      "status": "PASS",
+      "observed": {
+        "notProduct": true,
+        "width": 1440
+      }
+    },
+    {
+      "name": "pl client ItemList matches filtered physical results",
+      "status": "PASS",
+      "observed": {
+        "default": 6,
+        "instagram": 1,
+        "zero": 0
+      }
+    },
+    {
+      "name": "pl legacy service hub preserves allowed entry query",
+      "status": "PASS",
+      "observed": {
+        "context": true
+      }
+    },
+    {
+      "name": "pl Delivery FAQ keyboard opens and stays visible",
+      "status": "PASS",
+      "observed": {
+        "enter": true,
+        "space": true
+      }
+    },
+    {
+      "name": "pl separate service block screenshot 390",
+      "status": "PASS",
+      "observed": {
+        "notProduct": true,
+        "width": 390
+      }
+    },
+    {
+      "name": "pl separate service block screenshot 1440",
+      "status": "PASS",
+      "observed": {
+        "notProduct": true,
+        "width": 1440
+      }
+    }
+  ],
+  "errors": [],
+  "pass": 15,
+  "fail": 0,
+  "status": "PASS"
+}

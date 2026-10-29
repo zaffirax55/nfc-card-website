@@ -143,7 +143,7 @@ def test_media_placement_avif_and_product_schema(source, locale):
     catalog = BeautifulSoup((site / prefix / "solutions/index.html").read_text("utf-8"), "html.parser")
     product = BeautifulSoup((site / prefix / "solutions/instagram-card/index.html").read_text("utf-8"), "html.parser")
     info = BeautifulSoup((site / prefix / "instagram-card/index.html").read_text("utf-8"), "html.parser")
-    assert "clean-front-render" in catalog.select_one('.commerce-card[data-variant="instagram"] img')["src"]
+    assert "/assets/model-posters/instagram.webp" in catalog.select_one('.commerce-card[data-variant="instagram"] img')["src"]
     slides = product.select("[data-slide]")
     assert len(slides) == 5 and not product.select("[data-placeholder]")
     assert all(slide.select_one('source[type="image/avif"]') for slide in slides)

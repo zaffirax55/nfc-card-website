@@ -110,7 +110,13 @@ def test_canonical_hreflang_are_bidirectional_and_current(route):
 @pytest.mark.parametrize('route', ['/', '/en', '/solutions', '/en/solutions'])
 def test_catalog_is_first_meaningful_section_with_four_mini_products_and_original_prices(route):
     soup = soup_at(route)
-    assert soup.main.find('section')['id'] == 'catalog'
+    first = soup.main.find('section')
+    if route in ('/', '/en'):
+        assert 'nfc-demo' in first.get('class', [])
+        assert 'home-top-demo' in first.parent.get('class', [])
+        assert soup.main.find('section', id='catalog')
+    else:
+        assert first.get('id') == 'catalog'
     cards = soup.select('.commerce-card')
     assert len(cards) == 9
     assert [c.get('data-variant') for c in cards[:2]] == ['standard', 'branded']
@@ -126,7 +132,7 @@ def test_catalog_is_first_meaningful_section_with_four_mini_products_and_origina
         assert not cards[index + 1].select_one('img.catalog-product-image')
     # These original assertions continue to protect the two Review Card offers.
     cards = cards[:2]
-    for card, prices in zip(cards, [(1500, 2600), (2000, 2600)]):
+    for card, prices in zip(cards, [(1500, 2600), (2000, 3600)]):
         amounts = [int(re.sub(r'[^0-9]', '', value.get_text())) for value in card.select('.commerce-card-prices dd')]
         assert amounts == list(prices)
     for card in cards:

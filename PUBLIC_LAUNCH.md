@@ -1,3 +1,5 @@
+> v36.2 update: the current root production build and existing-URL release gate are documented in [PRODUCTION_RELEASE.md](docs/release/v36.2/PRODUCTION_RELEASE.md). The earlier implementation below remains historical reference. No production QA form submissions or new notification permission.
+
 # NFC CARD PUBLIC launch
 
 Site: https://optidigitalagent.github.io/nfc-card-website/

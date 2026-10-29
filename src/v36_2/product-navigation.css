@@ -1,0 +1,21 @@
+/* Approved nine-product navigation; accepted content remains fully available. */
+.product-navigation-shell{position:sticky;top:var(--reading-header-height,112px);z-index:30;border-top:1px solid #d5dadf;border-bottom:1px solid #c3cbd4;background:#f7f7f4;box-shadow:0 3px 8px #12151a08}
+.product-reading-nav ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.35fr);align-items:stretch;gap:.25rem;list-style:none;margin:0;padding:.4rem 0}
+.product-reading-nav li{min-width:0;margin:0}
+.product-reading-nav a{display:flex;align-items:center;justify-content:center;gap:.4rem;height:100%;min-height:44px;padding:.6rem .7rem;border-bottom:2px solid transparent;text-decoration:none;font-size:.84rem;font-weight:650;line-height:1.4;white-space:normal;overflow-wrap:anywhere;text-align:center;color:#303c49}
+.reading-label-compact{display:none}
+.product-reading-nav a:hover{background:#e9edf0}.product-reading-nav a[aria-current=location]{border-bottom-color:#172333;color:#12151a;background:#e9edf0}
+.product-reading-nav a:focus-visible{outline:3px solid #174bb8;outline-offset:-3px}
+html:has(.product-navigation-shell){scroll-padding-top:0;scroll-behavior:auto}
+body:has(.product-navigation-shell) :is(#product-overview,#content-specs,#content-specifications,#content-formats,#content-format,#content-payment,#content-payment-delivery,#content-payment-and-delivery,[id^="content-faq-"],#product-content-faq-title,#product-config){scroll-margin-top:var(--reading-target-offset,224px)}
+body:has(.product-navigation-shell) :is(#product-overview,#content-specs,#content-specifications,#content-formats,#content-format,#content-payment,#content-payment-delivery,#content-payment-and-delivery,[id^="content-faq-"],#product-content-faq-title,#product-config):focus{outline:2px solid #8796aa;outline-offset:5px}
+@media(max-width:900px){.reading-label-full{display:none}.reading-label-compact{display:inline}}
+@media(max-width:600px){
+ .product-reading-nav{width:100%;padding:0 16px}
+ .product-reading-nav ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;padding:.3rem 0;gap:.25rem}
+ .product-reading-nav li{min-width:0}
+ .product-reading-nav li:last-child{grid-column:span 2}
+ .product-reading-nav a{height:100%;min-height:44px;padding:.5rem .4rem;white-space:normal;overflow-wrap:anywhere;text-align:center}
+ body:has(.product-navigation-shell) :is(#product-overview,#content-specs,#content-specifications,#content-formats,#content-format,#content-payment,#content-payment-delivery,#content-payment-and-delivery,[id^="content-faq-"],#product-content-faq-title,#product-config){scroll-margin-top:var(--reading-target-offset,calc(112px + 12rem))}
+}
+@media(prefers-reduced-motion:reduce){.product-navigation-shell,.product-reading-nav a{scroll-behavior:auto;transition:none}}

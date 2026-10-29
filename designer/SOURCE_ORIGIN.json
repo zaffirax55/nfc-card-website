@@ -1,0 +1,464 @@
+{
+  "archiveSHA256": "b6621cd2620bf57270ed2b616bb0ab4cdb609dbbce999319dfc242883c168b35",
+  "baseMain": "aab27e99e35aa538e73042249b2195c3129ce551",
+  "exactFiles": [
+    {
+      "path": "src/v36_2/product-content.css",
+      "sha256": "3f2bbbc902fa15bcc620a890c03878919c22ce9e7a862a6b5e2e7478a8171ab9",
+      "archivePath": "frontend/src/v36_2/product-content.css"
+    },
+    {
+      "path": "src/v36_2/public-catalog.mjs",
+      "sha256": "093bd925a86a3090dc65009563b26593d509401eadeed3c7577913b5eb96389c",
+      "archivePath": "frontend/src/v36_2/public-catalog.mjs"
+    },
+    {
+      "path": "src/v36_2/product-tabs.css",
+      "sha256": "d03d346d3c56b6395d4c229ae04578afbe5db340ef3b13ab5befde87f608f8dc",
+      "archivePath": "frontend/src/v36_2/product-tabs.css"
+    },
+    {
+      "path": "src/v36_2/editorial-content.mjs",
+      "sha256": "6227e22b895dd7c8e09d8ad08ee67a78e9d7e01862647b8a97b6827c2c7908ef",
+      "archivePath": "frontend/src/v36_2/editorial-content.mjs"
+    },
+    {
+      "path": "src/v36_2/i18n.mjs",
+      "sha256": "d3e670cb2a14dff988091274c5049ce4962f277d7223c7d8663caba8e3cf15ea",
+      "archivePath": "frontend/src/v36_2/i18n.mjs"
+    },
+    {
+      "path": "src/v36_2/styles.css",
+      "sha256": "811e42ec3b9f7f53ecfe041768ca524466cddbf70216c1586212e82b18f05f86",
+      "archivePath": "frontend/src/v36_2/styles.css"
+    },
+    {
+      "path": "src/v36_2/media.mjs",
+      "sha256": "ab0173f2192750e00ed4812073e8e846bee30e96bc8ff252b0fef9bf0e277e87",
+      "archivePath": "frontend/src/v36_2/media.mjs"
+    },
+    {
+      "path": "src/v36_2/visual-system.css",
+      "sha256": "9570a0f34598ed0f08c872d796e68f9bc75f89f08315de5dab83f540a5be7913",
+      "archivePath": "frontend/src/v36_2/visual-system.css"
+    },
+    {
+      "path": "src/v36_2/contacts.mjs",
+      "sha256": "ddd9ac1ccea733760800d9342b693c453311a6d9583be5eedea81610abda696b",
+      "archivePath": "frontend/src/v36_2/contacts.mjs"
+    },
+    {
+      "path": "src/v36_2/home-composition.mjs",
+      "sha256": "31ba26eba2d99be375b89d73359306bae6cf242f01ed3daecdd4ff54e2267c33",
+      "archivePath": "frontend/src/v36_2/home-composition.mjs"
+    },
+    {
+      "path": "src/v36_2/delivery-view.mjs",
+      "sha256": "2270700fa6dfd7e8f6b9b300ff24bedc07425551fce5923fcabb7e803fc84b3c",
+      "archivePath": "frontend/src/v36_2/delivery-view.mjs"
+    },
+    {
+      "path": "src/v36_2/delivery-content.mjs",
+      "sha256": "6644edb1c89babd48a9b5f95100b4e11bb4fae5d05906694b1eca80e234d54ab",
+      "archivePath": "frontend/src/v36_2/delivery-content.mjs"
+    },
+    {
+      "path": "src/v36_2/email-proposal.css",
+      "sha256": "49ac94bc145ef4a239024f1aaa8375e4783d67f705e726469e4f74197dc3e134",
+      "archivePath": "frontend/src/v36_2/email-proposal.css"
+    },
+    {
+      "path": "src/v36_2/media-owner.mjs",
+      "sha256": "39e8aa776206675d77af1b899e078e045734ec994f9a4637e56fc7d168c67991",
+      "archivePath": "frontend/src/v36_2/media-owner.mjs"
+    },
+    {
+      "path": "src/v36_2/product-content-view.mjs",
+      "sha256": "970d9ceeb2691d44b80767c6c505e0ccc4fbe0ed101b70ba7f8cd40ad0606a95",
+      "archivePath": "frontend/src/v36_2/product-content-view.mjs"
+    },
+    {
+      "path": "src/v36_2/api-client.mjs",
+      "sha256": "47e9265e7a533ad40a4bf8e15921747dd7ef267626b50ea270ea14367ef098c0",
+      "archivePath": "frontend/src/v36_2/api-client.mjs"
+    },
+    {
+      "path": "src/v36_2/commerce.mjs",
+      "sha256": "24457d4968513e15013f22aa91c4476e5ed81b875686bfcbe19c7c18af429582",
+      "archivePath": "frontend/src/v36_2/commerce.mjs"
+    },
+    {
+      "path": "src/v36_2/product-navigation.mjs",
+      "sha256": "3a4a043c6bec5e71af68c3ece07fac5176e358a4d4e49e8a50f9e1c384c44c94",
+      "archivePath": "frontend/src/v36_2/product-navigation.mjs"
+    },
+    {
+      "path": "src/v36_2/owner-structure.css",
+      "sha256": "13afe80d04ff93b444f3bf1be7029d0a4c779ed9633181cb141b84e2b147ad04",
+      "archivePath": "frontend/src/v36_2/owner-structure.css"
+    },
+    {
+      "path": "src/v36_2/email-proposal.mjs",
+      "sha256": "d12026d36aef6416cc61cf57f2912ce7916ec4fb8cdfc7cf5b9000ed2c3bb94a",
+      "archivePath": "frontend/src/v36_2/email-proposal.mjs"
+    },
+    {
+      "path": "src/v36_2/home-composition.css",
+      "sha256": "13d7ebf3d4c48bc3add3d96d976b20bff22669b06e5150bd97973de5d0b58628",
+      "archivePath": "frontend/src/v36_2/home-composition.css"
+    },
+    {
+      "path": "src/v36_2/media.css",
+      "sha256": "9a1e8861e1cd73b4ea2bfab275192497a4455d13142833072ace6f80b3c1e1fb",
+      "archivePath": "frontend/src/v36_2/media.css"
+    },
+    {
+      "path": "src/v36_2/build-config.mjs",
+      "sha256": "ef43680bcf4ef304def797fad181c2efd1ffd45203ce956319e5916f79c6b0af",
+      "archivePath": "frontend/src/v36_2/build-config.mjs"
+    },
+    {
+      "path": "src/v36_2/product-navigation.css",
+      "sha256": "ad874ea28c4e87ce16b756d3c4ed174af63a3bac773aaa26b8b67e1ae8f2df2e",
+      "archivePath": "frontend/src/v36_2/product-navigation.css"
+    },
+    {
+      "path": "src/v36_2/editorial.css",
+      "sha256": "be981e837ea98342dd0a02a07539fbba4d8e88fed2569558a618233dbe85e23e",
+      "archivePath": "frontend/src/v36_2/editorial.css"
+    },
+    {
+      "path": "src/v36_2/app.mjs",
+      "sha256": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
+      "archivePath": "frontend/src/v36_2/app.mjs"
+    },
+    {
+      "path": "src/v36_2/editorial-design.css",
+      "sha256": "81ae01b01e3514f32ef7bff4a0438d14d1ed5cac2665ce5f903e775fe4f66334",
+      "archivePath": "frontend/src/v36_2/editorial-design.css"
+    },
+    {
+      "path": "src/v36_2/media-owner.css",
+      "sha256": "7dc3650e1ccadb1c7e1f3ed7242f22d014b5b7b4c415765294720448d2ab9a32",
+      "archivePath": "frontend/src/v36_2/media-owner.css"
+    },
+    {
+      "path": "src/v36_2/shop-design.css",
+      "sha256": "bb2d8c21be23e9f7633d7d3f0b99127d3c912639b519990f2a6754b4e1d4b60a",
+      "archivePath": "frontend/src/v36_2/shop-design.css"
+    },
+    {
+      "path": "src/v36_2/product-content.mjs",
+      "sha256": "32dab762ad15ce03d4cfc1d45cac8a3b0124063b981f6b54913edb4c921d091e",
+      "archivePath": "frontend/src/v36_2/product-content.mjs"
+    },
+    {
+      "path": "src/v36_2/release-policy.mjs",
+      "sha256": "93b8311359519f6c44506420dc8820f85eec752efcd648996bde92760be52463",
+      "archivePath": "frontend/src/v36_2/release-policy.mjs"
+    },
+    {
+      "path": "src/v36_2/editorial-view.mjs",
+      "sha256": "13b9335a893f0a0ae414191576b95dc0198cd15e0d8a571186bf50cdf053371e",
+      "archivePath": "frontend/src/v36_2/editorial-view.mjs"
+    },
+    {
+      "path": "src/v36_2/seo.mjs",
+      "sha256": "4540b059a372b65b8e5b36b22d8915e2db952eb72f24f8cc9847a0a81af08b21",
+      "archivePath": "frontend/src/v36_2/seo.mjs"
+    },
+    {
+      "path": "src/v36_2/static-render.mjs",
+      "sha256": "12201670102697b17fc17a91ac31187ae1311529ed2fac7d5fe6376ef653b9a2",
+      "archivePath": "frontend/src/v36_2/static-render.mjs"
+    },
+    {
+      "path": "src/v36_2/policy-digest.mjs",
+      "sha256": "1a1af432a56cf2c38efe8d278778242e75e17c405a41258af78758e2e856734a",
+      "archivePath": "frontend/src/v36_2/policy-digest.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/pl-commerce.mjs",
+      "sha256": "8ce125231ca8f9d21ab3e85b4f073e6a5fcc4faf3911c3b19fb575bd814eb01e",
+      "archivePath": "frontend/src/v36_2/legacy-v36/pl-commerce.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/public-legal.mjs",
+      "sha256": "1d3d572f307c709e6afc1011b08af8a51113b4c0f73d3e7fd2b0659adfe1fe3c",
+      "archivePath": "frontend/src/v36_2/legacy-v36/public-legal.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/menu-contract.mjs",
+      "sha256": "a86178048068fecf23e0248d08e64d0c1764ce7d300ea1f0713ae7010bee17e2",
+      "archivePath": "frontend/src/v36_2/legacy-v36/menu-contract.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/pages.mjs",
+      "sha256": "f6c2625da2402350318c5aa49b12d40de0684defd035ad3f4dc2e055daa32a0a",
+      "archivePath": "frontend/src/v36_2/legacy-v36/pages.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/pl-shell.json",
+      "sha256": "9d64a7533c49857379a1bf1830503283720a895498f452b281fc89d9299120a2",
+      "archivePath": "frontend/src/v36_2/legacy-v36/pl-shell.json"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/locale.mjs",
+      "sha256": "2b08e7d74340bad80f40425910caf90a235d8e2935edbf82ef2c89abc7056f45",
+      "archivePath": "frontend/src/v36_2/legacy-v36/locale.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/commerce-contract.mjs",
+      "sha256": "6c1fce156711fb5c0d5410f32694d92faa912224277f46423d1cde292e8c9819",
+      "archivePath": "frontend/src/v36_2/legacy-v36/commerce-contract.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/mini-contract.mjs",
+      "sha256": "80e67b647a0083d5071122d07a2d9c12a2db827b00bc88f35d41588fb39b5092",
+      "archivePath": "frontend/src/v36_2/legacy-v36/mini-contract.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/pl-views.json",
+      "sha256": "1fdfe3fc5bdb907ba429266e63d466d15c1dae48cfaea9701e575c790dc108ca",
+      "archivePath": "frontend/src/v36_2/legacy-v36/pl-views.json"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/inbound-notice.mjs",
+      "sha256": "feb5e05d2b45a1ad3e57b61a0386d28805836ba3c31acd28ddf6e8665ffbccd9",
+      "archivePath": "frontend/src/v36_2/legacy-v36/inbound-notice.mjs"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/contacts.json",
+      "sha256": "3fc30b5324597a9252cb8e660bb2b780643d7c3348a7250f8bc28735c1703c37",
+      "archivePath": "frontend/src/v36_2/legacy-v36/contacts.json"
+    },
+    {
+      "path": "src/v36_2/legacy-v36/pl-clients.json",
+      "sha256": "d2774c4e673a21739fb18392c4d135ef3a21a8908b78c1b60189b9cbaf353560",
+      "archivePath": "frontend/src/v36_2/legacy-v36/pl-clients.json"
+    },
+    {
+      "path": "src/v36_2/assets/Onest.ttf",
+      "sha256": "966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31",
+      "archivePath": "frontend/src/v36_2/assets/Onest.ttf"
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_60_black.webp",
+      "sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "archivePath": "frontend/src/v36_2/assets/menu-square_60_black.webp"
+    },
+    {
+      "path": "src/v36_2/assets/instagram-edge.webp",
+      "sha256": "b94e29cfcd4dddb7b766e8fa50e8a2053e5c30eb6c87d18c40d1cc11ac816df9",
+      "archivePath": "frontend/src/v36_2/assets/instagram-edge.webp"
+    },
+    {
+      "path": "src/v36_2/assets/review-hand.webp",
+      "sha256": "a60fe94e3c1e30b3728538d80a19d902cd19c48e3aedb28e84790c5e5bf5e1a6",
+      "archivePath": "frontend/src/v36_2/assets/review-hand.webp"
+    },
+    {
+      "path": "src/v36_2/assets/review-back.webp",
+      "sha256": "1b9ed5247c961ca78307f313a1cb48ceef8b47a56fbb4602de61930fd5771e3f",
+      "archivePath": "frontend/src/v36_2/assets/review-back.webp"
+    },
+    {
+      "path": "src/v36_2/assets/three-d-desk.webp",
+      "sha256": "697c4ba1579b9a9009cdeea0a14288156874001e81c11fcf17e1f70589ad9997",
+      "archivePath": "frontend/src/v36_2/assets/three-d-desk.webp"
+    },
+    {
+      "path": "src/v36_2/assets/review.webp",
+      "sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "archivePath": "frontend/src/v36_2/assets/review.webp"
+    },
+    {
+      "path": "src/v36_2/assets/menu-round_70_black.webp",
+      "sha256": "368f88f827ae6b9696d163553b201b4975b8c9e7fa619e30c7f5d36c83a7d71e",
+      "archivePath": "frontend/src/v36_2/assets/menu-round_70_black.webp"
+    },
+    {
+      "path": "src/v36_2/assets/logo-reversed.svg",
+      "sha256": "01447ae086dfc42e65cf9a8f96f893b948c6e358658a63fc7229d21fd7f709d9",
+      "archivePath": "frontend/src/v36_2/assets/logo-reversed.svg"
+    },
+    {
+      "path": "src/v36_2/assets/beauty-edge.webp",
+      "sha256": "2c3d51e75ee05aaba6a9188b5dbeddcbba19e69cf070395c41c1a8eb7b06d6a6",
+      "archivePath": "frontend/src/v36_2/assets/beauty-edge.webp"
+    },
+    {
+      "path": "src/v36_2/assets/beauty-group-hand.webp",
+      "sha256": "87fa6d0fa9f8de2997d39f259737f4689d3bc08033b10749b49af0ca1e6661da",
+      "archivePath": "frontend/src/v36_2/assets/beauty-group-hand.webp"
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_100_black.webp",
+      "sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "archivePath": "frontend/src/v36_2/assets/menu-square_100_black.webp"
+    },
+    {
+      "path": "src/v36_2/assets/three-d-back.webp",
+      "sha256": "aa31b9fb3e14e5e0249a4010846bd59312cea82aa319b83fade5a4b3f0c0e33e",
+      "archivePath": "frontend/src/v36_2/assets/three-d-back.webp"
+    },
+    {
+      "path": "src/v36_2/assets/instagram-window.webp",
+      "sha256": "e617240a1a5d322e7402e27eeef54654a258db773a95c2c695bcc695545fa272",
+      "archivePath": "frontend/src/v36_2/assets/instagram-window.webp"
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-group-front.webp",
+      "sha256": "e27387c33206fe093ff1742c90d48aa17f302246424801821edf6271ceafd5ce",
+      "archivePath": "frontend/src/v36_2/assets/restaurant-group-front.webp"
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-back.webp",
+      "sha256": "b276415d90efba5e6434ffb546a9b397868d2b49c2cf7e06b6fa02df1aa5c5e5",
+      "archivePath": "frontend/src/v36_2/assets/restaurant-back.webp"
+    },
+    {
+      "path": "src/v36_2/assets/IBMPlexMono.ttf",
+      "sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
+      "archivePath": "frontend/src/v36_2/assets/IBMPlexMono.ttf"
+    },
+    {
+      "path": "src/v36_2/assets/review-edge.webp",
+      "sha256": "86238a5203d58f46d1a95ca84ed8d15c16d049bcb592f538285d4dba0e2d0637",
+      "archivePath": "frontend/src/v36_2/assets/review-edge.webp"
+    },
+    {
+      "path": "src/v36_2/assets/beauty-group-front.webp",
+      "sha256": "902858586cab6d5349454dd37d68f2d2db493cc6ec7ec195f42d4df6f3d72d34",
+      "archivePath": "frontend/src/v36_2/assets/beauty-group-front.webp"
+    },
+    {
+      "path": "src/v36_2/assets/three-d.webp",
+      "sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742",
+      "archivePath": "frontend/src/v36_2/assets/three-d.webp"
+    },
+    {
+      "path": "src/v36_2/assets/menu-round_70_white.webp",
+      "sha256": "c07cd061591a1ac4d045383dd29e27e3e31d06e5c1d61dde4f1bac38413e02e5",
+      "archivePath": "frontend/src/v36_2/assets/menu-round_70_white.webp"
+    },
+    {
+      "path": "src/v36_2/assets/instagram-back.webp",
+      "sha256": "baeda27a47eed8ba28f2e94af36a8e6e86d4d00d789332296b6193de2dc026fb",
+      "archivePath": "frontend/src/v36_2/assets/instagram-back.webp"
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_60_white.webp",
+      "sha256": "448ddbf9233876019d355f155b03ac6fe87e479d877ddccae80dc6f5caa8980f",
+      "archivePath": "frontend/src/v36_2/assets/menu-square_60_white.webp"
+    },
+    {
+      "path": "src/v36_2/assets/review-demo-poster.webp",
+      "sha256": "21022db9cdaa2769e5b062fd3d5c0c88cba9adc95f1e4248e679db1a03154806",
+      "archivePath": "frontend/src/v36_2/assets/review-demo-poster.webp"
+    },
+    {
+      "path": "src/v36_2/assets/beauty-back.webp",
+      "sha256": "0a2a87362ec7ce985b67546a6df05e0aeb6840ceba21aa2fe76625f342747c3f",
+      "archivePath": "frontend/src/v36_2/assets/beauty-back.webp"
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-group-hand.webp",
+      "sha256": "e864620ee79d8282e223e14231f0aebd2ca3455a8c11e715bfa302309a7198cc",
+      "archivePath": "frontend/src/v36_2/assets/restaurant-group-hand.webp"
+    },
+    {
+      "path": "src/v36_2/assets/founder.webp",
+      "sha256": "65849e440f008c63285e50cfb958404aedcc9827466e3f078df83432fc9dd7b7",
+      "archivePath": "frontend/src/v36_2/assets/founder.webp"
+    },
+    {
+      "path": "src/v36_2/assets/restaurant.webp",
+      "sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "archivePath": "frontend/src/v36_2/assets/restaurant.webp"
+    },
+    {
+      "path": "src/v36_2/assets/beauty.webp",
+      "sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "archivePath": "frontend/src/v36_2/assets/beauty.webp"
+    },
+    {
+      "path": "src/v36_2/assets/instagram.webp",
+      "sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "archivePath": "frontend/src/v36_2/assets/instagram.webp"
+    },
+    {
+      "path": "src/v36_2/assets/logo.svg",
+      "sha256": "9370da66fc8cd4b11a3cda60d692e9aa9451c04522b21c812473206f4ba222f9",
+      "archivePath": "frontend/src/v36_2/assets/logo.svg"
+    },
+    {
+      "path": "src/v36_2/assets/favicon.svg",
+      "sha256": "72f47239068397642729856cf55b548d0edccd3c747348eff805fb1fa77436e6",
+      "archivePath": "frontend/src/v36_2/assets/favicon.svg"
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_100_white.webp",
+      "sha256": "448ddbf9233876019d355f155b03ac6fe87e479d877ddccae80dc6f5caa8980f",
+      "archivePath": "frontend/src/v36_2/assets/menu-square_100_white.webp"
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-edge.webp",
+      "sha256": "8b55bb759acf0411d57efda9d1919ec5d6333757edab5387d01fcffe214dc02d",
+      "archivePath": "frontend/src/v36_2/assets/restaurant-edge.webp"
+    },
+    {
+      "path": "src/v36_2/assets/founder-primary.webp",
+      "sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "archivePath": "frontend/src/v36_2/assets/founder-primary.webp"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/contact.ts",
+      "sha256": "c6fcddc3a4b79ddfe405af60af2bc18a9a0e6f6dd5629144c01f17232f6c2e9a",
+      "archivePath": "gateway/services/lead-gateway/src/contact.ts"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/contract.ts",
+      "sha256": "a9c5cec5ff4e2a0ef2745e3c73f9901e8405abf326ea41013b7d41ccfe12a67f",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/contract.ts"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/mini-price-contract.json",
+      "sha256": "21d430cefd640567f32248ffa5fc40f5205f635aa2a05d4144641dbfaf1e163c",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/mini-price-contract.json"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/poland-commerce.json",
+      "sha256": "d890caba44556375a63fc2711888041898c880327c66c803758c4befa9f76a23",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/poland-commerce.json"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/commerce.ts",
+      "sha256": "7148a84c87b75c2033d4cff9d2c11499b24a903f6d85537b944936e8e35aa25c",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/commerce.ts"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/v2/contract.ts",
+      "sha256": "5c5a8078d7623a1abfe2f531df8313bbb2e675f09f187059f92580f70188d9fc",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/v2/contract.ts"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/v2/policy.ts",
+      "sha256": "e0b251780b1043f4115451543987719bc1c8faae701facbf6df3453fd5e1e351",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/v2/policy.ts"
+    },
+    {
+      "path": "designer/fixtures/gateway-contract/nfc-card/v2/registry.ts",
+      "sha256": "7a7adc79053c02bf014a31427d7ca34598d1e36424929e817d14f523f91b2ed4",
+      "archivePath": "gateway/services/lead-gateway/src/nfc-card/v2/registry.ts"
+    }
+  ],
+  "adaptations": [
+    "Build output under ignored work/ only",
+    "Portable launch/test paths rebased to repository, no archive sibling lookup",
+    "Source README corrected; two existing OFL license notices added beside bundled fonts",
+    "Explicit new package designer:* commands, old commands preserved",
+    "Root README and AGENTS receive branch-only safety notice",
+    "Three exact-hash Fetch credentials=omit lines reviewed by unchanged guard matching policy"
+  ]
+}

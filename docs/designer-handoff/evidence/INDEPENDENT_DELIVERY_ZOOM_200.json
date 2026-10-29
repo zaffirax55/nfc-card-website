@@ -1,0 +1,40 @@
+{
+  "method": "Native chrome.tabs.setZoom/getZoom=2 in disposable Chromium profile, not CSS zoom/device emulation",
+  "checks": [
+    {
+      "locale": "uk",
+      "route": "/delivery-and-payment/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/delivery-and-payment/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/delivery-and-payment/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    }
+  ],
+  "externalRequests": [],
+  "posts": 0,
+  "serverLifecycleActions": 0,
+  "realNotifications": 0,
+  "nativeZoom": {
+    "factor": 2,
+    "before": {
+      "innerWidth": 1440,
+      "devicePixelRatio": 1
+    },
+    "after": {
+      "innerWidth": 720,
+      "devicePixelRatio": 2
+    }
+  },
+  "visualCapture": "Native visible viewport via CDP fromSurface:false, after bringToFront/scrollTop/fonts/two animation frames; no clip or image transformation",
+  "status": "PASS"
+}

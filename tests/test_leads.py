@@ -52,7 +52,7 @@ def stored(service, lead_id=None):
 @pytest.mark.parametrize('locale', ['uk', 'en'])
 @pytest.mark.parametrize('variant,quantity,expected', [
     ('standard', '1', 1500), ('standard', '2', 2600),
-    ('branded', '1', 2000), ('branded', '2', 2600),
+    ('branded', '1', 2000), ('branded', '2', 3600),
     ('standard', 'more', None), ('branded', 'more', None),
     ('bulk', 'more', None),
     ('consultation', '1', None), ('consultation', '2', None), ('consultation', 'more', None),

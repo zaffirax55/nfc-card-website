@@ -1,0 +1,72 @@
+{
+  "mode": "LOCAL_SYNTHETIC_ONLY",
+  "runtime": "v24.19.0",
+  "finishedAt": "2026-10-27T20:16:23.916Z",
+  "checks": [
+    {
+      "name": "loopback static HTML is noindex and served from built preview",
+      "status": "PASS"
+    },
+    {
+      "name": "health explicitly identifies synthetic SQLite adapter",
+      "status": "PASS"
+    },
+    {
+      "name": "early v2 challenge fails before persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "v2 physical receipt uses exact frozen price and durable disabled notification",
+      "status": "PASS"
+    },
+    {
+      "name": "same v2 key replays identical immutable receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "changed v2 payload with existing key is conflict",
+      "status": "PASS"
+    },
+    {
+      "name": "v2 free design preserves product context without fictitious physical purchase",
+      "status": "PASS"
+    },
+    {
+      "name": "v1 V36 email proposal persists with approved two-Branded price",
+      "status": "PASS"
+    },
+    {
+      "name": "v1 replay is same durable lead and shared key cannot cross to v2",
+      "status": "PASS"
+    },
+    {
+      "name": "actual contacts, absent Synthetic prefix and wrong origin are rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "body cap, malformed JSON, invalid encoding and missing Origin fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "prewrite failure saves none; unknown outcome saves once and exact retry recovers",
+      "status": "PASS"
+    },
+    {
+      "name": "SQLite COMMIT is durable across restart and replay returns historical receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "private state cannot be placed inside publicly served static root",
+      "status": "PASS"
+    },
+    {
+      "name": "unowned state and existing database are refused without modification",
+      "status": "PASS"
+    }
+  ],
+  "pass": 15,
+  "fail": 0,
+  "noExternalRequests": true,
+  "noNotifications": true,
+  "temporaryStateRemoved": true
+}

@@ -2,7 +2,7 @@ name: Deploy fork preview to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [design/visual-refresh-2026-10-28]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: fork-pages-model-fix
+  group: fork-pages-v36-designer
   cancel-in-progress: true
 
 jobs:
@@ -26,23 +26,12 @@ jobs:
           node-version: '24'
           package-manager-cache: false
       - name: Install dependencies
+        run: npm ci
+      - name: Build v36 designer preview
         run: |
-          npm ci
-          npm install --no-save @google/model-viewer@4.4.0
-          cp node_modules/@google/model-viewer/dist/model-viewer.min.js src/model-viewer.min.js
-          test -s src/model-viewer.min.js
-          python -m pip install --disable-pip-version-check numpy Pillow trimesh
-          python scripts/build_review_card_fullbleed.py
-          test -s src/nfc-review-card-3d.glb
-      - name: Build fork preview
-        env:
-          NFC_ENV: production
-          NFC_DEPLOYMENT_TARGET: github-pages
-          NFC_PUBLIC_ORIGIN: https://zaffirax55.github.io
-          NFC_PUBLIC_BASE_PATH: /nfc-card-website
-          NFC_PUBLICATION_MODE: PUBLIC_PREVIEW
-          NFC_TELEGRAM_ENABLED: 'false'
-        run: npm run build
+          npm run designer:build
+          mv work/designer-preview-v36_2 site
+          test -s site/nfc-card-website/model-viewer.min.js
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b

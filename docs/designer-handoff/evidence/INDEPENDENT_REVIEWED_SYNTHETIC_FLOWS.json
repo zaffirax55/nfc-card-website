@@ -1,0 +1,161 @@
+{
+  "method": "Independent read-only assertions over the integration runner's new4196 browser receipts; no new POST by reviewer",
+  "runs": [
+    {
+      "evidence": "LIVE_COMMERCE_QA.json",
+      "pass": 25,
+      "serviceReceipts": [
+        {
+          "locale": "uk",
+          "entry": "branded-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "uk",
+          "entry": "branded-beauty-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "uk",
+          "entry": "branded-restaurant-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "en",
+          "entry": "branded-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "en",
+          "entry": "branded-beauty-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "en",
+          "entry": "branded-restaurant-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "pl",
+          "entry": "branded-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "pl",
+          "entry": "branded-beauty-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "pl",
+          "entry": "branded-restaurant-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        }
+      ],
+      "v2Saved": 22,
+      "v36Saved": 3,
+      "external": 0,
+      "productionPOST": 0,
+      "notifications": 0,
+      "before": {
+        "requests": 0,
+        "legacy": 0,
+        "v2_sends": 0,
+        "v1_sends": 0
+      },
+      "after": {
+        "requests": 22,
+        "legacy": 3,
+        "v2_sends": 0,
+        "v1_sends": 0
+      }
+    },
+    {
+      "evidence": "CATALOG_SERVICE_FLOW_QA.json",
+      "pass": 25,
+      "serviceReceipts": [
+        {
+          "locale": "uk",
+          "entry": "branded-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "uk",
+          "entry": "branded-beauty-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "uk",
+          "entry": "branded-restaurant-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "en",
+          "entry": "branded-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "en",
+          "entry": "branded-beauty-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "en",
+          "entry": "branded-restaurant-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "pl",
+          "entry": "branded-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "pl",
+          "entry": "branded-beauty-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        },
+        {
+          "locale": "pl",
+          "entry": "branded-restaurant-review-card",
+          "emptyLines": true,
+          "noTotalOrDeposit": true
+        }
+      ],
+      "v2Saved": 22,
+      "v36Saved": 3,
+      "external": 0,
+      "productionPOST": 0,
+      "notifications": 0,
+      "before": {
+        "requests": 22,
+        "legacy": 3,
+        "v2_sends": 0,
+        "v1_sends": 0
+      },
+      "after": {
+        "requests": 44,
+        "legacy": 6,
+        "v2_sends": 0,
+        "v1_sends": 0
+      }
+    }
+  ],
+  "overlap": "Two25-case runs share16 scenarios; second run replaces9product-service entries with9catalog-service journeys. Do not claim50 distinct cases.",
+  "status": "PASS"
+}

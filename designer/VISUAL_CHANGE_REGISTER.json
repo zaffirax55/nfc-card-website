@@ -1,0 +1,24 @@
+{
+  "productionBase": "d0e79aab9717b3bb569325f249164a72bc5acd64",
+  "scope": "Visual-only designer branch; the original archive and B05 production adaptation register remain immutable.",
+  "files": [
+    {
+      "path": "src/v36_2/app.mjs",
+      "productionSHA256": "a85f269110044649701540bd8f5215614c851516d76a6c928775dc556e06b09e",
+      "designerSHA256": "d960619231de94e76e234a1b3b62da179fc1ae09fc078e699ed0cef9037aa31c",
+      "reason": "Add localized, lazy 3D viewing to the six approved retail cards and galleries without changing commerce or request logic."
+    },
+    {
+      "path": "src/v36_2/home-composition.mjs",
+      "productionSHA256": "31ba26eba2d99be375b89d73359306bae6cf242f01ed3daecdd4ff54e2267c33",
+      "designerSHA256": "b9fd7eb34d2bff672ebfe718dd04573e3282c681406710cd692167f05b1b4a1d",
+      "reason": "Mount and statically render the existing localized NFC phone demonstration without changing request or commerce logic."
+    },
+    {
+      "path": "src/v36_2/static-render.mjs",
+      "productionSHA256": "12201670102697b17fc17a91ac31187ae1311529ed2fac7d5fe6376ef653b9a2",
+      "designerSHA256": "7f9aa0e4bc5e15fa01e18c7de4e88f6d8f0ef87fc2e10cf200e214ac8bc1846d",
+      "reason": "Include the locally hosted 3D viewer presentation stylesheet in static and hydrated pages."
+    }
+  ]
+}

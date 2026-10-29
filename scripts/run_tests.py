@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -62,6 +63,13 @@ def main():
                     "--junitxml=" + str(report), *selectors], report)
 
     save()
+    # The retained legacy suite expects its exact66-route artifact. A previous
+    # v36.2 production build may contain additional routes; never mix builds.
+    legacy_site = ROOT / 'site'
+    if legacy_site.is_symlink() or (legacy_site.exists() and not legacy_site.is_dir()):
+        raise SystemExit('Refusing non-directory/symlink generated site')
+    if legacy_site.exists():
+        shutil.rmtree(legacy_site)
     run("build-for-tests", ["node", "src/build.mjs"])
     if not summary["browser_only"]:
         pytest("unit-integration", ["tests", "--ignore=tests/test_v12_browser.py", "--ignore=tests/test_v13_browser.py", "--ignore=tests/test_instagram_browser.py"])

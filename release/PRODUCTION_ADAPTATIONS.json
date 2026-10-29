@@ -1,0 +1,32 @@
+{
+  "sourceArchiveSHA256": "b6621cd2620bf57270ed2b616bb0ab4cdb609dbbce999319dfc242883c168b35",
+  "designerBranch": "design/nfc-card-v36-2",
+  "designerCommit": "26910a0ea2c5774c25b758309e97500f88a1bb47",
+  "approval": "Existing-URL release request + B05 D1-D3 (2026-10-28)",
+  "files": [
+    {
+      "path": "src/v36_2/email-proposal.mjs",
+      "archiveSHA256": "d12026d36aef6416cc61cf57f2912ce7916ec4fb8cdfc7cf5b9000ed2c3bb94a",
+      "releaseSHA256": "376fe12d44da8e5866344685bee14b49a41e36b3c277335fa3c59cb25c5dbd67",
+      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+    },
+    {
+      "path": "src/v36_2/app.mjs",
+      "archiveSHA256": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
+      "releaseSHA256": "a85f269110044649701540bd8f5215614c851516d76a6c928775dc556e06b09e",
+      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+    },
+    {
+      "path": "src/v36_2/seo.mjs",
+      "archiveSHA256": "4540b059a372b65b8e5b36b22d8915e2db952eb72f24f8cc9847a0a81af08b21",
+      "releaseSHA256": "a9cab713db1ac2a7f8c0d23094894c32779c52fc540b84039f4898e0dea5aa00",
+      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+    },
+    {
+      "path": "src/v36_2/legacy-v36/pages.mjs",
+      "archiveSHA256": "f6c2625da2402350318c5aa49b12d40de0684defd035ad3f4dc2e055daa32a0a",
+      "releaseSHA256": "a2214c9d904c3cecba72fe0606fd3e7c06cf5a7e470731da6ffefdcf8b13ec2b",
+      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+    }
+  ]
+}

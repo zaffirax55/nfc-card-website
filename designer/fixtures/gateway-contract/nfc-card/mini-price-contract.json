@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "contractId": "NFC-CARD-CONTENT-TRUTH-PRICE-v33",
+  "supersedes": [
+    "NFC-CARD-BEAUTY-RESTAURANT-MINI-PRICE-v31",
+    "v30_uah_tier_contract",
+    "v29_branded_price_inheritance"
+  ],
+  "pricingMode": "explicit_supported_pack_quantities_no_interpolation",
+  "locales": {
+    "uk": {
+      "market": "UA",
+      "currency": "UAH"
+    },
+    "en": {
+      "market": "UA",
+      "currency": "UAH"
+    },
+    "pl": {
+      "market": "PL",
+      "currency": "PLN"
+    }
+  },
+  "UA": {
+    "beautyReadyMini": {
+      "appliesTo": [
+        "beauty-review-card"
+      ],
+      "bundles": {
+        "1": {
+          "unitPrice": 800,
+          "total": 800
+        },
+        "2": {
+          "unitPrice": 700,
+          "total": 1400
+        }
+      },
+      "otherQuantities": "individual_quote"
+    },
+    "brandedBeautyMini": {
+      "appliesTo": [
+        "branded-beauty-review-card"
+      ],
+      "bundles": {
+        "1": {
+          "unitPrice": 800,
+          "total": 800
+        },
+        "2": {
+          "unitPrice": 800,
+          "total": 1600
+        }
+      },
+      "otherQuantities": "individual_quote"
+    },
+    "restaurantReadyMini": { "appliesTo": ["restaurant-review-card"], "allQuantities": "individual_quote" },
+    "brandedRestaurantMini": { "appliesTo": ["branded-restaurant-review-card"], "allQuantities": "individual_quote" },
+    "deposit": {
+      "amount": 200,
+      "currency": "UAH",
+      "frequency": "once_per_confirmed_physical_order",
+      "includedInTotal": true,
+      "freeDesignRequestOrQuote": null
+    }
+  },
+  "PL": {
+    "status": "OPEN_OWNER_DECISION_NO_AUTOMATIC_CONVERSION",
+    "readyMini": "individual_quote",
+    "brandedMini": "individual_quote",
+    "deposit": {
+      "amount": 20,
+      "currency": "PLN",
+      "frequency": "once_per_confirmed_physical_order_after_price_agreement",
+      "includedInTotal": true
+    },
+    "rule": "Do not reuse old 169/299 PLN values for these new Mini contracts and do not convert UAH by exchange rate."
+  },
+  "rules": {
+    "noInterpolation": true,
+    "beautyQuantity3AndAbove": "individual_quote",
+    "restaurantAllQuantities": "individual_quote",
+    "beautyAndRestaurantQuantitiesCombine": false,
+    "readyAndBrandedQuantitiesCombine": false,
+    "browserPriceAuthoritative": false,
+    "serverDerivesPrice": true
+  }
+}

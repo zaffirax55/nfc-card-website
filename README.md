@@ -1,3 +1,9 @@
+> **NFC CARD v36.2 — existing-URL production integration**
+>
+> Start with [Designer Handoff](docs/designer-handoff/DESIGNER_START_HERE.md). Node24: `npm run designer:build` then `npm run designer:preview`; open `http://127.0.0.1:4196/nfc-card-website/`. No npm install, secrets or Docker needed. Use synthetic data only; no real sends. Editable storefront: `src/v36_2/`.
+>
+> `npm run build` builds the new approved storefront for the existing Pages URL. `npm run build:legacy` retains the old application. Publication requires the pinned gateway/schema/Owner Desk gate and exact approved B05 policy. See [production release](docs/release/v36.2/PRODUCTION_RELEASE.md). Designer commands remain synthetic and must never be published.
+
 # NFC CARD by Antonov Digital
 
 Source repository: https://github.com/optidigitalagent/nfc-card-website
@@ -7,7 +13,7 @@ Website: [NFC CARD](https://optidigitalagent.github.io/nfc-card-website/).
 The static frontend is published by GitHub Pages. Public enquiries use the existing
 Antonov lead gateway, its private PostgreSQL 17 and the separate `nfc_card` schema.
 The gateway persists a lead and outbox together before attempting Telegram.
-See [PUBLIC launch and rollback](PUBLIC_LAUNCH.md) for the active architecture;
+See [v36.2 production integration and rollback](docs/release/v36.2/PRODUCTION_RELEASE.md) for the current release; [earlier PUBLIC launch](PUBLIC_LAUNCH.md) is historical;
 older full-stack release documents describe the retained alternative runtime.
 No additional Railway service, bucket or worker is needed.
 

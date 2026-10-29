@@ -185,7 +185,7 @@ def test_about_responsive_media_route_top_and_safe_hash_navigation(web,browser,l
         assert page.evaluate('scrollY')<=1
         assert not page_errors and not console_errors
         assert page.evaluate('Array.isArray(window.nfcAnalyticsEvents)')
-        page.locator('a[href="#about-founder-story"]').click();expect(page.locator('#about-founder-story')).to_be_in_viewport()
+        page.locator('.about-story-link[href="#about-founder-story"]').click();expect(page.locator('#about-founder-story')).to_be_in_viewport()
         header=page.locator('header').bounding_box();story=page.locator('#about-founder-story').bounding_box()
         assert story['y']>=header['y']+header['height']-1
         sources=[]
@@ -217,7 +217,7 @@ def test_catalog_reserves_delayed_media_before_first_paint(web,browser,locale,ro
     def network_boundary(request):
         if not request.request.url.startswith(origin+'/'):
             blocked.append(request.request.url);return request.abort()
-        if '05-promo-direct-review-form' in request.request.url and not released:
+        if 'review-card-front' in request.request.url and not released:
             delayed.append(request);return
         request.continue_()
     context.route('**/*',network_boundary)
@@ -245,15 +245,15 @@ def test_catalog_reserves_delayed_media_before_first_paint(web,browser,locale,ro
         image=page.locator('.commerce-card[data-variant=standard] .catalog-product-image')
         copy=page.locator('.commerce-card[data-variant=standard] .commerce-card-copy')
         page.evaluate('()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))')
-        before={'image':image.bounding_box(),'copy':copy.bounding_box()}
+        frame=page.locator('.commerce-card[data-variant=standard] .catalog-card-media')
+        before={'image':image.bounding_box(),'frame':frame.bounding_box(),'copy':copy.bounding_box()}
         assert delayed,'The image must actually be held by the local network boundary.'
         assert image.evaluate('(e)=>!e.complete&&e.naturalWidth===0')
         assert before['image'] and before['copy']
-        reserved=before['image']
-        # v33 uses the shared square media frame on narrow catalog cards.
-        # Its reserved box must exist before the delayed image arrives.
-        assert reserved['height']>300 and abs(reserved['height']-reserved['width'])<=1
-        assert abs(before['copy']['y']-(reserved['y']+reserved['height']))<=1
+        # The photo strip occupies its own row, while the unloaded image and
+        # the complete media frame reserve their final positions.
+        assert before['image']['height']>200 and before['frame']['height']>300
+        assert abs(before['copy']['y']-(before['frame']['y']+before['frame']['height']))<=1
         name=f'{locale}-{("home" if route=="/" else "catalog")}-delayed-media-390'
         # Do not use shot(): its image.decode() wait must not release this deliberate delay.
         before_path=SHOTS/(name+'-reserved-before-load.png')
@@ -267,8 +267,8 @@ def test_catalog_reserves_delayed_media_before_first_paint(web,browser,locale,ro
         assert image.evaluate('(e)=>e.complete&&e.naturalWidth>0')
         page.evaluate('()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))')
         page.wait_for_timeout(100)
-        after={'image':image.bounding_box(),'copy':copy.bounding_box()}
-        for target in ['image','copy']:
+        after={'image':image.bounding_box(),'frame':frame.bounding_box(),'copy':copy.bounding_box()}
+        for target in ['image','frame','copy']:
             for coordinate in ['x','y','width','height']:
                 assert abs(after[target][coordinate]-before[target][coordinate])<=1,(target,coordinate,before,after)
         performance=page.evaluate('window.nfcDelayedMedia')

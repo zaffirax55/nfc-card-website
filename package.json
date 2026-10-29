@@ -3,11 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node src/build.mjs",
+    "build": "node scripts/build-public.mjs",
     "test": "python scripts/run_tests.py",
     "qa": "python scripts/run_tests.py --browser-only",
     "start": "python scripts/start.py",
-    "dev": "python scripts/start.py"
+    "dev": "python scripts/start.py",
+    "designer:build": "node scripts/build-v36_2.mjs preview",
+    "designer:seo": "node scripts/build-v36_2.mjs production-fixture",
+    "designer:preview": "node tools/designer-preview.mjs --port 4196",
+    "designer:test:contracts": "node --test tests/v36_2-client.test.mjs tests/v36_2-price.test.mjs tests/v36_2-challenge-renewal.test.mjs",
+    "designer:test:transport": "node tools/designer-preview-test.mjs",
+    "designer:check": "node tools/designer-check.mjs",
+    "build:legacy": "node src/build.mjs",
+    "test:production": "node --test tests/v36_2-production.test.mjs tests/v36_2-readiness.test.mjs",
+    "preflight:gateway": "node scripts/check-gateway-ready.mjs"
   },
   "engines": {
     "node": ">=22.12"

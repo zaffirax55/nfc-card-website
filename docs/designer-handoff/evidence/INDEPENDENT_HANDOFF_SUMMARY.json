@@ -1,0 +1,23 @@
+{
+  "dateUTC": "2026-10-27T20:27:11.088470+00:00",
+  "report": "INDEPENDENT_HANDOFF_ACCEPTANCE.md",
+  "localIntegration": "PASS",
+  "branchHandoff": "PENDING_FINAL_TRANSFER_PROOF",
+  "counts": {
+    "provenance": 4,
+    "staticSEO": 255,
+    "actualHTTPGET": 234,
+    "runtimeSEO": 15,
+    "offlineMockedRegression": 267,
+    "nativeZoom": 54,
+    "nativeDeliveryZoom": 3
+  },
+  "appSHA256": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
+  "sourceManifestSHA256": "ba11d7770dfee54e2b71e85ed4efa5d36a37632ec69083ef7b8806961192a7d3",
+  "reviewerRuntimeWrites": 0,
+  "reviewerProductionPOST": 0,
+  "reviewerPush": 0,
+  "openCritical": 0,
+  "openHigh": 0,
+  "openMedium": 0
+}

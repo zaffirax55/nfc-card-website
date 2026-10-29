@@ -62,7 +62,9 @@ def test_instagram_nine_width_pages_matrix(pages_web,browser,width):
                 cards=page.locator('.commerce-card')
                 assert cards.evaluate_all('(rows)=>rows.map(c=>c.dataset.variant||null)')==['standard','branded',None,None,None,None,None,'instagram','menu']
                 assert cards.nth(6).get_attribute('data-product-id')=='nfc-review-card-3d'
-                expect(page.locator('.commerce-card[data-variant=instagram] img[data-media-claim-role=promotional_product_render]')).to_be_visible()
+                poster=page.locator('.commerce-card[data-variant=instagram] img.catalog-artwork-poster')
+                expect(poster).to_be_visible()
+                assert '/assets/model-posters/instagram.webp' in poster.get_attribute('src')
                 page.locator('.commerce-card[data-variant=instagram]').screenshot(path=EVIDENCE/f'{locale}-instagram-catalog-tile-{width}.png')
             if route=='/solutions/instagram-card':
                 assert page.locator('[data-thumb-to]').count()==5

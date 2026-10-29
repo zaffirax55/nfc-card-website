@@ -20,7 +20,7 @@ def native(route, query=''):
     return BeautifulSoup(hydrate_native_form(source,route+query,load_commerce(),content),'html.parser')
 
 @pytest.mark.parametrize('prefix',['','/en'])
-@pytest.mark.parametrize('variant,prices',[('standard',{'1':1500,'2':2600}),('branded',{'1':2000,'2':2600})])
+@pytest.mark.parametrize('variant,prices',[('standard',{'1':1500,'2':2600}),('branded',{'1':2000,'2':3600})])
 @pytest.mark.parametrize('quantity',['1','2','more'])
 def test_native_pdp_and_lead_selection_agree(prefix,variant,prices,quantity):
     route=prefix+'/solutions/'+('branded-review-card' if variant=='branded' else 'review-card')
@@ -71,12 +71,12 @@ def test_snapshot_and_notification_keep_observation_separate(service):
     first=service.submit(data)
     retry=service.submit({**data,'displayed_price':'UAH 999,999'})
     lead=stored(service)
-    assert first['receipt']['quote']['amount']==2600
+    assert first['receipt']['quote']['amount']==3600
     assert retry['receipt']['duplicate'] and retry['receipt']['id']==first['receipt']['id']
     assert lead['displayed_price']=='UAH 0.01' and len(service.telegram.calls)==1
     message=telegram_message(first['receipt']['id'],0,lead)
     assert 'Displayed price (untrusted): UAH 0.01' in message
-    assert '2600' in message and '/solutions/review-card' in message and 'synthetic' in message
+    assert '3600' in message and '/solutions/review-card' in message and 'synthetic' in message
 
 def test_public_media_exact_allowlist_and_original_hashes():
     media=json.loads((ROOT/'src/media-manifest.json').read_text('utf-8'))

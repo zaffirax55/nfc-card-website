@@ -1,0 +1,143 @@
+{
+  "uk": [
+    {
+      "kind": "telegram",
+      "href": "https://t.me/TijGabumG",
+      "label": "Написати в Telegram",
+      "display": "Telegram",
+      "value": "https://t.me/TijGabumG",
+      "fallback": null,
+      "event": "telegram_click"
+    },
+    {
+      "kind": "phone",
+      "href": "tel:+380980421619",
+      "label": "Зателефонувати",
+      "display": "+380 98 042 16 19",
+      "value": "+380980421619",
+      "fallback": null,
+      "event": "phone_click"
+    },
+    {
+      "kind": "whatsapp",
+      "href": "https://wa.me/380980421619",
+      "label": "Написати у WhatsApp",
+      "display": "WhatsApp",
+      "value": "+380980421619",
+      "fallback": "tel:+380980421619",
+      "event": "whatsapp_click"
+    },
+    {
+      "kind": "viber",
+      "href": "viber://chat?number=%2B380980421619",
+      "label": "Написати у Viber",
+      "display": "Viber",
+      "value": "+380980421619",
+      "fallback": "tel:+380980421619",
+      "event": "viber_click"
+    },
+    {
+      "kind": "instagram",
+      "href": "https://www.instagram.com/antonovdigital/",
+      "label": "Відкрити Instagram",
+      "display": "Instagram",
+      "value": "https://www.instagram.com/antonovdigital/",
+      "fallback": null,
+      "event": "instagram_click"
+    }
+  ],
+  "en": [
+    {
+      "kind": "telegram",
+      "href": "https://t.me/TijGabumG",
+      "label": "Message on Telegram",
+      "display": "Telegram",
+      "value": "https://t.me/TijGabumG",
+      "fallback": null,
+      "event": "telegram_click"
+    },
+    {
+      "kind": "phone",
+      "href": "tel:+380980421619",
+      "label": "Call",
+      "display": "+380 98 042 16 19",
+      "value": "+380980421619",
+      "fallback": null,
+      "event": "phone_click"
+    },
+    {
+      "kind": "whatsapp",
+      "href": "https://wa.me/380980421619",
+      "label": "Message on WhatsApp",
+      "display": "WhatsApp",
+      "value": "+380980421619",
+      "fallback": "tel:+380980421619",
+      "event": "whatsapp_click"
+    },
+    {
+      "kind": "viber",
+      "href": "viber://chat?number=%2B380980421619",
+      "label": "Message on Viber",
+      "display": "Viber",
+      "value": "+380980421619",
+      "fallback": "tel:+380980421619",
+      "event": "viber_click"
+    },
+    {
+      "kind": "instagram",
+      "href": "https://www.instagram.com/antonovdigital/",
+      "label": "Open Instagram",
+      "display": "Instagram",
+      "value": "https://www.instagram.com/antonovdigital/",
+      "fallback": null,
+      "event": "instagram_click"
+    }
+  ],
+  "pl": [
+    {
+      "kind": "telegram",
+      "href": "https://t.me/TijGabumG",
+      "label": "Napisz na Telegramie",
+      "display": "Telegram",
+      "value": "https://t.me/TijGabumG",
+      "fallback": null,
+      "event": "telegram_click"
+    },
+    {
+      "kind": "phone",
+      "href": "tel:+380980421619",
+      "label": "Zadzwoń",
+      "display": "+380 98 042 16 19",
+      "value": "+380980421619",
+      "fallback": null,
+      "event": "phone_click"
+    },
+    {
+      "kind": "whatsapp",
+      "href": "https://wa.me/380980421619",
+      "label": "Napisz na WhatsAppie",
+      "display": "WhatsApp",
+      "value": "+380980421619",
+      "fallback": "tel:+380980421619",
+      "event": "whatsapp_click"
+    },
+    {
+      "kind": "viber",
+      "href": "viber://chat?number=%2B380980421619",
+      "label": "Napisz na Viberze",
+      "display": "Viber",
+      "value": "+380980421619",
+      "fallback": "tel:+380980421619",
+      "event": "viber_click"
+    },
+    {
+      "kind": "instagram",
+      "href": "https://www.instagram.com/antonovdigital/",
+      "label": "Otwórz Instagram",
+      "display": "Instagram",
+      "value": "https://www.instagram.com/antonovdigital/",
+      "fallback": null,
+      "event": "instagram_click"
+    }
+  ]
+}

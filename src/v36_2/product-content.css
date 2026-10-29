@@ -1,0 +1,23 @@
+/* Product-specific reading layout extends the accepted graphite/silver styles. */
+.product-overview { border-top: 1px solid var(--line, #d8d8d6); }
+.product-overview-summary { max-width: 78ch; color: var(--muted, #686866); font-size: 1.08rem; line-height: 1.7; }
+.product-overview-sections { margin-top: 2rem; }
+.product-content-section { display: grid; grid-template-columns: minmax(12rem, .75fr) minmax(0, 1.6fr); gap: 1.5rem 3rem; padding: 1.7rem 0; border-top: 1px solid var(--line, #d8d8d6); scroll-margin-top: 7rem; }
+.product-content-section h3 { margin: 0; font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.45; }
+.product-content-section p { max-width: 78ch; margin: 0 0 1rem; line-height: 1.7; }
+.product-content-section p:last-child { margin-bottom: 0; }
+.product-content-section ul { margin: 0; padding-left: 1.2rem; }
+.product-content-section li { max-width: 78ch; margin: .5rem 0; line-height: 1.65; }
+.product-content-links, .product-content-policies { display: flex; flex-wrap: wrap; gap: .8rem 1.7rem; }
+.product-content-links { margin-top: 1rem; }
+.product-content-faq { margin-top: 2.5rem; border-top: 1px solid var(--line, #d8d8d6); padding-top: 2rem; }
+.product-content-faq .faq-list { margin-top: 1.5rem; max-width: 100%; }
+.product-content-faq summary { line-height: 1.5; }
+.product-content-faq details p { max-width: 82ch; line-height: 1.7; }
+.product-content-policies { border-top: 1px solid var(--line, #d8d8d6); margin-top: 2rem; padding-top: 1.5rem; }
+.product-overview a { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+ .product-content-section { grid-template-columns: minmax(0, 1fr); gap: .8rem; padding: 1.4rem 0; }
+ .product-content-policies { flex-direction: column; align-items: flex-start; }
+ .product-overview-summary { font-size: 1rem; }
+}

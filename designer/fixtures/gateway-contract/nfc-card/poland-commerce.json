@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "contractId": "NFC-CARD-PL-2026-09-v28",
+  "locale": "pl",
+  "market": "PL",
+  "currency": "PLN",
+  "currencyDisplay": "code",
+  "minorUnitDigits": 2,
+  "deposit": {
+    "amount": 20,
+    "currency": "PLN",
+    "frequency": "once_per_physical_order",
+    "includedInProductTotal": true,
+    "consultationOnly": null
+  },
+  "delivery": {
+    "originCountry": "UA",
+    "destinationMarket": "PL",
+    "includedInProductPrice": false,
+    "customerPays": true,
+    "polishCopy": "Zamówienie wysyłamy z Ukrainy. Koszt i sposób dostawy potwierdzamy przed wpłatą zaliczki. Koszt dostawy pokrywa klient.",
+    "otherEuropeCopy": "Koszt i przewoźnika ustalamy indywidualnie przed płatnością."
+  },
+  "payment": {
+    "methods": [
+      "bank_transfer",
+      "usdt_by_individual_agreement"
+    ],
+    "balanceTiming": "after_dispatch_and_tracking_confirmation",
+    "notConfirmed": [
+      "polish_domestic_bank_account",
+      "card_acquiring",
+      "invoice_or_vat_status",
+      "net_or_gross_tax_label"
+    ]
+  },
+  "products": {
+    "review-card": {
+      "publicName": "Review Card",
+      "offer": "standard",
+      "fixedPrices": {
+        "1": 129,
+        "2": 219
+      },
+      "moreThanTwo": "individual_quote"
+    },
+    "branded-review-card": {
+      "publicName": "Branded Review Card",
+      "offer": "branded",
+      "fixedPrices": {
+        "1": 169,
+        "2": 299
+      },
+      "moreThanTwo": "individual_quote"
+    },
+    "nfc-instagram-card": {
+      "publicName": "NFC Instagram Card",
+      "offer": "ready",
+      "fixedPrices": {
+        "1": 129,
+        "2": 219
+      },
+      "allowedQuantities": [
+        1,
+        2
+      ]
+    },
+    "review-card-3d": {
+      "publicName": "NFC Review Card 3D",
+      "productId": "nfc-review-card-3d",
+      "offer": "fixed_shown_design",
+      "unitPrice": 349,
+      "quantityDiscount": false,
+      "status": [
+        "prototype",
+        "made_to_order"
+      ]
+    },
+    "nfc-menu-card": {
+      "publicName": "NFC Menu Card",
+      "offer": "ready",
+      "mixVariants": true,
+      "allUnitsTierPricing": true,
+      "tiers": [
+        {
+          "min": 1,
+          "max": 4,
+          "unitPrice": 89
+        },
+        {
+          "min": 5,
+          "max": 9,
+          "unitPrice": 69
+        },
+        {
+          "min": 10,
+          "max": 24,
+          "unitPrice": 55
+        },
+        {
+          "min": 25,
+          "max": null,
+          "unitPrice": 45
+        }
+      ],
+      "consultationOnly": {
+        "quantity": 0,
+        "amount": null,
+        "deposit": null
+      }
+    }
+  },
+  "invariants": {
+    "uaAndEnContractsUnchanged": true,
+    "browserPriceIsAuthoritative": false,
+    "deliverySeparateFromProductPrice": true,
+    "noAutomaticReviewPublication": true,
+    "instagramDoesNotAutoFollow": true,
+    "menuDoesNotProvideOrderingUnlessExternalMenuSupportsIt": true,
+    "review3dDoesNotGuaranteeMoreReviews": true
+  }
+}

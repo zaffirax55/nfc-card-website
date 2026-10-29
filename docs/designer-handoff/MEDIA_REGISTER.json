@@ -1,0 +1,3594 @@
+{
+  "revision": "v36.2",
+  "sourceZIP_SHA256": "b6621cd2620bf57270ed2b616bb0ab4cdb609dbbce999319dfc242883c168b35",
+  "publicationAuthorized": false,
+  "counts": {
+    "originalSlots": 104,
+    "originalRendered": 44,
+    "originalPlaceholders": 27,
+    "originalOmitted": 33,
+    "approvedOmissions": 30,
+    "restaurantKept": 1,
+    "significantHold": 2,
+    "additionalCaptureSlots": 7,
+    "assetFiles": 35
+  },
+  "sourceFiles": {
+    "src/v36_2/media.mjs": "ab0173f2192750e00ed4812073e8e846bee30e96bc8ff252b0fef9bf0e277e87",
+    "src/v36_2/media-owner.mjs": "39e8aa776206675d77af1b899e078e045734ec994f9a4637e56fc7d168c67991",
+    "src/v36_2/editorial-content.mjs": "6227e22b895dd7c8e09d8ad08ee67a78e9d7e01862647b8a97b6827c2c7908ef"
+  },
+  "slots": [
+    {
+      "slot_id": "GLOBAL.HEADER.LOGO",
+      "planned_purpose": "Primary logo on light navigation surface",
+      "planned_source": "src/media/v9/nfc-card-logo-primary.svg",
+      "planned_source_sha256": "9370da66fc8cd4b11a3cda60d692e9aa9451c04522b21c812473206f4ba222f9",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "header img[src=\"/nfc-card-website/assets/logo.svg\"]",
+      "actual_asset": "assets/logo.svg",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/v9/nfc-card-logo-primary.svg",
+      "actual_asset_sha256": "9370da66fc8cd4b11a3cda60d692e9aa9451c04522b21c812473206f4ba222f9",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/logo.svg",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "GLOBAL.FOOTER.LOGO_DARK.OPTION",
+      "planned_purpose": "Reversed logo if owner selects dark footer",
+      "planned_source": "src/media/v9/nfc-card-logo-reversed.svg",
+      "planned_source_sha256": "01447ae086dfc42e65cf9a8f96f893b948c6e358658a63fc7229d21fd7f709d9",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"GLOBAL.FOOTER.LOGO_DARK.OPTION\"]",
+      "actual_asset": "",
+      "reason": "An optional reversed logo is not used because the accepted footer remains light; primary original logo is used there.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "GLOBAL.COMPACT_MARK",
+      "planned_purpose": "Compact brand mark for constrained UI",
+      "planned_source": "src/media/v9/nfc-card-mark.svg",
+      "planned_source_sha256": "c16473474257ddfdec02c904d69a81ba1de63c87e91e464f16c65a36eb5d3dcd",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"GLOBAL.COMPACT_MARK\"]",
+      "actual_asset": "",
+      "reason": "The original full logo remains legible with the responsive two-row header; no separate compact-mark substitution is needed.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "GLOBAL.FAVICON",
+      "planned_purpose": "Browser/favicon identity",
+      "planned_source": "src/media/v9/nfc-card-favicon.svg",
+      "planned_source_sha256": "72f47239068397642729856cf55b548d0edccd3c747348eff805fb1fa77436e6",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "link[rel=\"icon\"][href=\"/nfc-card-website/assets/favicon.svg\"]",
+      "actual_asset": "assets/favicon.svg",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/v9/nfc-card-favicon.svg",
+      "actual_asset_sha256": "72f47239068397642729856cf55b548d0edccd3c747348eff805fb1fa77436e6",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/favicon.svg",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.GALLERY.DESIGN",
+      "planned_purpose": "Standard Review ready design detail",
+      "planned_source": "src/media/v9/01-review-card-design-render.webp",
+      "planned_source_sha256": "500d100f3bb5c01b5febda2df8bb6918cca7ca09936e8a6f1f2b6774992eea98",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.GALLERY.DESIGN\"]",
+      "actual_asset": "",
+      "reason": "Unused alternate source retained in immutable Gate A baseline; not required to duplicate the selected current product/gallery role.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ARCHIVE.REVIEW.LEGACY.FRONT",
+      "planned_purpose": "Retain legacy front original; prefer current September front for new detail slot",
+      "planned_source": "src/media/v9/02-review-card-real-front.webp",
+      "planned_source_sha256": "3c29ea613955253224b7ae53ad95ac24b49c3a915f39a3eb7a2737b166807ace",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ARCHIVE.REVIEW.LEGACY.FRONT\"]",
+      "actual_asset": "",
+      "reason": "Historical alternate source retained in original archive; current September gallery is selected without deleting history or implying an active historic offer.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.GALLERY.HAND.LEGACY",
+      "planned_purpose": "Alternate original in-hand context for standard Review",
+      "planned_source": "src/media/v9/03-review-card-real-in-hand.webp",
+      "planned_source_sha256": "32b9690fb453bbecbc14be9714ebc7065ce3355744cbb9344cdd06214b95caa9",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.GALLERY.HAND.LEGACY\"]",
+      "actual_asset": "",
+      "reason": "Unused alternate source retained in immutable Gate A baseline; not required to duplicate the selected current product/gallery role.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.GALLERY.BACK.LEGACY",
+      "planned_purpose": "Alternate original reverse-side detail",
+      "planned_source": "src/media/v9/04-review-card-real-back.webp",
+      "planned_source_sha256": "b6df354b2852610173b1aad03e935b175473d5c6027e4074beac3d8d162fb838",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.GALLERY.BACK.LEGACY\"]",
+      "actual_asset": "",
+      "reason": "Unused alternate source retained in immutable Gate A baseline; not required to duplicate the selected current product/gallery role.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.REVIEW.DIRECT_FORM.ILLUSTRATION",
+      "planned_purpose": "Educational promotional image, subject to claims/localization review",
+      "planned_source": "src/media/v9/05-promo-direct-review-form.webp",
+      "planned_source_sha256": "3d027f8fe044abc5726f50b4d32d50f13ecec4be62fe8bea4aa34fd2f42e309f",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"EDUCATION.REVIEW.DIRECT_FORM.ILLUSTRATION\"]",
+      "actual_asset": "",
+      "reason": "Baked-text promotional/educational alternate not needed in all three markets; native translated diagram/steps and current product photographs cover the explanation without importing unreviewed claims.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.PORTRAIT.LEGACY",
+      "planned_purpose": "Historic founder portrait retained as alternate",
+      "planned_source": "src/media/v9/artem-antonov-founder-photo.webp",
+      "planned_source_sha256": "65849e440f008c63285e50cfb958404aedcc9827466e3f078df83432fc9dd7b7",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.PORTRAIT.LEGACY\"]",
+      "actual_asset": "",
+      "reason": "The current approved founder portrait is selected for About; legacy portrait bytes remain retained but are not shown twice.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.STORY.AUSTRIA.CLIP1",
+      "planned_purpose": "Founder story atmospheric video chapter 1",
+      "planned_source": "src/media/v9/austria-story-01-muted.mp4",
+      "planned_source_sha256": "b6a7ee87376728c34c2be59b86303d26b9a995a5f8c7cbbf194f9f3f20ce1008",
+      "disposition": "review_placeholder",
+      "route": "/about/",
+      "component_selector": "[data-media-slot~=\"ABOUT.STORY.AUSTRIA.CLIP1\"]",
+      "actual_asset": "",
+      "reason": "Named founder-story review panels preserve the two planned chapter roles without claiming approved full playback or documentary relevance.",
+      "owner_decision": "Choose whether the founder chapters serve storefront About and approve complete playback/captions/rights.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.STORY.AUSTRIA.CLIP2",
+      "planned_purpose": "Founder story atmospheric video chapter 2",
+      "planned_source": "src/media/v9/austria-story-02-muted.mp4",
+      "planned_source_sha256": "a639e3bb64a363b79dee12c154eaa0dbe41e8cc916fb85c5e7d51a04ff809a86",
+      "disposition": "review_placeholder",
+      "route": "/about/",
+      "component_selector": "[data-media-slot~=\"ABOUT.STORY.AUSTRIA.CLIP2\"]",
+      "actual_asset": "",
+      "reason": "Named founder-story review panels preserve the two planned chapter roles without claiming approved full playback or documentary relevance.",
+      "owner_decision": "Choose whether the founder chapters serve storefront About and approve complete playback/captions/rights.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.STORY.AUSTRIA.CLIP1.POSTER",
+      "planned_purpose": "Loading/reduced-motion fallback for chapter 1",
+      "planned_source": "src/media/v9/austria-story-01-poster.jpg",
+      "planned_source_sha256": "1e6ee77027d894e376ad1a01d9a15ca8fdd0b053eb334da65b904e5f2d829775",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.STORY.AUSTRIA.CLIP1.POSTER\"]",
+      "actual_asset": "",
+      "reason": "No founder-story video is played in this review; corresponding still posters are omitted to avoid two extra atmospheric blocks without approved narrative.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.STORY.AUSTRIA.CLIP2.POSTER",
+      "planned_purpose": "Loading/reduced-motion fallback for chapter 2",
+      "planned_source": "src/media/v9/austria-story-02-poster.jpg",
+      "planned_source_sha256": "13fb263544a00d4009684b2e7dbcb19f11bc0282518aedd5837a360fa34c55cd",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.STORY.AUSTRIA.CLIP2.POSTER\"]",
+      "actual_asset": "",
+      "reason": "No founder-story video is played in this review; corresponding still posters are omitted to avoid two extra atmospheric blocks without approved narrative.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BRANDED.MINI.PERSONALIZATION.NEUTRAL",
+      "planned_purpose": "Neutral personalization example until owner provides an actual approved Branded asset",
+      "planned_source": "src/media/v11/branded-review-card-neutral-placeholder.svg",
+      "planned_source_sha256": "71c198633486c4a9fddebb6e9e7f9ad6fd0cedb94bb803d59f95338f568ac6d5",
+      "disposition": "review_placeholder",
+      "route": "/solutions/branded-beauty-review-card/",
+      "component_selector": "[data-media-slot~=\"BRANDED.MINI.PERSONALIZATION.NEUTRAL\"]",
+      "actual_asset": "",
+      "reason": "Original native schematic is clearly a design example, not a photograph of a manufactured Branded card. Exact current products/prices are not inferred from the drawing.",
+      "owner_decision": "Provide approved exact finished Branded examples if desired before final production merchandising.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.PORTRAIT",
+      "planned_purpose": "About introduction portrait",
+      "planned_source": "src/media/founder/portrait-desktop.webp",
+      "planned_source_sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "disposition": "rendered_asset",
+      "route": "/about/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/founder-primary.webp\"]",
+      "actual_asset": "assets/founder-primary.webp",
+      "reason": "Selected exact approved current founder portrait; no invented team, work or biography claim.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/founder/portrait-desktop.webp",
+      "actual_asset_sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/founder-primary.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.HOCKEY.TEAM",
+      "planned_purpose": "Founder teamwork story",
+      "planned_source": "src/media/founder/hockey-team-desktop.webp",
+      "planned_source_sha256": "ed0e8dd925165a107294edadf95e24288f2f351dd33d95eaa2e184f578114888",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.HOCKEY.TEAM\"]",
+      "actual_asset": "",
+      "reason": "Optional personal-story photo chapter is not used to invent company work or outcomes. The real founder portrait and About text preserve identity; expanded biography/media selection remains an explicit owner composition decision.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.HOCKEY.PUCK",
+      "planned_purpose": "Founder concentration story",
+      "planned_source": "src/media/founder/hockey-puck-desktop.webp",
+      "planned_source_sha256": "923cdf3845ee3ae4afcb29490d1f61c907661687954722227b52fdabb46e1d01",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.HOCKEY.PUCK\"]",
+      "actual_asset": "",
+      "reason": "Optional personal-story photo chapter is not used to invent company work or outcomes. The real founder portrait and About text preserve identity; expanded biography/media selection remains an explicit owner composition decision.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.URBAN",
+      "planned_purpose": "Founder philosophy transition, contained full figure",
+      "planned_source": "src/media/founder/urban-desktop.webp",
+      "planned_source_sha256": "67e0e9975df885c6779c4ac64a338a033bb6b8dbe490e58014d4ab807b7c3fb6",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.URBAN\"]",
+      "actual_asset": "",
+      "reason": "Optional personal-story photo chapter is not used to invent company work or outcomes. The real founder portrait and About text preserve identity; expanded biography/media selection remains an explicit owner composition decision.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.GOPRO",
+      "planned_purpose": "Founder technology/filming story",
+      "planned_source": "src/media/founder/gopro-desktop.webp",
+      "planned_source_sha256": "fcb8ba1a9900012b60335b7a4cb79bcc068a1aaaae6c15479011509212ad7fb0",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.GOPRO\"]",
+      "actual_asset": "",
+      "reason": "Optional personal-story photo chapter is not used to invent company work or outcomes. The real founder portrait and About text preserve identity; expanded biography/media selection remains an explicit owner composition decision.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.BOAT",
+      "planned_purpose": "Founder water-story chapter",
+      "planned_source": "src/media/founder/boat-desktop.webp",
+      "planned_source_sha256": "a873287440f8aa9d5d124a854989bac129e6587abeb8029517a7ae210b70afa5",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.BOAT\"]",
+      "actual_asset": "",
+      "reason": "Optional personal-story photo chapter is not used to invent company work or outcomes. The real founder portrait and About text preserve identity; expanded biography/media selection remains an explicit owner composition decision.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.JETSKI",
+      "planned_purpose": "Founder context on homepage/About if approved in final page priorities",
+      "planned_source": "src/media/founder/jetski-desktop.webp",
+      "planned_source_sha256": "2f2876e22b98add0753fcb80370ecfe51fb2e869619ddfea10ab696beaab8176",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"ABOUT.FOUNDER.JETSKI\"]",
+      "actual_asset": "",
+      "reason": "Optional personal-story photo chapter is not used to invent company work or outcomes. The real founder portrait and About text preserve identity; expanded biography/media selection remains an explicit owner composition decision.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.CATALOG_AND_GALLERY.FRONT",
+      "planned_purpose": "Primary standard Review real front, catalog/detail",
+      "planned_source": "src/media/2026-09/review-card-front.webp",
+      "planned_source_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review.webp\"]",
+      "actual_asset": "assets/review.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-front.webp",
+      "actual_asset_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.GALLERY.BACK",
+      "planned_purpose": "Standard Review reverse-side detail",
+      "planned_source": "src/media/2026-09/review-card-back.webp",
+      "planned_source_sha256": "1b9ed5247c961ca78307f313a1cb48ceef8b47a56fbb4602de61930fd5771e3f",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review-back.webp\"]",
+      "actual_asset": "assets/review-back.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-back.webp",
+      "actual_asset_sha256": "1b9ed5247c961ca78307f313a1cb48ceef8b47a56fbb4602de61930fd5771e3f",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review-back.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.GALLERY.EDGE",
+      "planned_purpose": "Standard Review edge/thickness context",
+      "planned_source": "src/media/2026-09/review-card-edge.webp",
+      "planned_source_sha256": "86238a5203d58f46d1a95ca84ed8d15c16d049bcb592f538285d4dba0e2d0637",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review-edge.webp\"]",
+      "actual_asset": "assets/review-edge.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-edge.webp",
+      "actual_asset_sha256": "86238a5203d58f46d1a95ca84ed8d15c16d049bcb592f538285d4dba0e2d0637",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review-edge.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.GALLERY.HAND",
+      "planned_purpose": "Standard Review in-hand scale context",
+      "planned_source": "src/media/2026-09/review-card-in-hand.webp",
+      "planned_source_sha256": "a60fe94e3c1e30b3728538d80a19d902cd19c48e3aedb28e84790c5e5bf5e1a6",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review-hand.webp\"]",
+      "actual_asset": "assets/review-hand.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-in-hand.webp",
+      "actual_asset_sha256": "a60fe94e3c1e30b3728538d80a19d902cd19c48e3aedb28e84790c5e5bf5e1a6",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review-hand.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.REVIEW.OVERVIEW",
+      "planned_purpose": "Review overview illustration on decision/support section",
+      "planned_source": "src/media/2026-09/review-card-overview.webp",
+      "planned_source_sha256": "8c1a87236c02d9024823f445e3d4f6a430b8056c92dc3bd1d2eaaabd8b98c74a",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"EDUCATION.REVIEW.OVERVIEW\"]",
+      "actual_asset": "",
+      "reason": "Baked-text promotional/educational alternate not needed in all three markets; native translated diagram/steps and current product photographs cover the explanation without importing unreviewed claims.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.REVIEW.CONTEXT",
+      "planned_purpose": "Review request context illustration",
+      "planned_source": "src/media/2026-09/review-card-review-context.webp",
+      "planned_source_sha256": "af4370212b2338ca6332cc6e99ad052a636362ba84d1503303734f37c94152ea",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"EDUCATION.REVIEW.CONTEXT\"]",
+      "actual_asset": "",
+      "reason": "Baked-text promotional/educational alternate not needed in all three markets; native translated diagram/steps and current product photographs cover the explanation without importing unreviewed claims.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.REVIEW.HOW_IT_WORKS",
+      "planned_purpose": "How Review opens agreed destination illustration",
+      "planned_source": "src/media/2026-09/review-card-how-it-works.webp",
+      "planned_source_sha256": "ec86d9d1b2c8803508deb2786056a4941d3af0c630c9ae02b6e8cfe51de856da",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"EDUCATION.REVIEW.HOW_IT_WORKS\"]",
+      "actual_asset": "",
+      "reason": "Baked-text promotional/educational alternate not needed in all three markets; native translated diagram/steps and current product photographs cover the explanation without importing unreviewed claims.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.REVIEW.BENEFITS",
+      "planned_purpose": "Business benefit explainer illustration",
+      "planned_source": "src/media/2026-09/review-card-business-benefits.webp",
+      "planned_source_sha256": "91e3ecec6d735cc98700d4875a8a56588c98c1302605171eb14e750b4b43d643",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"EDUCATION.REVIEW.BENEFITS\"]",
+      "actual_asset": "",
+      "reason": "Baked-text promotional/educational alternate not needed in all three markets; native translated diagram/steps and current product photographs cover the explanation without importing unreviewed claims.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO1.POSTER",
+      "planned_purpose": "Fallback/loading poster of demonstration1",
+      "planned_source": "src/media/2026-09/review-card-video-1-poster.webp",
+      "planned_source_sha256": "21022db9cdaa2769e5b062fd3d5c0c88cba9adc95f1e4248e679db1a03154806",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review-demo-poster.webp\"]",
+      "actual_asset": "assets/review-demo-poster.webp",
+      "reason": "Original still poster only, explicitly labelled; it is not a playing video or proof that playback/captions were accepted.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-video-1-poster.webp",
+      "actual_asset_sha256": "21022db9cdaa2769e5b062fd3d5c0c88cba9adc95f1e4248e679db1a03154806",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review-demo-poster.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO1",
+      "planned_purpose": "Product demonstration1",
+      "planned_source": "src/media/2026-09/review-card-video-1.mp4",
+      "planned_source_sha256": "261a8e3f791d84de81c45bf4de410176d96492ec5b0d1758eb050b73b1a855ae",
+      "disposition": "review_placeholder",
+      "route": "/solutions/review-card/",
+      "component_selector": "[data-media-slot~=\"REVIEW.READY.VIDEO1\"]",
+      "actual_asset": "",
+      "reason": "A named Google tap-demonstration review panel preserves the role. Full video playback, privacy and translated caption acceptance are not established; no player or autoplay is simulated.",
+      "owner_decision": "Approve full clip/rights/captions before real playback or publication.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO2.POSTER",
+      "planned_purpose": "Fallback/loading poster of demonstration2",
+      "planned_source": "src/media/2026-09/review-card-video-2-poster.webp",
+      "planned_source_sha256": "116b4228010387d894e6713c618a6e62c22bc79a0640a0611fd31f7314d8b4aa",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.VIDEO2.POSTER\"]",
+      "actual_asset": "",
+      "reason": "Their parent clips remain on editorial HOLD; one explicit poster-only example is enough for the review composition, not three misleading inactive players.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO2",
+      "planned_purpose": "Product demonstration2",
+      "planned_source": "src/media/2026-09/review-card-video-2.mp4",
+      "planned_source_sha256": "a3394dcdd37c2e0dcdd78438ea669090c0ddc96f59e13ec049e4755d37456a03",
+      "disposition": "review_placeholder",
+      "route": "/solutions/review-card/",
+      "component_selector": "[data-media-slot~=\"REVIEW.READY.VIDEO2\"]",
+      "actual_asset": "",
+      "reason": "A named Google tap-demonstration review panel preserves the role. Full video playback, privacy and translated caption acceptance are not established; no player or autoplay is simulated.",
+      "owner_decision": "Approve full clip/rights/captions before real playback or publication.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO3.POSTER",
+      "planned_purpose": "Fallback/loading poster of detailed demonstration3",
+      "planned_source": "src/media/2026-09/review-card-video-3-poster.webp",
+      "planned_source_sha256": "e7e042144d2052a387f2ef700e124d2e395f1d5ede3f2208eb99ff8818776502",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.VIDEO3.POSTER\"]",
+      "actual_asset": "",
+      "reason": "Their parent clips remain on editorial HOLD; one explicit poster-only example is enough for the review composition, not three misleading inactive players.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO3",
+      "planned_purpose": "Detailed product explanation, editorial hold before new placement",
+      "planned_source": "src/media/2026-09/review-card-video-3.mp4",
+      "planned_source_sha256": "015bab847694482d6d8682284797f7ec9eb41f00e1539574563594dbb28dd4a4",
+      "disposition": "review_placeholder",
+      "route": "/solutions/review-card/",
+      "component_selector": "[data-media-slot~=\"REVIEW.READY.VIDEO3\"]",
+      "actual_asset": "",
+      "reason": "A named Google tap-demonstration review panel preserves the role. Full video playback, privacy and translated caption acceptance are not established; no player or autoplay is simulated.",
+      "owner_decision": "Approve full clip/rights/captions before real playback or publication.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO3.CAPTIONS.UK",
+      "planned_purpose": "Ukrainian condensed subtitles of clip3",
+      "planned_source": "src/media/2026-09/review-card-video-3-uk.vtt",
+      "planned_source_sha256": "e81fb4daac7da46ee23ff1b5ba08538600f33cc02f65092d922deb880f7e9b49",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.VIDEO3.CAPTIONS.UK\"]",
+      "actual_asset": "",
+      "reason": "The parent video3 is not played. Caption files stay historical inputs pending full semantic/playback/privacy review; no subtitle acceptance is claimed.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO3.CAPTIONS.EN",
+      "planned_purpose": "English condensed subtitles of clip3",
+      "planned_source": "src/media/2026-09/review-card-video-3-en.vtt",
+      "planned_source_sha256": "4c78e9541a74e3b8c7afd4e47890e3c3617cbc150799c9833ca6746e0975d8ae",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.VIDEO3.CAPTIONS.EN\"]",
+      "actual_asset": "",
+      "reason": "The parent video3 is not played. Caption files stay historical inputs pending full semantic/playback/privacy review; no subtitle acceptance is claimed.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW.READY.VIDEO3.CAPTIONS.PL",
+      "planned_purpose": "Polish condensed subtitles of clip3",
+      "planned_source": "src/media/2026-09/review-card-video-3-pl.vtt",
+      "planned_source_sha256": "00b3a3278eb3b05e0e0563fbb719846909e87df199ff0fa70e00b618f31f1bfc",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"REVIEW.READY.VIDEO3.CAPTIONS.PL\"]",
+      "actual_asset": "",
+      "reason": "The parent video3 is not played. Caption files stay historical inputs pending full semantic/playback/privacy review; no subtitle acceptance is claimed.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "INSTAGRAM.READY.GALLERY.WINDOW",
+      "planned_purpose": "Authentic Instagram front at window",
+      "planned_source": "src/media/instagram/instagram-card-real-front-window.webp",
+      "planned_source_sha256": "e617240a1a5d322e7402e27eeef54654a258db773a95c2c695bcc695545fa272",
+      "disposition": "rendered_asset",
+      "route": "/solutions/instagram-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/instagram-window.webp\"]",
+      "actual_asset": "assets/instagram-window.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/instagram/instagram-card-real-front-window.webp",
+      "actual_asset_sha256": "e617240a1a5d322e7402e27eeef54654a258db773a95c2c695bcc695545fa272",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/instagram-window.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "INSTAGRAM.READY.CATALOG_AND_GALLERY.FRONT",
+      "planned_purpose": "Primary authentic Instagram front on desk",
+      "planned_source": "src/media/instagram/instagram-card-real-front-desk.webp",
+      "planned_source_sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "disposition": "rendered_asset",
+      "route": "/solutions/instagram-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/instagram.webp\"]",
+      "actual_asset": "assets/instagram.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/instagram/instagram-card-real-front-desk.webp",
+      "actual_asset_sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/instagram.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "INSTAGRAM.READY.GALLERY.EDGE",
+      "planned_purpose": "Authentic Instagram edge profile",
+      "planned_source": "src/media/instagram/instagram-card-real-edge-profile.webp",
+      "planned_source_sha256": "b94e29cfcd4dddb7b766e8fa50e8a2053e5c30eb6c87d18c40d1cc11ac816df9",
+      "disposition": "rendered_asset",
+      "route": "/solutions/instagram-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/instagram-edge.webp\"]",
+      "actual_asset": "assets/instagram-edge.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/instagram/instagram-card-real-edge-profile.webp",
+      "actual_asset_sha256": "b94e29cfcd4dddb7b766e8fa50e8a2053e5c30eb6c87d18c40d1cc11ac816df9",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/instagram-edge.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "INSTAGRAM.READY.GALLERY.BACK",
+      "planned_purpose": "Authentic Instagram reverse/mounting view",
+      "planned_source": "src/media/instagram/instagram-card-real-back-mounting.webp",
+      "planned_source_sha256": "baeda27a47eed8ba28f2e94af36a8e6e86d4d00d789332296b6193de2dc026fb",
+      "disposition": "rendered_asset",
+      "route": "/solutions/instagram-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/instagram-back.webp\"]",
+      "actual_asset": "assets/instagram-back.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/instagram/instagram-card-real-back-mounting.webp",
+      "actual_asset_sha256": "baeda27a47eed8ba28f2e94af36a8e6e86d4d00d789332296b6193de2dc026fb",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/instagram-back.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "INSTAGRAM.READY.GALLERY.RENDER",
+      "planned_purpose": "Clean design visualization, secondary to actual photos",
+      "planned_source": "src/media/instagram/instagram-card-clean-front-render.webp",
+      "planned_source_sha256": "5ed2e3f6149abea4d8b5c7c8768878b6f4b3c4090e4ea5d6c4646b7f875abe5e",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"INSTAGRAM.READY.GALLERY.RENDER\"]",
+      "actual_asset": "",
+      "reason": "A clean render is redundant alongside four actual owner product views; actual photographs remain primary and no extra apparent proof is created.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.SQUARE_BLACK.DESK",
+      "planned_purpose": "Menu square black visualization on desk",
+      "planned_source": "src/media/menu/menu-card-square-black-desk.webp",
+      "planned_source_sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "disposition": "rendered_asset",
+      "route": "/solutions/menu-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/menu-square_100_black.webp\"]",
+      "actual_asset": "assets/menu-square_100_black.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/menu/menu-card-square-black-desk.webp",
+      "actual_asset_sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/menu-square_100_black.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.SQUARE_BLACK.HAND",
+      "planned_purpose": "Menu square black hand-context visualization",
+      "planned_source": "src/media/menu/menu-card-square-black-hand.webp",
+      "planned_source_sha256": "d07e359fe6ad26db4fe360723d19ee999727af5d1c7c9e01131f05b635ddaf9f",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"MENU.VARIANTS.SQUARE_BLACK.HAND\"]",
+      "actual_asset": "",
+      "reason": "Additional generated hand-context view is deliberately omitted; selected desk illustration and explicit nominal-size guide cover the variant without implying a real manufacturing/scale photo.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.ROUND_WHITE.DESK",
+      "planned_purpose": "Menu round white visualization on desk",
+      "planned_source": "src/media/menu/menu-card-round-white-desk.webp",
+      "planned_source_sha256": "c07cd061591a1ac4d045383dd29e27e3e31d06e5c1d61dde4f1bac38413e02e5",
+      "disposition": "rendered_asset",
+      "route": "/solutions/menu-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/menu-round_70_white.webp\"]",
+      "actual_asset": "assets/menu-round_70_white.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/menu/menu-card-round-white-desk.webp",
+      "actual_asset_sha256": "c07cd061591a1ac4d045383dd29e27e3e31d06e5c1d61dde4f1bac38413e02e5",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/menu-round_70_white.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.ROUND_WHITE.HAND",
+      "planned_purpose": "Menu round white hand-context visualization",
+      "planned_source": "src/media/menu/menu-card-round-white-hand.webp",
+      "planned_source_sha256": "b33bc44bdd7abbe63456aca6a890fcfff2abc220f8c00847e2fc978efc9f2727",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"MENU.VARIANTS.ROUND_WHITE.HAND\"]",
+      "actual_asset": "",
+      "reason": "Additional generated hand-context view is deliberately omitted; selected desk illustration and explicit nominal-size guide cover the variant without implying a real manufacturing/scale photo.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.ROUND_BLACK.DESK",
+      "planned_purpose": "Menu round black visualization on desk",
+      "planned_source": "src/media/menu/menu-card-round-black-desk.webp",
+      "planned_source_sha256": "368f88f827ae6b9696d163553b201b4975b8c9e7fa619e30c7f5d36c83a7d71e",
+      "disposition": "rendered_asset",
+      "route": "/solutions/menu-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/menu-round_70_black.webp\"]",
+      "actual_asset": "assets/menu-round_70_black.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/menu/menu-card-round-black-desk.webp",
+      "actual_asset_sha256": "368f88f827ae6b9696d163553b201b4975b8c9e7fa619e30c7f5d36c83a7d71e",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/menu-round_70_black.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.ROUND_BLACK.HAND",
+      "planned_purpose": "Menu round black hand-context visualization",
+      "planned_source": "src/media/menu/menu-card-round-black-hand.webp",
+      "planned_source_sha256": "a9d6c43c13400f61c71c0a4f34e59401121c98e34360bf346d3fb23bb74f1e6b",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"MENU.VARIANTS.ROUND_BLACK.HAND\"]",
+      "actual_asset": "",
+      "reason": "Additional generated hand-context view is deliberately omitted; selected desk illustration and explicit nominal-size guide cover the variant without implying a real manufacturing/scale photo.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.SQUARE_WHITE.DESK",
+      "planned_purpose": "Menu square white visualization on desk",
+      "planned_source": "src/media/menu/menu-card-square-white-desk.webp",
+      "planned_source_sha256": "448ddbf9233876019d355f155b03ac6fe87e479d877ddccae80dc6f5caa8980f",
+      "disposition": "rendered_asset",
+      "route": "/solutions/menu-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/menu-square_100_white.webp\"]",
+      "actual_asset": "assets/menu-square_100_white.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/menu/menu-card-square-white-desk.webp",
+      "actual_asset_sha256": "448ddbf9233876019d355f155b03ac6fe87e479d877ddccae80dc6f5caa8980f",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/menu-square_100_white.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.SQUARE_WHITE.HAND",
+      "planned_purpose": "Menu square white hand-context visualization",
+      "planned_source": "src/media/menu/menu-card-square-white-hand.webp",
+      "planned_source_sha256": "8674a0f65a625ea739deb4bf1ad70e39b5c6de0a89a1ec73dfeffe9e49d10918",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"MENU.VARIANTS.SQUARE_WHITE.HAND\"]",
+      "actual_asset": "",
+      "reason": "Additional generated hand-context view is deliberately omitted; selected desk illustration and explicit nominal-size guide cover the variant without implying a real manufacturing/scale photo.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "unused",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_OMISSION",
+        "decision": "omit_current_composition",
+        "group": "optional",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.FORMAT_COMPARE.SQUARE_WHITE",
+      "planned_purpose": "Illustrative square white size comparison",
+      "planned_source": "src/media/menu/menu-card-square-white-size-pair.webp",
+      "planned_source_sha256": "8659d601b87846d5ea6f9688068b8fa886a5ee72e9edd04048552e90d7d53aa5",
+      "disposition": "review_placeholder",
+      "route": "/solutions/menu-card/",
+      "component_selector": "[data-media-slot~=\"MENU.FORMAT_COMPARE.SQUARE_WHITE\"]",
+      "actual_asset": "",
+      "reason": "The selected nominal dimensions and neutral size guide distinguish 100 / 60 / 70 mm. This is explicitly a schematic, not a claimed photographed true-scale manufacture comparison.",
+      "owner_decision": "Actual comparison photos remain optional owner media request; existing visualization provenance is retained.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.FORMAT_COMPARE.SQUARE_BLACK",
+      "planned_purpose": "Illustrative square black size comparison",
+      "planned_source": "src/media/menu/menu-card-square-black-size-pair.webp",
+      "planned_source_sha256": "46acd670f44037c7dbe153a517e5ab464ab639c0534e7dcf701b7704162cfa58",
+      "disposition": "review_placeholder",
+      "route": "/solutions/menu-card/",
+      "component_selector": "[data-media-slot~=\"MENU.FORMAT_COMPARE.SQUARE_BLACK\"]",
+      "actual_asset": "",
+      "reason": "The selected nominal dimensions and neutral size guide distinguish 100 / 60 / 70 mm. This is explicitly a schematic, not a claimed photographed true-scale manufacture comparison.",
+      "owner_decision": "Actual comparison photos remain optional owner media request; existing visualization provenance is retained.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW3D.CATALOG_AND_GALLERY.FRONT_HAND",
+      "planned_purpose": "Shown 3D prototype front in hand",
+      "planned_source": "src/media/review-3d/review-card-3d-front-in-hand.webp",
+      "planned_source_sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card-3d/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/three-d.webp\"]",
+      "actual_asset": "assets/three-d.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/review-3d/review-card-3d-front-in-hand.webp",
+      "actual_asset_sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/three-d.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW3D.GALLERY.DESK",
+      "planned_purpose": "Shown 3D prototype on desk",
+      "planned_source": "src/media/review-3d/review-card-3d-front-on-desk.webp",
+      "planned_source_sha256": "697c4ba1579b9a9009cdeea0a14288156874001e81c11fcf17e1f70589ad9997",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card-3d/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/three-d-desk.webp\"]",
+      "actual_asset": "assets/three-d-desk.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/review-3d/review-card-3d-front-on-desk.webp",
+      "actual_asset_sha256": "697c4ba1579b9a9009cdeea0a14288156874001e81c11fcf17e1f70589ad9997",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/three-d-desk.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEW3D.GALLERY.BACK",
+      "planned_purpose": "Shown 3D prototype reverse side",
+      "planned_source": "src/media/review-3d/review-card-3d-back.webp",
+      "planned_source_sha256": "aa31b9fb3e14e5e0249a4010846bd59312cea82aa319b83fade5a4b3f0c0e33e",
+      "disposition": "rendered_asset",
+      "route": "/solutions/review-card-3d/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/three-d-back.webp\"]",
+      "actual_asset": "assets/three-d-back.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/review-3d/review-card-3d-back.webp",
+      "actual_asset_sha256": "aa31b9fb3e14e5e0249a4010846bd59312cea82aa319b83fade5a4b3f0c0e33e",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/three-d-back.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BEAUTY.READY.CATALOG_AND_GALLERY.FRONT",
+      "planned_purpose": "Beauty ready Mini primary front in hand",
+      "planned_source": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+      "planned_source_sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "disposition": "rendered_asset",
+      "route": "/solutions/beauty-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty.webp\"]",
+      "actual_asset": "assets/beauty.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+      "actual_asset_sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BEAUTY.READY.GALLERY.GROUP_HAND",
+      "planned_purpose": "Beauty ready cards in hand quantity context",
+      "planned_source": "src/media/niche-v33/beauty-review-card-group-hand-crop-960.webp",
+      "planned_source_sha256": "87fa6d0fa9f8de2997d39f259737f4689d3bc08033b10749b49af0ca1e6661da",
+      "disposition": "rendered_asset",
+      "route": "/solutions/beauty-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty-group-hand.webp\"]",
+      "actual_asset": "assets/beauty-group-hand.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-group-hand-crop-960.webp",
+      "actual_asset_sha256": "87fa6d0fa9f8de2997d39f259737f4689d3bc08033b10749b49af0ca1e6661da",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty-group-hand.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BEAUTY.READY.GALLERY.GROUP_FRONT",
+      "planned_purpose": "Beauty ready group/front design detail",
+      "planned_source": "src/media/niche-v33/beauty-review-card-group-front-crop-960.webp",
+      "planned_source_sha256": "902858586cab6d5349454dd37d68f2d2db493cc6ec7ec195f42d4df6f3d72d34",
+      "disposition": "rendered_asset",
+      "route": "/solutions/beauty-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty-group-front.webp\"]",
+      "actual_asset": "assets/beauty-group-front.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-group-front-crop-960.webp",
+      "actual_asset_sha256": "902858586cab6d5349454dd37d68f2d2db493cc6ec7ec195f42d4df6f3d72d34",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty-group-front.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BEAUTY.READY.GALLERY.EDGE",
+      "planned_purpose": "Beauty ready edge detail",
+      "planned_source": "src/media/niche-v33/beauty-review-card-edge-thickness-crop-960.webp",
+      "planned_source_sha256": "2c3d51e75ee05aaba6a9188b5dbeddcbba19e69cf070395c41c1a8eb7b06d6a6",
+      "disposition": "rendered_asset",
+      "route": "/solutions/beauty-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty-edge.webp\"]",
+      "actual_asset": "assets/beauty-edge.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-edge-thickness-crop-960.webp",
+      "actual_asset_sha256": "2c3d51e75ee05aaba6a9188b5dbeddcbba19e69cf070395c41c1a8eb7b06d6a6",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty-edge.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BEAUTY.READY.GALLERY.BACK",
+      "planned_purpose": "Beauty ready back/mounting detail",
+      "planned_source": "src/media/niche-v33/beauty-review-card-back-mounting-crop-960.webp",
+      "planned_source_sha256": "0a2a87362ec7ce985b67546a6df05e0aeb6840ceba21aa2fe76625f342747c3f",
+      "disposition": "rendered_asset",
+      "route": "/solutions/beauty-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty-back.webp\"]",
+      "actual_asset": "assets/beauty-back.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-back-mounting-crop-960.webp",
+      "actual_asset_sha256": "0a2a87362ec7ce985b67546a6df05e0aeb6840ceba21aa2fe76625f342747c3f",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty-back.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "RESTAURANT.READY.CATALOG_AND_GALLERY.FRONT",
+      "planned_purpose": "Restaurant ready Mini primary front in hand",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-front-hand-crop-960.webp",
+      "planned_source_sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "disposition": "rendered_asset",
+      "route": "/solutions/restaurant-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/restaurant.webp\"]",
+      "actual_asset": "assets/restaurant.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/restaurant-review-card-front-hand-crop-960.webp",
+      "actual_asset_sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/restaurant.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "RESTAURANT.READY.GALLERY.GROUP_HAND",
+      "planned_purpose": "Restaurant ready cards in hand quantity context",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-group-hand-crop-960.webp",
+      "planned_source_sha256": "e864620ee79d8282e223e14231f0aebd2ca3455a8c11e715bfa302309a7198cc",
+      "disposition": "rendered_asset",
+      "route": "/solutions/restaurant-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/restaurant-group-hand.webp\"]",
+      "actual_asset": "assets/restaurant-group-hand.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/restaurant-review-card-group-hand-crop-960.webp",
+      "actual_asset_sha256": "e864620ee79d8282e223e14231f0aebd2ca3455a8c11e715bfa302309a7198cc",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/restaurant-group-hand.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "RESTAURANT.READY.GALLERY.GROUP_FRONT",
+      "planned_purpose": "Restaurant ready group/front detail",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-group-front-crop-960.webp",
+      "planned_source_sha256": "e27387c33206fe093ff1742c90d48aa17f302246424801821edf6271ceafd5ce",
+      "disposition": "rendered_asset",
+      "route": "/solutions/restaurant-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/restaurant-group-front.webp\"]",
+      "actual_asset": "assets/restaurant-group-front.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/restaurant-review-card-group-front-crop-960.webp",
+      "actual_asset_sha256": "e27387c33206fe093ff1742c90d48aa17f302246424801821edf6271ceafd5ce",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/restaurant-group-front.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "RESTAURANT.READY.GALLERY.EDGE",
+      "planned_purpose": "Restaurant ready edge detail",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-edge-thickness-crop-960.webp",
+      "planned_source_sha256": "8b55bb759acf0411d57efda9d1919ec5d6333757edab5387d01fcffe214dc02d",
+      "disposition": "rendered_asset",
+      "route": "/solutions/restaurant-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/restaurant-edge.webp\"]",
+      "actual_asset": "assets/restaurant-edge.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/restaurant-review-card-edge-thickness-crop-960.webp",
+      "actual_asset_sha256": "8b55bb759acf0411d57efda9d1919ec5d6333757edab5387d01fcffe214dc02d",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/restaurant-edge.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "RESTAURANT.READY.GALLERY.BACK",
+      "planned_purpose": "Restaurant ready back/mounting detail",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-back-mounting-crop-960.webp",
+      "planned_source_sha256": "b276415d90efba5e6434ffb546a9b397868d2b49c2cf7e06b6fa02df1aa5c5e5",
+      "disposition": "rendered_asset",
+      "route": "/solutions/restaurant-review-card/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/restaurant-back.webp\"]",
+      "actual_asset": "assets/restaurant-back.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/restaurant-review-card-back-mounting-crop-960.webp",
+      "actual_asset_sha256": "b276415d90efba5e6434ffb546a9b397868d2b49c2cf7e06b6fa02df1aa5c5e5",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/restaurant-back.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.HERO.DESKTOP",
+      "planned_purpose": "Main product hero; real Google card",
+      "planned_source": "src/media/2026-09/review-card-front.webp",
+      "planned_source_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": ".hero-visual img",
+      "actual_asset": "assets/review.webp",
+      "reason": "Both responsive hero slots intentionally share the current original front photograph with contain; the alternate in-hand photo is retained in the detail gallery, without a new fabricated crop.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-front.webp",
+      "actual_asset_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.HERO.MOBILE",
+      "planned_purpose": "Main hero crop for small screens",
+      "planned_source": "src/media/2026-09/review-card-in-hand.webp",
+      "planned_source_sha256": "a60fe94e3c1e30b3728538d80a19d902cd19c48e3aedb28e84790c5e5bf5e1a6",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": ".hero-visual img",
+      "actual_asset": "assets/review.webp",
+      "reason": "Both responsive hero slots intentionally share the current original front photograph with contain; the alternate in-hand photo is retained in the detail gallery, without a new fabricated crop.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-front.webp",
+      "actual_asset_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PURPOSE.GOOGLE",
+      "planned_purpose": "Google purpose visual",
+      "planned_source": "src/media/2026-09/review-card-front.webp",
+      "planned_source_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review.webp\"]",
+      "actual_asset": "assets/review.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-front.webp",
+      "actual_asset_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PURPOSE.INSTAGRAM",
+      "planned_purpose": "Instagram purpose visual",
+      "planned_source": "src/media/instagram/instagram-card-real-front-desk.webp",
+      "planned_source_sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/instagram.webp\"]",
+      "actual_asset": "assets/instagram.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/instagram/instagram-card-real-front-desk.webp",
+      "actual_asset_sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/instagram.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PURPOSE.MENU",
+      "planned_purpose": "Menu purpose visualization labelled illustration",
+      "planned_source": "src/media/menu/menu-card-square-black-desk.webp",
+      "planned_source_sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "[data-product-id=\"nfc-menu-card\"] .card-image img",
+      "actual_asset": "assets/menu-square_100_black.webp",
+      "reason": "Existing owner-approved generated visualization is visibly labelled illustration; never a manufacture photo.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/menu/menu-card-square-black-desk.webp",
+      "actual_asset_sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/menu-square_100_black.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.MINI.BEAUTY",
+      "planned_purpose": "Beauty ready Mini collection card",
+      "planned_source": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+      "planned_source_sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty.webp\"]",
+      "actual_asset": "assets/beauty.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+      "actual_asset_sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.MINI.RESTAURANT",
+      "planned_purpose": "Restaurant ready Mini collection card",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-front-hand-crop-960.webp",
+      "planned_source_sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"HOME.MINI.RESTAURANT\"]",
+      "actual_asset": "",
+      "reason": "Restaurant remains a current catalog/detail offer. Home selects one Mini story rather than duplicating every active product; this editorial omission is explicit for owner review.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "approved_local_placement",
+      "ownerOverlay": {
+        "approval": "OWNER_APPROVED_LOCAL_PLACEMENT",
+        "decision": "retain_home_b",
+        "group": "restaurant",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.HOW.POSTER",
+      "planned_purpose": "User-started demonstration poster",
+      "planned_source": "src/media/2026-09/review-card-video-1-poster.webp",
+      "planned_source_sha256": "21022db9cdaa2769e5b062fd3d5c0c88cba9adc95f1e4248e679db1a03154806",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review-demo-poster.webp\"]",
+      "actual_asset": "assets/review-demo-poster.webp",
+      "reason": "Original still poster only, explicitly labelled; it is not a playing video or proof that playback/captions were accepted.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-video-1-poster.webp",
+      "actual_asset_sha256": "21022db9cdaa2769e5b062fd3d5c0c88cba9adc95f1e4248e679db1a03154806",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review-demo-poster.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.HOW.VIDEO",
+      "planned_purpose": "Optional existing video1 subject to full editorial review",
+      "planned_source": "src/media/2026-09/review-card-video-1.mp4",
+      "planned_source_sha256": "261a8e3f791d84de81c45bf4de410176d96492ec5b0d1758eb050b73b1a855ae",
+      "disposition": "review_placeholder",
+      "route": "/",
+      "component_selector": "[data-media-slot~=\"HOME.HOW.VIDEO\"]",
+      "actual_asset": "",
+      "reason": "A named Google tap-demonstration review panel preserves the role. Full video playback, privacy and translated caption acceptance are not established; no player or autoplay is simulated.",
+      "owner_decision": "Approve full clip/rights/captions before real playback or publication.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.ABOUT.PORTRAIT",
+      "planned_purpose": "Short founder introduction",
+      "planned_source": "src/media/founder/portrait-desktop.webp",
+      "planned_source_sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "disposition": "rendered_asset",
+      "route": "/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/founder-primary.webp\"]",
+      "actual_asset": "assets/founder-primary.webp",
+      "reason": "Selected exact approved current founder portrait; no invented team, work or biography claim.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/founder/portrait-desktop.webp",
+      "actual_asset_sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/founder-primary.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.REVIEW.READY",
+      "planned_purpose": "Google Ready identification thumbnail",
+      "planned_source": "src/media/2026-09/review-card-front.webp",
+      "planned_source_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "disposition": "rendered_asset",
+      "route": "/solutions/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/review.webp\"]",
+      "actual_asset": "assets/review.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/2026-09/review-card-front.webp",
+      "actual_asset_sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/review.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.INSTAGRAM",
+      "planned_purpose": "Instagram identification thumbnail",
+      "planned_source": "src/media/instagram/instagram-card-real-front-desk.webp",
+      "planned_source_sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "disposition": "rendered_asset",
+      "route": "/solutions/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/instagram.webp\"]",
+      "actual_asset": "assets/instagram.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/instagram/instagram-card-real-front-desk.webp",
+      "actual_asset_sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/instagram.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.BEAUTY",
+      "planned_purpose": "Beauty Ready Mini thumbnail",
+      "planned_source": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+      "planned_source_sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "disposition": "rendered_asset",
+      "route": "/solutions/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/beauty.webp\"]",
+      "actual_asset": "assets/beauty.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+      "actual_asset_sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/beauty.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.RESTAURANT",
+      "planned_purpose": "Restaurant Ready Mini thumbnail",
+      "planned_source": "src/media/niche-v33/restaurant-review-card-front-hand-crop-960.webp",
+      "planned_source_sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "disposition": "rendered_asset",
+      "route": "/solutions/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/restaurant.webp\"]",
+      "actual_asset": "assets/restaurant.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/niche-v33/restaurant-review-card-front-hand-crop-960.webp",
+      "actual_asset_sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/restaurant.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.REVIEW3D",
+      "planned_purpose": "3D physical prototype identification",
+      "planned_source": "src/media/review-3d/review-card-3d-front-in-hand.webp",
+      "planned_source_sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742",
+      "disposition": "rendered_asset",
+      "route": "/solutions/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/three-d.webp\"]",
+      "actual_asset": "assets/three-d.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/review-3d/review-card-3d-front-in-hand.webp",
+      "actual_asset_sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/three-d.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.MENU",
+      "planned_purpose": "Menu visualization thumbnail",
+      "planned_source": "src/media/menu/menu-card-square-black-desk.webp",
+      "planned_source_sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "disposition": "rendered_asset",
+      "route": "/solutions/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/menu-square_100_black.webp\"]",
+      "actual_asset": "assets/menu-square_100_black.webp",
+      "reason": "Original approved source bytes reused for the exact product/brand role; localized caption/alt and contain treatment.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/menu/menu-card-square-black-desk.webp",
+      "actual_asset_sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/menu-square_100_black.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "CATALOG.BRANDED10.NEUTRAL",
+      "planned_purpose": "Current neutral branded design example; no claim of finished customized photo",
+      "planned_source": "src/media/v11/branded-review-card-neutral-placeholder.svg",
+      "planned_source_sha256": "71c198633486c4a9fddebb6e9e7f9ad6fd0cedb94bb803d59f95338f568ac6d5",
+      "disposition": "review_placeholder",
+      "route": "/solutions/",
+      "component_selector": ".schematic",
+      "actual_asset": "",
+      "reason": "Original native schematic is clearly a design example, not a photograph of a manufactured Branded card. Exact current products/prices are not inferred from the drawing.",
+      "owner_decision": "Provide approved exact finished Branded examples if desired before final production merchandising.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "DETAIL.BRANDED10.DESIGN_EXAMPLE",
+      "planned_purpose": "Neutral manual design process sample",
+      "planned_source": "src/media/v11/branded-review-card-neutral-placeholder.svg",
+      "planned_source_sha256": "71c198633486c4a9fddebb6e9e7f9ad6fd0cedb94bb803d59f95338f568ac6d5",
+      "disposition": "review_placeholder",
+      "route": "/solutions/branded-review-card/",
+      "component_selector": "[data-media-slot~=\"DETAIL.BRANDED10.DESIGN_EXAMPLE\"]",
+      "actual_asset": "",
+      "reason": "Original native schematic is clearly a design example, not a photograph of a manufactured Branded card. Exact current products/prices are not inferred from the drawing.",
+      "owner_decision": "Provide approved exact finished Branded examples if desired before final production merchandising.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "DETAIL.BRANDED_MINI.DESIGN_EXAMPLE",
+      "planned_purpose": "Your design neutral diagram; no dimensions/price inferred",
+      "planned_source": "src/media/v11/branded-review-card-neutral-placeholder.svg",
+      "planned_source_sha256": "71c198633486c4a9fddebb6e9e7f9ad6fd0cedb94bb803d59f95338f568ac6d5",
+      "disposition": "review_placeholder",
+      "route": "/solutions/branded-beauty-review-card/",
+      "component_selector": "[data-media-slot~=\"DETAIL.BRANDED_MINI.DESIGN_EXAMPLE\"]",
+      "actual_asset": "",
+      "reason": "Original native schematic is clearly a design example, not a photograph of a manufactured Branded card. Exact current products/prices are not inferred from the drawing.",
+      "owner_decision": "Provide approved exact finished Branded examples if desired before final production merchandising.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "ABOUT.FOUNDER.PRIMARY",
+      "planned_purpose": "Founder portrait chosen for factual identity",
+      "planned_source": "src/media/founder/portrait-desktop.webp",
+      "planned_source_sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "disposition": "rendered_asset",
+      "route": "/about/",
+      "component_selector": "img[src=\"/nfc-card-website/assets/founder-primary.webp\"]",
+      "actual_asset": "assets/founder-primary.webp",
+      "reason": "Selected exact approved current founder portrait; no invented team, work or biography claim.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "src/media/founder/portrait-desktop.webp",
+      "actual_asset_sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "currentStatus": "approved_local_asset",
+      "ownerOverlay": null,
+      "actualRepositoryPath": "src/v36_2/assets/founder-primary.webp",
+      "originalSourceStillPreservedInMain": true,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "UNIVERSAL.READY.CARD",
+      "planned_purpose": "Unconfirmed ready design image",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/universal-mini-card/",
+      "component_selector": "[data-media-slot~=\"UNIVERSAL.READY.CARD\"]",
+      "actual_asset": "",
+      "reason": "Private DRAFT review panel names the unconfirmed image role; no physical appearance, specifications, price or order eligibility is invented.",
+      "owner_decision": "Separate Universal offer facts/media/status/price approval required.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "UNIVERSAL.READY.GALLERY.FRONT",
+      "planned_purpose": "Actual approved universal front",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/universal-mini-card/",
+      "component_selector": "[data-media-slot~=\"UNIVERSAL.READY.GALLERY.FRONT\"]",
+      "actual_asset": "",
+      "reason": "Private DRAFT review panel names the unconfirmed image role; no physical appearance, specifications, price or order eligibility is invented.",
+      "owner_decision": "Separate Universal offer facts/media/status/price approval required.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "UNIVERSAL.READY.GALLERY.BACK",
+      "planned_purpose": "Actual back/mounting details",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/universal-mini-card/",
+      "component_selector": "[data-media-slot~=\"UNIVERSAL.READY.GALLERY.BACK\"]",
+      "actual_asset": "",
+      "reason": "Private DRAFT review panel names the unconfirmed image role; no physical appearance, specifications, price or order eligibility is invented.",
+      "owner_decision": "Separate Universal offer facts/media/status/price approval required.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "UNIVERSAL.BRANDED.GALLERY.REAL",
+      "planned_purpose": "Finished branded example if owner has it",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/branded-mini-card/",
+      "component_selector": "[data-media-slot~=\"UNIVERSAL.BRANDED.GALLERY.REAL\"]",
+      "actual_asset": "",
+      "reason": "A specifically named preview-only placeholder holds missing approved finished product evidence; no fabricated Branded/Universal photo.",
+      "owner_decision": "Branded finished example needs approval; Universal remains DRAFT with separate facts/status/price approval.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "BRANDED10.GALLERY.REAL",
+      "planned_purpose": "Actual finished branded10 example",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/branded-review-card/",
+      "component_selector": "[data-media-slot~=\"BRANDED10.GALLERY.REAL\"]",
+      "actual_asset": "",
+      "reason": "A specifically named preview-only placeholder holds missing approved finished product evidence; no fabricated Branded/Universal photo.",
+      "owner_decision": "Branded finished example needs approval; Universal remains DRAFT with separate facts/status/price approval.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PROCESS.PREPARATION",
+      "planned_purpose": "Real preparation/programming process",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/",
+      "component_selector": "[data-media-slot~=\"HOME.PROCESS.PREPARATION\"]",
+      "actual_asset": "",
+      "reason": "Specific named preparation/packaging/customer-proof review panel preserves intended composition. No factory/process image, customer logo, installation, testimonial or portrait is fabricated.",
+      "owner_decision": "Provide real evidence and rights/consent; production omits unconfirmed proof.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PROCESS.PACKAGING",
+      "planned_purpose": "Real packaging/dispatch material",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/",
+      "component_selector": "[data-media-slot~=\"HOME.PROCESS.PACKAGING\"]",
+      "actual_asset": "",
+      "reason": "Specific named preparation/packaging/customer-proof review panel preserves intended composition. No factory/process image, customer logo, installation, testimonial or portrait is fabricated.",
+      "owner_decision": "Provide real evidence and rights/consent; production omits unconfirmed proof.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PROOF.CLIENT_LOGO",
+      "planned_purpose": "Real customer logo with permission",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/",
+      "component_selector": "[data-media-slot~=\"HOME.PROOF.CLIENT_LOGO\"]",
+      "actual_asset": "",
+      "reason": "Specific named preparation/packaging/customer-proof review panel preserves intended composition. No factory/process image, customer logo, installation, testimonial or portrait is fabricated.",
+      "owner_decision": "Provide real evidence and rights/consent; production omits unconfirmed proof.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "HOME.PROOF.RECEPTION",
+      "planned_purpose": "Actual client installation at reception",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/",
+      "component_selector": "[data-media-slot~=\"HOME.PROOF.RECEPTION\"]",
+      "actual_asset": "",
+      "reason": "Specific named preparation/packaging/customer-proof review panel preserves intended composition. No factory/process image, customer logo, installation, testimonial or portrait is fabricated.",
+      "owner_decision": "Provide real evidence and rights/consent; production omits unconfirmed proof.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "REVIEWS.TESTIMONIAL.PORTRAIT",
+      "planned_purpose": "Optional actual reviewer portrait",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/",
+      "component_selector": "[data-media-slot~=\"REVIEWS.TESTIMONIAL.PORTRAIT\"]",
+      "actual_asset": "",
+      "reason": "Specific named preparation/packaging/customer-proof review panel preserves intended composition. No factory/process image, customer logo, installation, testimonial or portrait is fabricated.",
+      "owner_decision": "Provide real evidence and rights/consent; production omits unconfirmed proof.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.GOOGLE.DEMO",
+      "planned_purpose": "Real tap → review form demonstration",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/review-card/",
+      "component_selector": "[data-media-slot~=\"EDUCATION.GOOGLE.DEMO\"]",
+      "actual_asset": "",
+      "reason": "A named Google tap-demonstration review panel preserves the role. Full video playback, privacy and translated caption acceptance are not established; no player or autoplay is simulated.",
+      "owner_decision": "Approve full clip/rights/captions before real playback or publication.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.INSTAGRAM.DEMO",
+      "planned_purpose": "Real tap → exact profile demonstration",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/instagram-card/",
+      "component_selector": "[data-media-slot~=\"EDUCATION.INSTAGRAM.DEMO\"]",
+      "actual_asset": "",
+      "reason": "Named exact-profile demonstration placeholder and truthful written steps; no simulated auto-follow or fabricated phone video.",
+      "owner_decision": "Approve a real complete demonstration/caption set before playback.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "EDUCATION.MENU.DEMO",
+      "planned_purpose": "Real tap → external menu demonstration",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/menu-card/",
+      "component_selector": "[data-media-slot~=\"EDUCATION.MENU.DEMO\"]",
+      "actual_asset": "",
+      "reason": "Named external-menu demonstration placeholder and written intent explanation; no invented POS, payment or ordering features.",
+      "owner_decision": "Approve real complete menu demonstration/captions before playback.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "MENU.VARIANTS.REAL_COMPARE",
+      "planned_purpose": "Actual6 variants/size comparison if available",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/solutions/menu-card/",
+      "component_selector": "[data-media-slot~=\"MENU.VARIANTS.REAL_COMPARE\"]",
+      "actual_asset": "",
+      "reason": "The selected nominal dimensions and neutral size guide distinguish 100 / 60 / 70 mm. This is explicitly a schematic, not a claimed photographed true-scale manufacture comparison.",
+      "owner_decision": "Actual comparison photos remain optional owner media request; existing visualization provenance is retained.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "GUIDE.OWN.NFC.DIAGRAM",
+      "planned_purpose": "Own schematic smartphone/card interaction",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "review_placeholder",
+      "route": "/what-is-nfc-card/",
+      "component_selector": "[data-media-slot~=\"GUIDE.OWN.NFC.DIAGRAM\"]",
+      "actual_asset": "",
+      "reason": "Native original card→compatible phone→agreed destination schematic, explicitly illustrative; no competitor artwork or physical-device compatibility guarantee.",
+      "owner_decision": "Owner reviews illustrative communication; no factual photo claimed.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "placeholder",
+      "ownerOverlay": null,
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "PRODUCT_DETAIL_EXTENSION_SLOT",
+      "planned_purpose": "Reserved future function",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"PRODUCT_DETAIL_EXTENSION_SLOT\"]",
+      "actual_asset": "",
+      "reason": "Unspecified future functionality has no approved product scope or content; no filler block, upload service or new feature is activated.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "hold",
+      "ownerOverlay": {
+        "approval": "HOLD",
+        "decision": "hold",
+        "group": "significant_hold",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    },
+    {
+      "slot_id": "PROMOTION.BANNER",
+      "planned_purpose": "Unapproved promotion",
+      "planned_source": "",
+      "planned_source_sha256": "",
+      "disposition": "omitted",
+      "route": "/review/media/",
+      "component_selector": "[data-media-coverage-slot=\"PROMOTION.BANNER\"]",
+      "actual_asset": "",
+      "reason": "No approved promotion terms/media exist. Promotional banner remains HOLD and is deliberately absent; merchandising hero is not relabelled as a sale.",
+      "owner_decision": "Review composition at Gate B; production rights/content approval remains separate.",
+      "actual_source_path": "",
+      "actual_asset_sha256": "",
+      "currentStatus": "hold",
+      "ownerOverlay": {
+        "approval": "HOLD",
+        "decision": "hold",
+        "group": "significant_hold",
+        "productionApproval": false
+      },
+      "actualRepositoryPath": null,
+      "originalSourceStillPreservedInMain": false,
+      "replacementRequires": "Source/permission check, truthful UA/EN/PL alt, accurate product role, responsive crop review; no automatic activation of HOLD",
+      "productionApproval": false
+    }
+  ],
+  "additionalCaptureSlots": [
+    {
+      "slotId": "HOW.NFC.DEMO_VIDEO",
+      "page": "/what-is-nfc-card/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Дотик телефоном до картки",
+          "brief": "Короткий реальний запис: картка, положення телефона, системне сповіщення та відкриття посилання. Без удаваної публікації відгуку."
+        },
+        "en": {
+          "title": "A phone touching a card",
+          "brief": "A real short recording showing the card, phone position, system prompt and link opening. It must not simulate a customer publishing a review."
+        },
+        "pl": {
+          "title": "Zbliżenie telefonu do karty",
+          "brief": "Krótki rzeczywisty film: karta, położenie telefonu, powiadomienie systemowe i otwarcie linku. Bez udawania publikacji opinii klienta."
+        }
+      },
+      "captureProposal": {
+        "kind": "real_video",
+        "proposedAspect": "16:9 with a mobile-safe subject area",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    },
+    {
+      "slotId": "HOW.NFC.PHONE_SCREEN",
+      "page": "/what-is-nfc-card/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Що бачить відвідувач",
+          "brief": "Погоджений запис екрана, який показує перехід і добровільний наступний крок. Не зображати демонстрацію як відгук справжнього клієнта."
+        },
+        "en": {
+          "title": "What the visitor sees",
+          "brief": "An approved screen recording of the link opening and the visitor’s voluntary next step. A demonstration must not be presented as a real customer review."
+        },
+        "pl": {
+          "title": "Co widzi gość",
+          "brief": "Zatwierdzone nagranie ekranu z otwarciem linku i dobrowolnym kolejnym krokiem. Demonstracji nie należy przedstawiać jako opinii prawdziwego klienta."
+        }
+      },
+      "captureProposal": {
+        "kind": "permitted_screen_recording",
+        "proposedAspect": "9:16 phone screen",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    },
+    {
+      "slotId": "DESIGN.REVIEW.EXAMPLE",
+      "page": "/services/design/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Приклад оформлення Google 10 × 10",
+          "brief": "Погоджене фото готової картки або явно підписаний макет; не видавати схему за клієнтську роботу."
+        },
+        "en": {
+          "title": "Google 10 × 10 design example",
+          "brief": "An approved finished-card photograph or clearly labelled mockup; a diagram must not be presented as customer work."
+        },
+        "pl": {
+          "title": "Przykład projektu Google 10 × 10",
+          "brief": "Zatwierdzone zdjęcie gotowej karty albo wyraźnie podpisana wizualizacja; schemat nie może udawać realizacji klienta."
+        }
+      },
+      "captureProposal": {
+        "kind": "approved_photo_or_labelled_mockup",
+        "proposedAspect": "1:1",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    },
+    {
+      "slotId": "DESIGN.BEAUTY.EXAMPLE",
+      "page": "/services/design/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Приклад оформлення Beauty Mini",
+          "brief": "Реальний дозволений приклад або чесно позначений макет на погодженій фізичній основі."
+        },
+        "en": {
+          "title": "Beauty Mini design example",
+          "brief": "A permitted real example or honestly labelled mockup on the agreed physical card type."
+        },
+        "pl": {
+          "title": "Przykład projektu Beauty Mini",
+          "brief": "Rzeczywisty przykład z pozwoleniem albo uczciwie opisana wizualizacja na uzgodnionym typie karty."
+        }
+      },
+      "captureProposal": {
+        "kind": "approved_photo_or_labelled_mockup",
+        "proposedAspect": "1:1",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    },
+    {
+      "slotId": "DESIGN.RESTAURANT.EXAMPLE",
+      "page": "/services/design/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Приклад оформлення Restaurant Mini",
+          "brief": "Погоджений приклад без вигадування розміру, клієнта чи результату."
+        },
+        "en": {
+          "title": "Restaurant Mini design example",
+          "brief": "An approved example without invented dimensions, customer identity or results."
+        },
+        "pl": {
+          "title": "Przykład projektu Restaurant Mini",
+          "brief": "Zatwierdzony przykład bez wymyślonych wymiarów, tożsamości klienta czy wyników."
+        }
+      },
+      "captureProposal": {
+        "kind": "approved_photo_or_labelled_mockup",
+        "proposedAspect": "1:1; no implied physical dimensions",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    },
+    {
+      "slotId": "DESIGN.PROCESS",
+      "page": "/services/design/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Від матеріалів бренду до картки",
+          "brief": "Дозволені логотип чи референс, погоджений макет і фото фізичного результату з правильними підписами."
+        },
+        "en": {
+          "title": "From brand materials to a card",
+          "brief": "Permitted logo or reference, approved mockup and physical-result photograph, with accurate captions."
+        },
+        "pl": {
+          "title": "Od materiałów marki do karty",
+          "brief": "Dozwolone logo lub inspiracja, uzgodniona wizualizacja i zdjęcie fizycznego efektu z prawidłowymi podpisami."
+        }
+      },
+      "captureProposal": {
+        "kind": "approved_photo_sequence",
+        "proposedAspect": "Three equally sized frames, responsive stack",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    },
+    {
+      "slotId": "DESIGN.NFC_DEMO",
+      "page": "/services/design/",
+      "status": "placeholder",
+      "actualAsset": null,
+      "actualSHA256": null,
+      "canonicalProvenance": null,
+      "notCustomerProof": true,
+      "localized": {
+        "uk": {
+          "title": "Перевірка NFC після погодження",
+          "brief": "Короткий реальний запис перевірки налаштованої картки; не імітувати успішний клієнтський відгук."
+        },
+        "en": {
+          "title": "NFC checking after approval",
+          "brief": "A real short recording of the configured card being checked, without simulating a successful customer review."
+        },
+        "pl": {
+          "title": "Sprawdzenie NFC po uzgodnieniu",
+          "brief": "Krótki rzeczywisty film ze sprawdzania skonfigurowanej karty, bez udawania pozytywnej opinii klienta."
+        }
+      },
+      "captureProposal": {
+        "kind": "real_video",
+        "proposedAspect": "16:9 with a mobile-safe subject area",
+        "status": "designer_capture_target_only_not_product_specification"
+      },
+      "altCaptionRequirement": "Write truthful localized UA/EN/PL alt/caption after real material and its permission are approved; no fabricated customer attribution."
+    }
+  ],
+  "assets": [
+    {
+      "path": "src/v36_2/assets/IBMPlexMono.ttf",
+      "bytes": 136704,
+      "sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
+      "kind": "font",
+      "canonicalProvenance": null,
+      "provenanceBasis": "Bundled OFL notice and unchanged main font bytes",
+      "sourceManifestMatches": [],
+      "slotIds": [],
+      "licenseNotice": "src/v36_2/assets/IBMPlexMono-OFL.txt",
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "not_applicable",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/Onest.ttf",
+      "bytes": 193056,
+      "sha256": "966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31",
+      "kind": "font",
+      "canonicalProvenance": null,
+      "provenanceBasis": "Bundled OFL notice and unchanged main font bytes",
+      "sourceManifestMatches": [],
+      "slotIds": [],
+      "licenseNotice": "src/v36_2/assets/Onest-OFL.txt",
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "not_applicable",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/beauty-back.webp",
+      "bytes": 50102,
+      "sha256": "0a2a87362ec7ce985b67546a6df05e0aeb6840ceba21aa2fe76625f342747c3f",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/beauty-review-card-back-mounting-crop-960.webp",
+          "role": "gallery, back view",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Зворотний бік Beauty Review Card із двома синіми клейкими смугами.",
+            "en": "Back of the Beauty Review Card with two blue adhesive strips.",
+            "pl": "Tył Beauty Review Card z dwoma niebieskimi paskami samoprzylepnymi."
+          }
+        }
+      ],
+      "slotIds": [
+        "BEAUTY.READY.GALLERY.BACK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/beauty-edge.webp",
+      "bytes": 60562,
+      "sha256": "2c3d51e75ee05aaba6a9188b5dbeddcbba19e69cf070395c41c1a8eb7b06d6a6",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/beauty-review-card-edge-thickness-crop-960.webp",
+          "role": "gallery, edge view",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Beauty Review Card збоку в руці; видно край фізичної картки.",
+            "en": "Beauty Review Card held edge-on, showing the side of the physical card.",
+            "pl": "Beauty Review Card trzymana bokiem; widoczna jest krawędź fizycznej karty."
+          }
+        }
+      ],
+      "slotIds": [
+        "BEAUTY.READY.GALLERY.EDGE"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/beauty-group-front.webp",
+      "bytes": 88484,
+      "sha256": "902858586cab6d5349454dd37d68f2d2db493cc6ec7ec195f42d4df6f3d72d34",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/beauty-review-card-group-front-crop-960.webp",
+          "role": "gallery, design context",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Чотири Beauty Review Card з рожевим оформленням на світлій поверхні.",
+            "en": "Four Beauty Review Cards with a pink design on a light surface.",
+            "pl": "Cztery Beauty Review Card z różowym projektem na jasnej powierzchni."
+          }
+        }
+      ],
+      "slotIds": [
+        "BEAUTY.READY.GALLERY.GROUP_FRONT"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/beauty-group-hand.webp",
+      "bytes": 82766,
+      "sha256": "87fa6d0fa9f8de2997d39f259737f4689d3bc08033b10749b49af0ca1e6661da",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/beauty-review-card-group-hand-crop-960.webp",
+          "role": "gallery, quantity context",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Кілька Beauty Review Card з рожевим дизайном; одну картку тримають у руці.",
+            "en": "Several pink Beauty Review Cards, with one card held in a hand.",
+            "pl": "Kilka różowych Beauty Review Card; jedna karta jest trzymana w dłoni."
+          }
+        }
+      ],
+      "slotIds": [
+        "BEAUTY.READY.GALLERY.GROUP_HAND"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/beauty.webp",
+      "bytes": 96872,
+      "sha256": "3c8f4ddc67497c119fdbe862a1dcb155be19e62cbe81b44b352ba379bb4eab31",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/beauty-review-card-front-hand-crop-960.webp",
+          "role": "catalog primary, gallery primary, product hero",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Beauty Review Card у руці; на задньому плані лежать інші картки з рожевим дизайном.",
+            "en": "Beauty Review Card held in a hand, with other pink-design cards in the background.",
+            "pl": "Beauty Review Card trzymana w dłoni; w tle leżą pozostałe karty z różowym projektem."
+          }
+        }
+      ],
+      "slotIds": [
+        "BEAUTY.READY.CATALOG_AND_GALLERY.FRONT",
+        "HOME.MINI.BEAUTY",
+        "CATALOG.BEAUTY"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/favicon.svg",
+      "bytes": 1336,
+      "sha256": "72f47239068397642729856cf55b548d0edccd3c747348eff805fb1fa77436e6",
+      "kind": "brand_vector",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/v9/nfc-card-favicon.svg",
+          "role": "Favicon / app icon",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "brand",
+          "dimensions": {
+            "width": null,
+            "height": null
+          },
+          "alt": {
+            "uk": "",
+            "en": "",
+            "pl": ""
+          }
+        }
+      ],
+      "slotIds": [
+        "GLOBAL.FAVICON"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/founder-primary.webp",
+      "bytes": 36660,
+      "sha256": "910d416f8c366ab8ea59f698ea760de6cd14c176b8af1b8f990076393671ca0b",
+      "kind": "image",
+      "canonicalProvenance": "verified_official_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/founder/portrait-desktop.webp",
+          "role": "About introduction only",
+          "status": "public",
+          "provenance": "verified_official_business_asset",
+          "claimRole": "founder_personal_history",
+          "dimensions": {
+            "width": 680,
+            "height": 986
+          },
+          "alt": {
+            "uk": "Артем Антонов у кепці біля моря",
+            "en": "Artem Antonov wearing a cap by the sea",
+            "pl": "Artem Antonov w czapce nad morzem"
+          }
+        }
+      ],
+      "slotIds": [
+        "ABOUT.FOUNDER.PORTRAIT",
+        "HOME.ABOUT.PORTRAIT",
+        "ABOUT.FOUNDER.PRIMARY"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/founder.webp",
+      "bytes": 201898,
+      "sha256": "65849e440f008c63285e50cfb958404aedcc9827466e3f078df83432fc9dd7b7",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/v9/artem-antonov-founder-photo.webp",
+          "role": "Founder portrait",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "founder_portrait",
+          "dimensions": {
+            "width": 960,
+            "height": 1280
+          },
+          "alt": {
+            "uk": "Артем Антонов, засновник NFC CARD та Antonov Digital",
+            "en": "Artem Antonov, founder of NFC CARD and Antonov Digital",
+            "pl": "Artem Antonov, założyciel NFC CARD i Antonov Digital"
+          }
+        }
+      ],
+      "slotIds": [],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/instagram-back.webp",
+      "bytes": 49046,
+      "sha256": "baeda27a47eed8ba28f2e94af36a8e6e86d4d00d789332296b6193de2dc026fb",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/instagram/instagram-card-real-back-mounting.webp",
+          "role": "Authentic reverse and mounting photo",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "real_product_photo",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "Зворотний бік NFC Instagram Card із двома клейкими смугами для кріплення.",
+            "en": "Back of the NFC Instagram Card with two adhesive mounting strips.",
+            "pl": "Tył NFC Instagram Card z dwoma paskami samoprzylepnymi do mocowania."
+          }
+        }
+      ],
+      "slotIds": [
+        "INSTAGRAM.READY.GALLERY.BACK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/instagram-edge.webp",
+      "bytes": 73768,
+      "sha256": "b94e29cfcd4dddb7b766e8fa50e8a2053e5c30eb6c87d18c40d1cc11ac816df9",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/instagram/instagram-card-real-edge-profile.webp",
+          "role": "Authentic edge and thickness context",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "real_product_photo",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "NFC Instagram Card під кутом у руці; видно край і товщину картки.",
+            "en": "NFC Instagram Card held at an angle, showing the edge and thickness.",
+            "pl": "NFC Instagram Card w dłoni pod kątem, z widoczną krawędzią i grubością."
+          }
+        }
+      ],
+      "slotIds": [
+        "INSTAGRAM.READY.GALLERY.EDGE"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/instagram-window.webp",
+      "bytes": 93312,
+      "sha256": "e617240a1a5d322e7402e27eeef54654a258db773a95c2c695bcc695545fa272",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/instagram/instagram-card-real-front-window.webp",
+          "role": "Primary authentic product photo",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "real_product_photo",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "Передня сторона NFC Instagram Card у руці біля вікна.",
+            "en": "Front of the NFC Instagram Card held in a hand near a window.",
+            "pl": "Przód NFC Instagram Card w dłoni przy oknie."
+          }
+        }
+      ],
+      "slotIds": [
+        "INSTAGRAM.READY.GALLERY.WINDOW"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/instagram.webp",
+      "bytes": 87850,
+      "sha256": "6e72323e4bbfa39d82a75cc2376a7ee524615627c3275fd00f312ed7ed8ca4f9",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/instagram/instagram-card-real-front-desk.webp",
+          "role": "Secondary authentic product photo",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "real_product_photo",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "Передня сторона NFC Instagram Card у руці над світлим робочим столом.",
+            "en": "Front of the NFC Instagram Card held above a light desk.",
+            "pl": "Przód NFC Instagram Card w dłoni nad jasnym biurkiem."
+          }
+        }
+      ],
+      "slotIds": [
+        "INSTAGRAM.READY.CATALOG_AND_GALLERY.FRONT",
+        "HOME.PURPOSE.INSTAGRAM",
+        "CATALOG.INSTAGRAM"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/logo-reversed.svg",
+      "bytes": 1993,
+      "sha256": "01447ae086dfc42e65cf9a8f96f893b948c6e358658a63fc7229d21fd7f709d9",
+      "kind": "brand_vector",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/v9/nfc-card-logo-reversed.svg",
+          "role": "Reversed horizontal logo",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "brand",
+          "dimensions": {
+            "width": null,
+            "height": null
+          },
+          "alt": {
+            "uk": "",
+            "en": "",
+            "pl": ""
+          }
+        }
+      ],
+      "slotIds": [],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/logo.svg",
+      "bytes": 1964,
+      "sha256": "9370da66fc8cd4b11a3cda60d692e9aa9451c04522b21c812473206f4ba222f9",
+      "kind": "brand_vector",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/v9/nfc-card-logo-primary.svg",
+          "role": "Primary horizontal logo",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "brand",
+          "dimensions": {
+            "width": null,
+            "height": null
+          },
+          "alt": {
+            "uk": "",
+            "en": "",
+            "pl": ""
+          }
+        }
+      ],
+      "slotIds": [
+        "GLOBAL.HEADER.LOGO"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/menu-round_70_black.webp",
+      "bytes": 56334,
+      "sha256": "368f88f827ae6b9696d163553b201b4975b8c9e7fa619e30c7f5d36c83a7d71e",
+      "kind": "image",
+      "canonicalProvenance": "ai_generated_original",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/menu/menu-card-round-black-desk.webp",
+          "role": "product gallery, variant showcase",
+          "status": "public",
+          "provenance": "ai_generated_original",
+          "claimRole": "generated_product_visualization",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Візуалізація чорної круглої NFC Menu Card на світлому столі.",
+            "en": "Visualization of a black round NFC Menu Card on a light desk.",
+            "pl": "Wizualizacja czarnej okrągłej NFC Menu Card na jasnym stole."
+          }
+        }
+      ],
+      "slotIds": [
+        "MENU.VARIANTS.ROUND_BLACK.DESK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/menu-round_70_white.webp",
+      "bytes": 59136,
+      "sha256": "c07cd061591a1ac4d045383dd29e27e3e31d06e5c1d61dde4f1bac38413e02e5",
+      "kind": "image",
+      "canonicalProvenance": "ai_generated_original",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/menu/menu-card-round-white-desk.webp",
+          "role": "product gallery, variant showcase",
+          "status": "public",
+          "provenance": "ai_generated_original",
+          "claimRole": "generated_product_visualization",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Візуалізація білої круглої NFC Menu Card на світлому столі.",
+            "en": "Visualization of a white round NFC Menu Card on a light desk.",
+            "pl": "Wizualizacja białej okrągłej NFC Menu Card na jasnym stole."
+          }
+        }
+      ],
+      "slotIds": [
+        "MENU.VARIANTS.ROUND_WHITE.DESK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_100_black.webp",
+      "bytes": 57510,
+      "sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "kind": "image",
+      "canonicalProvenance": "ai_generated_original",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/menu/menu-card-square-black-desk.webp",
+          "role": "catalog primary, product gallery primary, product page hero",
+          "status": "public",
+          "provenance": "ai_generated_original",
+          "claimRole": "generated_product_visualization",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Візуалізація чорної квадратної NFC Menu Card на світлому столі.",
+            "en": "Visualization of a black square NFC Menu Card on a light desk.",
+            "pl": "Wizualizacja czarnej kwadratowej NFC Menu Card na jasnym stole."
+          }
+        }
+      ],
+      "slotIds": [
+        "MENU.VARIANTS.SQUARE_BLACK.DESK",
+        "HOME.PURPOSE.MENU",
+        "CATALOG.MENU"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_100_white.webp",
+      "bytes": 74682,
+      "sha256": "448ddbf9233876019d355f155b03ac6fe87e479d877ddccae80dc6f5caa8980f",
+      "kind": "image",
+      "canonicalProvenance": "ai_generated_original",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/menu/menu-card-square-white-desk.webp",
+          "role": "product gallery, variant showcase",
+          "status": "public",
+          "provenance": "ai_generated_original",
+          "claimRole": "generated_product_visualization",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Візуалізація білої квадратної NFC Menu Card на світлому столі.",
+            "en": "Visualization of a white square NFC Menu Card on a light desk.",
+            "pl": "Wizualizacja białej kwadratowej NFC Menu Card na jasnym stole."
+          }
+        }
+      ],
+      "slotIds": [
+        "MENU.VARIANTS.SQUARE_WHITE.DESK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_60_black.webp",
+      "bytes": 57510,
+      "sha256": "0dfcfbc868a270030c156deb67b99ea4d4f1faf4a65024470416d33f20e361f4",
+      "kind": "image",
+      "canonicalProvenance": "ai_generated_original",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/menu/menu-card-square-black-desk.webp",
+          "role": "catalog primary, product gallery primary, product page hero",
+          "status": "public",
+          "provenance": "ai_generated_original",
+          "claimRole": "generated_product_visualization",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Візуалізація чорної квадратної NFC Menu Card на світлому столі.",
+            "en": "Visualization of a black square NFC Menu Card on a light desk.",
+            "pl": "Wizualizacja czarnej kwadratowej NFC Menu Card na jasnym stole."
+          }
+        }
+      ],
+      "slotIds": [],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/menu-square_60_white.webp",
+      "bytes": 74682,
+      "sha256": "448ddbf9233876019d355f155b03ac6fe87e479d877ddccae80dc6f5caa8980f",
+      "kind": "image",
+      "canonicalProvenance": "ai_generated_original",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/menu/menu-card-square-white-desk.webp",
+          "role": "product gallery, variant showcase",
+          "status": "public",
+          "provenance": "ai_generated_original",
+          "claimRole": "generated_product_visualization",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Візуалізація білої квадратної NFC Menu Card на світлому столі.",
+            "en": "Visualization of a white square NFC Menu Card on a light desk.",
+            "pl": "Wizualizacja białej kwadratowej NFC Menu Card na jasnym stole."
+          }
+        }
+      ],
+      "slotIds": [],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-back.webp",
+      "bytes": 58920,
+      "sha256": "b276415d90efba5e6434ffb546a9b397868d2b49c2cf7e06b6fa02df1aa5c5e5",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/restaurant-review-card-back-mounting-crop-960.webp",
+          "role": "gallery, back view",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Зворотний бік Restaurant Review Card із двома синіми клейкими смугами.",
+            "en": "Back of the Restaurant Review Card with two blue adhesive strips.",
+            "pl": "Tył Restaurant Review Card z dwoma niebieskimi paskami samoprzylepnymi."
+          }
+        }
+      ],
+      "slotIds": [
+        "RESTAURANT.READY.GALLERY.BACK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-edge.webp",
+      "bytes": 55170,
+      "sha256": "8b55bb759acf0411d57efda9d1919ec5d6333757edab5387d01fcffe214dc02d",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/restaurant-review-card-edge-thickness-crop-960.webp",
+          "role": "gallery, edge view",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Restaurant Review Card збоку в руці; видно край фізичної картки.",
+            "en": "Restaurant Review Card held edge-on, showing the side of the physical card.",
+            "pl": "Restaurant Review Card trzymana bokiem; widoczna jest krawędź fizycznej karty."
+          }
+        }
+      ],
+      "slotIds": [
+        "RESTAURANT.READY.GALLERY.EDGE"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-group-front.webp",
+      "bytes": 75598,
+      "sha256": "e27387c33206fe093ff1742c90d48aa17f302246424801821edf6271ceafd5ce",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/restaurant-review-card-group-front-crop-960.webp",
+          "role": "gallery, design context",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Чотири Restaurant Review Card із зеленим ресторанним оформленням на світлій поверхні.",
+            "en": "Four Restaurant Review Cards with a green restaurant design on a light surface.",
+            "pl": "Cztery Restaurant Review Card z zielonym projektem restauracyjnym na jasnej powierzchni."
+          }
+        }
+      ],
+      "slotIds": [
+        "RESTAURANT.READY.GALLERY.GROUP_FRONT"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/restaurant-group-hand.webp",
+      "bytes": 81110,
+      "sha256": "e864620ee79d8282e223e14231f0aebd2ca3455a8c11e715bfa302309a7198cc",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/restaurant-review-card-group-hand-crop-960.webp",
+          "role": "gallery, quantity context",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Кілька Restaurant Review Card із зеленим дизайном; одну картку тримають у руці.",
+            "en": "Several green Restaurant Review Cards, with one card held in a hand.",
+            "pl": "Kilka zielonych Restaurant Review Card; jedna karta jest trzymana w dłoni."
+          }
+        }
+      ],
+      "slotIds": [
+        "RESTAURANT.READY.GALLERY.GROUP_HAND"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/restaurant.webp",
+      "bytes": 79468,
+      "sha256": "2c4b9efc48487d7b222b76bf5a7fb73bc887e39e105dd2121730d0072e6cbd05",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/niche-v33/restaurant-review-card-front-hand-crop-960.webp",
+          "role": "catalog primary, gallery primary, product hero",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_product_photo",
+          "dimensions": {
+            "width": 960,
+            "height": 960
+          },
+          "alt": {
+            "uk": "Restaurant Review Card у руці; на задньому плані лежать інші картки із зеленим ресторанним дизайном.",
+            "en": "Restaurant Review Card held in a hand, with other green restaurant-design cards in the background.",
+            "pl": "Restaurant Review Card trzymana w dłoni; w tle leżą pozostałe karty z zielonym projektem restauracyjnym."
+          }
+        }
+      ],
+      "slotIds": [
+        "RESTAURANT.READY.CATALOG_AND_GALLERY.FRONT",
+        "CATALOG.RESTAURANT"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/review-back.webp",
+      "bytes": 86724,
+      "sha256": "1b9ed5247c961ca78307f313a1cb48ceef8b47a56fbb4602de61930fd5771e3f",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/2026-09/review-card-back.webp",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "product_appearance_reference",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "Зворотний бік Review Card із клейкими смугами",
+            "en": "Review Card back with adhesive strips",
+            "pl": "Tył Review Card z paskami samoprzylepnymi"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW.READY.GALLERY.BACK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/review-demo-poster.webp",
+      "bytes": 22396,
+      "sha256": "21022db9cdaa2769e5b062fd3d5c0c88cba9adc95f1e4248e679db1a03154806",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/2026-09/review-card-video-1-poster.webp",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "product_video_poster",
+          "dimensions": {
+            "width": 320,
+            "height": 568
+          },
+          "alt": {
+            "uk": "Готові Review Card: вигляд і товщина",
+            "en": "Finished Review Cards: appearance and thickness",
+            "pl": "Gotowe Review Card: wygląd i grubość"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW.READY.VIDEO1.POSTER",
+        "HOME.HOW.POSTER"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/review-edge.webp",
+      "bytes": 93022,
+      "sha256": "86238a5203d58f46d1a95ca84ed8d15c16d049bcb592f538285d4dba0e2d0637",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/2026-09/review-card-edge.webp",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "product_appearance_reference",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "Товщина та край Review Card",
+            "en": "Review Card thickness and edge",
+            "pl": "Grubość i krawędź Review Card"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW.READY.GALLERY.EDGE"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/review-hand.webp",
+      "bytes": 379820,
+      "sha256": "a60fe94e3c1e30b3728538d80a19d902cd19c48e3aedb28e84790c5e5bf5e1a6",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/2026-09/review-card-in-hand.webp",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "actual_standard_product",
+          "dimensions": {
+            "width": 1600,
+            "height": 2133
+          },
+          "alt": {
+            "uk": "Review Card у руці крупним планом",
+            "en": "Close-up of Review Card held in a hand",
+            "pl": "Review Card trzymana w dłoni, zbliżenie"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW.READY.GALLERY.HAND"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/review.webp",
+      "bytes": 108396,
+      "sha256": "84cfa4624b0f4e0d404bb5fdf69b4358aef4e89eb0bdb333c8e7962e98d37647",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/2026-09/review-card-front.webp",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "product_appearance_reference",
+          "dimensions": {
+            "width": 1086,
+            "height": 1448
+          },
+          "alt": {
+            "uk": "Лицьова сторона Review Card",
+            "en": "Review Card front",
+            "pl": "Przód Review Card"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW.READY.CATALOG_AND_GALLERY.FRONT",
+        "HOME.HERO.DESKTOP",
+        "HOME.HERO.MOBILE",
+        "HOME.PURPOSE.GOOGLE",
+        "CATALOG.REVIEW.READY"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/three-d-back.webp",
+      "bytes": 101218,
+      "sha256": "aa31b9fb3e14e5e0249a4010846bd59312cea82aa319b83fade5a4b3f0c0e33e",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/review-3d/review-card-3d-back.webp",
+          "role": "Product gallery third image",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_prototype_image",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Зворотний бік прототипу NFC Review Card 3D із захисною підкладкою клейкого шару",
+            "en": "Back of the NFC Review Card 3D prototype with protective film.",
+            "pl": "Tył prototypu NFC Review Card 3D z folią ochronną warstwy klejącej"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW3D.GALLERY.BACK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/three-d-desk.webp",
+      "bytes": 131840,
+      "sha256": "697c4ba1579b9a9009cdeea0a14288156874001e81c11fcf17e1f70589ad9997",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/review-3d/review-card-3d-front-on-desk.webp",
+          "role": "Product gallery second image",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_prototype_image",
+          "dimensions": {
+            "width": 1122,
+            "height": 1402
+          },
+          "alt": {
+            "uk": "Прототип NFC Review Card 3D на світлій поверхні, вид спереду під кутом",
+            "en": "NFC Review Card 3D prototype on a light desk, showing the front and transparent edge.",
+            "pl": "Prototyp NFC Review Card 3D na jasnej powierzchni, widok z przodu pod kątem"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW3D.GALLERY.DESK"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    },
+    {
+      "path": "src/v36_2/assets/three-d.webp",
+      "bytes": 127190,
+      "sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742",
+      "kind": "image",
+      "canonicalProvenance": "user_provided_business_asset",
+      "provenanceBasis": "Existing main src/media-manifest.json exact SHA match",
+      "sourceManifestMatches": [
+        {
+          "source": "src/media/review-3d/review-card-3d-front-in-hand.webp",
+          "role": "Catalogue primary and product gallery first image",
+          "status": "public",
+          "provenance": "user_provided_business_asset",
+          "claimRole": "owner_supplied_prototype_image",
+          "dimensions": {
+            "width": 1198,
+            "height": 1313
+          },
+          "alt": {
+            "uk": "Прототип NFC Review Card 3D у руці: прозорий край, об’ємні написи, зірки та позначення NFC",
+            "en": "Front of the NFC Review Card 3D prototype held in a hand, with a Google review prompt.",
+            "pl": "Prototyp NFC Review Card 3D w dłoni: przezroczysta krawędź, wypukłe napisy, gwiazdki i symbol NFC"
+          }
+        }
+      ],
+      "slotIds": [
+        "REVIEW3D.CATALOG_AND_GALLERY.FRONT_HAND",
+        "CATALOG.REVIEW3D"
+      ],
+      "licenseNotice": null,
+      "altImplementation": "Localized use-site alt in app.mjs/editorial-view.mjs/media.mjs; preserve meaning when replacing assets",
+      "cropStrategy": "Product galleries contain the complete physical object; retain ratio and inspect desktop/mobile. Portrait crops must preserve the face.",
+      "productionApproval": false
+    }
+  ]
+}

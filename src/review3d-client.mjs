@@ -1,5 +1,6 @@
 import {leadEndpoint,submitLead,publicBasePath,unavailable} from './pages.mjs';
 import {review3dQuote,validateCommerce} from './commerce-contract.mjs';
+import {requestNotice} from './inbound-notice.mjs';
 
 const methods=new Set(['telegram','whatsapp','viber']);
 const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
@@ -48,7 +49,7 @@ export function review3dLeadPayload(input,{basePath='',pathname}={}){
   const payload={language:input.locale,product:'review-card-3d',productSchemaVersion:1,
     product_id:'nfc-review-card-3d',design:'fixed_shown_design',quantity,
     customerName:name,contact:{phone:phone.replace(/[ ()-]/g,''),preferredMethod:input.messenger},
-    sourcePage:route,consent:true};
+    sourcePage:route,...requestNotice};
   if(google)payload.google_location_url=google;
   if(comment)payload.comment=comment;
   return payload;
@@ -91,6 +92,15 @@ export async function mountReview3dForm(form,{endpoint='',basePath='',locale='uk
   else if(stored?.state==='uncertain'){submit.disabled=true;show(P('Попередня заявка могла бути збережена. Дані не зберігаються у браузері; уточніть статус у нас або свідомо створіть нову заявку.','A previous enquiry may have been saved. Details are not stored in this browser; ask us to check its status or explicitly start a new enquiry.'),'uncertain');newRequest.hidden=false;}
 }
 if(typeof document!=='undefined'){
+  // The product page loads its viewer eagerly; keep it still for visitors who
+  // request reduced motion, including when the preference changes mid-session.
+  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const syncViewerMotion=()=>{const viewer=document.querySelector('.review-card-model');if(viewer){
+    if(motion.matches)viewer.removeAttribute('auto-rotate');
+    else viewer.setAttribute('auto-rotate','');
+  }};
+  motion.addEventListener('change',syncViewerMotion);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',syncViewerMotion,{once:true});else syncViewerMotion();
   const start=async()=>{const form=document.querySelector('[data-review3d-form]');if(!form)return;
     const basePath=document.documentElement.dataset.publicBasePath||'',endpoint=document.documentElement.dataset.leadEndpoint||'';
     let commerce;try{const response=await fetch(basePath+'/assets/content.json');if(!response.ok)throw Error('content_unavailable');commerce=validateCommerce((await response.json()).commerce);}catch{return;}

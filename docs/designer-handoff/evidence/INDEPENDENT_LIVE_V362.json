@@ -1,0 +1,6285 @@
+{
+  "method": "Actual Chromium HTTP GET-only on owned4196, nine widths, real links/filters/locale/noJS; no network POST or external origin",
+  "base": "http://127.0.0.1:4196",
+  "sourceBuildStable": true,
+  "buildManifestSHA256": "ba11d7770dfee54e2b71e85ed4efa5d36a37632ec69083ef7b8806961192a7d3",
+  "results": [
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DELIVERY 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/delivery-and-payment/",
+        "h1": "Доставка й оплата",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk ABOUT 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/about/",
+        "h1": "Про нас",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk CATALOG 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/solutions/",
+        "h1": "Каталог",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk BRANDED_HUB 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "uk DESIGN 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/services/design/",
+        "h1": "Зробити свій дизайн",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DELIVERY 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/delivery-and-payment/",
+        "h1": "Delivery and payment",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en ABOUT 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/about/",
+        "h1": "About us",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en CATALOG 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/solutions/",
+        "h1": "Catalog",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en BRANDED_HUB 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "en DESIGN 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/services/design/",
+        "h1": "Create your own design",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 320",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 320,
+          "scrollWidth": 320,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 108,
+            "top": 0,
+            "right": 320,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 360",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 360,
+          "scrollWidth": 360,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 108,
+            "top": 0,
+            "right": 360,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 390",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 390,
+          "scrollWidth": 390,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 108,
+            "top": 0,
+            "right": 390,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 393",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 393,
+          "scrollWidth": 393,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 108,
+            "top": 0,
+            "right": 393,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 430",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 430,
+          "scrollWidth": 430,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 108,
+            "top": 0,
+            "right": 430,
+            "bottom": 108,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 768",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 768,
+          "scrollWidth": 768,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 79,
+            "top": 0,
+            "right": 768,
+            "bottom": 79,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 1024",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 1024,
+          "scrollWidth": 1024,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 1280",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 1280,
+          "scrollWidth": 1280,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 89,
+            "top": 0,
+            "right": 1280,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DELIVERY 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/delivery-and-payment/",
+        "h1": "Dostawa i płatność",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl ABOUT 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/about/",
+        "h1": "O nas",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl CATALOG 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/solutions/",
+        "h1": "Katalog",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl BRANDED_HUB 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A23",
+      "name": "pl DESIGN 1440",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/services/design/",
+        "h1": "Stwórz własny projekt",
+        "geometry": {
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "bodyFont": 16,
+          "badTargets": [],
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          }
+        },
+        "sticky": [
+          {
+            "where": "top",
+            "headerTop": 0
+          },
+          {
+            "where": "middle",
+            "headerTop": 0
+          },
+          {
+            "where": "bottom",
+            "headerTop": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A13",
+      "name": "uk six exact public offers /solutions/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "uk six exact public offers /catalog/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "uk six exact public offers /collections/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "uk six exact public offers /search/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": null
+      }
+    },
+    {
+      "id": "A14",
+      "name": "uk category stays subset /collections/google-review/",
+      "status": "PASS",
+      "observed": [
+        "review-card",
+        "review-card-3d",
+        "beauty-review-card",
+        "restaurant-review-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "uk category stays subset /collections/instagram/",
+      "status": "PASS",
+      "observed": [
+        "nfc-instagram-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "uk category stays subset /collections/online-menu/",
+      "status": "PASS",
+      "observed": [
+        "nfc-menu-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "uk category stays subset /collections/mini/",
+      "status": "PASS",
+      "observed": [
+        "beauty-review-card",
+        "restaurant-review-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "uk search/filter/reset preserves shortlist",
+      "status": "PASS",
+      "observed": {
+        "empty": 6,
+        "branded": 0,
+        "reset": 6,
+        "instagram": 1
+      }
+    },
+    {
+      "id": "A19",
+      "name": "uk legacy branded collection is one service hub",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/collections/branded/",
+        "productCards": 0
+      }
+    },
+    {
+      "id": "A15",
+      "name": "uk home exact approved four offers",
+      "status": "PASS",
+      "observed": {
+        "four": true
+      }
+    },
+    {
+      "id": "A10",
+      "name": "uk About labels/H1/title/meta/breadcrumb",
+      "status": "PASS",
+      "observed": {
+        "label": "Про нас",
+        "h1": "Про нас",
+        "title": "Про нас | NFC CARD · Antonov Digital"
+      }
+    },
+    {
+      "id": "A10",
+      "name": "uk header About and mobile locale stays About",
+      "status": "PASS",
+      "observed": {
+        "from": "uk",
+        "to": "pl",
+        "path": "about"
+      }
+    },
+    {
+      "id": "A02",
+      "name": "uk Delivery useful sections/FAQ/market terms and links",
+      "status": "PASS",
+      "observed": {
+        "characters": 3646,
+        "sections": 8,
+        "faq": 7
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link instagram-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "instagram-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link menu-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "menu-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link review-card-3d",
+      "status": "PASS",
+      "observed": {
+        "slug": "review-card-3d",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "beauty-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "restaurant-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link branded-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link branded-beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-beauty-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk product payment panel full-terms link branded-restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-restaurant-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk real Catalog → product → Delivery panel → full page → Contact",
+      "status": "PASS",
+      "observed": {
+        "journey": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk direct main crosslink /cart/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk direct main crosslink /order/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk direct main crosslink /faq/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "uk direct main crosslink /contact/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A17",
+      "name": "uk product contextual service review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A17",
+      "name": "uk product contextual service beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-beauty-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A17",
+      "name": "uk product contextual service restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-restaurant-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A13",
+      "name": "en six exact public offers /solutions/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "en six exact public offers /catalog/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "en six exact public offers /collections/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "en six exact public offers /search/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": null
+      }
+    },
+    {
+      "id": "A14",
+      "name": "en category stays subset /collections/google-review/",
+      "status": "PASS",
+      "observed": [
+        "review-card",
+        "review-card-3d",
+        "beauty-review-card",
+        "restaurant-review-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "en category stays subset /collections/instagram/",
+      "status": "PASS",
+      "observed": [
+        "nfc-instagram-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "en category stays subset /collections/online-menu/",
+      "status": "PASS",
+      "observed": [
+        "nfc-menu-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "en category stays subset /collections/mini/",
+      "status": "PASS",
+      "observed": [
+        "beauty-review-card",
+        "restaurant-review-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "en search/filter/reset preserves shortlist",
+      "status": "PASS",
+      "observed": {
+        "empty": 6,
+        "branded": 0,
+        "reset": 6,
+        "instagram": 1
+      }
+    },
+    {
+      "id": "A19",
+      "name": "en legacy branded collection is one service hub",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/en/collections/branded/",
+        "productCards": 0
+      }
+    },
+    {
+      "id": "A15",
+      "name": "en home exact approved four offers",
+      "status": "PASS",
+      "observed": {
+        "four": true
+      }
+    },
+    {
+      "id": "A10",
+      "name": "en About labels/H1/title/meta/breadcrumb",
+      "status": "PASS",
+      "observed": {
+        "label": "About us",
+        "h1": "About us",
+        "title": "About us | NFC CARD · Antonov Digital"
+      }
+    },
+    {
+      "id": "A10",
+      "name": "en header About and mobile locale stays About",
+      "status": "PASS",
+      "observed": {
+        "from": "en",
+        "to": "pl",
+        "path": "about"
+      }
+    },
+    {
+      "id": "A02",
+      "name": "en Delivery useful sections/FAQ/market terms and links",
+      "status": "PASS",
+      "observed": {
+        "characters": 3556,
+        "sections": 8,
+        "faq": 7
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link instagram-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "instagram-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link menu-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "menu-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link review-card-3d",
+      "status": "PASS",
+      "observed": {
+        "slug": "review-card-3d",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "beauty-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "restaurant-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link branded-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link branded-beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-beauty-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en product payment panel full-terms link branded-restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-restaurant-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en real Catalog → product → Delivery panel → full page → Contact",
+      "status": "PASS",
+      "observed": {
+        "journey": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en direct main crosslink /cart/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en direct main crosslink /order/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en direct main crosslink /faq/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "en direct main crosslink /contact/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A17",
+      "name": "en product contextual service review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A17",
+      "name": "en product contextual service beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-beauty-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A17",
+      "name": "en product contextual service restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-restaurant-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A13",
+      "name": "pl six exact public offers /solutions/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "pl six exact public offers /catalog/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "pl six exact public offers /collections/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": 6
+      }
+    },
+    {
+      "id": "A13",
+      "name": "pl six exact public offers /search/",
+      "status": "PASS",
+      "observed": {
+        "ids": [
+          "review-card",
+          "nfc-instagram-card",
+          "nfc-menu-card",
+          "review-card-3d",
+          "beauty-review-card",
+          "restaurant-review-card"
+        ],
+        "serviceBlocks": 1,
+        "itemList": null
+      }
+    },
+    {
+      "id": "A14",
+      "name": "pl category stays subset /collections/google-review/",
+      "status": "PASS",
+      "observed": [
+        "review-card",
+        "review-card-3d",
+        "beauty-review-card",
+        "restaurant-review-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "pl category stays subset /collections/instagram/",
+      "status": "PASS",
+      "observed": [
+        "nfc-instagram-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "pl category stays subset /collections/online-menu/",
+      "status": "PASS",
+      "observed": [
+        "nfc-menu-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "pl category stays subset /collections/mini/",
+      "status": "PASS",
+      "observed": [
+        "beauty-review-card",
+        "restaurant-review-card"
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "pl search/filter/reset preserves shortlist",
+      "status": "PASS",
+      "observed": {
+        "empty": 6,
+        "branded": 0,
+        "reset": 6,
+        "instagram": 1
+      }
+    },
+    {
+      "id": "A19",
+      "name": "pl legacy branded collection is one service hub",
+      "status": "PASS",
+      "observed": {
+        "url": "http://127.0.0.1:4196/nfc-card-website/pl/collections/branded/",
+        "productCards": 0
+      }
+    },
+    {
+      "id": "A15",
+      "name": "pl home exact approved four offers",
+      "status": "PASS",
+      "observed": {
+        "four": true
+      }
+    },
+    {
+      "id": "A10",
+      "name": "pl About labels/H1/title/meta/breadcrumb",
+      "status": "PASS",
+      "observed": {
+        "label": "O nas",
+        "h1": "O nas",
+        "title": "O nas | NFC CARD · Antonov Digital"
+      }
+    },
+    {
+      "id": "A10",
+      "name": "pl header About and mobile locale stays About",
+      "status": "PASS",
+      "observed": {
+        "from": "pl",
+        "to": "en",
+        "path": "about"
+      }
+    },
+    {
+      "id": "A02",
+      "name": "pl Delivery useful sections/FAQ/market terms and links",
+      "status": "PASS",
+      "observed": {
+        "characters": 3147,
+        "sections": 8,
+        "faq": 6
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link instagram-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "instagram-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link menu-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "menu-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link review-card-3d",
+      "status": "PASS",
+      "observed": {
+        "slug": "review-card-3d",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "beauty-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "restaurant-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link branded-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link branded-beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-beauty-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl product payment panel full-terms link branded-restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "slug": "branded-restaurant-review-card",
+        "fullTerms": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl real Catalog → product → Delivery panel → full page → Contact",
+      "status": "PASS",
+      "observed": {
+        "journey": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl direct main crosslink /cart/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl direct main crosslink /order/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl direct main crosslink /faq/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A09",
+      "name": "pl direct main crosslink /contact/",
+      "status": "PASS",
+      "observed": {
+        "main": true,
+        "footer": true
+      }
+    },
+    {
+      "id": "A17",
+      "name": "pl product contextual service review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A17",
+      "name": "pl product contextual service beauty-review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-beauty-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A17",
+      "name": "pl product contextual service restaurant-review-card",
+      "status": "PASS",
+      "observed": {
+        "entry": "branded-restaurant-review-card",
+        "intent": "free_design_concepts",
+        "initialGoogleURL": false
+      }
+    },
+    {
+      "id": "A22",
+      "name": "uk no-JS SSR readable /delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "h1": "Доставка й оплата",
+        "visibleText": 3646
+      }
+    },
+    {
+      "id": "A22",
+      "name": "uk no-JS SSR readable /about/",
+      "status": "PASS",
+      "observed": {
+        "h1": "Про нас",
+        "visibleText": 2484
+      }
+    },
+    {
+      "id": "A22",
+      "name": "en no-JS SSR readable /delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "h1": "Delivery and payment",
+        "visibleText": 3556
+      }
+    },
+    {
+      "id": "A22",
+      "name": "en no-JS SSR readable /about/",
+      "status": "PASS",
+      "observed": {
+        "h1": "About us",
+        "visibleText": 2502
+      }
+    },
+    {
+      "id": "A22",
+      "name": "pl no-JS SSR readable /delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "h1": "Dostawa i płatność",
+        "visibleText": 3147
+      }
+    },
+    {
+      "id": "A22",
+      "name": "pl no-JS SSR readable /about/",
+      "status": "PASS",
+      "observed": {
+        "h1": "O nas",
+        "visibleText": 2494
+      }
+    }
+  ],
+  "errors": [],
+  "requestCount": 12136,
+  "postRequests": 0,
+  "externalRequests": 0,
+  "status": "PASS",
+  "pass": 234,
+  "fail": 0
+}

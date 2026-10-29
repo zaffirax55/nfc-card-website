@@ -1,6 +1,7 @@
 // Shared Pages build/client boundary. Only explicit public configuration belongs here.
 import {instagramProfileURL} from './commerce-contract.mjs';
 import {MINI_PRODUCTS,MINI_QUANTITIES,miniQuote} from './mini-contract.mjs';
+import {requestNotice} from './inbound-notice.mjs';
 export function publicBasePath(value = '') {
   if (value === '' || value === '/') return '';
   if (typeof value !== 'string' || !/^\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_-]+\/?$/.test(value)) {
@@ -84,6 +85,19 @@ export function submissionNotice(locale,selection){
   : localized(locale,'Надсилаємо лише ім’я, контакт, картку та кількість. Коментар і додаткові деталі погодимо в месенджері.','We send only your name, contact, card and quantity. Please share comments and additional details in a messenger.','Przesyłamy tylko imię, dane kontaktowe, wybraną kartę i liczbę sztuk. Komentarz oraz pozostałe szczegóły ustalimy w komunikatorze.');
 }
 export function pagesFormHTML(html, {endpoint = '', locale, esc}) {
+  if (html.includes('data-commerce-form data-variant="branded"')) {
+    const L = (uk,en,pl) => localized(locale,uk,en,pl);
+    html = html.replace('<div class="messenger-options">', '<div class="messenger-options"><label class="messenger-option"><input type="radio" name="messenger" value="email" required><span>Email</span><span>' + L('Комерційна пропозиція','Commercial proposal','Oferta handlowa') + '</span></label>');
+    const fields = `<fieldset data-email-proposal hidden disabled><legend>${L('Пропозиція на email','Proposal by email','Oferta na email')}</legend>
+      <div class="field"><label for="proposal-email">Email *</label><input id="proposal-email" type="email" name="proposalEmail" maxlength="254" autocomplete="email" required></div>
+      <div class="field"><label for="proposal-business">${L('Назва бізнесу *','Business name *','Nazwa firmy *')}</label><input id="proposal-business" name="proposalBusiness" maxlength="150" required></div>
+      <div class="field"><label for="proposal-niche">${L('Сфера бізнесу *','Business type *','Branża *')}</label><select id="proposal-niche" name="proposalNiche" required><option value="">${L('Оберіть','Choose','Wybierz')}</option><option value="dental_orthodontics">${L('Стоматологія','Dental clinic','Stomatologia')}</option><option value="beauty_salons_barbershops">${L('Салон краси / барбершоп','Beauty salon / barbershop','Salon urody / barbershop')}</option><option value="other">${L('Інше','Other','Inna')}</option></select></div>
+      <div class="field"><label for="proposal-url">${L('Сайт бізнесу — необов’язково','Business website — optional','Strona firmy — opcjonalnie')}</label><input id="proposal-url" type="url" name="proposalUrl" maxlength="300" placeholder="https://"></div>
+      <label><input type="checkbox" name="proposalRequested" required> ${L('Прошу надіслати комерційну пропозицію NFC CARD на вказаний email щодо цієї заявки. Це не підписка на розсилку.','Please email me an NFC CARD commercial proposal about this enquiry. This is not a mailing list subscription.','Proszę o przesłanie oferty NFC CARD na podany email w sprawie tego zgłoszenia. To nie jest zapis do newslettera.')}</label></fieldset>`;
+    html = html.replace('</fieldset>', '</fieldset>' + fields);
+    html = html.replace('Leave your contact details. We will message you in your selected messenger and confirm the details.','Choose messenger or request a proposal by email.');
+    html = html.replace(L('Зручний месенджер *','Preferred messenger *','Preferowany komunikator *'), L('Спосіб відповіді *','Reply channel *','Sposób odpowiedzi *'));
+  }
   const nicheType=html.includes('data-niche-form')?(html.includes('data-design-mode="branded"')?'mini-branded':'mini-ready'):null;
   const notice = endpoint ? submissionNotice(locale,nicheType|| (html.includes('data-commerce-form data-variant="instagram"')?'instagram':'')) : unavailable(locale);
   // Native submission is inert even if either client script fails to load. Only
@@ -119,13 +133,18 @@ export function leadPayload(input, {basePath = '', pathname, utm = {}}) {
     ['logoNote','brandLink','brandStyle','designSplitNote'].some(key=>typeof (input[key]??'')!=='string'||(input[key]??'').length>300)||
     (mini.designMode==='ready'&&['logoNote','brandLink','brandStyle','designSplitNote'].some(key=>input[key]))))throw Error('invalid_fields');
   if(input.variant==='instagram'&&!instagramProfileURL(input.instagramUrl))throw Error('invalid_instagram_url');
+  const emailRoute=input.messenger==='email' && input.variant==='branded' && !solution && !mini;
+  const email=String(input.proposalEmail||'').trim();
+  if(emailRoute&&(!/^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/.test(email)||email.length>254||
+    !String(input.proposalBusiness||'').trim()||input.proposalBusiness.length>150||
+    !['dental_orthodontics','beauty_salons_barbershops','other'].includes(input.proposalNiche)||input.proposalRequested!==true))throw Error('invalid_fields');
   const name = String(input.name || '').trim().normalize('NFC'), phone = String(input.phone || '').trim();
   if (!['uk', 'en', 'pl'].includes(input.locale) || !products.includes(input.variant) || !(quantities.includes(input.quantity)||advice||mini) ||
       (solution&&input.variant!=='branded') ||(mini&&input.variant!==(mini.designMode==='branded'?'branded':'standard')) ||
       (input.variant === 'instagram' && (!['1','2'].includes(input.quantity)||!instagramProfileURL(input.instagramUrl)||typeof input.comment!=='string'||input.comment.length>2000)) ||
       (input.variant === 'bulk' && input.quantity !== 'more') || !name || name.length > 100 || /[\x00-\x1f\x7f\u202a-\u202e\u2066-\u2069]/u.test(name) ||
-      !/^\+?[\d ()-]+$/.test(phone) || phone.replace(/\D/g, '').length < 7 || phone.replace(/\D/g, '').length > 15 ||
-      !channels.includes(input.messenger) || input.consent !== true || input.website) throw Error('invalid_fields');
+      ((!emailRoute||phone)&&(!/^\+?[\d ()-]+$/.test(phone) || phone.replace(/\D/g, '').length < 7 || phone.replace(/\D/g, '').length > 15)) ||
+      (!emailRoute&&!channels.includes(input.messenger)) || input.consent !== true || input.website) throw Error('invalid_fields');
   const route = String(pathname || '').split(/[?#]/)[0].replace(/\/$/, '') || '/';
   const sourcePage = route === basePath ? basePath + '/' : route;
   const relative = sourcePage.slice(basePath.length);
@@ -134,8 +153,9 @@ export function leadPayload(input, {basePath = '', pathname, utm = {}}) {
       (mini&&!['', '/en', '/pl'].some(prefix=>relative===prefix+miniRoutes[solutionId]))) throw Error('invalid_source_page');
   const payload = {language: input.locale, product: mini?'nfc-review-card-mini':input.variant === 'instagram' ? 'nfc-instagram-card' : input.variant === 'branded' ? 'branded-review-card' : 'review-card',
     ...(miniPhysical?{quantity:miniQuantity}:!advice&&!mini?{quantity:input.quantity === 'more' ? 3 : Number(input.quantity)}:{}), customerName: name,
-    contact: {phone: phone.replace(/[ ()-]/g, ''), preferredMethod: input.messenger}, sourcePage,
+    contact: {...(phone?{phone:phone.replace(/[ ()-]/g, '')}:{}), ...(emailRoute?{email}:{}), preferredMethod: input.messenger}, sourcePage, ...requestNotice, ...(emailRoute?{formVersion:'NFC-CARD-FORM-V36',privacyNoticeVersion:'NFC-CARD-PRIVACY-V35'}:{}),
     selection: {variant: input.variant, quantity: input.quantity}};
+  if(emailRoute)payload.emailProposal={intent:'commercial_offer_by_email',businessName:input.proposalBusiness.trim(),niche:input.proposalNiche,...(String(input.proposalUrl||'').trim()?{businessUrl:input.proposalUrl.trim()}:{}),requested:true};
   if(input.variant==='instagram')Object.assign(payload,{productSchemaVersion:1,product_id:'nfc-instagram-card',sku:'NFC-IG-READY',offer:'ready',instagramUrl:instagramProfileURL(input.instagramUrl),comment:input.comment.trim(),consent:true});
   if(solution)payload.solution={schemaVersion:1,solution_id:solutionId,niche:solution.niche,request_type:'free_first_mockup'};
   if(mini){
@@ -209,7 +229,9 @@ export function mountPagesForm(form, {endpoint, basePath, locale, pathname, attr
     form.dataset.enhanced = 'true';
     return;
   }
-  const updateNotice=()=>{form.querySelector('.preview-notice').textContent=submissionNotice(locale,form.dataset.solution?(form.dataset.designMode==='branded'?'mini-branded':'mini-ready'):selection().variant);};
+  const syncEmail=()=>{const fields=form.querySelector('[data-email-proposal]');if(!fields)return;const email=q('messenger').value==='email';fields.hidden=!email;fields.disabled=!email;q('phone').required=!email;const phoneLabel=form.querySelector('label[for="f-phone"]');if(phoneLabel){phoneLabel.dataset.original??=phoneLabel.textContent;phoneLabel.textContent=email?P('Телефон — необов’язково','Phone — optional','Telefon — opcjonalnie'):phoneLabel.dataset.original;}submit.textContent=email?P('Запросити пропозицію на email','Request proposal by email','Poproś o ofertę na email'):label;};
+  form.addEventListener('change',e=>{if(e.target.name==='messenger'){syncEmail();updateNotice();}});syncEmail();
+  const updateNotice=()=>{if(q('messenger').value==='email'){form.querySelector('.preview-notice').textContent=P('Збережемо ім’я, email, назву й сферу бізнесу, сайт (якщо вказано), картку, кількість і джерело заявки для однієї відповіді на ваш запит. Без підписки на розсилку.','We save your name, email, business name and type, optional website, card, quantity and request source to respond to this enquiry. No mailing list subscription.','Zapisujemy imię, email, nazwę i branżę firmy, opcjonalną stronę, kartę, liczbę i źródło zgłoszenia, aby odpowiedzieć na ten wniosek. Bez zapisu do newslettera.');return;}form.querySelector('.preview-notice').textContent=submissionNotice(locale,form.dataset.solution?(form.dataset.designMode==='branded'?'mini-branded':'mini-ready'):selection().variant);};
   updateNotice();
   let busy = false, pending = null;
   const storageKey = `nfc-public-attempt:${basePath}:${endpoint}:${pathname.replace(/\/$/, '')}`;
@@ -234,6 +256,7 @@ export function mountPagesForm(form, {endpoint, basePath, locale, pathname, attr
   function clearProfileError(){const input=q('instagramUrl'),error=form.querySelector('#e-instagramUrl');if(input){input.removeAttribute('aria-invalid');input.setAttribute('aria-describedby','instagram-help');}if(error){error.hidden=true;error.textContent='';}}
   q('instagramUrl')?.addEventListener('input',clearProfileError);
   const snapshot = () => ({name: q('name').value, phone: q('phone').value, messenger: q('messenger').value,
+    proposalEmail:q('proposalEmail')?.value||'',proposalBusiness:q('proposalBusiness')?.value||'',proposalNiche:q('proposalNiche')?.value||'',proposalUrl:q('proposalUrl')?.value||'',proposalRequested:q('proposalRequested')?.checked===true,
     consent: q('consent').checked, instagramUrl:q('instagramUrl')?.value.trim(),comment:q('comment')?.value||'',
     customQuantity:q('customQuantity')?.value||'',brandLink:q('brandLink')?.value||'',logoNote:q('logoNote')?.value||'',
     brandStyle:q('brandStyle')?.value||'',designSplitNote:q('designSplitNote')?.value||'',
@@ -242,7 +265,7 @@ export function mountPagesForm(form, {endpoint, basePath, locale, pathname, attr
   function lock(locked) {
     for (const el of form.elements) if (!['hidden', 'submit', 'button'].includes(el.type)) el.disabled = locked;
     lockSelection(locked);
-    if(!locked)select(selection());
+    if(!locked){select(selection());syncEmail();}
     note.hidden = !locked;
     if (locked) note.textContent = P('Результат спроби ще не підтверджено. Повторимо ту саму заявку з тими самими даними, щоб не створити дублікат.',
       'The attempt is not confirmed yet. We will retry the same request with the same details to avoid a duplicate.',
@@ -260,7 +283,7 @@ export function mountPagesForm(form, {endpoint, basePath, locale, pathname, attr
           'Zapisaliśmy prośbę o bezpłatne warianty projektu. Nie złożono zamówienia na karty.')
       : form.dataset.successBody;
     status((previous ? P('Попередню заявку вже збережено. Нові дані не надсилалися. Номер: ', 'Your previous enquiry is already saved. The new details were not submitted. Reference: ', 'Poprzednie zgłoszenie zostało już zapisane. Nie wysłano nowych danych. Numer: ') :form.dataset.solution?form.dataset.successHeading+' — '+successBody+' ' :
-      selection().variant==='instagram'?P('Дякуємо! Заявку отримано. Я зв’яжуся з вами, перевірю Instagram-посилання та уточню деталі замовлення. Номер: ','Thank you! Your enquiry has been received. I will contact you, check the Instagram link and confirm your order details. Reference: ','Dziękuję! Otrzymałem zgłoszenie. Skontaktuję się z Tobą, sprawdzę link do profilu na Instagramie i ustalę szczegóły zamówienia. Numer: '):P('Дякуємо! Заявку збережено. Деталі погодимо у вибраному месенджері. Номер: ', 'Thank you! Your request is saved. We will agree the details in your selected messenger. Reference: ', 'Dziękujemy! Zgłoszenie zostało zapisane. Szczegóły ustalimy w wybranym komunikatorze. Numer: ')) + leadId + (locale==='pl'&&Number.isSafeInteger(serverQuote?.amount)?` · Cena produktów: ${serverQuote.amount} PLN. Zaliczka: ${serverQuote.deposit} PLN.`:''), previous ? 'existing' : 'success');
+      pending?.payload?.contact?.preferredMethod==='email'?P('Запит збережено. Пропозицію підготуємо на вказаний email після перевірки заявки. Це ще не підтвердження відправлення листа. Номер: ','Request saved. We will prepare a proposal for your email after reviewing the enquiry. This does not confirm that an email has been sent. Reference: ','Zgłoszenie zapisane. Po sprawdzeniu przygotujemy ofertę na podany email. To nie jest potwierdzenie wysłania wiadomości. Numer: '):selection().variant==='instagram'?P('Дякуємо! Заявку отримано. Я зв’яжуся з вами, перевірю Instagram-посилання та уточню деталі замовлення. Номер: ','Thank you! Your enquiry has been received. I will contact you, check the Instagram link and confirm your order details. Reference: ','Dziękuję! Otrzymałem zgłoszenie. Skontaktuję się z Tobą, sprawdzę link do profilu na Instagramie i ustalę szczegóły zamówienia. Numer: '):P('Дякуємо! Заявку збережено. Відповімо обраним вами способом. Номер: ', 'Thank you! Your request is saved. We will reply through your selected channel. Reference: ', 'Dziękujemy! Zgłoszenie zostało zapisane. Odpowiemy wybraną drogą. Numer: ')) + leadId + (locale==='pl'&&Number.isSafeInteger(serverQuote?.amount)?` · Cena produktów: ${serverQuote.amount} PLN. Zaliczka: ${serverQuote.deposit} PLN.`:''), previous ? 'existing' : 'success');
     remember('complete', leadId);
     if (newRequest) newRequest.hidden = false;
   }
@@ -334,6 +357,7 @@ export function mountPagesForm(form, {endpoint, basePath, locale, pathname, attr
       busy = false; submit.disabled = !!form.dataset.complete;
       submit.textContent = form.dataset.productFamily === 'nfc-review-card-mini' ?
         (selection().quantity === 'concepts' ? form.dataset.conceptsSubmit : form.dataset.physicalSubmit) : label;
+      if(!pending&&!form.dataset.complete)syncEmail();
       if (!pending && !form.dataset.complete) form.dataset.attemptState = 'draft';
       form.removeAttribute('aria-busy');
     }

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "NFC-CARD-B05-DP03-OWNER-D1-D3-2026-10-28",
+  "authority": "Direct explicit project-owner approval in current chat on2026-10-28; supersedes earlier single-character reply",
+  "decisions": {
+    "D1": "APPROVED exact public text UA/EN/PL and checkbox",
+    "D2": "APPROVED sole human Artem Antonov; existing private gateway/PostgreSQL and closed Owner Desk only; automatic separate Cloud CRM transfer disabled",
+    "D3": "APPROVED purpose-based retention and manual DP03 rights runbook; no invented retention deadline, no promise of immediate all-backup deletion; real customer deletion not exercised in tests"
+  },
+  "publicTextSHA256": "9a247e3320c0b1594374efd103b2e139d344b6b4eff26318c18f0dbe6ca2cb8f",
+  "policyBodySHA256": "d76bda8aff9b69e79731a2a536254e8c6e6b9d8b62faa986407f06e3e05806b4",
+  "rightsRunbookSHA256": "dac42a234ac6a6db4eac1732f964aaa3459366d708bc6a0350fbb45cac417e8a",
+  "publicationCondition": "Other mandatory production safety and compatible integration must pass; no production POST or QA notifications"
+}

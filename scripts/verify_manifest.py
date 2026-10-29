@@ -40,6 +40,24 @@ def generated_path(path: str) -> bool:
     return any(path == p or path.startswith(p + "/") for p in GENERATED_ROOTS)
 
 
+def registered_worktree_marker(path: Path) -> bool:
+    """Accept only reciprocal Git worktree metadata, never an arbitrary file."""
+    try:
+        marker = read_regular(path).decode("utf-8")
+        if not re.fullmatch(r"gitdir: /[^\r\n]+\n?", marker):
+            return False
+        directory = Path(marker.removeprefix("gitdir: ").strip())
+        if directory.is_symlink() or not directory.is_dir():
+            return False
+        backlink = Path(read_regular(directory / "gitdir").decode("utf-8").strip())
+        if backlink.resolve(strict=True) != path.resolve(strict=True):
+            return False
+        common = (directory / read_regular(directory / "commondir").decode("utf-8").strip()).resolve(strict=True)
+        return (common / "config").is_file() and (common / "HEAD").is_file()
+    except (OSError, UnicodeError, ValueError):
+        return False
+
+
 def source_files(root: Path) -> dict[str, Path]:
     """Walk every authored file, including dotfiles and Git-ignored files."""
     root = Path(root).absolute()
@@ -63,7 +81,8 @@ def source_files(root: Path) -> dict[str, Path]:
                 if relative not in GENERATED_ROOTS:
                     visit(entry)
             elif relative in GENERATED_ROOTS:
-                raise ManifestError("Generated directory replaced with a file")
+                if relative != ".git" or not registered_worktree_marker(entry):
+                    raise ManifestError("Generated directory replaced with a file")
             else:
                 found[relative] = entry
 

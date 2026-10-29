@@ -1,0 +1,20 @@
+/* Owner v36.0: in-place panels, not the superseded sticky anchor Guided bar. */
+.product-navigation-shell[data-reading-navigation=tabs]{position:relative;top:auto;z-index:5;background:#f7f7f4;border-block:1px solid #c3cbd4;box-shadow:none}
+.product-tabs-controls{padding-block:.75rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+.product-tab-list{display:none;flex:1 1 38rem;min-width:0;gap:.25rem;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding:4px;scroll-behavior:auto}
+.product-tabs-enhanced .product-tab-list{display:flex}
+.product-tab-list [role=tab]{flex:1 0 auto;min-width:8rem;min-height:48px;padding:.65rem .9rem;background:transparent;border:0;border-bottom:3px solid transparent;color:#303c49;font:inherit;font-size:1rem;font-weight:650;line-height:1.45;white-space:nowrap;cursor:pointer}
+.product-tab-list [role=tab]:hover{background:#e9edf0}
+.product-tab-list [role=tab][aria-selected=true]{background:#e9edf0;border-bottom-color:#172333;color:#12151a}
+.product-tab-list [role=tab]:focus-visible,.product-config-link:focus-visible{outline:3px solid #174bb8;outline-offset:2px}
+.product-config-link{display:inline-flex;align-items:center;min-height:44px;padding:.4rem 0;font-size:1rem;line-height:1.5}
+[data-product-tab-panels]{overflow-anchor:none}
+[data-product-tab-panel][hidden]{display:none!important}
+.product-tab-panel{padding-top:1.5rem;outline-offset:6px}
+.product-tab-panel:focus-visible{outline:2px solid #174bb8}
+.product-panel-title{margin-bottom:1.5rem;font-size:clamp(1.35rem,2.1vw,1.8rem)}
+.product-tab-panel .product-content-section:first-of-type{border-top:0}
+.product-tab-panel :is([id^=content-],#product-content-faq-title){scroll-margin-top:var(--reading-target-offset,130px)}
+.product-payment-faq{margin-top:1.5rem}
+@media(max-width:650px){.product-tabs-controls{gap:.25rem}.product-tab-list{flex-basis:100%;width:100%}.product-tab-list [role=tab]{min-width:max-content;padding-inline:.8rem}.product-config-link{margin-inline:4px}.product-tab-panel{padding-top:1rem}}
+@media(prefers-reduced-motion:reduce){.product-tab-list{scroll-behavior:auto}.product-tab-list [role=tab]{transition:none}}

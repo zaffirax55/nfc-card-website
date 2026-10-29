@@ -1,0 +1,48 @@
+{
+  "scope": "Independent local archive/source integration acceptance; no push, clean-clone or production proof",
+  "checks": [
+    {
+      "name": "Approved ZIP independently matches every runtime/CSS/asset/pure fixture; docs-only exceptions",
+      "status": "PASS",
+      "observed": {
+        "exactRuntimeAndPureFixtureFiles": 90,
+        "archiveSourceFiles": 83,
+        "onlyNewSourceFiles": [
+          "assets/IBMPlexMono-OFL.txt",
+          "assets/Onest-OFL.txt"
+        ],
+        "onlyAdaptedSourceFile": "README.md",
+        "zipCRC": "PASS"
+      }
+    },
+    {
+      "name": "Existing production src and all GitHub workflows unchanged",
+      "status": "PASS",
+      "observed": {
+        "unchangedOriginalSourceAndWorkflowFiles": 437
+      }
+    },
+    {
+      "name": "Isolated feature branch and additive designer package commands",
+      "status": "PASS",
+      "observed": {
+        "baseMain": "aab27e99e35aa538e73042249b2195c3129ce551",
+        "branch": "design/nfc-card-v36-2",
+        "existingPackageCommandsUnchanged": 5
+      }
+    },
+    {
+      "name": "Portable preview safety guards and production build boundary inspected",
+      "status": "PASS",
+      "observed": {
+        "loopbackOnly": true,
+        "syntheticAdmission": true,
+        "noProductionRuntimeOrSenders": true,
+        "productionBuildApprovalGuard": true
+      }
+    }
+  ],
+  "pass": 4,
+  "fail": 0,
+  "status": "PASS"
+}

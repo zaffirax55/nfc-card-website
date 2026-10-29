@@ -1,0 +1,346 @@
+{
+  "method": "Native chrome.tabs.setZoom/getZoom=2 in disposable Chromium profile, not CSS zoom/device emulation",
+  "checks": [
+    {
+      "locale": "uk",
+      "product": "review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "branded-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "nfc-instagram-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "nfc-menu-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "review-card-3d",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "beauty-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "branded-beauty-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "restaurant-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "product": "branded-restaurant-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "branded-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "nfc-instagram-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "nfc-menu-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "review-card-3d",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "beauty-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "branded-beauty-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "restaurant-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "product": "branded-restaurant-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "branded-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "nfc-instagram-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "nfc-menu-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "review-card-3d",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "beauty-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "branded-beauty-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "restaurant-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "product": "branded-restaurant-review-card",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/solutions/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/services/design/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/about/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/faq/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/delivery-and-payment/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/collections/branded/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/cart/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "uk",
+      "route": "/order/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/solutions/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/services/design/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/about/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/faq/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/delivery-and-payment/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/collections/branded/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/cart/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "route": "/order/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/solutions/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/services/design/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/about/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/faq/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/delivery-and-payment/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/collections/branded/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/cart/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    },
+    {
+      "locale": "pl",
+      "route": "/order/",
+      "nativeZoom": 2,
+      "status": "PASS"
+    }
+  ],
+  "externalRequests": [],
+  "posts": 0,
+  "serverLifecycleActions": 0,
+  "realNotifications": 0,
+  "nativeZoom": {
+    "factor": 2,
+    "before": {
+      "innerWidth": 1440,
+      "devicePixelRatio": 1
+    },
+    "after": {
+      "innerWidth": 720,
+      "devicePixelRatio": 2
+    }
+  },
+  "visualCapture": "Native visible viewport via CDP fromSurface:false, after bringToFront/scrollTop/fonts/two animation frames; no clip or image transformation",
+  "status": "PASS"
+}

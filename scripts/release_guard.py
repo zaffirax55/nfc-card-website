@@ -52,6 +52,9 @@ PATTERNS = {
 # appending anything to that line invalidates the exemption. No tests/** or
 # keyword-based bypass exists. Reasons and fixture scopes are in PACKAGING.md.
 SAFE_FIXTURES: dict[tuple[str, str, str], str] = {
+    ('src/v36_2/api-client.mjs', 'credential-literal', '75ddb62862e54661e82143d0791cea8ad0466257688e34df04abf0ed86932afb'): 'Fetch credentials mode omit, not a credential value; exact immutable archive source.',
+    ('src/v36_2/legacy-v36/pages.mjs', 'credential-literal', 'c69d8f3d1537648b69d5e4792668ce05f6afc6deebe85a20ba150355766a6cb0'): 'Fetch credentials mode omit, not a credential value; exact immutable archive source.',
+    ('src/v36_2/legacy-v36/pages.mjs', 'credential-literal', '42fff62a2d917c178ec83a013dcece0a1bc0458648c77cf7167a083d143887bd'): 'Fetch credentials mode omit, not a credential value; exact immutable archive source.',
     ("tests/test_pages_v17.py", "credential-literal", "735b954cc21270d13d65ef6927da6c7abcf443949108201bb52af41f12b5113f"): "unsigned synthetic challenge stub; transport fully mocked",
     ("src/pages.mjs", "credential-literal", "c69d8f3d1537648b69d5e4792668ce05f6afc6deebe85a20ba150355766a6cb0"): "GET challenge fetch credentials mode omit; no credential value",
     ("server/set_admin_password.py", "credential-literal", "ed7489ccf2dbe1f9ac0862947de7e10b7acefc3ff748436455524a936bc85d09"): "getpass confirmation prompt; no credential value",

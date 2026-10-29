@@ -79,13 +79,14 @@ const copy = {
 const symbols={cafe:'☕',salon:'✦',dental:'✚'};
 const appIcons=['☎','≡','✿','◉','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>','⚙'];
 const nfcIcon=`<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10a9 9 0 0 1 0 12m5-16a15 15 0 0 1 0 20m5-24a21 21 0 0 1 0 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="16" r="2" fill="currentColor"/></svg>`;
-export function nfcDemoView({locale,esc,asset}) {
+export function nfcDemoView({locale,esc,asset,url}) {
  const c=copy[locale]||copy.uk;
  return `<section class="nfc-demo" data-nfc-demo data-state="desktop" data-situation="cafe" aria-labelledby="nfc-demo-title">
   <div class="nfc-demo-copy">
    <p class="eyebrow"><span class="nfc-demo-live-dot" aria-hidden="true"></span> NFC · LIVE DEMO</p>
    <h2 id="nfc-demo-title">${esc(c.title)}</h2><p class="nfc-demo-intro">${esc(c.intro)}</p>
    <div class="nfc-demo-situations" role="group" aria-label="${esc(c.situationLabel)}">${Object.entries(c.situations).map(([key,label])=>`<button type="button" data-demo-situation="${key}" data-business="${esc(c.businesses[key])}" data-symbol="${symbols[key]}" aria-pressed="${key==='cafe'}"><span aria-hidden="true">${symbols[key]}</span>${esc(label)}</button>`).join('')}</div>
+   <a class="nfc-demo-catalog button secondary" href="${url('/solutions')}" data-event="catalog_view">${esc({uk:'Обрати картку',en:'Explore the cards',pl:'Wybierz kartę'}[locale])}<span aria-hidden="true">↗</span></a>
   </div>
   <ol class="nfc-demo-steps">${c.steps.map((text,i)=>`<li data-demo-step="${i}"${i===0?' aria-current="step"':''}><span class="nfc-demo-step-number" aria-hidden="true">0${i+1}</span><span>${esc(text)}</span></li>`).join('')}</ol>
   <div class="nfc-demo-controls">

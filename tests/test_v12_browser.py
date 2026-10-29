@@ -44,7 +44,7 @@ def ready(page):
         page.wait_for_function("() => { const form = document.querySelector('[data-review-form]'); return form.noValidate && typeof form.onsubmit === 'function'; }")
     if page.locator('[data-admin-loading]').count():expect(page.locator('[data-admin-loading]')).to_be_hidden()
     visible_images(page)
-def geometry(page):return page.evaluate('''()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,h1:document.querySelectorAll('h1').length,missingAlt:[...document.images].filter(e=>!e.hasAttribute('alt')).length,zeroReviews:!document.querySelector('#client-reviews,a[href="#client-reviews"]'),brokenImages:[...document.images].filter(e=>e.getBoundingClientRect().width>0&&e.complete&&e.currentSrc&&e.naturalWidth===0).map(e=>e.currentSrc),galleryDisplay:document.querySelector('.commerce-product-layout')?getComputedStyle(document.querySelector('.commerce-product-layout')).display:null})''')
+def geometry(page):return page.evaluate('''()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,h1:document.querySelectorAll('h1').length,missingAlt:[...document.images].filter(e=>!e.hasAttribute('alt')).length,zeroReviews:!document.querySelector('#client-reviews .review-card,#client-reviews [data-review-id]'),brokenImages:[...document.images].filter(e=>e.getBoundingClientRect().width>0&&e.complete&&e.currentSrc&&e.naturalWidth===0).map(e=>e.currentSrc),galleryDisplay:document.querySelector('.commerce-product-layout')?getComputedStyle(document.querySelector('.commerce-product-layout')).display:null})''')
 def capture(page,name,full=False):
     visible_images(page)
     page.screenshot(path=SHOTS/(name+'-top.png'),animations='disabled')
@@ -171,7 +171,7 @@ def test_review_public_pending_form_and_private_admin(web,browser,locale):
     page.goto(origin+prefix+'/admin/reviews/new');ready(page);capture(page,locale+'-admin-empty-manual-form-390',True)
     page.locator('#admin-reviewText').fill('Unsaved isolated technical draft.');page.locator('.admin-locale').click();expect(page.locator('[data-admin-error]')).to_be_visible();assert prefix+'/admin/reviews/new' in page.url
     page.locator('[data-logout]').click();page.wait_for_url('**/admin/login');page.goto(origin+prefix+'/admin/reviews/'+id);page.wait_for_url('**/admin/login')
-    page.goto(origin+('/en' if locale=='en' else '/'));ready(page);assert not page.locator('#client-reviews,a[href="#client-reviews"]').count();assert not errors
+    page.goto(origin+('/en' if locale=='en' else '/'));ready(page);assert page.locator('#client-reviews').count()==1;assert not page.locator('#client-reviews .review-card,#client-reviews [data-review-id]').count();assert not errors
     (EVIDENCE/(locale+'-review-admin-flow.json')).write_text(json.dumps({'pass':True,'rating':3,'submit':'pending only; same reference retry after response lost','admin':'protected login, read-only raw/rating, blockers, unsaved locale protection, save, logout','publishedCases':0,'pageErrors':errors},indent=2),'utf-8');context.close()
 
 def test_reduced_motion_zoom_reflow_and_story_control_contrast(web,browser):

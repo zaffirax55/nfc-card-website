@@ -720,7 +720,7 @@ const source = {
       "qr": "optional",
       "prices": {
         "1": 2000,
-        "2": 2600
+        "2": 3600
       },
       "provenance": "NFC_CARD_Site_Rebuild_Master_Brief_v9.md §3; NFC_CARD_Copy_UA_EN_v9.md §1",
       "benefits": {
@@ -1568,7 +1568,7 @@ export const caseTemplate = resolved.caseTemplate;
 export function validateModel(model = resolved) {
   validateInstagramContent({instagram,instagramGlobalFAQs,instagramProductFAQs});
   if (model.variants.length !== 2 || model.variants.map(v => v.id).join(',') !== 'standard,branded') throw new Error('Expected two variants of one card');
-  const expected = { standard: { '1': 1500, '2': 2600 }, branded: { '1': 2000, '2': 2600 } };
+  const expected = { standard: { '1': 1500, '2': 2600 }, branded: { '1': 2000, '2': 3600 } };
   for (const variant of model.variants) {
     if (JSON.stringify(variant.prices) !== JSON.stringify(expected[variant.id])) throw new Error('Canonical price mismatch');
     if (!variant.provenance || !variant.name || !variant.slot) throw new Error('Missing variant evidence');

@@ -1,0 +1,162 @@
+{
+  "scope": "Independent integrated local source/UX/content/SEO acceptance before source branch publication",
+  "localIntegrationStatus": "PASS",
+  "branchHandoffStatus": "PARTIAL_PENDING_FINAL_TRANSFER_PROOF",
+  "matrix": [
+    {
+      "id": "A01",
+      "status": "PASS",
+      "observed": "All three localized Delivery routes return200 in the new4196 preview.",
+      "evidence": "INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A02",
+      "status": "PASS",
+      "observed": "Full order/deposit/shipping/timing/quote/FAQ/contact-return sections in each locale;7/7/6Delivery FAQ.",
+      "evidence": "INDEPENDENT_LIVE_V362.json; INDEPENDENT_STATIC_SEO_V362.json"
+    },
+    {
+      "id": "A03",
+      "status": "PASS",
+      "observed": "UA/EN200UAH once, included in physical order; remaining payment follows dispatch/tracking. Approved content/pure fixtures unchanged.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; INTEGRATED_FRONTEND.log"
+    },
+    {
+      "id": "A04",
+      "status": "PASS",
+      "observed": "UA/EN standard Nova Poshta delivery in Ukraine remains free; other arrangements are agreed.",
+      "evidence": "INDEPENDENT_LIVE_V362.json; INDEPENDENT_PROVENANCE.json"
+    },
+    {
+      "id": "A05",
+      "status": "PASS",
+      "observed": "PL20PLN once/included; shipment from Ukraine, recipient-paid, carrier/cost agreed before deposit.",
+      "evidence": "INDEPENDENT_LIVE_V362.json; INTEGRATED_FRONTEND.log"
+    },
+    {
+      "id": "A06",
+      "status": "PASS",
+      "observed": "PL full Delivery does not promise free Polish shipping; EN usesUAH. Market price fixtures remain exact, without automatic conversion.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A07",
+      "status": "PASS",
+      "observed": "No online charge; service receipts have no physical lines,total or deposit.",
+      "evidence": "INDEPENDENT_REVIEWED_SYNTHETIC_FLOWS.json"
+    },
+    {
+      "id": "A08",
+      "status": "PASS",
+      "observed": "Fixed/quote/mixed/service semantics and once-per-order deposit retained in exact contracts and new local browser receipts.",
+      "evidence": "INTEGRATED_FRONTEND.log; LIVE_COMMERCE_QA.json"
+    },
+    {
+      "id": "A09",
+      "status": "PASS",
+      "observed": "Localized full-terms links from all27product payment panels,cart/order/FAQ/contact/footer; actual catalog→product→terms→contact journey.",
+      "evidence": "INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A10",
+      "status": "PASS",
+      "observed": "Header,mobile,H1,breadcrumb,title and description show Про нас / About us / O nas; locale switch stays on About. About JSON-LD is not claimed.",
+      "evidence": "INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A11",
+      "status": "PASS",
+      "observed": "All About paths and company/founder copy and original photograph preserved.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A12",
+      "status": "PASS",
+      "observed": "Separate How page at what-is-nfc-card remains unchanged.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; INDEPENDENT_BROWSER_V362.json"
+    },
+    {
+      "id": "A13",
+      "status": "PASS",
+      "observed": "Exact six ordered physical cards on solutions/catalog/collections and default search across three locales.",
+      "evidence": "INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A14",
+      "status": "PASS",
+      "observed": "Categories/search/filter/reset stay within six; Branded query is not a seventh retail card; client ItemList follows actual filtered results.",
+      "evidence": "INDEPENDENT_LIVE_V362.json; INDEPENDENT_RUNTIME_SEO_V362.json"
+    },
+    {
+      "id": "A15",
+      "status": "PASS",
+      "observed": "Home remains Beauty→Restaurant→Google→Instagram; exact home source/CSS/assets unchanged.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; INDEPENDENT_BROWSER_V362.json"
+    },
+    {
+      "id": "A16",
+      "status": "PASS",
+      "observed": "Design block is separate from product grid,with no product price/AddToCart/ProductOffer identity.",
+      "evidence": "INDEPENDENT_RUNTIME_SEO_V362.json; INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A17",
+      "status": "PASS",
+      "observed": "Three base products preserve correct service context in three locales; actual new local service-only saved receipts verified.",
+      "evidence": "INDEPENDENT_REVIEWED_SYNTHETIC_FLOWS.json; INDEPENDENT_BROWSER_V362.json"
+    },
+    {
+      "id": "A18",
+      "status": "PASS",
+      "observed": "No BrandedInstagram; two Universal drafts remain unavailable and excluded from Product/Offer/sitemap.",
+      "evidence": "INDEPENDENT_STATIC_SEO_V362.json; INDEPENDENT_PROVENANCE.json"
+    },
+    {
+      "id": "A19",
+      "status": "PASS",
+      "observed": "Legacy branded collection is a service hub without retail cards/prices/schema; permitted entry query is retained.",
+      "evidence": "INDEPENDENT_RUNTIME_SEO_V362.json; INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A20",
+      "status": "PASS",
+      "observed": "Nine active IDs/direct URLs,all fixed prices and3600UAH/299PLN Branded pair,82retained historical receipt specimens preserved.",
+      "evidence": "INTEGRATED_FRONTEND.log; INDEPENDENT_PROVENANCE.json; INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A21",
+      "status": "PASS",
+      "observed": "Original production source/workflows unchanged; archived V36 shim preserved; actual three-locale synthetic V36 forms,replay and parser regression pass. Installed CRM/OwnerDesk remains separate.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; LIVE_COMMERCE_QA.json; MAIN_V36_EMAIL_REGRESSION.log"
+    },
+    {
+      "id": "A22",
+      "status": "PASS",
+      "observed": "Three-locale raw HTML,canonical/hreflang/labels/schema and no-JS Delivery/About inspected; design service does not become ProductOffer.",
+      "evidence": "INDEPENDENT_STATIC_SEO_V362.json; INDEPENDENT_LIVE_V362.json"
+    },
+    {
+      "id": "A23",
+      "status": "PASS",
+      "observed": "Nine required widths,keyboard,real native200%zoom,reduced-motion rendering,sticky shell and actual screenshot paint inspected.",
+      "evidence": "INDEPENDENT_LIVE_V362.json; INDEPENDENT_BROWSER_V362.json; INDEPENDENT_NATIVE_ZOOM_200.json; INDEPENDENT_DELIVERY_ZOOM_200.json"
+    },
+    {
+      "id": "A24",
+      "status": "PASS_LOCAL_SCOPE",
+      "observed": "Reviewer made no app edits/commits/push/production requests or sends. New owner authorization permits feature-branch transfer only; final clean-clone,remote SHA/main/Pages receipts remain mandatory transfer gates.",
+      "evidence": "INDEPENDENT_PROVENANCE.json; INDEPENDENT_LIVE_V362.json; publication receipt pending"
+    }
+  ],
+  "openCritical": 0,
+  "openHigh": 0,
+  "openMedium": 0,
+  "pending": [
+    "Clean-clone commands on the final staged/committed tree",
+    "Final authored-source/index/history secret guard and source manifest",
+    "Exact remote feature SHA verification after authorized push",
+    "Remote main unchanged and no Pages deployment/new production side effects"
+  ],
+  "reviewerImplementationWrites": 0,
+  "reviewerPushOrDeploy": 0
+}

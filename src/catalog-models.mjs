@@ -64,9 +64,13 @@ document.addEventListener('click',async event=>{
   viewer.setAttribute('src',`${base}/assets/models/${id}.glb?v=20261022-polished`);
   viewer.setAttribute('alt',`3D: ${title}`);
   viewer.setAttribute('camera-controls','');
-  viewer.setAttribute('auto-rotate','');
-  viewer.setAttribute('auto-rotate-delay','1000');
-  viewer.setAttribute('rotation-per-second','7deg');
+  // A single viewer is created on demand. Respect reduced motion and avoid
+  // keeping a continuous animation alive for visitors who disable it.
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+   viewer.setAttribute('auto-rotate','');
+   viewer.setAttribute('auto-rotate-delay','1000');
+   viewer.setAttribute('rotation-per-second','7deg');
+  }
   viewer.setAttribute('environment-image','neutral');
   viewer.setAttribute('exposure','1.18');
   viewer.setAttribute('shadow-intensity','1.2');

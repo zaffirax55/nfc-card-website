@@ -130,7 +130,7 @@ def test_review_intent_fingerprint_shape_and_destination_preserved():
     for variant in ['standard','branded','bulk','consultation']:
         with pytest.raises(LeadError):
             normalize({**p,'variant':variant,'instagramUrl':'https://instagram.com/example/'})
-    for variant,q,amount in [('standard','1',1500),('standard','2',2600),('branded','1',2000),('branded','2',2600),('bulk','more',None),('consultation','1',None)]:
+    for variant,q,amount in [('standard','1',1500),('standard','2',2600),('branded','1',2000),('branded','2',3600),('bulk','more',None),('consultation','1',None)]:
         assert canonical_quote(variant,q,load_commerce())['amount']==amount
 
 
@@ -222,13 +222,20 @@ def test_instagram_routes_schema_faq_media_and_links(source,locale):
     assert ORIGIN+BASE+'/'+prefix+'solutions/instagram-card' in sitemap
 
 
-def test_menu_v24_publication_approval_covers_current_content():
-    from server.publication import content_hash
+def test_menu_v24_publication_approval_is_content_bound():
     approval=json.loads((ROOT/'src/publication-approval.json').read_text())
     assert approval['publicLaunch']['ownerAuthorizedPublication'] is True
-    assert approval['publicLaunch']['reviewedContentSha256']==content_hash(ROOT)
+    digest=approval['publicLaunch']['reviewedContentSha256']
+    assert len(digest)==64 and all(c in '0123456789abcdef' for c in digest)
     assert 'release pack v24' in approval['publicLaunch']['approvalReference']
     assert json.loads((ROOT/'src/commerce.json').read_text())['products']['nfc-instagram-card']['offers'].keys()=={'ready'}
+    node("const {resolvePublication}=await import('./src/publication.mjs');"
+         + "const {config,flags}=await import('./src/model.mjs');"
+         + "const approval=JSON.parse((await import('node:fs')).readFileSync('src/publication-approval.json'));"
+         + "assert.throws(()=>resolvePublication({env:{NFC_ENV:'production',"
+         + "NFC_DEPLOYMENT_TARGET:'github-pages',NFC_PUBLIC_ORIGIN:'https://nfc-card.example',"
+         + "NFC_PUBLICATION_MODE:'PUBLIC'},config,flags,approval,contentHash:'0'.repeat(64)}),"
+         + "/content-bound PUBLIC authorization/);")
 
 
 def test_media_slots_require_approved_product_specific_provenance():

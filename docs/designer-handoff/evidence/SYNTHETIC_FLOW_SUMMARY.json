@@ -1,0 +1,266 @@
+{
+  "scope": "Actual integrated4196 browser to loopback-only synthetic SQLite. Raw request/receipt bodies not published.",
+  "overlap": "16cases overlap; second run has9catalog-to-service paths in place of9product-to-service paths; not50unique scenarios.",
+  "runs": [
+    {
+      "sourceReport": "LIVE_COMMERCE_QA.json",
+      "passed": 25,
+      "failed": 0,
+      "beforeCounts": {
+        "requests": 0,
+        "legacy": 0,
+        "v2_sends": 0,
+        "v1_sends": 0
+      },
+      "afterCounts": {
+        "requests": 22,
+        "legacy": 3,
+        "v2_sends": 0,
+        "v1_sends": 0
+      },
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "notifications": 0,
+      "productionPOST": 0,
+      "serviceOnlyCases": 9,
+      "serviceAssertions": {
+        "linesEmpty": true,
+        "totalNull": true,
+        "depositNotApplicable": true,
+        "durableSaved": true
+      },
+      "cases": [
+        {
+          "name": "uk ready review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "uk ready beauty-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "uk ready restaurant-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "en ready review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "en ready beauty-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "en ready restaurant-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "pl ready review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "pl ready beauty-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "pl ready restaurant-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "uk design review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "uk design beauty-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "uk design restaurant-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "en design review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "en design beauty-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "en design restaurant-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "pl design review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "pl design beauty-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "pl design restaurant-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Instagram required profile survives negative and actual positive order",
+          "status": "PASS"
+        },
+        {
+          "name": "Menu existing requires URL actual receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Menu development no URL actual receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Legacy Google destination survives locale and cart quantity edit without initial field",
+          "status": "PASS"
+        },
+        {
+          "name": "uk V36 actual v1 explicit email proposal and replay",
+          "status": "PASS"
+        },
+        {
+          "name": "en V36 actual v1 explicit email proposal and replay",
+          "status": "PASS"
+        },
+        {
+          "name": "pl V36 actual v1 explicit email proposal and replay",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "sourceReport": "CATALOG_SERVICE_FLOW_QA.json",
+      "passed": 25,
+      "failed": 0,
+      "beforeCounts": {
+        "requests": 22,
+        "legacy": 3,
+        "v2_sends": 0,
+        "v1_sends": 0
+      },
+      "afterCounts": {
+        "requests": 44,
+        "legacy": 6,
+        "v2_sends": 0,
+        "v1_sends": 0
+      },
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "notifications": 0,
+      "productionPOST": 0,
+      "serviceOnlyCases": 9,
+      "serviceAssertions": {
+        "linesEmpty": true,
+        "totalNull": true,
+        "depositNotApplicable": true,
+        "durableSaved": true
+      },
+      "cases": [
+        {
+          "name": "uk ready review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "uk ready beauty-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "uk ready restaurant-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "en ready review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "en ready beauty-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "en ready restaurant-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "pl ready review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "pl ready beauty-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "pl ready restaurant-review-card actual cart with no Google URL",
+          "status": "PASS"
+        },
+        {
+          "name": "uk catalog design review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "uk catalog design beauty-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "uk catalog design restaurant-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "en catalog design review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "en catalog design beauty-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "en catalog design restaurant-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "pl catalog design review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "pl catalog design beauty-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "pl catalog design restaurant-review-card contextual actual service receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Instagram required profile survives negative and actual positive order",
+          "status": "PASS"
+        },
+        {
+          "name": "Menu existing requires URL actual receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Menu development no URL actual receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Legacy Google destination survives locale and cart quantity edit without initial field",
+          "status": "PASS"
+        },
+        {
+          "name": "uk V36 actual v1 explicit email proposal and replay",
+          "status": "PASS"
+        },
+        {
+          "name": "en V36 actual v1 explicit email proposal and replay",
+          "status": "PASS"
+        },
+        {
+          "name": "pl V36 actual v1 explicit email proposal and replay",
+          "status": "PASS"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 6,
-  "revision": "NFC-CARD-CONTENT-TRUTH-PRICE-v33",
+  "revision": "NFC-CARD-BRANDED-PAIR-OWNER-20261026",
   "physicalProduct": {
     "id": "nfc-review-card",
     "name": "NFC Review Card"
@@ -24,7 +24,7 @@
       "name": "Branded Review Card",
       "prices": {
         "1": 2000,
-        "2": 2600
+        "2": 3600
       },
       "qr": "optional",
       "customDesign": true,

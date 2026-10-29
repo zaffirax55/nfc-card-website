@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "scope": "Pre-publication clean clone of locally committed designer branch. Final remote publication receipt is separate; no production release.",
+  "nodeVersion": "v24.19.0",
+  "commandExits": [
+    {
+      "name": "initial-status",
+      "exit": 0
+    },
+    {
+      "name": "commit",
+      "exit": 0
+    },
+    {
+      "name": "node",
+      "exit": 0
+    },
+    {
+      "name": "designer-build",
+      "exit": 0
+    },
+    {
+      "name": "designer-seo",
+      "exit": 0
+    },
+    {
+      "name": "designer-test-contracts",
+      "exit": 0
+    },
+    {
+      "name": "designer-test-transport",
+      "exit": 0
+    },
+    {
+      "name": "designer-check",
+      "exit": 0
+    },
+    {
+      "name": "media-export",
+      "exit": 0
+    },
+    {
+      "name": "source-manifest",
+      "exit": 0
+    },
+    {
+      "name": "source-index-history-guard",
+      "exit": 0
+    },
+    {
+      "name": "final-status",
+      "exit": 0
+    }
+  ],
+  "checks": [
+    {
+      "name": "Fresh-clone documented builds/tests/source-static",
+      "status": "PASS",
+      "frontendTests": 103,
+      "portableTests": 15,
+      "sourceStaticChecks": 44
+    },
+    {
+      "name": "Manifest, complete history/index/filesystem guard and clean tracked state",
+      "status": "PASS"
+    },
+    {
+      "name": "Fresh-clone documented Node24 preview,18GET pages/3locales, health/noindex",
+      "status": "PASS",
+      "pages": [
+        {
+          "path": "/nfc-card-website/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/catalog/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/delivery-and-payment/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/about/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/services/design/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/collections/branded/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/en/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/en/catalog/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/en/delivery-and-payment/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/en/about/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/en/services/design/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/en/collections/branded/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/pl/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/pl/catalog/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/pl/delivery-and-payment/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/pl/about/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/pl/services/design/",
+          "status": 200,
+          "exactBuiltHTML": true
+        },
+        {
+          "path": "/nfc-card-website/pl/collections/branded/",
+          "status": 200,
+          "exactBuiltHTML": true
+        }
+      ],
+      "notifications": "disabled"
+    }
+  ],
+  "exactApplicationSource": "designer/SOURCE_ORIGIN.json:90fileSHA; runtime/CSS/media unchanged after this clone",
+  "finalCommit": "Resolve with git rev-parse HEAD; supplied immutable SHA is verified after branch push",
+  "productionPOST": 0,
+  "realNotifications": 0,
+  "codeDiffCheck": "Authored integration clean; copied approved source/OFL notices retain original whitespace/CRLF",
+  "mainRuntimeCIUnchanged": true
+}

@@ -27,7 +27,7 @@ EXPECTED_ANSWERS = {
 }
 PRICES = {
     "uk": {
-        "review-card": (1500, 2600), "branded-review-card": (2000, 2600),
+        "review-card": (1500, 2600), "branded-review-card": (2000, 3600),
         "instagram-card": (1500, 2600), "review-card-3d": (4000,),
         "menu-card": (1000,),
         "beauty-review-card": (800, 1400),

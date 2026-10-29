@@ -1,0 +1,149 @@
+{
+  "revision": "v36.2",
+  "v1Endpoint": "https://lead-gateway-production-6c25.up.railway.app/v1/public/leads/nfc-card",
+  "v2Endpoint": "https://lead-gateway-production-6c25.up.railway.app/v2/public/requests/nfc-card",
+  "policy": {
+    "scope": "NFC_CARD_V2_RICH_REQUEST",
+    "formVersion": "NFC-CARD-FORM-V37",
+    "privacyNoticeVersion": "NFC-CARD-PRIVACY-V37",
+    "legacyNoticeSha256": "1d3d572f307c709e6afc1011b08af8a51113b4c0f73d3e7fd2b0659adfe1fe3c",
+    "checkbox": {
+      "uk": "Погоджуюся на обробку даних цієї заявки та її конфігурацій для відповіді, погодження й виконання запиту, як описано в Політиці конфіденційності. Це не згода на маркетингові розсилки.",
+      "en": "I agree to the processing of this enquiry and its configurations to respond, agree and fulfil my request, as described in the Privacy Policy. This does not authorise marketing messages.",
+      "pl": "Zgadzam się na przetwarzanie danych tego zgłoszenia i jego konfiguracji w celu odpowiedzi, uzgodnienia i realizacji mojego zapytania, zgodnie z Polityką prywatności. Nie jest to zgoda na wiadomości marketingowe."
+    },
+    "sections": {
+      "uk": [
+        {
+          "heading": "Продавець і контакт",
+          "text": "Продавець NFC CARD — Артем Антонов. Для питань щодо замовлення, повернення або персональних даних звертайтеся за контактами нижче."
+        },
+        {
+          "heading": "Дані чинних окремих форм",
+          "text": "Після вашої згоди та надсилання обробляємо ім’я, телефон, обраний месенджер, картку або тип звернення, кількість, мову, сторінку форми й обмежені UTM-мітки переходу. Це потрібно, щоб відповісти на заявку та погодити замовлення. У попередній окремій формі Google Review Card або Branded Review Card коментар не передається; це обмеження не стосується описаних нижче нових форм кошика. Для NFC Instagram Card передаємо посилання на Instagram-профіль і необов’язковий коментар. Для NFC Review Card 3D передаємо цілу кількість карток, за наявності посилання на Google-точку та необов’язковий коментар. У чинних формах Branded Mini також обробляємо надані опис логотипа, сайт або Instagram, побажання щодо стилю та розподілу дизайнів. Згода на заявку не є згодою на маркетингові розсилки."
+        },
+        {
+          "heading": "Дані заявки NFC Menu Card",
+          "text": "Для заявки NFC Menu Card також передаємо обрані виконання та кількості, статус онлайн-меню, а якщо меню вже є — його гостьове посилання. Необов’язковий коментар у цій формі теж передається. Для запиту лише на консультацію не передаємо кількість, виконання або ціну карток."
+        },
+        {
+          "heading": "Нова корзина, конфігурації та сервісні звернення",
+          "text": "Після вашої згоди та надсилання обробляємо ім’я, надані контакти (email, телефон або Telegram), обраний спосіб зв’язку, мову, сторінку форми й обмежені UTM-мітки переходу. Одна заявка з кошика може містити кілька товарів та окремі конфігурації: виконання, кількість, посилання на Google-точку, Instagram-профіль або онлайн-меню, статус меню, примітки й надані побажання щодо дизайну — опис логотипа, сайт або Instagram, стиль і розподіл дизайнів. Для безкоштовних концепцій дизайну, консультації щодо кількості або меню обробляємо переданий опис звернення й обраний товар та конфігурацію, якщо вони передбачені формою; такий запит не створює покупки. Ці дані потрібні для відповіді, розрахунку, погодження й виконання вашого запиту. Внесені в ці нові форми коментарі та побажання передаються разом із заявкою."
+        },
+        {
+          "heading": "Зберігання, доступ та повідомлення",
+          "text": "Заявка спочатку зберігається у приватній базі PostgreSQL gateway у Railway. Разом із нею зберігаємо отриману конфігурацію, час отримання, версії згоди, розрахунок і підтвердження. GitHub Pages розміщує сайт, Railway обробляє заявки; поточний регіон бази заявок — US West, США. Для розгляду й відповіді продавець може використовувати свою закриту робочу систему з доступом лише для продавця; це не підписка на розсилки та не автоматичне створення продажу. Автоматична передача нових заявок кошика в іншу CRM не вмикається фактом згоди: для неї потрібна окремо перевірена сумісна інтеграція. Автоматичні Telegram-повідомлення gateway про заявки сайту зараз вимкнені. Підтвердження форми означає збереження заявки, а не доставку Telegram або Gmail. Обраний вами контакт використовуємо для відповіді на цей запит. Окрема email-пропозиція описана нижче."
+        },
+        {
+          "heading": "Пропозиція на email — чинний окремий сценарій V36",
+          "text": "Якщо у формі Branded Review Card ви обираєте email і просите комерційну пропозицію, зберігаємо наданий email, назву та сферу бізнесу, необов’язковий сайт і телефон, джерело й час заявки та вашу згоду на відповідь. Ці дані використовуємо для перевірки заявки та підготовки однієї відповіді через Gmail. Це не підписка на маркетингову розсилку."
+        },
+        {
+          "heading": "Дані у браузері",
+          "text": "У чинних окремих формах ім’я, контакти й коментар не записуються застосунком у сховища браузера. У сесії зберігаємо випадковий ідентифікатор спроби, її статус і номер підтвердженої заявки для захисту від дублікатів; для Menu Card — також тип звернення, статус меню, виконання та кількості. Посилання на меню не записуємо в це сховище. У новій корзині й сервісних формах дані кошика, посилання, примітки, побажання щодо дизайну, ім’я та контакти залишаються лише в пам’яті відкритої сторінки. У localStorage записуємо тільки випадковий ідентифікатор спроби, технічну версію та статус невідомого результату для захисту від дублікатів. Персональні дані форм не передаються в analytics."
+        },
+        {
+          "heading": "Доступ, виправлення та видалення",
+          "text": "Зберігаємо заявку, поки вона потрібна для відповіді, погодження й виконання замовлення та розгляду пов’язаних звернень. Для доступу, виправлення, видалення даних або відкликання згоди зверніться до Артема Антонова за контактами нижче, за можливості вкажіть номер заявки. Запити розглядає продавець; за потреби дані перевіряються перед зміною."
+        },
+        {
+          "heading": "Оригінали, службові записи та резервні копії",
+          "text": "Під час розгляду запиту перевіряємо пов’язані копії заявки, підтвердження, робочі оригінали та службові записи. Виправлення не повинно непомітно змінювати початковий розрахунок або історичне підтвердження. Резервні копії можуть містити попередній стан даних. Не обіцяємо негайне видалення з усіх архівів і резервних копій або автоматичне видалення за неузгодженим строком. Продавець пояснює підтверджений обсяг, порядок і обмеження виконання конкретного запиту. Перед поверненням резервної копії в роботу слід врахувати раніше погоджені виправлення, обмеження обробки та видалення."
+        },
+        {
+          "heading": "Контакти",
+          "text": "Telegram: https://t.me/TijGabumG. Телефон: +380 98 042 16 19. WhatsApp: https://wa.me/380980421619. Viber: +380 98 042 16 19."
+        }
+      ],
+      "en": [
+        {
+          "heading": "Seller and contact",
+          "text": "NFC CARD is sold by Artem Antonov. For questions about orders, returns or personal data, use the contacts below."
+        },
+        {
+          "heading": "Existing separate forms",
+          "text": "After your consent and submission, we process your name, phone, preferred messenger, card or enquiry type, quantity, language, form page and limited referral UTM tags. We use these details to reply and agree your order. The comment in the previous separate Google Review Card or Branded Review Card form is not transmitted; this limitation does not apply to the new cart forms described below. For NFC Instagram Card, we send the Instagram profile URL and optional comment. For NFC Review Card 3D, we send the whole-number quantity and, when provided, the Google location link and optional comment. In existing Branded Mini forms, we also process the supplied logo description, website or Instagram, style preferences and allocation of designs. Enquiry consent does not authorise marketing messages."
+        },
+        {
+          "heading": "NFC Menu Card enquiry details",
+          "text": "For an NFC Menu Card enquiry, we also transmit selected formats and quantities, online menu status and, when a menu exists, its guest-facing URL. An optional comment in this form is also transmitted. A consultation-only enquiry does not send card quantity, formats or a price."
+        },
+        {
+          "heading": "New cart, configurations and service enquiries",
+          "text": "After your consent and submission, we process your name, supplied contact details (email, phone or Telegram), preferred contact method, language, form page and limited referral UTM tags. One cart enquiry may contain multiple products and separate configurations: format, quantity, Google location, Instagram profile or online menu URLs, menu status, notes and supplied design preferences — a description of your logo, website or Instagram, style and allocation of designs. For free design concepts, quantity advice or menu consultation, we process the enquiry description and selected product and configuration where the form provides them; this request does not create a purchase. We use these details to respond, prepare a quote, agree and fulfil your request. Comments and preferences entered in these new forms are transmitted with the enquiry."
+        },
+        {
+          "heading": "Storage, access and messages",
+          "text": "Your enquiry is first saved in the gateway’s private PostgreSQL database on Railway. We also save the supplied configuration, receipt time, consent versions, quote and confirmation. GitHub Pages hosts the site and Railway processes enquiries; the enquiry database’s current region is US West, USA. To review and respond, the seller may use a private working system accessible only to the seller; this does not subscribe you to marketing or automatically create a sale. Consent itself does not enable automatic transfer of new cart enquiries to another CRM: a separately verified compatible integration is required. Automatic gateway Telegram notifications for website enquiries are currently disabled. A form confirmation means that the enquiry was saved, not that a Telegram or Gmail message was delivered. We use your selected contact to respond to this request. The separate email proposal is described below."
+        },
+        {
+          "heading": "Email proposal — existing separate V36 scenario",
+          "text": "If you select email in the Branded Review Card form and request a commercial proposal, we save your provided email, business name and type, optional website and phone, request source and time, and your request to receive a reply. We use these details to review the enquiry and prepare one response through Gmail. This does not subscribe you to marketing emails."
+        },
+        {
+          "heading": "Details in your browser",
+          "text": "In existing separate forms, names, contacts and comments are not written to browser storage by the application. The session stores a random attempt identifier, its status and the confirmed enquiry reference to prevent duplicates; for Menu Card it also stores enquiry type, menu status, formats and quantities. The menu URL is not written to that storage. In the new cart and service forms, cart details, URLs, notes, design preferences, names and contacts remain only in the open page’s memory. localStorage stores only a random attempt identifier, a technical version and an unknown-outcome status to prevent duplicates. Form personal data is not sent to analytics."
+        },
+        {
+          "heading": "Access, correction and deletion",
+          "text": "We retain the enquiry while it is needed to respond, agree and fulfil the order and handle related enquiries. To request access, correction, deletion or withdrawal of consent, contact Artem Antonov using the details below and include your enquiry reference if available. The seller handles these requests and may verify details before making changes."
+        },
+        {
+          "heading": "Originals, operational records and backups",
+          "text": "When reviewing a request, we check related enquiry copies, confirmations, working originals and operational records. A correction must not silently change the original quote or historical confirmation. Backups may contain a previous state of the data. We do not promise immediate deletion from every archive and backup or automatic deletion after an unapproved period. The seller explains the verified scope, procedure and limitations for the individual request. Previously agreed corrections, processing restrictions and deletions must be accounted for before a backup is returned to use."
+        },
+        {
+          "heading": "Contacts",
+          "text": "Telegram: https://t.me/TijGabumG. Phone: +380 98 042 16 19. WhatsApp: https://wa.me/380980421619. Viber: +380 98 042 16 19."
+        }
+      ],
+      "pl": [
+        {
+          "heading": "Sprzedawca i kontakt",
+          "text": "Sprzedawcą NFC CARD jest Artem Antonov. W sprawach zamówień, zwrotów lub danych osobowych skorzystaj z poniższych danych kontaktowych."
+        },
+        {
+          "heading": "Dotychczasowe osobne formularze",
+          "text": "Po wyrażeniu zgody i wysłaniu formularza przetwarzamy imię, telefon, wybrany komunikator, kartę lub rodzaj zapytania, liczbę kart, język, stronę formularza i ograniczony zestaw znaczników UTM. Dane służą do odpowiedzi na zapytanie i uzgodnienia zamówienia. Komentarz z poprzedniego osobnego formularza Google Review Card lub Branded Review Card nie jest przekazywany; to ograniczenie nie dotyczy opisanych poniżej nowych formularzy koszyka. W przypadku NFC Instagram Card przekazujemy link do profilu na Instagramie i opcjonalny komentarz. W przypadku NFC Review Card 3D przekazujemy liczbę kart wyrażoną liczbą całkowitą, a także link do lokalizacji w Google i opcjonalny komentarz, jeśli je podano. W dotychczasowych formularzach Branded Mini przetwarzamy również podany opis logo, stronę lub Instagram, preferencje stylu i podział projektów. Zgoda na obsługę zapytania nie oznacza zgody na wiadomości marketingowe."
+        },
+        {
+          "heading": "Dane zapytania NFC Menu Card",
+          "text": "W przypadku zapytania NFC Menu Card przekazujemy także wybrane warianty i ilości, status menu online oraz jego link dla gości, jeśli menu już istnieje. Przekazywany jest też opcjonalny komentarz. Zapytanie wyłącznie o konsultację nie przekazuje liczby, wariantów ani ceny kart."
+        },
+        {
+          "heading": "Nowy koszyk, konfiguracje i zgłoszenia usługowe",
+          "text": "Po wyrażeniu zgody i przesłaniu zgłoszenia przetwarzamy imię, podane dane kontaktowe (email, telefon lub Telegram), preferowany sposób kontaktu, język, stronę formularza i ograniczone znaczniki UTM. Jedno zgłoszenie z koszyka może zawierać wiele produktów i osobne konfiguracje: wariant, ilość, link do lokalizacji Google, profilu Instagram lub menu online, status menu, uwagi i podane preferencje projektowe — opis logo, stronę lub Instagram, styl oraz podział projektów. W przypadku bezpłatnych koncepcji projektu, doradztwa dotyczącego ilości lub konsultacji menu przetwarzamy opis zapytania i wybrany produkt oraz konfigurację, jeśli formularz je przewiduje; takie zgłoszenie nie tworzy zakupu. Dane służą odpowiedzi, przygotowaniu wyceny, uzgodnieniu i realizacji zapytania. Uwagi i preferencje wpisane w tych nowych formularzach są przekazywane wraz ze zgłoszeniem."
+        },
+        {
+          "heading": "Przechowywanie, dostęp i wiadomości",
+          "text": "Zgłoszenie jest najpierw zapisywane w prywatnej bazie PostgreSQL gateway w Railway. Zapisujemy też podaną konfigurację, czas otrzymania, wersje zgody, wycenę i potwierdzenie. GitHub Pages hostuje stronę, a Railway przetwarza zgłoszenia; obecny region bazy zgłoszeń to US West, USA. Do rozpatrzenia zgłoszenia i odpowiedzi sprzedawca może użyć prywatnego systemu obsługi zgłoszeń, do którego dostęp ma wyłącznie sprzedawca; nie oznacza to zapisu do marketingu ani automatycznego utworzenia sprzedaży. Sama zgoda nie włącza automatycznego przekazywania nowych zgłoszeń koszyka do innego CRM: wymagana jest osobno sprawdzona, zgodna integracja. Automatyczne powiadomienia Telegram gateway o zgłoszeniach strony są obecnie wyłączone. Potwierdzenie formularza oznacza zapis zgłoszenia, a nie dostarczenie wiadomości Telegram lub Gmail. Wybrany kontakt wykorzystujemy do odpowiedzi na to zapytanie. Odrębna oferta email jest opisana poniżej."
+        },
+        {
+          "heading": "Oferta na email — istniejący osobny scenariusz V36",
+          "text": "Jeśli w formularzu Branded Review Card wybierzesz email i poprosisz o ofertę, zapisujemy podany email, nazwę i branżę firmy, opcjonalną stronę i telefon, źródło i czas zgłoszenia oraz zgodę na odpowiedź. Dane służą sprawdzeniu zgłoszenia i przygotowaniu jednej odpowiedzi przez Gmail. Nie jest to zapis do newslettera."
+        },
+        {
+          "heading": "Dane w przeglądarce",
+          "text": "W dotychczasowych osobnych formularzach aplikacja nie zapisuje imienia, danych kontaktowych ani komentarzy w pamięci przeglądarki. Sesja przechowuje losowy identyfikator próby, jej status i numer potwierdzonego zgłoszenia, aby zapobiec duplikatom; dla Menu Card również typ zapytania, status menu, warianty i ilości. Link do menu nie jest zapisywany w tej pamięci. W nowych formularzach koszyka i usług dane koszyka, linki, uwagi, preferencje projektowe, imię i dane kontaktowe pozostają wyłącznie w pamięci otwartej strony. localStorage zapisuje jedynie losowy identyfikator próby, wersję techniczną i status nieznanego wyniku, aby zapobiec duplikatom. Dane osobowe formularzy nie trafiają do analytics."
+        },
+        {
+          "heading": "Dostęp, poprawianie i usuwanie danych",
+          "text": "Przechowujemy zapytanie tak długo, jak jest potrzebne do udzielenia odpowiedzi, uzgodnienia i realizacji zamówienia oraz obsługi związanych z nim spraw. Aby uzyskać dostęp do danych, poprawić je, usunąć lub wycofać zgodę, skontaktuj się z Artemem Antonovem, korzystając z poniższych danych kontaktowych. W miarę możliwości podaj numer zapytania. Sprzedawca rozpatruje te wnioski i w razie potrzeby weryfikuje dane przed ich zmianą."
+        },
+        {
+          "heading": "Oryginały, zapisy operacyjne i kopie zapasowe",
+          "text": "Przy rozpatrywaniu wniosku sprawdzamy powiązane kopie zgłoszenia, potwierdzenia, oryginały robocze i zapisy operacyjne. Poprawka nie powinna niezauważalnie zmieniać pierwotnej wyceny ani historycznego potwierdzenia. Kopie zapasowe mogą zawierać wcześniejszy stan danych. Nie obiecujemy natychmiastowego usunięcia ze wszystkich archiwów i kopii zapasowych ani automatycznego usunięcia po niezatwierdzonym okresie. Sprzedawca wyjaśnia potwierdzony zakres, sposób wykonania i ograniczenia konkretnego wniosku. Przed przywróceniem kopii zapasowej do użytku należy uwzględnić wcześniej uzgodnione poprawki, ograniczenia przetwarzania i usunięcia."
+        },
+        {
+          "heading": "Kontakt",
+          "text": "Telegram: https://t.me/TijGabumG. Telefon: +380 98 042 16 19. WhatsApp: https://wa.me/380980421619. Viber: +380 98 042 16 19."
+        }
+      ]
+    },
+    "ownerApproved": true,
+    "approvalReference": "NFC-CARD-B05-DP03-OWNER-D1-D3-2026-10-28",
+    "policySha256": "d76bda8aff9b69e79731a2a536254e8c6e6b9d8b62faa986407f06e3e05806b4",
+    "sourceApprovalSha256": "a761169434cf3ff9fc4cc5b57be5ef4c03531e54ef16f29cd167b93f973286a7",
+    "publicTextSha256": "9a247e3320c0b1594374efd103b2e139d344b6b4eff26318c18f0dbe6ca2cb8f"
+  }
+}

@@ -1,0 +1,1785 @@
+{
+  "at": "2026-10-27T20:21:39.092Z",
+  "method": "Actual Chromium, local-file route fulfillment and explicit in-memory transport mocks; zero real HTTP/API sends",
+  "results": [
+    {
+      "id": "REG-A01",
+      "name": "uk HOME four ready products 320",
+      "status": "PASS",
+      "durationMs": 620.243334,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "uk HOME four ready products 360",
+      "status": "PASS",
+      "durationMs": 578.5233340000001,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "uk HOME four ready products 390",
+      "status": "PASS",
+      "durationMs": 600.7754579999998,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "uk HOME four ready products 768",
+      "status": "PASS",
+      "durationMs": 590.9502499999999,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "uk HOME four ready products 1024",
+      "status": "PASS",
+      "durationMs": 574.5333330000003,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "uk HOME four ready products 1440",
+      "status": "PASS",
+      "durationMs": 634.618708,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A03",
+      "name": "uk public listing excludes internal/Branded tiles /solutions/",
+      "status": "PASS",
+      "durationMs": 570.5908749999999
+    },
+    {
+      "id": "REG-A03",
+      "name": "uk public listing excludes internal/Branded tiles /search/",
+      "status": "PASS",
+      "durationMs": 574.6554159999996
+    },
+    {
+      "id": "REG-A03",
+      "name": "uk public listing excludes internal/Branded tiles /collections/branded/",
+      "status": "PASS",
+      "durationMs": 553.3220420000007
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk CATALOG responsive 320",
+      "status": "PASS",
+      "durationMs": 558.730125
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk GOOGLE responsive 320",
+      "status": "PASS",
+      "durationMs": 586.2612909999998
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk BEAUTY responsive 320",
+      "status": "PASS",
+      "durationMs": 574.6381659999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk RESTAURANT responsive 320",
+      "status": "PASS",
+      "durationMs": 566.449834
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk INSTAGRAM responsive 320",
+      "status": "PASS",
+      "durationMs": 556.931290999999
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk DESIGN responsive 320",
+      "status": "PASS",
+      "durationMs": 554.0697080000009
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk HOW responsive 320",
+      "status": "PASS",
+      "durationMs": 554.8654160000006
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk ABOUT responsive 320",
+      "status": "PASS",
+      "durationMs": 555.0813330000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk FAQ responsive 320",
+      "status": "PASS",
+      "durationMs": 554.8845000000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk CATALOG responsive 360",
+      "status": "PASS",
+      "durationMs": 560.6118749999987
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk GOOGLE responsive 360",
+      "status": "PASS",
+      "durationMs": 591.6838329999991
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk BEAUTY responsive 360",
+      "status": "PASS",
+      "durationMs": 574.3113329999996
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk RESTAURANT responsive 360",
+      "status": "PASS",
+      "durationMs": 576.9869159999998
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk INSTAGRAM responsive 360",
+      "status": "PASS",
+      "durationMs": 579.2073330000003
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk DESIGN responsive 360",
+      "status": "PASS",
+      "durationMs": 569.7668329999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk HOW responsive 360",
+      "status": "PASS",
+      "durationMs": 564.2988750000004
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk ABOUT responsive 360",
+      "status": "PASS",
+      "durationMs": 571.7939160000005
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk FAQ responsive 360",
+      "status": "PASS",
+      "durationMs": 562.7325419999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk CATALOG responsive 390",
+      "status": "PASS",
+      "durationMs": 581.3236249999991
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk GOOGLE responsive 390",
+      "status": "PASS",
+      "durationMs": 588.9199589999989
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk BEAUTY responsive 390",
+      "status": "PASS",
+      "durationMs": 586.5203750000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk RESTAURANT responsive 390",
+      "status": "PASS",
+      "durationMs": 582.2522089999984
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk INSTAGRAM responsive 390",
+      "status": "PASS",
+      "durationMs": 576.2285830000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk DESIGN responsive 390",
+      "status": "PASS",
+      "durationMs": 665.156167000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk HOW responsive 390",
+      "status": "PASS",
+      "durationMs": 651.5723749999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk ABOUT responsive 390",
+      "status": "PASS",
+      "durationMs": 619.3862919999992
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk FAQ responsive 390",
+      "status": "PASS",
+      "durationMs": 607.3732920000002
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk CATALOG responsive 768",
+      "status": "PASS",
+      "durationMs": 565.3721250000017
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk GOOGLE responsive 768",
+      "status": "PASS",
+      "durationMs": 567.9622080000008
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk BEAUTY responsive 768",
+      "status": "PASS",
+      "durationMs": 560.4530000000013
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk RESTAURANT responsive 768",
+      "status": "PASS",
+      "durationMs": 562.5375409999979
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk INSTAGRAM responsive 768",
+      "status": "PASS",
+      "durationMs": 554.2782499999994
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk DESIGN responsive 768",
+      "status": "PASS",
+      "durationMs": 559.2377909999996
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk HOW responsive 768",
+      "status": "PASS",
+      "durationMs": 562.330750000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk ABOUT responsive 768",
+      "status": "PASS",
+      "durationMs": 553.1865829999988
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk FAQ responsive 768",
+      "status": "PASS",
+      "durationMs": 554.3511249999974
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk CATALOG responsive 1024",
+      "status": "PASS",
+      "durationMs": 558.2972499999996
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk GOOGLE responsive 1024",
+      "status": "PASS",
+      "durationMs": 572.762791000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk BEAUTY responsive 1024",
+      "status": "PASS",
+      "durationMs": 579.9438750000008
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk RESTAURANT responsive 1024",
+      "status": "PASS",
+      "durationMs": 585.6799580000006
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk INSTAGRAM responsive 1024",
+      "status": "PASS",
+      "durationMs": 574.450499999999
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk DESIGN responsive 1024",
+      "status": "PASS",
+      "durationMs": 581.8668749999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk HOW responsive 1024",
+      "status": "PASS",
+      "durationMs": 583.8250000000007
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk ABOUT responsive 1024",
+      "status": "PASS",
+      "durationMs": 570.8380830000024
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk FAQ responsive 1024",
+      "status": "PASS",
+      "durationMs": 571.577959000002
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk CATALOG responsive 1440",
+      "status": "PASS",
+      "durationMs": 616.6570839999986
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk GOOGLE responsive 1440",
+      "status": "PASS",
+      "durationMs": 624.3137499999975
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk BEAUTY responsive 1440",
+      "status": "PASS",
+      "durationMs": 625.0482499999998
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk RESTAURANT responsive 1440",
+      "status": "PASS",
+      "durationMs": 637.0646659999984
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk INSTAGRAM responsive 1440",
+      "status": "PASS",
+      "durationMs": 608.052208000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk DESIGN responsive 1440",
+      "status": "PASS",
+      "durationMs": 685.2025839999988
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk HOW responsive 1440",
+      "status": "PASS",
+      "durationMs": 663.3092499999984
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk ABOUT responsive 1440",
+      "status": "PASS",
+      "durationMs": 642.9219999999987
+    },
+    {
+      "id": "REG-A15",
+      "name": "uk FAQ responsive 1440",
+      "status": "PASS",
+      "durationMs": 620.6614160000026
+    },
+    {
+      "id": "REG-A12",
+      "name": "uk meaningful HOW content",
+      "status": "PASS",
+      "durationMs": 545.7791250000009
+    },
+    {
+      "id": "REG-A13",
+      "name": "uk meaningful ABOUT/no hollow story",
+      "status": "PASS",
+      "durationMs": 545.7358329999988
+    },
+    {
+      "id": "REG-A14",
+      "name": "uk substantial grouped FAQ keyboard",
+      "status": "PASS",
+      "durationMs": 574.325874999995
+    },
+    {
+      "id": "REG-A01",
+      "name": "en HOME four ready products 320",
+      "status": "PASS",
+      "durationMs": 574.7727089999971,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "en HOME four ready products 360",
+      "status": "PASS",
+      "durationMs": 575.9456250000003,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "en HOME four ready products 390",
+      "status": "PASS",
+      "durationMs": 589.4069579999996,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "en HOME four ready products 768",
+      "status": "PASS",
+      "durationMs": 579.9294999999984,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "en HOME four ready products 1024",
+      "status": "PASS",
+      "durationMs": 588.2144169999956,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "en HOME four ready products 1440",
+      "status": "PASS",
+      "durationMs": 644.3099169999987,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A03",
+      "name": "en public listing excludes internal/Branded tiles /solutions/",
+      "status": "PASS",
+      "durationMs": 583.0653329999986
+    },
+    {
+      "id": "REG-A03",
+      "name": "en public listing excludes internal/Branded tiles /search/",
+      "status": "PASS",
+      "durationMs": 600.1619169999976
+    },
+    {
+      "id": "REG-A03",
+      "name": "en public listing excludes internal/Branded tiles /collections/branded/",
+      "status": "PASS",
+      "durationMs": 571.7705419999984
+    },
+    {
+      "id": "REG-A15",
+      "name": "en CATALOG responsive 320",
+      "status": "PASS",
+      "durationMs": 561.8625419999953
+    },
+    {
+      "id": "REG-A15",
+      "name": "en GOOGLE responsive 320",
+      "status": "PASS",
+      "durationMs": 581.2875419999982
+    },
+    {
+      "id": "REG-A15",
+      "name": "en BEAUTY responsive 320",
+      "status": "PASS",
+      "durationMs": 562.8285420000029
+    },
+    {
+      "id": "REG-A15",
+      "name": "en RESTAURANT responsive 320",
+      "status": "PASS",
+      "durationMs": 568.1006249999991
+    },
+    {
+      "id": "REG-A15",
+      "name": "en INSTAGRAM responsive 320",
+      "status": "PASS",
+      "durationMs": 562.9681249999994
+    },
+    {
+      "id": "REG-A15",
+      "name": "en DESIGN responsive 320",
+      "status": "PASS",
+      "durationMs": 558.4236250000031
+    },
+    {
+      "id": "REG-A15",
+      "name": "en HOW responsive 320",
+      "status": "PASS",
+      "durationMs": 575.4462910000002
+    },
+    {
+      "id": "REG-A15",
+      "name": "en ABOUT responsive 320",
+      "status": "PASS",
+      "durationMs": 558.7469579999961
+    },
+    {
+      "id": "REG-A15",
+      "name": "en FAQ responsive 320",
+      "status": "PASS",
+      "durationMs": 555.1652909999975
+    },
+    {
+      "id": "REG-A15",
+      "name": "en CATALOG responsive 360",
+      "status": "PASS",
+      "durationMs": 599.0437089999978
+    },
+    {
+      "id": "REG-A15",
+      "name": "en GOOGLE responsive 360",
+      "status": "PASS",
+      "durationMs": 574.789208000002
+    },
+    {
+      "id": "REG-A15",
+      "name": "en BEAUTY responsive 360",
+      "status": "PASS",
+      "durationMs": 566.5822079999998
+    },
+    {
+      "id": "REG-A15",
+      "name": "en RESTAURANT responsive 360",
+      "status": "PASS",
+      "durationMs": 562.802416999999
+    },
+    {
+      "id": "REG-A15",
+      "name": "en INSTAGRAM responsive 360",
+      "status": "PASS",
+      "durationMs": 577.9454579999947
+    },
+    {
+      "id": "REG-A15",
+      "name": "en DESIGN responsive 360",
+      "status": "PASS",
+      "durationMs": 570.7663339999999
+    },
+    {
+      "id": "REG-A15",
+      "name": "en HOW responsive 360",
+      "status": "PASS",
+      "durationMs": 563.9482080000016
+    },
+    {
+      "id": "REG-A15",
+      "name": "en ABOUT responsive 360",
+      "status": "PASS",
+      "durationMs": 561.8642499999987
+    },
+    {
+      "id": "REG-A15",
+      "name": "en FAQ responsive 360",
+      "status": "PASS",
+      "durationMs": 688.4524999999994
+    },
+    {
+      "id": "REG-A15",
+      "name": "en CATALOG responsive 390",
+      "status": "PASS",
+      "durationMs": 594.8113749999975
+    },
+    {
+      "id": "REG-A15",
+      "name": "en GOOGLE responsive 390",
+      "status": "PASS",
+      "durationMs": 610.3144580000007
+    },
+    {
+      "id": "REG-A15",
+      "name": "en BEAUTY responsive 390",
+      "status": "PASS",
+      "durationMs": 587.3415830000013
+    },
+    {
+      "id": "REG-A15",
+      "name": "en RESTAURANT responsive 390",
+      "status": "PASS",
+      "durationMs": 599.1275409999944
+    },
+    {
+      "id": "REG-A15",
+      "name": "en INSTAGRAM responsive 390",
+      "status": "PASS",
+      "durationMs": 592.0992499999993
+    },
+    {
+      "id": "REG-A15",
+      "name": "en DESIGN responsive 390",
+      "status": "PASS",
+      "durationMs": 659.5266659999979
+    },
+    {
+      "id": "REG-A15",
+      "name": "en HOW responsive 390",
+      "status": "PASS",
+      "durationMs": 676.8274170000004
+    },
+    {
+      "id": "REG-A15",
+      "name": "en ABOUT responsive 390",
+      "status": "PASS",
+      "durationMs": 632.4315420000057
+    },
+    {
+      "id": "REG-A15",
+      "name": "en FAQ responsive 390",
+      "status": "PASS",
+      "durationMs": 619.2078750000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "en CATALOG responsive 768",
+      "status": "PASS",
+      "durationMs": 559.7483749999956
+    },
+    {
+      "id": "REG-A15",
+      "name": "en GOOGLE responsive 768",
+      "status": "PASS",
+      "durationMs": 562.4422500000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "en BEAUTY responsive 768",
+      "status": "PASS",
+      "durationMs": 556.0773750000008
+    },
+    {
+      "id": "REG-A15",
+      "name": "en RESTAURANT responsive 768",
+      "status": "PASS",
+      "durationMs": 558.945375000003
+    },
+    {
+      "id": "REG-A15",
+      "name": "en INSTAGRAM responsive 768",
+      "status": "PASS",
+      "durationMs": 555.791541999999
+    },
+    {
+      "id": "REG-A15",
+      "name": "en DESIGN responsive 768",
+      "status": "PASS",
+      "durationMs": 553.5781669999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "en HOW responsive 768",
+      "status": "PASS",
+      "durationMs": 552.6396249999962
+    },
+    {
+      "id": "REG-A15",
+      "name": "en ABOUT responsive 768",
+      "status": "PASS",
+      "durationMs": 555.1047089999993
+    },
+    {
+      "id": "REG-A15",
+      "name": "en FAQ responsive 768",
+      "status": "PASS",
+      "durationMs": 572.8271669999958
+    },
+    {
+      "id": "REG-A15",
+      "name": "en CATALOG responsive 1024",
+      "status": "PASS",
+      "durationMs": 572.3931669999947
+    },
+    {
+      "id": "REG-A15",
+      "name": "en GOOGLE responsive 1024",
+      "status": "PASS",
+      "durationMs": 564.7917919999891
+    },
+    {
+      "id": "REG-A15",
+      "name": "en BEAUTY responsive 1024",
+      "status": "PASS",
+      "durationMs": 558.4752499999886
+    },
+    {
+      "id": "REG-A15",
+      "name": "en RESTAURANT responsive 1024",
+      "status": "PASS",
+      "durationMs": 556.3500420000055
+    },
+    {
+      "id": "REG-A15",
+      "name": "en INSTAGRAM responsive 1024",
+      "status": "PASS",
+      "durationMs": 559.2467089999991
+    },
+    {
+      "id": "REG-A15",
+      "name": "en DESIGN responsive 1024",
+      "status": "PASS",
+      "durationMs": 560.2642080000078
+    },
+    {
+      "id": "REG-A15",
+      "name": "en HOW responsive 1024",
+      "status": "PASS",
+      "durationMs": 571.3908329999977
+    },
+    {
+      "id": "REG-A15",
+      "name": "en ABOUT responsive 1024",
+      "status": "PASS",
+      "durationMs": 570.5577090000006
+    },
+    {
+      "id": "REG-A15",
+      "name": "en FAQ responsive 1024",
+      "status": "PASS",
+      "durationMs": 567.0286249999917
+    },
+    {
+      "id": "REG-A15",
+      "name": "en CATALOG responsive 1440",
+      "status": "PASS",
+      "durationMs": 632.4371669999964
+    },
+    {
+      "id": "REG-A15",
+      "name": "en GOOGLE responsive 1440",
+      "status": "PASS",
+      "durationMs": 602.739665999994
+    },
+    {
+      "id": "REG-A15",
+      "name": "en BEAUTY responsive 1440",
+      "status": "PASS",
+      "durationMs": 623.195584000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "en RESTAURANT responsive 1440",
+      "status": "PASS",
+      "durationMs": 637.4432910000032
+    },
+    {
+      "id": "REG-A15",
+      "name": "en INSTAGRAM responsive 1440",
+      "status": "PASS",
+      "durationMs": 631.8675840000069
+    },
+    {
+      "id": "REG-A15",
+      "name": "en DESIGN responsive 1440",
+      "status": "PASS",
+      "durationMs": 690.9655420000054
+    },
+    {
+      "id": "REG-A15",
+      "name": "en HOW responsive 1440",
+      "status": "PASS",
+      "durationMs": 659.8990409999969
+    },
+    {
+      "id": "REG-A15",
+      "name": "en ABOUT responsive 1440",
+      "status": "PASS",
+      "durationMs": 655.5722079999978
+    },
+    {
+      "id": "REG-A15",
+      "name": "en FAQ responsive 1440",
+      "status": "PASS",
+      "durationMs": 639.0401249999995
+    },
+    {
+      "id": "REG-A12",
+      "name": "en meaningful HOW content",
+      "status": "PASS",
+      "durationMs": 545.4303749999963
+    },
+    {
+      "id": "REG-A13",
+      "name": "en meaningful ABOUT/no hollow story",
+      "status": "PASS",
+      "durationMs": 553.4334999999992
+    },
+    {
+      "id": "REG-A14",
+      "name": "en substantial grouped FAQ keyboard",
+      "status": "PASS",
+      "durationMs": 569.1603749999922
+    },
+    {
+      "id": "REG-A01",
+      "name": "pl HOME four ready products 320",
+      "status": "PASS",
+      "durationMs": 608.0245839999989,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "pl HOME four ready products 360",
+      "status": "PASS",
+      "durationMs": 572.1630000000005,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "pl HOME four ready products 390",
+      "status": "PASS",
+      "durationMs": 611.0332919999928,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "pl HOME four ready products 768",
+      "status": "PASS",
+      "durationMs": 570.4112500000047,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "pl HOME four ready products 1024",
+      "status": "PASS",
+      "durationMs": 576.0663750000094,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A01",
+      "name": "pl HOME four ready products 1440",
+      "status": "PASS",
+      "durationMs": 646.1447079999925,
+      "observed": {
+        "ids": [
+          "beauty-review-card",
+          "restaurant-review-card",
+          "review-card",
+          "nfc-instagram-card"
+        ]
+      }
+    },
+    {
+      "id": "REG-A03",
+      "name": "pl public listing excludes internal/Branded tiles /solutions/",
+      "status": "PASS",
+      "durationMs": 584.926707999999
+    },
+    {
+      "id": "REG-A03",
+      "name": "pl public listing excludes internal/Branded tiles /search/",
+      "status": "PASS",
+      "durationMs": 578.6574170000094
+    },
+    {
+      "id": "REG-A03",
+      "name": "pl public listing excludes internal/Branded tiles /collections/branded/",
+      "status": "PASS",
+      "durationMs": 571.8687500000087
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl CATALOG responsive 320",
+      "status": "PASS",
+      "durationMs": 571.7661250000092
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl GOOGLE responsive 320",
+      "status": "PASS",
+      "durationMs": 593.135832999993
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl BEAUTY responsive 320",
+      "status": "PASS",
+      "durationMs": 570.2656669999997
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl RESTAURANT responsive 320",
+      "status": "PASS",
+      "durationMs": 577.4182089999958
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl INSTAGRAM responsive 320",
+      "status": "PASS",
+      "durationMs": 573.559500000003
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl DESIGN responsive 320",
+      "status": "PASS",
+      "durationMs": 579.3624579999887
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl HOW responsive 320",
+      "status": "PASS",
+      "durationMs": 559.8794169999892
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl ABOUT responsive 320",
+      "status": "PASS",
+      "durationMs": 560.2605840000033
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl FAQ responsive 320",
+      "status": "PASS",
+      "durationMs": 552.7393329999904
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl CATALOG responsive 360",
+      "status": "PASS",
+      "durationMs": 580.2930840000045
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl GOOGLE responsive 360",
+      "status": "PASS",
+      "durationMs": 581.6990829999995
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl BEAUTY responsive 360",
+      "status": "PASS",
+      "durationMs": 578.9663330000039
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl RESTAURANT responsive 360",
+      "status": "PASS",
+      "durationMs": 565.4442500000005
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl INSTAGRAM responsive 360",
+      "status": "PASS",
+      "durationMs": 571.5151659999974
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl DESIGN responsive 360",
+      "status": "PASS",
+      "durationMs": 575.7158340000024
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl HOW responsive 360",
+      "status": "PASS",
+      "durationMs": 564.138666999992
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl ABOUT responsive 360",
+      "status": "PASS",
+      "durationMs": 561.0998340000078
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl FAQ responsive 360",
+      "status": "PASS",
+      "durationMs": 573.9679579999938
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl CATALOG responsive 390",
+      "status": "PASS",
+      "durationMs": 597.13220800001
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl GOOGLE responsive 390",
+      "status": "PASS",
+      "durationMs": 597.9289580000041
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl BEAUTY responsive 390",
+      "status": "PASS",
+      "durationMs": 588.5244999999995
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl RESTAURANT responsive 390",
+      "status": "PASS",
+      "durationMs": 605.6454590000067
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl INSTAGRAM responsive 390",
+      "status": "PASS",
+      "durationMs": 587.3470409999863
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl DESIGN responsive 390",
+      "status": "PASS",
+      "durationMs": 662.3139579999988
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl HOW responsive 390",
+      "status": "PASS",
+      "durationMs": 626.1821659999987
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl ABOUT responsive 390",
+      "status": "PASS",
+      "durationMs": 674.2317499999917
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl FAQ responsive 390",
+      "status": "PASS",
+      "durationMs": 618.651125000004
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl CATALOG responsive 768",
+      "status": "PASS",
+      "durationMs": 572.2606249999953
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl GOOGLE responsive 768",
+      "status": "PASS",
+      "durationMs": 563.6997080000001
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl BEAUTY responsive 768",
+      "status": "PASS",
+      "durationMs": 559.9552920000133
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl RESTAURANT responsive 768",
+      "status": "PASS",
+      "durationMs": 564.8252499999944
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl INSTAGRAM responsive 768",
+      "status": "PASS",
+      "durationMs": 577.1377499999944
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl DESIGN responsive 768",
+      "status": "PASS",
+      "durationMs": 583.307375000004
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl HOW responsive 768",
+      "status": "PASS",
+      "durationMs": 570.4438749999972
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl ABOUT responsive 768",
+      "status": "PASS",
+      "durationMs": 556.0741669999989
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl FAQ responsive 768",
+      "status": "PASS",
+      "durationMs": 559.3543340000033
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl CATALOG responsive 1024",
+      "status": "PASS",
+      "durationMs": 571.9272090000013
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl GOOGLE responsive 1024",
+      "status": "PASS",
+      "durationMs": 573.1447919999919
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl BEAUTY responsive 1024",
+      "status": "PASS",
+      "durationMs": 577.0092499999882
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl RESTAURANT responsive 1024",
+      "status": "PASS",
+      "durationMs": 569.189000000013
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl INSTAGRAM responsive 1024",
+      "status": "PASS",
+      "durationMs": 588.1280830000032
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl DESIGN responsive 1024",
+      "status": "PASS",
+      "durationMs": 575.7151250000024
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl HOW responsive 1024",
+      "status": "PASS",
+      "durationMs": 570.0987079999904
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl ABOUT responsive 1024",
+      "status": "PASS",
+      "durationMs": 567.654165999993
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl FAQ responsive 1024",
+      "status": "PASS",
+      "durationMs": 578.1842500000057
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl CATALOG responsive 1440",
+      "status": "PASS",
+      "durationMs": 639.6697499999864
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl GOOGLE responsive 1440",
+      "status": "PASS",
+      "durationMs": 636.3869589999958
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl BEAUTY responsive 1440",
+      "status": "PASS",
+      "durationMs": 656.0311250000086
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl RESTAURANT responsive 1440",
+      "status": "PASS",
+      "durationMs": 617.6313749999972
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl INSTAGRAM responsive 1440",
+      "status": "PASS",
+      "durationMs": 646.3435829999944
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl DESIGN responsive 1440",
+      "status": "PASS",
+      "durationMs": 709.4227089999913
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl HOW responsive 1440",
+      "status": "PASS",
+      "durationMs": 668.7409579999949
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl ABOUT responsive 1440",
+      "status": "PASS",
+      "durationMs": 661.9220000000059
+    },
+    {
+      "id": "REG-A15",
+      "name": "pl FAQ responsive 1440",
+      "status": "PASS",
+      "durationMs": 635.6831660000025
+    },
+    {
+      "id": "REG-A12",
+      "name": "pl meaningful HOW content",
+      "status": "PASS",
+      "durationMs": 560.7954590000008
+    },
+    {
+      "id": "REG-A13",
+      "name": "pl meaningful ABOUT/no hollow story",
+      "status": "PASS",
+      "durationMs": 551.3819170000061
+    },
+    {
+      "id": "REG-A14",
+      "name": "pl substantial grouped FAQ keyboard",
+      "status": "PASS",
+      "durationMs": 584.078416999997
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk beauty-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 712.4824579999986
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk branded-beauty-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 678.2020829999965
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk restaurant-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 666.1177500000049
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk branded-restaurant-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 648.0374169999996
+    },
+    {
+      "id": "REG-A07",
+      "name": "en beauty-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 657.6195000000007
+    },
+    {
+      "id": "REG-A07",
+      "name": "en branded-beauty-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 660.5881249999948
+    },
+    {
+      "id": "REG-A07",
+      "name": "en restaurant-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 660.0040000000008
+    },
+    {
+      "id": "REG-A07",
+      "name": "en branded-restaurant-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 761.3003330000065
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl beauty-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 678.7202079999988
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl branded-beauty-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 681.7054169999901
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl restaurant-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 664.9004169999971
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl branded-restaurant-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 659.4655000000057
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 736.2653750000027
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk branded-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 662.7044579999929
+    },
+    {
+      "id": "REG-A07",
+      "name": "en review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 813.3665409999958
+    },
+    {
+      "id": "REG-A07",
+      "name": "en branded-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 662.9372500000027
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 774.9006249999948
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl branded-review-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 656.1361250000045
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk nfc-instagram-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 676.1746659999917
+    },
+    {
+      "id": "REG-A07",
+      "name": "en nfc-instagram-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 667.9236249999958
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl nfc-instagram-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 649.7039590000059
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk nfc-menu-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 664.1417500000098
+    },
+    {
+      "id": "REG-A07",
+      "name": "en nfc-menu-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 681.2517919999955
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl nfc-menu-card four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 686.3234579999989
+    },
+    {
+      "id": "REG-A07",
+      "name": "uk review-card-3d four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 698.1609999999928
+    },
+    {
+      "id": "REG-A07",
+      "name": "en review-card-3d four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 674.6354170000122
+    },
+    {
+      "id": "REG-A07",
+      "name": "pl review-card-3d four true tabs/keyboard/no route jump",
+      "status": "PASS",
+      "durationMs": 665.3842080000031
+    },
+    {
+      "id": "REG-A04",
+      "name": "uk review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2683.6114170000073
+    },
+    {
+      "id": "REG-A04",
+      "name": "uk beauty-review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2692.117125000019
+    },
+    {
+      "id": "REG-A04",
+      "name": "uk restaurant-review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2691.5677499999874
+    },
+    {
+      "id": "REG-A04",
+      "name": "en review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2758.293833999982
+    },
+    {
+      "id": "REG-A04",
+      "name": "en beauty-review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2675.4842499999795
+    },
+    {
+      "id": "REG-A04",
+      "name": "en restaurant-review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2669.0165829999896
+    },
+    {
+      "id": "REG-A04",
+      "name": "pl review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2682.6831249999814
+    },
+    {
+      "id": "REG-A04",
+      "name": "pl beauty-review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2703.5889169999864
+    },
+    {
+      "id": "REG-A04",
+      "name": "pl restaurant-review-card design context to mocked receipt",
+      "status": "PASS",
+      "durationMs": 2704.9452919999894
+    },
+    {
+      "id": "REG-A10",
+      "name": "uk physical Google cart request without Google URL",
+      "status": "PASS",
+      "durationMs": 2727.8468749999884
+    },
+    {
+      "id": "REG-A10",
+      "name": "en physical Google cart request without Google URL",
+      "status": "PASS",
+      "durationMs": 2736.9550839999865
+    },
+    {
+      "id": "REG-A10",
+      "name": "pl physical Google cart request without Google URL",
+      "status": "PASS",
+      "durationMs": 2741.1867500000226
+    },
+    {
+      "id": "REG-A11",
+      "name": "uk Instagram/Menu URL constraints and no branded Instagram",
+      "status": "PASS",
+      "durationMs": 1197.683290999994
+    },
+    {
+      "id": "REG-A11",
+      "name": "en Instagram/Menu URL constraints and no branded Instagram",
+      "status": "PASS",
+      "durationMs": 1190.0786249999946
+    },
+    {
+      "id": "REG-A11",
+      "name": "pl Instagram/Menu URL constraints and no branded Instagram",
+      "status": "PASS",
+      "durationMs": 1159.3635000000068
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk beauty-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 50.31445800000802
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk branded-beauty-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 28.798875000007683
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk restaurant-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 31.698000000003958
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk branded-restaurant-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 35.190666999988025
+    },
+    {
+      "id": "REG-A08",
+      "name": "en beauty-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 28.61775000000489
+    },
+    {
+      "id": "REG-A08",
+      "name": "en branded-beauty-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 27.680541999987327
+    },
+    {
+      "id": "REG-A08",
+      "name": "en restaurant-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 28.221083000011276
+    },
+    {
+      "id": "REG-A08",
+      "name": "en branded-restaurant-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 28.988125000003492
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl beauty-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 27.498457999987295
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl branded-beauty-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 28.95170799997868
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl restaurant-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 27.30691700000898
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl branded-restaurant-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 30.856750000006286
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 42.45924999998533
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk branded-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 30.90837499999907
+    },
+    {
+      "id": "REG-A08",
+      "name": "en review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 34.09937499999069
+    },
+    {
+      "id": "REG-A08",
+      "name": "en branded-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 43.20800000001327
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 29.291957999987062
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl branded-review-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 43.65508399999817
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk nfc-instagram-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 32.10899999999674
+    },
+    {
+      "id": "REG-A08",
+      "name": "en nfc-instagram-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 27.840291000000434
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl nfc-instagram-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 31.109207999979844
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk nfc-menu-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 36.85841699998127
+    },
+    {
+      "id": "REG-A08",
+      "name": "en nfc-menu-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 31.9076659999846
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl nfc-menu-card noJS complete content",
+      "status": "PASS",
+      "durationMs": 37.81966600002488
+    },
+    {
+      "id": "REG-A08",
+      "name": "uk review-card-3d noJS complete content",
+      "status": "PASS",
+      "durationMs": 38.92316700000083
+    },
+    {
+      "id": "REG-A08",
+      "name": "en review-card-3d noJS complete content",
+      "status": "PASS",
+      "durationMs": 27.953458999982104
+    },
+    {
+      "id": "REG-A08",
+      "name": "pl review-card-3d noJS complete content",
+      "status": "PASS",
+      "durationMs": 31.437082999997074
+    }
+  ],
+  "errors": [],
+  "notifications": 0,
+  "sourceSHA256": {
+    "app.mjs": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
+    "styles.css": "811e42ec3b9f7f53ecfe041768ca524466cddbf70216c1586212e82b18f05f86",
+    "product-navigation.mjs": "3a4a043c6bec5e71af68c3ece07fac5176e358a4d4e49e8a50f9e1c384c44c94",
+    "product-content-view.mjs": "970d9ceeb2691d44b80767c6c505e0ccc4fbe0ed101b70ba7f8cd40ad0606a95",
+    "home-composition.mjs": "31ba26eba2d99be375b89d73359306bae6cf242f01ed3daecdd4ff54e2267c33",
+    "editorial-content.mjs": "6227e22b895dd7c8e09d8ad08ee67a78e9d7e01862647b8a97b6827c2c7908ef",
+    "editorial-view.mjs": "13b9335a893f0a0ae414191576b95dc0198cd15e0d8a571186bf50cdf053371e",
+    "visual-system.css": "9570a0f34598ed0f08c872d796e68f9bc75f89f08315de5dab83f540a5be7913",
+    "shop-design.css": "bb2d8c21be23e9f7633d7d3f0b99127d3c912639b519990f2a6754b4e1d4b60a",
+    "editorial-design.css": "81ae01b01e3514f32ef7bff4a0438d14d1ed5cac2665ce5f903e775fe4f66334"
+  },
+  "finishedUTC": "2026-10-27T20:24:31.137Z",
+  "status": "PASS",
+  "pass": 267,
+  "fail": 0,
+  "externalAttempts": 0,
+  "realNetworkRequestsSent": 0,
+  "requestLogSummary": {
+    "count": 13885,
+    "byMethod": {
+      "GET": 13873,
+      "POST": 12
+    },
+    "byOrigin": {
+      "127.0.0.1:4197": 13885
+    },
+    "mockedTransportSpecimens": 12,
+    "realNetworkRequestsSent": 0
+  },
+  "publicSanitization": "Repetitive request log and mocked request bodies omitted; all267 individual results and method/zero-external counters retained. Original reviewer evidence kept separately."
+}

@@ -1,0 +1,2543 @@
+{
+  "method": "Independent local static SSR/SEO basics, Python stdlib HTMLParser; no indexing or production claim",
+  "results": [
+    {
+      "name": "work/designer-preview-v36_2 current source files match build SHA",
+      "status": "PASS",
+      "observed": 85
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/catalog/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/catalog/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/catalog/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/collections/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/collections/google-review/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/google-review/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/google-review/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/collections/instagram/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/instagram/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/instagram/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/collections/online-menu/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/online-menu/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/online-menu/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/collections/mini/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/mini/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/mini/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/collections/branded/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/branded/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/branded/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/search/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/search/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/search/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/cart/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/cart/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/cart/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/order/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/order/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/order/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/services/design/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/services/design/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/services/design/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/services/quantity-advice/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/services/quantity-advice/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/services/quantity-advice/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/services/menu-consultation/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/services/menu-consultation/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/services/menu-consultation/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/thank-you/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/thank-you/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/thank-you/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/faq/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/faq/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/faq/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/about/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/about/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/about/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/contact/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/contact/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/contact/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/what-is-nfc-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/what-is-nfc-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/what-is-nfc-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/delivery-and-payment/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/delivery-and-payment/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/privacy/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/privacy/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/privacy/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/terms/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/terms/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/terms/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/warranty-and-returns/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/warranty-and-returns/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/warranty-and-returns/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/instagram-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/instagram-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/menu-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/menu-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/review/visual/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/review/visual/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/review/visual/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/review/drafts/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/review/drafts/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/review/drafts/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/review/media/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/review/media/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/review/media/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/review/states/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/review/states/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/review/states/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/branded-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/instagram-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/instagram-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/menu-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/menu-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/review-card-3d/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/review-card-3d/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card-3d/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/beauty-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/beauty-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/branded-beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-beauty-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-beauty-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/restaurant-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/restaurant-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/branded-restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-restaurant-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-restaurant-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/universal-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/universal-mini-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/universal-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/branded-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-mini-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/counter-stand/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/counter-stand/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/team-kit/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/team-kit/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/solutions/multi-location/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/multi-location/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/catalog/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/catalog/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/catalog/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/collections/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/collections/google-review/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/google-review/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/google-review/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/collections/instagram/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/instagram/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/instagram/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/collections/online-menu/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/online-menu/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/online-menu/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/collections/mini/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/mini/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/mini/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/collections/branded/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/branded/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/branded/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/search/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/search/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/search/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/cart/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/cart/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/cart/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/order/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/order/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/order/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/services/design/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/services/design/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/services/design/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/services/quantity-advice/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/services/quantity-advice/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/services/quantity-advice/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/services/menu-consultation/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/services/menu-consultation/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/services/menu-consultation/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/thank-you/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/thank-you/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/thank-you/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/faq/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/faq/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/faq/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/about/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/about/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/about/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/contact/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/contact/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/contact/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/what-is-nfc-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/what-is-nfc-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/what-is-nfc-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/delivery-and-payment/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/delivery-and-payment/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/privacy/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/privacy/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/privacy/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/terms/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/terms/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/terms/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/warranty-and-returns/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/warranty-and-returns/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/warranty-and-returns/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/instagram-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/instagram-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/menu-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/menu-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/review/visual/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/review/visual/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/review/visual/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/review/drafts/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/review/drafts/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/review/drafts/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/review/media/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/review/media/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/review/media/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/review/states/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/review/states/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/review/states/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/branded-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/instagram-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/instagram-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/menu-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/menu-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/review-card-3d/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/review-card-3d/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card-3d/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/beauty-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/beauty-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/branded-beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-beauty-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-beauty-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/restaurant-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/restaurant-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/branded-restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-restaurant-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-restaurant-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/universal-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/universal-mini-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/universal-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/branded-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-mini-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/counter-stand/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/counter-stand/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/team-kit/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/team-kit/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/en/solutions/multi-location/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/multi-location/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/catalog/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/catalog/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/catalog/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/collections/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/collections/google-review/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/google-review/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/google-review/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/collections/instagram/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/instagram/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/instagram/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/collections/online-menu/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/online-menu/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/online-menu/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/collections/mini/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/mini/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/mini/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/collections/branded/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/branded/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/branded/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/search/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/search/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/search/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/cart/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/cart/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/cart/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/order/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/order/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/order/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/services/design/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/services/design/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/services/design/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/services/quantity-advice/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/services/quantity-advice/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/services/quantity-advice/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/services/menu-consultation/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/services/menu-consultation/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/services/menu-consultation/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/thank-you/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/thank-you/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/thank-you/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/faq/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/faq/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/faq/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/about/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/about/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/about/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/contact/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/contact/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/contact/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/what-is-nfc-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/what-is-nfc-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/what-is-nfc-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/delivery-and-payment/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/delivery-and-payment/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/privacy/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/privacy/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/privacy/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/terms/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/terms/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/terms/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/warranty-and-returns/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/warranty-and-returns/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/warranty-and-returns/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/instagram-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/instagram-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/menu-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/menu-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/review/visual/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/review/visual/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/review/visual/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/review/drafts/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/review/drafts/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/review/drafts/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/review/media/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/review/media/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/review/media/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/review/states/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/review/states/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/review/states/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/branded-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/instagram-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/instagram-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/menu-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/menu-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/review-card-3d/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/review-card-3d/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card-3d/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/beauty-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/beauty-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/branded-beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-beauty-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-beauty-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/restaurant-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/restaurant-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/branded-restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-restaurant-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-restaurant-review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/universal-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/universal-mini-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/universal-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/branded-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-mini-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/counter-stand/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/counter-stand/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/team-kit/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/team-kit/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-preview-v36_2 /nfc-card-website/pl/solutions/multi-location/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/multi-location/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 current source files match build SHA",
+      "status": "PASS",
+      "observed": 85
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/catalog/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/catalog/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/catalog/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/collections/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/collections/google-review/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/google-review/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/google-review/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/collections/instagram/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/instagram/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/instagram/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/collections/online-menu/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/online-menu/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/online-menu/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/collections/mini/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/mini/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/mini/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/collections/branded/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/collections/branded/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/collections/branded/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/search/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/search/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/search/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/cart/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/cart/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/cart/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/order/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/order/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/order/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/services/design/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/services/design/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/services/design/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/services/quantity-advice/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/services/quantity-advice/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/services/quantity-advice/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/services/menu-consultation/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/services/menu-consultation/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/services/menu-consultation/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/thank-you/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/thank-you/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/thank-you/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/faq/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/faq/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/faq/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/about/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/about/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/about/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/contact/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/contact/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/contact/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/what-is-nfc-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/what-is-nfc-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/what-is-nfc-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/delivery-and-payment/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/delivery-and-payment/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/privacy/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/privacy/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/privacy/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/terms/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/terms/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/terms/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/warranty-and-returns/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/warranty-and-returns/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/warranty-and-returns/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/instagram-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/instagram-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/menu-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/menu-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/branded-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/instagram-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/instagram-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/menu-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/menu-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/review-card-3d/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/review-card-3d/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card-3d/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/beauty-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/beauty-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/branded-beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-beauty-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-beauty-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/restaurant-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/restaurant-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/branded-restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-restaurant-review-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-restaurant-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/universal-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/universal-mini-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/universal-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/branded-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/branded-mini-card/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/branded-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/counter-stand/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/counter-stand/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/team-kit/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/team-kit/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/solutions/multi-location/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/solutions/multi-location/",
+        "language": "uk",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/catalog/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/catalog/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/catalog/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/collections/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/collections/google-review/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/google-review/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/google-review/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/collections/instagram/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/instagram/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/instagram/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/collections/online-menu/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/online-menu/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/online-menu/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/collections/mini/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/mini/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/mini/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/collections/branded/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/collections/branded/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/collections/branded/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/search/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/search/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/search/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/cart/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/cart/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/cart/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/order/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/order/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/order/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/services/design/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/services/design/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/services/design/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/services/quantity-advice/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/services/quantity-advice/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/services/quantity-advice/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/services/menu-consultation/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/services/menu-consultation/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/services/menu-consultation/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/thank-you/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/thank-you/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/thank-you/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/faq/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/faq/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/faq/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/about/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/about/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/about/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/contact/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/contact/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/contact/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/what-is-nfc-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/what-is-nfc-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/what-is-nfc-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/delivery-and-payment/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/delivery-and-payment/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/privacy/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/privacy/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/privacy/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/terms/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/terms/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/terms/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/warranty-and-returns/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/warranty-and-returns/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/warranty-and-returns/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/instagram-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/instagram-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/menu-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/menu-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/branded-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/instagram-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/instagram-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/menu-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/menu-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/review-card-3d/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/review-card-3d/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card-3d/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/beauty-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/beauty-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/branded-beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-beauty-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-beauty-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/restaurant-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/restaurant-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/branded-restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-restaurant-review-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-restaurant-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/universal-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/universal-mini-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/universal-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/branded-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/branded-mini-card/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/branded-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/counter-stand/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/counter-stand/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/team-kit/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/team-kit/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/en/solutions/multi-location/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/en/solutions/multi-location/",
+        "language": "en",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/en/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/catalog/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/catalog/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/catalog/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/collections/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/collections/google-review/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/google-review/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/google-review/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/collections/instagram/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/instagram/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/instagram/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/collections/online-menu/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/online-menu/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/online-menu/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/collections/mini/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/mini/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/mini/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/collections/branded/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/collections/branded/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/collections/branded/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/search/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/search/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/search/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/cart/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/cart/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/cart/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/order/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/order/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/order/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/services/design/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/services/design/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/services/design/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/services/quantity-advice/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/services/quantity-advice/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/services/quantity-advice/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/services/menu-consultation/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/services/menu-consultation/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/services/menu-consultation/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/thank-you/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/thank-you/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/thank-you/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/faq/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/faq/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/faq/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/about/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/about/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/about/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/contact/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/contact/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/contact/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/what-is-nfc-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/what-is-nfc-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/what-is-nfc-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/delivery-and-payment/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/delivery-and-payment/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/delivery-and-payment/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/privacy/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/privacy/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/privacy/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/terms/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/terms/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/terms/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/warranty-and-returns/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/warranty-and-returns/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/warranty-and-returns/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/instagram-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/instagram-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/menu-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/menu-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/branded-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/instagram-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/instagram-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/instagram-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/menu-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/menu-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/menu-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/review-card-3d/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/review-card-3d/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card-3d/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/beauty-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/beauty-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/branded-beauty-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-beauty-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-beauty-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/restaurant-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/restaurant-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/branded-restaurant-review-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-restaurant-review-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-restaurant-review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/universal-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/universal-mini-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/universal-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/branded-mini-card/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/branded-mini-card/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/branded-mini-card/",
+        "robots": "noindex,nofollow,noarchive"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/counter-stand/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/counter-stand/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/team-kit/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/team-kit/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 /nfc-card-website/pl/solutions/multi-location/",
+      "status": "PASS",
+      "observed": {
+        "url": "/nfc-card-website/pl/solutions/multi-location/",
+        "language": "pl",
+        "canonical": "https://optidigitalagent.github.io/nfc-card-website/pl/solutions/review-card/",
+        "robots": "index,follow,max-image-preview:large"
+      }
+    },
+    {
+      "name": "work/designer-seo-fixture-v36_2 sitemap excludes private/draft",
+      "status": "PASS",
+      "observed": 93
+    }
+  ],
+  "pass": 255,
+  "fail": 0,
+  "status": "PASS"
+}

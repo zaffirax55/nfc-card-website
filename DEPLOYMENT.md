@@ -1,3 +1,5 @@
+> v36.2 update: the current root production build and existing-URL release gate are documented in [PRODUCTION_RELEASE.md](docs/release/v36.2/PRODUCTION_RELEASE.md). The earlier implementation below remains historical reference. No production QA form submissions or new notification permission.
+
 # Current deployment target: GitHub Pages (v17)
 
 The owner's v17 request supersedes the v16 full-stack Railway hosting target.

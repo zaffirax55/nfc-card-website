@@ -271,7 +271,10 @@ const context={basePath:'/nfc-card-website',pathname:'/nfc-card-website/order/?s
 def test_minimal_payload_allowlists_source_normalization_and_utm_limits():
     node(PAYLOAD_FIXTURE + r"""
       const payload=pages.leadPayload({...fields,source:'IADDS',lead_id:'fake',timestamp:'fake',displayed_price:'1',comment:'private'},context);
-      assert.deepEqual(Object.keys(payload), ['language','product','quantity','customerName','contact','sourcePage','selection','utm']);
+      assert.deepEqual(Object.keys(payload), ['language','product','quantity','customerName','contact','sourcePage','formVersion','privacyNoticeVersion','consent','selection','utm']);
+      assert.equal(payload.formVersion,'NFC-CARD-FORM-V34');
+      assert.equal(payload.privacyNoticeVersion,'NFC-CARD-PRIVACY-V34');
+      assert.equal(payload.consent,true);
       assert.equal(payload.customerName,'Test Customer'); assert.equal(payload.quantity,2);
       assert.deepEqual(payload.contact,{phone:'+380980000000',preferredMethod:'telegram'});
       assert.equal(payload.sourcePage,'/nfc-card-website/order');

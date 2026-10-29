@@ -71,12 +71,17 @@ jobs:
       - name: Run complete sequential test suite
         id: tests
         run: npm test
-      - name: Build public preview with a synthetic HTTPS origin
+      - name: Test new store production policy, layout and gateway gate
+        run: npm run designer:test:contracts && npm run test:production
+      - name: Build the new v36.2 production shop after verified gateway release
         id: build
         env:
           NFC_ENV: production
-          NFC_PUBLIC_ORIGIN: https://nfc-card.example
-          NFC_PUBLICATION_MODE: PUBLIC_PREVIEW
+          NFC_PUBLIC_ORIGIN: https://optidigitalagent.github.io
+          NFC_PUBLIC_BASE_PATH: /nfc-card-website
+          NFC_DEPLOYMENT_TARGET: github-pages
+          NFC_PUBLICATION_MODE: PUBLIC
+          NFC_REQUIRE_GATEWAY_READY: 'true'
         run: npm run build
       - name: Verify source after tests and build
         id: final_manifest
@@ -138,7 +143,8 @@ jobs:
       NFC_PUBLIC_ORIGIN: https://optidigitalagent.github.io
       NFC_PUBLIC_BASE_PATH: /nfc-card-website
       NFC_PUBLICATION_MODE: PUBLIC
-      NFC_TELEGRAM_ENABLED: 'true'
+      NFC_TELEGRAM_ENABLED: 'false'
+      NFC_REQUIRE_GATEWAY_READY: 'true'
       # Public browser endpoint only; source secrets stay on the existing gateway.
       NFC_LEAD_ENDPOINT: ${{ vars.NFC_LEAD_ENDPOINT }}
     steps:

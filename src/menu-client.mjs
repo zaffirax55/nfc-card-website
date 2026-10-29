@@ -1,6 +1,7 @@
 import {MENU_VARIANTS, normalizeMenuRows, menuQuote, menuPublicURL} from './menu-contract.mjs';
 import {validatePolandCommerce} from './pl-commerce.mjs';
 import {leadEndpoint, submitLead, publicBasePath} from './pages.mjs';
+import {requestNotice} from './inbound-notice.mjs';
 
 const methods = new Set(['telegram','whatsapp','viber']);
 const uuid = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
@@ -27,7 +28,7 @@ export function menuLeadPayload(input,{basePath='',pathname}={}) {
   if(input.menu_status==='existing'&&!url)throw Error('invalid_menu_url');
   const payload={language:input.locale,product:'nfc-menu-card',productSchemaVersion:1,product_id:'nfc-menu-card',
     customerName:name,contact:{phone:phone.replace(/[ ()-]/g,''),preferredMethod:input.messenger},sourcePage:route,
-    intent:input.intent,menu_status:input.menu_status,consent:true};
+    intent:input.intent,menu_status:input.menu_status,...requestNotice};
   if(!consult){payload.items=items;payload.quantity=quantity;}
   if(url)payload.menu_url=url;
   if(comment)payload.comment=comment;

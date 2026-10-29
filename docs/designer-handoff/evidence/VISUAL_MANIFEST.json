@@ -1,0 +1,168 @@
+{
+  "screens": [
+    {
+      "path": "visual/LIVE_uk_DELIVERY_390.png",
+      "bytes": 74440,
+      "sha256": "c741d1a64f4eba873ea30a282b1ebe4e471c96f5f893c648373949c6dd6e5386",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_DELIVERY_1440.png",
+      "bytes": 136636,
+      "sha256": "d10f12fa86980b6113461dde90d936ff9d4ce1f399bfc2bffc8974416bd79472",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_ABOUT_390.png",
+      "bytes": 156153,
+      "sha256": "8ba99938f2d7f4eb714eada4539a46fc79439b187f6eda239f005243d18e9384",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_ABOUT_1440.png",
+      "bytes": 259609,
+      "sha256": "b24e63f95f1509fbe25bb3205fa9bf62f9b7da125026bb9a8a500be68e75fc83",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_CATALOG_390.png",
+      "bytes": 92399,
+      "sha256": "1352e8fe91f0b37c87bf483522a3a29e3053de435db75e9af49e20167476865f",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_CATALOG_1440.png",
+      "bytes": 326760,
+      "sha256": "7510f7f547e7a7311abcdeee06f3d1eda1dbbad8a066642e90497006cccf953e",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_CATALOG_SERVICE_390.png",
+      "bytes": 81652,
+      "sha256": "950dbeffede57c295132ee2f2b7e44370ce81e51e589d20f83fcef8bed92876a",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_uk_CATALOG_SERVICE_1440.png",
+      "bytes": 142345,
+      "sha256": "8d2a1da5edc7bd377a5e1d4fb237ca26e193a28f06f38d0f9c69b87463e5a1cc",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_DELIVERY_390.png",
+      "bytes": 71290,
+      "sha256": "6b97d1bfa08a3d137fffdd4a1237b4958170fda68b294ba5157dd3dcb6e1796f",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_DELIVERY_1440.png",
+      "bytes": 142953,
+      "sha256": "0ac0b78b4439af1cde20e6d182b479421c20d61d5c051f593afe6502e38289d0",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_ABOUT_390.png",
+      "bytes": 157891,
+      "sha256": "fcc22f5de55f49ed215f86c8fc2a660424f49c45fbcbc8f671683670322093d9",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_ABOUT_1440.png",
+      "bytes": 258515,
+      "sha256": "bb5f627332c8d5c99004a3b63f7ccb8ca53eb45d628d6260dc78a6eaea954884",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_CATALOG_390.png",
+      "bytes": 89849,
+      "sha256": "0911427aadc2b47502a48ab6bd675842676f75cf01e160cf0c639f06eda06543",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_CATALOG_1440.png",
+      "bytes": 326431,
+      "sha256": "871999e06f73029f0daa7d037667b2cd547734999c98ea72e169c307a6be0cd0",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_CATALOG_SERVICE_390.png",
+      "bytes": 76546,
+      "sha256": "89703950c6aef60a4c2da300f4014dd945ec5d421395fdcd2f57bc4b3c9cb75a",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_en_CATALOG_SERVICE_1440.png",
+      "bytes": 150428,
+      "sha256": "37e60503d9980dd79f3d6b7203737509c1fd3ff066a2feb9b3ee15d28969d4f8",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_DELIVERY_390.png",
+      "bytes": 79286,
+      "sha256": "210c46dea4ab4e9f2d3028f25b7f81c47625865ca0e1416e735a06e472d4a25e",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_DELIVERY_1440.png",
+      "bytes": 144714,
+      "sha256": "18c70f22e18ab6cb3460172343453f66515123a2a182bd1b7ded944b1ce2ea68",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_ABOUT_390.png",
+      "bytes": 157756,
+      "sha256": "700e7cf56a122f5a43ce9b3bc55de88676648aeef8169b91d87414c0eb0f25ce",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_ABOUT_1440.png",
+      "bytes": 260959,
+      "sha256": "06abed67c1c3547eee6115afd7c3b478edcb7b13af73408bd0d7ff3a99e4d394",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_CATALOG_390.png",
+      "bytes": 97961,
+      "sha256": "05754add39d41e820e3b38635aad89c4c38e8c606446af1c0f2cc70d40141204",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_CATALOG_1440.png",
+      "bytes": 333537,
+      "sha256": "f5ab05e881b90f16607135afad70e101618fd74da2924b736785df85b02e1403",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_CATALOG_SERVICE_390.png",
+      "bytes": 82870,
+      "sha256": "8ea63ecb4ba774f268ff76be937c9074b32a93caf5cc8dab71dd794b1e4a1a28",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/LIVE_pl_CATALOG_SERVICE_1440.png",
+      "bytes": 159511,
+      "sha256": "a354713e732f5b7ab2889765c72e71224d4a7018b00cc778d0d154f3820a0a8c",
+      "method": "Actual loopback GET"
+    },
+    {
+      "path": "visual/INDEPENDENT_uk_HOME_390.png",
+      "bytes": 149995,
+      "sha256": "2abf4cea26048272717b11765c8ea2e3b22565486621cc2b2aedd0245d0221e7",
+      "method": "Local static fulfillment in isolated Chromium regression"
+    },
+    {
+      "path": "visual/INDEPENDENT_uk_HOME_1440.png",
+      "bytes": 453018,
+      "sha256": "7e7c2ac8396c749ca2e811a87778cf28891af31b90402aae41c8aa6205955adb",
+      "method": "Local static fulfillment in isolated Chromium regression"
+    },
+    {
+      "path": "visual/INDEPENDENT_NATIVE_ZOOM_200_PL_DELIVERY.png",
+      "bytes": 133044,
+      "sha256": "254136f9feed9f476d2870f8f6c464aa595e6eff43e7b91526539c08d289e684",
+      "method": "Native Chrome 200% paint"
+    }
+  ],
+  "includesRealCustomerData": false,
+  "generatedFromIntegratedSource": true
+}

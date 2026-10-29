@@ -97,6 +97,21 @@ def test_generated_boundary_must_be_a_directory(tree):
         vm.verify(tree)
 
 
+def test_only_reciprocal_registered_git_worktree_marker_is_excluded(tree, tmp_path):
+    metadata = tmp_path.parent / (tmp_path.name + "-gitmeta")
+    registration = metadata / "worktrees" / "release"
+    registration.mkdir(parents=True)
+    put(metadata, "config", b"[core]\nrepositoryformatversion = 0\n")
+    put(metadata, "HEAD", b"ref: refs/heads/main\n")
+    put(registration, "commondir", b"../..\n")
+    put(registration, "gitdir", str(tree / ".git").encode() + b"\n")
+    put(tree, ".git", ("gitdir: " + str(registration) + "\n").encode())
+    vm.verify(tree)
+    put(registration, "gitdir", str(tree / "other").encode() + b"\n")
+    with pytest.raises(vm.ManifestError, match="replaced with a file"):
+        vm.verify(tree)
+
+
 @pytest.mark.parametrize("name", ["../escape", "/absolute", "a/../b", "a//b", "./a", "a/",
                                  "C:/drive", "a\\b", "a\nb", "a/.", "a. ", "site/index.html",
                                  vm.MANIFEST])
