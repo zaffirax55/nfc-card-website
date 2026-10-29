@@ -34,3 +34,5 @@ for name in ['review-standard','beauty','instagram','review-acrylic']:
   start=bv.get('byteOffset',0); im=Image.open(BytesIO(chunks[b'BIN\x00'][start:start+bv['byteLength']])).convert('RGB')
   st=ImageStat.Stat(im)
   print('TEXTURE',i,im.size,'mean',tuple(round(v) for v in st.mean),'center',im.getpixel((im.width//2,im.height//2)),'corner',im.getpixel((4,4)))
+
+# rerun with Pillow
