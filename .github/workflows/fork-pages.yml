@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Mobile experience v1, six viewport and route browser checks
+# Motion + polish v1: lazy imagery, lightweight scroll animation and UI refinement
 
 on:
   push:
