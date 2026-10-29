@@ -46,3 +46,48 @@ a:focus-visible,button:focus-visible{outline:3px solid #3279b1;outline-offset:3p
  html{scroll-behavior:auto}
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* Mobile motion v2 — touch-first and compositor-only. */
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){
+  .button,.nfc-glb-button,.icon-btn,.purpose-link,.thumb,.product-card .card-image {
+    -webkit-tap-highlight-color:transparent;
+    transition:transform 190ms cubic-bezier(.2,.75,.25,1),background-color 190ms ease,box-shadow 190ms ease;
+  }
+  .button:active,.nfc-glb-button:active,.purpose-link:active,.icon-btn:active,.thumb:active{
+    transform:scale(.965)!important;
+    transition-duration:85ms!important;
+  }
+  .product-card .card-image:active{transform:scale(.988)}
+  .product-card.nfc-motion-in{animation:nfc-mobile-card-in 480ms cubic-bezier(.2,.78,.2,1) both}
+  .product-grid .product-card:nth-child(2).nfc-motion-in{animation-delay:45ms}
+  .product-grid .product-card:nth-child(3).nfc-motion-in{animation-delay:85ms}
+  .section-heading.nfc-motion-in,.hero-copy.nfc-motion-in,.home-b-hero-copy.nfc-motion-in{
+    animation:nfc-mobile-text-in 460ms cubic-bezier(.2,.8,.2,1) both
+  }
+  .feature.nfc-motion-in,.home-b-product-stage.nfc-motion-in,.product-summary.nfc-motion-in{
+    animation:nfc-mobile-card-in 520ms cubic-bezier(.2,.8,.2,1) both
+  }
+  @keyframes nfc-mobile-card-in{
+    from{opacity:.38;transform:translate3d(0,14px,0) scale(.984)}
+    to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+  }
+  @keyframes nfc-mobile-text-in{
+    from{opacity:.38;transform:translate3d(0,11px,0)}
+    to{opacity:1;transform:translate3d(0,0,0)}
+  }
+  dialog.nfc-glb-dialog[open],dialog.menu-dialog[open]{
+    animation:nfc-mobile-dialog-in 260ms cubic-bezier(.16,.8,.25,1) both
+  }
+  dialog.nfc-glb-dialog::backdrop,dialog.menu-dialog::backdrop{
+    animation:nfc-mobile-backdrop-in 240ms ease-out both
+  }
+  @keyframes nfc-mobile-dialog-in{
+    from{opacity:.5;transform:translate3d(0,18px,0) scale(.98)}
+    to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+  }
+  @keyframes nfc-mobile-backdrop-in{from{opacity:0}to{opacity:1}}
+}
+@media(max-width:800px) and (prefers-reduced-motion:reduce){
+ .button:active,.nfc-glb-button:active,.purpose-link:active,.icon-btn:active{transform:none!important}
+}
