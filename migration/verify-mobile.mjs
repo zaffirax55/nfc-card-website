@@ -14,6 +14,17 @@ for(const width of widths){
  return {viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,headerWidth:header?.getBoundingClientRect().width,cardWidth:card?.getBoundingClientRect().width,buttons:buttons.length,smallTaps:[...document.querySelectorAll('.nfc-glb-button')].filter(el=>el.getBoundingClientRect().height<44).length};
  });
  console.log('MOBILE',width,JSON.stringify(metrics));
+ if(width===390){
+  const anim=await page.evaluate(()=>{
+   const button=document.querySelector('.nfc-glb-button');
+   const card=document.querySelector('.product-card');
+   const buttonTransition=getComputedStyle(button).transitionDuration;
+   const cardTransition=getComputedStyle(card).transitionDuration;
+   return {buttonTransition,cardTransition};
+  });
+  console.log('MOBILE_MOTION',JSON.stringify(anim));
+  if(anim.buttonTransition==='0s'||anim.cardTransition==='0s')errors.push('touch animation disabled');
+ }
  if(metrics.scrollWidth>metrics.viewport+2)errors.push(width+' horizontal overflow '+metrics.scrollWidth);
  if(metrics.buttons<3||metrics.smallTaps)errors.push(width+' unusable 3D buttons');
  if([320,390,768].includes(width)){
