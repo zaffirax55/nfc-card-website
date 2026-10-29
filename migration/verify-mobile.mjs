@@ -31,6 +31,17 @@ for(const width of widths){
   console.log('ROUTE',width,route,JSON.stringify(m));
   if(m.scroll>m.inner+2)errors.push(width+' '+route+' horizontal overflow '+m.scroll);
  }
+ if(width===390){
+   await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+   const transitionSupport=await page.evaluate(()=>typeof document.startViewTransition==='function');
+   await page.locator('.desktop-nav a[href$="/solutions/"],.hero a[href$="/solutions/"],a[href$="/solutions/"]').first().click();
+   await page.waitForURL('**/solutions/');
+   await page.locator('.product-card a[href*="/solutions/"]').first().click();
+   await page.waitForURL('**/solutions/*/');
+   await page.goBack({waitUntil:'domcontentloaded'});
+   await page.waitForURL('**/solutions/');
+   console.log('NAVIGATION_TRANSITIONS',JSON.stringify({supported:transitionSupport,back:page.url()}));
+ }
  await page.close();
 }
 await browser.close();
