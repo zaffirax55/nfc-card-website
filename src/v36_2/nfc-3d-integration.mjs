@@ -5,6 +5,7 @@ const menu=['menu-square-black','menu-square-white','menu-round-black','menu-rou
 const labels={uk:{open:'Переглянути в 3D',close:'Закрити',rotate:'Обертайте мишею або пальцем',loading:'Завантаження 3D…',failed:'Не вдалося завантажити 3D'},en:{open:'View in 3D',close:'Close',rotate:'Drag to rotate the card',loading:'Loading 3D…',failed:'3D preview unavailable'},pl:{open:'Zobacz w 3D',close:'Zamknij',rotate:'Przeciągnij, aby obrócić kartę',loading:'Wczytywanie 3D…',failed:'Podgląd 3D niedostępny'}};
 const t=()=>labels[document.documentElement.lang]||labels.uk;
 let dialog,loader,request=0;
+const posterFor={'review-standard':'review.webp','review-branded':'review.webp','review-acrylic':'three-d.webp','instagram':'instagram.webp','beauty':'beauty.webp','beauty-branded':'beauty.webp','restaurant':'restaurant.webp','restaurant-branded':'restaurant.webp','menu-square-black':'menu-square_100_black.webp','menu-square-white':'menu-square_100_white.webp','menu-round-black':'menu-round_70_black.webp','menu-round-white':'menu-round_70_white.webp'};
 function ensureDialog(){
  if(dialog)return dialog;
  dialog=document.createElement('dialog');dialog.className='nfc-glb-dialog';
@@ -33,7 +34,10 @@ document.addEventListener('click',async e=>{
  const control=e.target.closest('[data-glb-model]');if(!control)return;
  e.preventDefault();e.stopPropagation();
  const d=ensureDialog(),stage=d.querySelector('.nfc-glb-stage'),current=++request;
- stage.textContent=t().loading;d.showModal();
+ stage.replaceChildren();
+ const preview=document.createElement('div');preview.className='nfc-glb-poster';
+ const poster=document.createElement('img');poster.src=ROOT+'/assets/'+(posterFor[control.dataset.glbModel]||'review.webp');poster.alt='';
+ preview.append(poster);stage.append(preview);d.querySelector('.nfc-glb-hint').textContent=t().rotate;d.showModal();
  try{
   loader ||= import(ROOT+'/assets/model-viewer.min.js');
   await loader;
@@ -41,17 +45,24 @@ document.addEventListener('click',async e=>{
   const viewer=document.createElement('model-viewer');
   viewer.setAttribute('src',ROOT+'/assets/models/'+control.dataset.glbModel+'.glb');
   viewer.setAttribute('camera-controls','');viewer.setAttribute('auto-rotate','');
+  viewer.setAttribute('camera-orbit','180deg 75deg auto');
+  viewer.setAttribute('field-of-view','32deg');viewer.setAttribute('min-field-of-view','20deg');
+  viewer.setAttribute('max-field-of-view','60deg');
+  viewer.setAttribute('loading','eager');
+  viewer.setAttribute('reveal','auto');
   viewer.setAttribute('auto-rotate-delay','1000');viewer.setAttribute('rotation-per-second','7deg');
   viewer.setAttribute('environment-image','neutral');viewer.setAttribute('exposure','1.18');
   viewer.setAttribute('shadow-intensity','1.2');viewer.setAttribute('shadow-softness','0.8');
   viewer.setAttribute('touch-action','pan-y');viewer.setAttribute('interaction-prompt','none');
   viewer.setAttribute('alt','NFC CARD 3D');
   stage.replaceChildren(viewer);
+  viewer.addEventListener('load',()=>{if(current!==request)return;d.querySelector('.nfc-glb-hint').textContent=t().rotate},{once:true});
+  viewer.addEventListener('error',()=>{if(current!==request)return;stage.replaceChildren(preview);d.querySelector('.nfc-glb-hint').textContent=t().failed},{once:true});
   if(menu.includes(control.dataset.glbModel)){
    const variants=document.createElement('div');variants.className='nfc-glb-variants';
    const titles=['□ Black','□ White','○ Black','○ White'];
    menu.forEach((id,index)=>{const option=document.createElement('button');option.type='button';option.textContent=titles[index];option.addEventListener('click',()=>viewer.setAttribute('src',ROOT+'/assets/models/'+id+'.glb'));variants.append(option)});
    stage.append(variants);
   }
- }catch(err){if(d.open&&current===request){stage.textContent=t().failed;loader=null;}}
+ }catch(err){if(d.open&&current===request){stage.replaceChildren(preview);d.querySelector('.nfc-glb-hint').textContent=t().failed;loader=null;}}
 });
