@@ -1,0 +1,35 @@
+name: Mobile responsive browser verification
+on:
+  push:
+    branches: [optidigital-3d-preview]
+    paths:
+      - 'src/v36_2/mobile-experience.css'
+      - 'migration/verify-mobile.mjs'
+      - '.github/workflows/verify-mobile.yml'
+      - 'src/v36_2/static-render.mjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Build and serve
+        run: |
+          npm run designer:build
+          cd work/designer-preview-v36_2
+          python3 -m http.server 8731 --bind 127.0.0.1 >/tmp/nfc-mobile-server.log 2>&1 &
+      - name: Test touch-sized controls and 3D on six viewports
+        run: node migration/verify-mobile.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mobile-3d-viewports
+          path: mobile-*.png
