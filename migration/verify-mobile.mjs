@@ -25,6 +25,12 @@ for(const width of widths){
   await page.screenshot({path:'mobile-'+width+'.png'});
   await page.locator('.nfc-glb-close').click();
  }
+ for(const route of ['/','/solutions/beauty-review-card/','/cart/','/order/']){
+  await page.goto(base+route,{waitUntil:'domcontentloaded'});
+  const m=await page.evaluate(()=>({inner:innerWidth,scroll:document.documentElement.scrollWidth}));
+  console.log('ROUTE',width,route,JSON.stringify(m));
+  if(m.scroll>m.inner+2)errors.push(width+' '+route+' horizontal overflow '+m.scroll);
+ }
  await page.close();
 }
 await browser.close();
