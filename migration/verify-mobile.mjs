@@ -38,7 +38,7 @@ for(const width of widths){
    await page.waitForURL('**/solutions/');
    await page.locator('.product-card a[href*="/solutions/"]').first().click();
    await page.waitForURL('**/solutions/*/');
-   await page.goBack({waitUntil:'domcontentloaded'});
+   await page.goBack({timeout:10000});
    await page.waitForURL('**/solutions/');
    console.log('NAVIGATION_TRANSITIONS',JSON.stringify({supported:transitionSupport,back:page.url()}));
  }
