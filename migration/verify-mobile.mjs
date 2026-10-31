@@ -67,6 +67,20 @@ for(const width of widths){
    await page.locator('[data-site-theme]').click();
    let theme=await page.evaluate(()=>document.documentElement.dataset.theme);
    console.log('THEME',theme);
+   for(const route of ['/','/solutions/','/solutions/beauty-review-card/','/cart/','/order/']){
+     await page.goto(base+route,{waitUntil:'domcontentloaded'});
+     const appearance=await page.evaluate(()=>{
+       const css=el=>getComputedStyle(document.querySelector(el));
+       const body=css('body'),header=css('.header');
+       const panel=document.querySelector('.product-card,.product-summary,.summary-box,.form-card,.nfc-demo');
+       const color=(val)=>{const v=val.match(/[0-9.]+/g)?.slice(0,3).map(Number)||[];return v};
+       const lightness=v=>{const rgb=color(v);return rgb.length===3?rgb.reduce((a,b)=>a+b,0)/3:255};
+       return {bodyBg:body.backgroundColor,headerBg:header.backgroundColor,bodyFg:body.color,panelBg:panel?getComputedStyle(panel).backgroundColor:null,dark:document.documentElement.dataset.theme,bodyLight:lightness(body.backgroundColor)};
+     });
+     console.log('DARK_ROUTE',width,route,JSON.stringify(appearance));
+     if(appearance.dark!=='dark'||appearance.bodyLight>90)errors.push('dark theme not applied '+route);
+   }
+   await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    if(theme!=='dark'&&theme!=='light')errors.push('theme toggle unavailable');
    await page.locator('[data-site-language="ru"]').click();
    const translated=await page.locator('.hero h1').textContent();
