@@ -1,0 +1,133 @@
+/* NFC CARD Nightfall — complete dark surfaces and consistent contrast. */
+html[data-theme="dark"]{
+ --ink:#eef4fa;--muted:#b6c6d4;--paper:#0a111a;--surface:#162332;
+ --line:#34485a;--silver:#263848;--chrome:#587286;
+ --nfc-ink:#f1f6fc;--nfc-surface:#162332;--nfc-hairline:#34485a;
+ color-scheme:dark;
+}
+html[data-theme="dark"] body{background:#0a111a!important;color:#e8f1fa!important}
+html[data-theme="dark"] main{background:transparent;color:inherit}
+html[data-theme="dark"] .header{
+ background:rgba(15,26,37,.97)!important;
+ border-bottom:1px solid #35485c!important;
+ box-shadow:0 7px 26px #0005!important
+}
+html[data-theme="dark"] .header .logo img:not([src*="reversed"]){filter:brightness(0) invert(1)}
+html[data-theme="dark"] .header .desktop-nav a,html[data-theme="dark"] .header .icon-btn{color:#e7f1fb!important}
+html[data-theme="dark"] .header .desktop-nav a:hover,html[data-theme="dark"] .header .icon-btn:hover{color:#fff!important}
+html[data-theme="dark"] .header .icon-btn:hover{background:#293d50!important}
+html[data-theme="dark"] .header .order-header{background:#d9eaf9!important;color:#112334!important;border-color:#d9eaf9!important}
+html[data-theme="dark"] .site-theme-toggle{background:#2a4054!important;color:#ffe4a5!important;border-color:#587187!important}
+html[data-theme="dark"] .site-lang-group{background:#192b3b!important;border-color:#435d72!important}
+html[data-theme="dark"] .site-lang-group button{color:#c6d9e9!important}
+html[data-theme="dark"] .site-lang-group button[aria-pressed="true"]{background:#e1edf8!important;color:#152738!important}
+html[data-theme="dark"] .hero,html[data-theme="dark"] .owner-home,html[data-theme="dark"] .visual-home,html[data-theme="dark"] .home-b-hero{
+ background:linear-gradient(135deg,#10202d,#111b28 65%,#142333)!important
+}
+html[data-theme="dark"] .section{border-color:#273949!important;background-color:transparent}
+html[data-theme="dark"] .home-selection,html[data-theme="dark"] .home-process,html[data-theme="dark"] .home-personalisation,html[data-theme="dark"] .home-contact{background:transparent!important}
+html[data-theme="dark"] .home-purpose,html[data-theme="dark"] .home-questions{background:#101d2a!important}
+html[data-theme="dark"] .page-head,html[data-theme="dark"] .breadcrumb,html[data-theme="dark"] .editorial-hero{background:transparent!important;color:#eff6fd}
+html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] h4,html[data-theme="dark"] .price,html[data-theme="dark"] .card-bottom>.price,html[data-theme="dark"] .product-card .card-bottom>.price{color:#eff6fd!important}
+html[data-theme="dark"] p,html[data-theme="dark"] li,html[data-theme="dark"] .home-after-request p,html[data-theme="dark"] .product-summary p{color:#c0cedc}
+html[data-theme="dark"] .muted,html[data-theme="dark"] small,html[data-theme="dark"] .small,html[data-theme="dark"] .caption,html[data-theme="dark"] .eyebrow,html[data-theme="dark"] .page-head>p{color:#b9c9d8!important}
+html[data-theme="dark"] a:not(.button):not(.nfc-glb-button){text-decoration-color:#7893ab}
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .filters,
+html[data-theme="dark"] .product-summary,
+html[data-theme="dark"] .product-quick,
+html[data-theme="dark"] .summary-box,
+html[data-theme="dark"] .cart-line,
+html[data-theme="dark"] .form-card,
+html[data-theme="dark"] .home-after-request,
+html[data-theme="dark"] .faq-list details,
+html[data-theme="dark"] .product-content-section,
+html[data-theme="dark"] .product-content-faq,
+html[data-theme="dark"] .product-payment-faq,
+html[data-theme="dark"] .feature,
+html[data-theme="dark"] .editorial-card,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .empty,
+html[data-theme="dark"] .receipt{
+ background:#172636!important;
+ border-color:#3c5267!important;
+ color:#e8f1fb!important;
+ box-shadow:0 8px 26px #050b1370!important
+}
+html[data-theme="dark"] .product-card:hover{border-color:#779bb5!important;box-shadow:0 16px 35px #0008!important}
+html[data-theme="dark"] .product-card .card-image,html[data-theme="dark"] .card-image,
+html[data-theme="dark"] .hero-studio,html[data-theme="dark"] .hero-visual,
+html[data-theme="dark"] .gallery-main,html[data-theme="dark"] .feature-image,
+html[data-theme="dark"] .home-b-product-stage{
+ background:radial-gradient(circle at 50% 40%,#344b5c,#1d2c3d 78%)!important;
+ border-color:#40576b!important
+}
+html[data-theme="dark"] .product-card .card-body>p,html[data-theme="dark"] .card-body .caption{color:#bfcfdd!important}
+html[data-theme="dark"] .product-card .card-bottom,html[data-theme="dark"] .product-card .card-body>[data-testid="design-product-cta"],
+html[data-theme="dark"] .cart-line-top{border-color:#3d5367!important}
+html[data-theme="dark"] .product-card .badge,html[data-theme="dark"] .badge{
+ color:#e6f3ff!important;background:#2a4358!important;border-color:#587188!important
+}
+html[data-theme="dark"] .product-card h3 a,html[data-theme="dark"] .text-link,html[data-theme="dark"] .breadcrumb a,html[data-theme="dark"] .purpose-link{color:#e6f2fd!important}
+html[data-theme="dark"] .button{background:#dbeaf7!important;border-color:#dbeaf7!important;color:#122737!important;box-shadow:0 3px 12px #0004!important}
+html[data-theme="dark"] .button:hover{background:#fff!important;border-color:#fff!important}
+html[data-theme="dark"] .button.secondary{background:#21374a!important;border-color:#648098!important;color:#eaf4fe!important}
+html[data-theme="dark"] .button.secondary:hover{background:#304b60!important}
+html[data-theme="dark"] .nfc-glb-button{background:#263e51!important;color:#edf6fd!important;border-color:#6a879c!important}
+html[data-theme="dark"] .nfc-glb-button:hover{background:#375b71!important}
+html[data-theme="dark"] .purpose-link,html[data-theme="dark"] .home-b-stage-label,html[data-theme="dark"] .home-b-stage-footer{
+ background:#223448!important;border-color:#47637a!important;color:#e6f1fb!important
+}
+html[data-theme="dark"] .purpose-link span{color:#c2d2df!important}
+html[data-theme="dark"] input:not([type=checkbox]),html[data-theme="dark"] select,html[data-theme="dark"] textarea{
+ background:#0e1d2b!important;color:#ecf5fe!important;border:1px solid #5d7a90!important;
+ caret-color:#dbeefe
+}
+html[data-theme="dark"] select option{color:#eaf4fc;background:#142535}
+html[data-theme="dark"] input::placeholder,html[data-theme="dark"] textarea::placeholder{color:#a7bccd!important}
+html[data-theme="dark"] input:focus-visible,html[data-theme="dark"] select:focus-visible,html[data-theme="dark"] textarea:focus-visible{
+ outline:3px solid #76b8ec!important;outline-offset:2px
+}
+html[data-theme="dark"] input[type=checkbox],html[data-theme="dark"] input[type=radio]{accent-color:#76b8ec}
+html[data-theme="dark"] .field label,html[data-theme="dark"] label,html[data-theme="dark"] legend,html[data-theme="dark"] summary{color:#e9f4fd!important}
+html[data-theme="dark"] .product-tab-list,html[data-theme="dark"] .tabs{background:#152637!important;border-color:#486176!important}
+html[data-theme="dark"] .product-tab-list [role=tab],html[data-theme="dark"] .tabs button{color:#c8d8e6!important}
+html[data-theme="dark"] .product-tab-list [aria-selected=true],html[data-theme="dark"] .tabs button[aria-selected=true]{color:#fff!important;background:#34546b!important}
+html[data-theme="dark"] .faq-list details,html[data-theme="dark"] details,html[data-theme="dark"] .spec,html[data-theme="dark"] .product-content-section{
+ border-color:#3d5368!important
+}
+html[data-theme="dark"] dialog.dialog:not(.nfc-glb-dialog){background:#182a3a!important;color:#eaf3fc!important;border-color:#516c81!important}
+html[data-theme="dark"] dialog.dialog:not(.nfc-glb-dialog) nav a{color:#eef6fe!important}
+html[data-theme="dark"] dialog.nfc-glb-dialog{background:#142332!important;color:#edf6fd!important;border-color:#4b6476!important}
+html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-stage{background:radial-gradient(ellipse at 50% 38%,#344e64,#152536 78%)!important}
+html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-bar,html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-hint{color:#e4eef8!important}
+html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-close,html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-faces button,html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-variants button{
+ background:#2a4356!important;border-color:#66839a!important;color:#eef6ff!important
+}
+html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-faces button[aria-pressed=true],html[data-theme="dark"] .nfc-glb-dialog .nfc-glb-variants button[aria-pressed=true]{background:#e3effa!important;color:#1a3143!important}
+html[data-theme="dark"] .nfc-demo{background:linear-gradient(145deg,#1a2e40,#0f1d2b)!important;border-color:#435c70!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-visual{background:radial-gradient(ellipse at 55% 35%,#3a4c5b,#121c28 78%)!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-copy h2,html[data-theme="dark"] .nfc-demo .nfc-demo-status{color:#eef7ff!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-steps li{color:#c9d7e3!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-situations button{background:#263b4f!important;color:#e6f3ff!important;border-color:#577489!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-situations button[aria-pressed=true]{background:#e3eff9!important;color:#172c3d!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-phone h3{color:#182432!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-home,html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-home *{color:#fff!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-review,html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-review *,html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-complete,html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-complete *{color:#1b2732!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-stars .is-filled{color:#996000!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-phone textarea{background:#fff!important;color:#18222c!important;border-color:#c0cbd4!important}
+html[data-theme="dark"] .nfc-demo .nfc-demo-phone .nfc-demo-finish{background:#1a2938!important;color:#fff!important}
+html[data-theme="dark"] .footer{background:#0e1b29!important;border-color:#34495a!important}
+html[data-theme="dark"] .footer .logo img{filter:none}
+html[data-theme="dark"] .footer a{color:#e5f2ff!important}
+html[data-theme="dark"] .footer p{color:#bacbd9!important}
+html[data-theme="dark"] .footer-bottom{border-color:#3e5366!important}
+@media(min-width:801px){html[data-theme="dark"] .header{backdrop-filter:blur(16px)}}
+@media(max-width:800px){html[data-theme="dark"] .header{backdrop-filter:none}html[data-theme="dark"] .product-card{box-shadow:0 5px 16px #0006!important}}
+@media(prefers-reduced-motion:no-preference){
+ html body,html .header,html .product-card,html .button,html .site-theme-toggle{
+  transition:background-color .24s ease,color .24s ease,border-color .24s ease,box-shadow .24s ease
+ }
+}
+@media(prefers-reduced-motion:reduce){html body,html .header,html .product-card,html .button{transition:none!important}}
