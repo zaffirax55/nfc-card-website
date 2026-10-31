@@ -8,6 +8,8 @@ import {mediaSections as sourceMediaSections,mediaReviewIndex,mediaGalleryFiles}
 import {renderProductOverview} from './product-content-view.mjs';
 import {renderOwnerMediaReview,bindOwnerMediaReview} from './media-owner.mjs';
 import {renderHomeB,renderVisualReview} from './home-composition.mjs';
+import {nfcDemoView} from './nfc-phone-demo-view.mjs';
+import {bindNfcPhoneDemo} from './nfc-phone-demo-client.mjs';
 import {renderProductNavigation,bindProductNavigation,selectedProductTabHash} from './product-navigation.mjs';
 import {updateDocumentMetadata,isKnownRoute} from './seo.mjs';
 import {BUILD_CONFIG} from './build-config.mjs';
@@ -161,7 +163,11 @@ function loadScenario(scenario){
  const fixtures={empty:[],fixed:[line('review-card')],quote:[line('restaurant-review-card')],mixed:[line('review-card'),line('restaurant-review-card')],google:[line('review-card',1,'https://g.page/demo-location-one/review'),line('review-card',1,'https://g.page/demo-location-two/review')],menu:menuVariants.map(variantId=>line('nfc-menu-card',1,'https://example.org/menu',{variantId,intent:'card_order',menuStatus:'existing'})),draft:[line('universal-ready-mini')],expired:[line('review-card',1,'',{expired:true})]};
  cart=fixtures[scenario]||[];removed=null;persistCart();navigate(url('/cart/'));
 }
-function homeChoice(){return renderHomeB({locale,card:id=>card(product(id)),productImage:id=>productImage(product(id)),priceOne:id=>priceOne(product(id)),faqGroups:generalFAQGroups[locale]});}
+function homeChoice(){
+ const original=renderHomeB({locale,card:id=>card(product(id)),productImage:id=>productImage(product(id)),priceOne:id=>priceOne(product(id)),faqGroups:generalFAQGroups[locale]});
+ const demo='<section class="section home-top-demo"><div class="wrap">'+nfcDemoView({locale,esc,asset:()=>({url:BASE+'/assets/review.webp'})})+'</div></section>';
+ return original.replace('</section>', '</section>'+demo);
+}
 function ownerMedia(){const technical=mediaReviewIndex(locale).replace('class="media-table-scroll"','class="media-table-scroll" role="region"').replace(/<h1>/g,'<h2>').replace(/<\/h1>/g,'</h2>');const label=({uk:'Вихідний реєстр v35.7 · 104 ролі · історичні статуси',en:'Original v35.7 register · 104 roles · historical statuses',pl:'Rejestr źródłowy v35.7 · 104 miejsca · statusy historyczne'})[locale];return renderOwnerMediaReview(locale)+`<section class="wrap owner-full-register"><details><summary>${label}</summary>${technical}</details></section>`;}
 function routeContent(){if(path.startsWith('/review/')&&!reviewEnabled())return notFound();if(path==='/')return homeChoice();if(path==='/review/visual/')return renderVisualReview(locale);if(path==='/solutions/'||path==='/catalog/'||path==='/collections/')return listing();if(path==='/search/')return listing(null,true);if(path==='/collections/branded/')return brandedServiceHub();if(path.startsWith('/collections/'))return categories[path.split('/')[2]]?listing(path.split('/')[2]):notFound();if(path.startsWith('/solutions/')){let slug=path.split('/')[2];const aliases={'counter-stand':'review-card','team-kit':'review-card','multi-location':'review-card'};slug=aliases[slug]||slug;const p=catalog.find(p=>p.slug===slug);return p?productDetail(p):notFound();}if(path==='/instagram-card/')return infoProduct('nfc-instagram-card');if(path==='/menu-card/')return infoProduct('nfc-menu-card');if(path==='/cart/')return cartPage();if(path==='/order/')return formPage();if(path==='/services/design/')return renderEditorialPage('design',locale,{esc,url,link,selectedEntry:serviceEntryId})+`<section id="design-request" class="section">${formPage('free_design_concepts').replace('<h1>','<h2>').replace('</h1>','</h2>')}</section>`;if(path==='/services/quantity-advice/')return formPage('quantity_advice');if(path==='/services/menu-consultation/')return formPage('menu_consultation');if(path==='/thank-you/')return receiptPage();if(path==='/review/drafts/')return draftsPage();if(path==='/review/states/')return reviewStates();if(path==='/review/media/')return ownerMedia();const info={[HISTORIC_PRIVACY_ROUTE]:'privacyArchive','/faq/':'faq','/about/':'about','/contact/':'contact','/what-is-nfc-card/':'how','/delivery-and-payment/':'delivery','/privacy/':'privacy','/terms/':'terms','/warranty-and-returns/':'warranty'};return info[path]?infoPage(info[path]):notFound();}
 function infoProduct(id){const p=product(id);return `<div class="wrap"><div class="page-head"><h1>${copy(p).name}</h1><p>${copy(p).description}</p>${link(`/solutions/${p.slug}/`,t('details'),'button')}</div></div>${steps()}${mediaSections('guide',locale)}<section class="section"><div class="wrap">${faqs(true)}</div></section>`;}
@@ -195,6 +201,7 @@ function render({hydrate=false}={}){
  app.dataset.ssrRoute=path;app.dataset.ssrLocale=locale;
  if(path==='/review/media/')bindOwnerMediaReview();
  bindProductNavigation();
+ bindNfcPhoneDemo();
  mountEmailProposal(runtimeConfig,locale);
 }
 function dialog(title,content,cls=''){const last=document.activeElement,d=document.createElement('dialog');d.className='dialog '+cls;d.innerHTML=`<div class="dialog-head"><h2>${title}</h2><button class="icon-btn" data-close-dialog aria-label="${t('close')}">${svg('close')}</button></div>${content}`;document.body.append(d);document.body.classList.add('dialog-open');d.addEventListener('click',e=>{if(e.target.closest('[data-close-dialog]'))d.close();});d.addEventListener('close',()=>{d.remove();last?.focus();document.body.classList.remove('dialog-open');});d.showModal();d.querySelector('button,input,a')?.focus();return d;}
