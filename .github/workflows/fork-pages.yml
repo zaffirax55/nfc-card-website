@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Restore Polish to four-language site preference switcher
+# Publish server-rendered UA RU EN PL header buttons, verified on mobile
 
 on:
   push:
