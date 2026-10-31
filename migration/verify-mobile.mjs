@@ -75,6 +75,16 @@ for(const width of widths){
    await page.locator('[data-site-language="en"]').click();
    await page.waitForURL('**/en/**');
    if((await page.locator('html').getAttribute('lang'))!=='en')errors.push('English locale switch failed');
+   await page.locator('[data-site-language="pl"]').click();
+   await page.waitForURL('**/pl/',{timeout:10000});
+   const polish=await page.locator('.hero h1').textContent();
+   console.log('POLISH_HERO',polish);
+   if(!polish.includes('Karty NFC'))errors.push('Polish homepage not translated');
+   const polishSelection=await page.locator('[data-site-language="pl"]').getAttribute('aria-pressed');
+   if(polishSelection!=='true')errors.push('Polish selection not active');
+   await page.reload({waitUntil:'domcontentloaded'});
+   await page.locator('[data-site-language="pl"]').waitFor({timeout:10000});
+   if(await page.locator('[data-site-language="pl"]').getAttribute('aria-pressed')!=='true')errors.push('Polish locale not persisted');
    await page.locator('[data-site-language="uk"]').click();
    await page.waitForURL(base+'/',{timeout:10000});
    if((await page.locator('html').getAttribute('lang'))!=='uk')errors.push('Ukrainian locale switch failed');
