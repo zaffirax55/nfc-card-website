@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Restore original animated NFC phone tap and simulated review on OptiDigital 3D homepage
+# Theme and UA RU EN mobile settings update, verified in Chromium
 
 on:
   push:
