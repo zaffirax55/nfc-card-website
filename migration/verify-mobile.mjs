@@ -68,7 +68,8 @@ for(const width of widths){
    let theme=await page.evaluate(()=>document.documentElement.dataset.theme);
    console.log('THEME',theme);
    for(const route of ['/','/solutions/','/solutions/beauty-review-card/','/cart/','/order/']){
-     await page.goto(base+route,{waitUntil:'domcontentloaded'});
+     await page.goto(base+route,{waitUntil:'load'});
+     await page.waitForFunction(()=>getComputedStyle(document.body).backgroundColor==='rgb(10, 17, 26)',{timeout:8000});
      const appearance=await page.evaluate(()=>{
        const css=el=>getComputedStyle(document.querySelector(el));
        const body=css('body'),header=css('.header');
@@ -78,7 +79,7 @@ for(const width of widths){
        return {bodyBg:body.backgroundColor,headerBg:header.backgroundColor,bodyFg:body.color,panelBg:panel?getComputedStyle(panel).backgroundColor:null,dark:document.documentElement.dataset.theme,bodyLight:lightness(body.backgroundColor)};
      });
      console.log('DARK_ROUTE',width,route,JSON.stringify(appearance));
-     if(appearance.dark!=='dark'||appearance.bodyLight>90)errors.push('dark theme not applied '+route);
+     if(appearance.dark!=='dark'||appearance.bodyLight>90||!appearance.bodyFg.includes('232, 241, 250'))errors.push('dark theme not applied '+route);
    }
    await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    if(theme!=='dark'&&theme!=='light')errors.push('theme toggle unavailable');
