@@ -57,6 +57,11 @@ for(const width of widths){
   if(m.scroll>m.inner+2)errors.push(width+' '+route+' horizontal overflow '+m.scroll);
  }
  if(width===390){
+   const raw=await (await page.request.get(base+'/')).text();
+   console.log('SERVER_LANGUAGE_CONTROLS',raw.includes('data-site-language="pl"'),raw.includes('data-site-language="ru"'));
+   if(!raw.includes('data-site-language="pl"')||!raw.includes('data-site-language="ru"'))errors.push('language controls missing from source HTML');
+ }
+ if(width===390){
    await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    await page.locator('[data-site-preferences]').waitFor({timeout:10000});
    await page.locator('[data-site-theme]').click();
