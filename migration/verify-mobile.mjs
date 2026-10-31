@@ -58,6 +58,29 @@ for(const width of widths){
  }
  if(width===390){
    await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+   await page.locator('[data-site-preferences]').waitFor({timeout:10000});
+   await page.locator('[data-site-theme]').click();
+   let theme=await page.evaluate(()=>document.documentElement.dataset.theme);
+   console.log('THEME',theme);
+   if(theme!=='dark'&&theme!=='light')errors.push('theme toggle unavailable');
+   await page.locator('[data-site-language="ru"]').click();
+   const translated=await page.locator('.hero h1').textContent();
+   console.log('RUSSIAN_HERO',translated);
+   if(!translated.includes('карточки'))errors.push('Russian language missing home translation');
+   await page.reload({waitUntil:'domcontentloaded'});
+   await page.locator('[data-site-preferences]').waitFor({timeout:10000});
+   const persisted=await page.evaluate(()=>({theme:document.documentElement.dataset.theme,lang:document.documentElement.dataset.uiLanguage}));
+   console.log('PREFERENCES_PERSISTED',JSON.stringify(persisted));
+   if(persisted.theme!==theme||persisted.lang!=='ru')errors.push('settings not persistent');
+   await page.locator('[data-site-language="en"]').click();
+   await page.waitForURL('**/en/**');
+   if((await page.locator('html').getAttribute('lang'))!=='en')errors.push('English locale switch failed');
+   await page.locator('[data-site-language="uk"]').click();
+   await page.waitForURL(base+'/',{timeout:10000});
+   if((await page.locator('html').getAttribute('lang'))!=='uk')errors.push('Ukrainian locale switch failed');
+ }
+ if(width===390){
+   await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    const transitionSupport=await page.evaluate(()=>typeof document.startViewTransition==='function');
    await page.locator('a[href$="/solutions/"]:visible').first().click();
    await page.waitForURL('**/solutions/');
