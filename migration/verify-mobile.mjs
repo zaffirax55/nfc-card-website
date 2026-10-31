@@ -40,6 +40,20 @@ for(const width of widths){
   await page.goto(base+route,{waitUntil:'domcontentloaded'});
   const m=await page.evaluate(()=>({inner:innerWidth,scroll:document.documentElement.scrollWidth}));
   console.log('ROUTE',width,route,JSON.stringify(m));
+  if(route==='/' && [320,390,768].includes(width)){
+   await page.locator('[data-nfc-demo]').waitFor({timeout:10000});
+   const phone=await page.locator('[data-nfc-demo]').evaluate(el=>{
+     const stage=el.querySelector('.nfc-demo-stage').getBoundingClientRect();
+     const phone=el.querySelector('.nfc-demo-phone').getBoundingClientRect();
+     return {state:el.dataset.state,phoneWidth:phone.width,stageWidth:stage.width,buttons:el.querySelectorAll('[data-demo-reset],[data-demo-pause]').length};
+   });
+   console.log('PHONE_DEMO',width,JSON.stringify(phone));
+   if(phone.phoneWidth<=0||phone.stageWidth<=0||phone.buttons!==2)errors.push(width+' phone demo failed to mount');
+   await page.locator('[data-demo-pause]').click();
+   if(await page.locator('[data-nfc-demo]').getAttribute('data-paused')!=='true')errors.push(width+' phone pause failed');
+   await page.locator('[data-demo-pause]').click();
+   await page.locator('[data-demo-reset]').click();
+  }
   if(m.scroll>m.inner+2)errors.push(width+' '+route+' horizontal overflow '+m.scroll);
  }
  if(width===390){
