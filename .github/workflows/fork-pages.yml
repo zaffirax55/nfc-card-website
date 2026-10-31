@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Theme and UA RU EN mobile settings update, verified in Chromium
+# Restore Polish to four-language site preference switcher
 
 on:
   push:
