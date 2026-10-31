@@ -2,8 +2,8 @@
 const BASE='/nfc-card-website';
 const prefKey='nfc-card-ui-preferences-v1';
 const pref=(()=>{try{return JSON.parse(localStorage.getItem(prefKey)||'{}')}catch{return {}}})();
-const localeFromPath=()=>location.pathname.startsWith(BASE+'/en/')?'en':'uk';
-const selected=()=>localeFromPath()==='en'?'en':(pref.language==='ru'||new URLSearchParams(location.search).get('lang')==='ru'?'ru':'uk');
+const localeFromPath=()=>location.pathname.startsWith(BASE+'/en/')?'en':location.pathname.startsWith(BASE+'/pl/')?'pl':'uk';
+const selected=()=>['en','pl'].includes(localeFromPath())?localeFromPath():(pref.language==='ru'||new URLSearchParams(location.search).get('lang')==='ru'?'ru':'uk');
 const prefersDark=()=>matchMedia('(prefers-color-scheme: dark)').matches;
 let theme=pref.theme==='dark'||pref.theme==='light'?pref.theme:(prefersDark()?'dark':'light');
 let language=selected();
@@ -47,7 +47,7 @@ function ru(text){if(!text||!/[А-Яа-яІіЇїЄєҐґ]/.test(text))return te
 const sourceText=new WeakMap();
 let translating=false;
 function translateElement(root){
- if(language!=='ru'||localeFromPath()==='en'||translating)return;
+ if(language!=='ru'||localeFromPath()!=='uk'||translating)return;
  translating=true;
  try{
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
@@ -71,7 +71,7 @@ function translateElement(root){
   }
  }finally{translating=false}
 }
-function themeLabels(){return {uk:['Світла тема','Темна тема','Мова сайту'],ru:['Светлая тема','Тёмная тема','Язык сайта'],en:['Light theme','Dark theme','Site language']}[language]||[]}
+function themeLabels(){return {uk:['Світла тема','Темна тема','Мова сайту'],ru:['Светлая тема','Тёмная тема','Язык сайта'],en:['Light theme','Dark theme','Site language'],pl:['Jasny motyw','Ciemny motyw','Język strony']}[language]||[]}
 function updateControls(){
  document.documentElement.dataset.theme=theme;
  document.documentElement.dataset.uiLanguage=language;
@@ -89,7 +89,7 @@ function mount(){
  let settings=header.querySelector('[data-site-preferences]');
  if(!settings){
   settings=document.createElement('div');settings.className='site-preferences';settings.dataset.sitePreferences='';
-  settings.innerHTML='<button type="button" class="site-theme-toggle" data-site-theme aria-pressed="false">☾</button><div class="site-lang-group" data-site-languages role="group"><button type="button" data-site-language="uk">UA</button><button type="button" data-site-language="ru">RU</button><button type="button" data-site-language="en">EN</button></div>';
+  settings.innerHTML='<button type="button" class="site-theme-toggle" data-site-theme aria-pressed="false">☾</button><div class="site-lang-group" data-site-languages role="group"><button type="button" data-site-language="uk">UA</button><button type="button" data-site-language="ru">RU</button><button type="button" data-site-language="en">EN</button><button type="button" data-site-language="pl">PL</button></div>';
   header.prepend(settings);
  }
  updateControls();
@@ -102,9 +102,14 @@ document.addEventListener('click',event=>{
   theme=theme==='dark'?'light':'dark';save();updateControls();return;
  }
  language=button.dataset.siteLanguage;save();
- if(language==='en'){location.assign(BASE+'/en/'+location.pathname.replace(new RegExp('^'+BASE+'/(?:en/)?'),'')+location.search);return}
- if(localeFromPath()==='en'){location.assign(BASE+'/'+location.pathname.replace(BASE+'/en/',''));return}
- if(language==='uk'){location.reload();return}
+ const currentPath=location.pathname.replace(new RegExp('^'+BASE+'/(?:en/|pl/)?'),'/');
+ const prefix=(language==='en'||language==='pl')?'/'+language:'';
+ const destination=BASE+prefix+(currentPath.startsWith('/')?currentPath:'/'+currentPath)+location.search+location.hash;
+ if(language==='en'||language==='pl'||localeFromPath()!=='uk'||language==='uk'){
+   if(destination!==location.pathname+location.search+location.hash){location.assign(destination);return}
+   if(language==='uk')location.reload();
+   return;
+ }
  updateControls();translateElement(document.querySelector('#app')||document.body);
 });
 let scheduled=false;
