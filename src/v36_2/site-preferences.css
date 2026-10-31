@@ -1,4 +1,4 @@
-/* Appearance and three-language controls for NFC CARD. */
+/* Appearance and four-language controls for NFC CARD. */
 :root{color-scheme:light}
 html[data-theme="dark"]{color-scheme:dark}
 .site-preferences{display:flex;align-items:center;gap:6px;flex-shrink:0;white-space:nowrap}
@@ -73,3 +73,7 @@ html[data-theme="dark"] .nfc-demo-phone .nfc-demo-home,html[data-theme="dark"] .
 html[data-theme="dark"] .nfc-demo-phone .nfc-demo-review,html[data-theme="dark"] .nfc-demo-phone .nfc-demo-complete,html[data-theme="dark"] .nfc-demo-phone .nfc-demo-review *{color:#181b1f}
 html[data-theme="dark"] .nfc-demo-phone textarea{background:#fff!important;color:#181b1f!important;border-color:#c9d1d8!important}
 @media(prefers-reduced-motion:reduce){.site-theme-toggle,.site-lang-group *{transition:none!important}}
+
+/* Compact four-language switcher without clipped controls on narrow phones. */
+@media(max-width:420px){.site-preferences{max-width:100%;gap:3px}.site-lang-group button{min-width:29px;padding-inline:2px}.site-theme-toggle{width:36px;flex-basis:36px;min-height:36px;height:36px}}
+@media(max-width:360px){.site-lang-group button{min-width:30px}.header-actions{min-width:0}}
