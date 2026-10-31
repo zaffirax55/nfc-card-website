@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Mobile animations v2: touch feedback, elegant card entrance, smoother route and 3D dialogs
+# Restore original animated NFC phone tap and simulated review on OptiDigital 3D homepage
 
 on:
   push:
