@@ -81,7 +81,7 @@ const appIcons=['☎','≡','✿','◉','<svg viewBox="0 0 24 24" aria-hidden="t
 const nfcIcon=`<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10a9 9 0 0 1 0 12m5-16a15 15 0 0 1 0 20m5-24a21 21 0 0 1 0 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="16" r="2" fill="currentColor"/></svg>`;
 export function nfcDemoView({locale,esc,asset}) {
  const c=copy[locale]||copy.uk;
- return `<section class="nfc-demo" data-nfc-demo data-state="desktop" data-situation="cafe" aria-labelledby="nfc-demo-title">
+ return `<section class="nfc-demo" id="nfc-phone-demo" data-nfc-demo data-state="desktop" data-situation="cafe" aria-labelledby="nfc-demo-title">
   <div class="nfc-demo-copy">
    <p class="eyebrow"><span class="nfc-demo-live-dot" aria-hidden="true"></span> NFC · LIVE DEMO</p>
    <h2 id="nfc-demo-title">${esc(c.title)}</h2><p class="nfc-demo-intro">${esc(c.intro)}</p>
