@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Publish readability improvements, reduced whitespace and real-product photo gallery with feedback invitation
+# Compact homepage FAQ layout and help CTA, tested on desktop and mobile
 
 on:
   push:
