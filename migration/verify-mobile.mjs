@@ -193,6 +193,42 @@ for(const width of [390,1366]){
  await page.screenshot({path:'faq-layout-'+width+'.png',fullPage:false});
  await page.close();
 }
+// Design service: all five previously empty boxes must contain working visuals.
+for(const width of [390,1366]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ page.on('pageerror',e=>errors.push('design '+width+' JS '+e.message));
+ await page.goto(base+'/services/design/',{waitUntil:'load'});
+ const cards=page.locator('[data-editorial-media="design"] .editorial-media-example');
+ const count=await cards.count();
+ const remaining=await page.locator('[data-editorial-media="design"] .editorial-media-placeholder').count();
+ const pictureState=await cards.locator('img').evaluateAll(async images=>Promise.all(images.map(async img=>{
+  img.loading='eager';try{await img.decode();return {ok:true,w:img.naturalWidth,src:img.getAttribute('src')}}catch{return {ok:false,src:img.getAttribute('src')}}})));
+ const layout=await page.evaluate(()=>{
+  const grid=document.querySelector('[data-editorial-media="design"]');
+  const fig=grid?.querySelector('figure'),bg=fig?getComputedStyle(fig).backgroundColor:null;
+  return {width:innerWidth,overflow:document.documentElement.scrollWidth-innerWidth,
+  columns:getComputedStyle(grid).gridTemplateColumns.split(' ').length,background:bg};
+ });
+ const demoLink=await page.locator('[data-media-slot="DESIGN.NFC_DEMO"] a').getAttribute('href');
+ console.log('DESIGN_EXAMPLES',width,JSON.stringify({count,remaining,pictureState,layout,demoLink}));
+ if(count!==5||remaining!==0||pictureState.length!==6||pictureState.some(p=>!p.ok||p.w<100)||layout.overflow>2||
+    layout.columns!==(width>=700?6:1)||!demoLink?.endsWith('/#nfc-phone-demo'))
+   errors.push('design page imagery missing or broken '+width);
+ await page.evaluate(()=>document.documentElement.dataset.theme='dark');
+ const dark=await page.locator('.editorial-media-example').first().evaluate(el=>getComputedStyle(el).backgroundColor);
+ console.log('DESIGN_DARK_THEME',width,dark);
+ if(dark!=='rgb(23, 40, 56)')errors.push('design photo cards dark mode broken '+width);
+ await page.close();
+}
+for(const l of ['en','pl']){
+ const page=await browser.newPage({viewport:{width:390,height:844}});
+ await page.goto(base+'/'+l+'/services/design/',{waitUntil:'domcontentloaded'});
+ const count=await page.locator('[data-editorial-media="design"] .editorial-media-example').count();
+ const text=await page.locator('[data-editorial-media="design"] figcaption p').first().textContent();
+ console.log('DESIGN_LOCALE',l,JSON.stringify({count,text}));
+ if(count!==5||(!text.includes('Ready-made')&&!text.includes('Zdjęcie')))errors.push('design locale missing '+l);
+ await page.close();
+}
 await browser.close();
 if(errors.length){console.error('FAILED',JSON.stringify(errors));process.exit(1)}
 console.log('MOBILE_RESPONSIVE_TEST_SUCCESS');
