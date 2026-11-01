@@ -1,0 +1,91 @@
+/* One-screen NFC explanation: light CSS-only animation, graphite/silver palette. */
+.hero-tap-hero{min-height:0!important;align-self:center;padding:15px!important;gap:9px;overflow:hidden}
+.hero-tap-head{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:34px;color:#f1f5f8}
+.hero-tap-head strong{font-size:15px;line-height:1.35;font-weight:650;color:#fff}
+.hero-tap-eyebrow{color:#c0cbd4;font:600 10px/1.4 monospace;letter-spacing:.055em;white-space:nowrap}
+.hero-tap-scene{height:295px;position:relative;overflow:hidden;border-radius:12px;background:radial-gradient(ellipse at 52% 42%,#3f474f,#1b222a 76%);border:1px solid #5a6570;isolation:isolate}
+.hero-tap-scene::before{position:absolute;content:'';inset:10%;border-radius:50%;border:1px solid #ffffff0e;transform:rotate(-25deg);pointer-events:none}
+.hero-tap-scene::after{position:absolute;content:'';width:65%;height:70%;left:-14%;top:19%;border:1px solid #ffffff09;border-radius:50%;transform:rotate(-25deg);pointer-events:none}
+.hero-tap-card{position:absolute;width:clamp(115px,33%,157px);left:9%;top:63px;z-index:1;border-radius:12px;border:2px solid #f2f3f4;background:#fff;overflow:hidden;box-shadow:0 14px 23px #0008;transform:rotate(-11deg);animation:tap-card-move 8s cubic-bezier(.22,.7,.2,1) infinite}
+.hero-tap-card img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.hero-tap-waves{position:absolute;z-index:4;left:42%;top:36%;width:62px;height:62px;opacity:0;animation:tap-waves-in 8s linear infinite;pointer-events:none}
+.hero-tap-waves span{position:absolute;inset:6px;border:3px solid #f5faff;border-radius:50%;animation:tap-pulse 1s ease-out infinite}
+.hero-tap-waves span+span{animation-delay:.35s}
+.hero-tap-phone{position:absolute;z-index:3;right:9%;top:11px;width:178px;height:275px;border:5px solid #0b1016;border-radius:29px;background:#fcfcfd;box-shadow:0 16px 28px #0009,2px 0 0 #85919c;overflow:hidden;transform-origin:50% 50%;animation:tap-phone-move 8s cubic-bezier(.22,.75,.3,1) infinite}
+.hero-tap-notch{position:absolute;top:3px;left:50%;transform:translateX(-50%);width:38%;height:11px;background:#111821;border-radius:7px;z-index:6}
+.hero-tap-homebar{position:absolute;bottom:5px;left:33%;width:34%;height:4px;border-radius:4px;background:#1c2530;z-index:7}
+.hero-tap-screen{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:11px;padding:20px 10px;background:#fff;color:#1b2630;opacity:0}
+.hero-tap-screen-home{opacity:1;background:linear-gradient(145deg,#313e4e,#8c9eaf);color:#fff;animation:tap-screen-home 8s linear infinite}
+.hero-tap-screen-home>span{font:700 28px/1.2 Arial,sans-serif}
+.hero-tap-home-icons{display:grid;grid-template-columns:repeat(2,43px);gap:9px}
+.hero-tap-home-icons i{display:grid;place-items:center;width:43px;height:43px;border-radius:12px;background:#ffffff36;color:#fff;font:normal 22px Arial,sans-serif}
+.hero-tap-screen-link{animation:tap-screen-link 8s linear infinite}
+.hero-tap-link-icon{font:700 12px monospace;color:#fff;background:#263d50;border-radius:50%;height:59px;width:59px;display:grid;place-items:center;border:4px solid #d5e0e8}
+.hero-tap-screen-link b{font-size:13px;line-height:1.4;max-width:140px}
+.hero-tap-screen-link small{font-size:11px;color:#576775}
+.hero-tap-screen-review{animation:tap-screen-review 8s linear infinite}
+.hero-tap-google{font:700 18px Arial,sans-serif;letter-spacing:-.02em;color:#30465b}
+.hero-tap-screen-review>b{font-size:13px}
+.hero-tap-stars{color:#eeb326;letter-spacing:1px;font:900 17px/1 Arial,sans-serif;white-space:nowrap}
+.hero-tap-typing{display:block;width:91%;height:38px;border:1px solid #cbd1d7;border-radius:7px;background:#f6f8fa;overflow:hidden}
+.hero-tap-typing i{display:block;height:5px;width:0;max-width:76%;margin:11px 0 0 9px;border-radius:3px;background:#b0bbc6;animation:tap-type-line 8s linear infinite}
+.hero-tap-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0}
+.hero-tap-steps span{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 4px;min-height:39px;border-radius:7px;background:#3b434c;color:#d7dde3;font-size:11px;font-weight:600;line-height:1.3;text-align:center}
+.hero-tap-steps i{font:700 10px/1 monospace;opacity:.72}
+.hero-tap-steps span:first-child{animation:tap-step-one 8s linear infinite}
+.hero-tap-steps span:nth-child(2){animation:tap-step-two 8s linear infinite}
+.hero-tap-steps span:nth-child(3){animation:tap-step-three 8s linear infinite}
+.hero-tap-caption{color:#c6cfd8!important;font-size:11px!important;line-height:1.4!important;margin:0!important;text-align:center}
+@keyframes tap-phone-move{
+ 0%,17%,84%,100%{transform:translate3d(0,0,0) rotate(0deg)}
+ 30%,37%{transform:translate3d(-39px,14px,0) rotate(-6deg)}
+ 49%,75%{transform:translate3d(0,0,0) rotate(0deg)}
+}
+@keyframes tap-card-move{
+ 0%,20%,85%,100%{transform:rotate(-11deg)}
+ 30%,40%{transform:rotate(-7deg) translate3d(2px,-2px,0)}
+}
+@keyframes tap-waves-in{0%,24%,42%,100%{opacity:0}29%,35%{opacity:1}}
+@keyframes tap-pulse{from{transform:scale(.6);opacity:1}to{transform:scale(1.6);opacity:0}}
+@keyframes tap-screen-home{0%,36%{opacity:1}41%,93%{opacity:0}98%,100%{opacity:1}}
+@keyframes tap-screen-link{0%,36%,57%,100%{opacity:0}42%,53%{opacity:1}}
+@keyframes tap-screen-review{0%,55%,100%{opacity:0}60%,91%{opacity:1}}
+@keyframes tap-type-line{0%,60%{width:0}72%,92%{width:72%}100%{width:0}}
+@keyframes tap-step-one{0%,38%,100%{background:#edf0f3;color:#182129}43%,95%{background:#3b434c;color:#d7dde3}}
+@keyframes tap-step-two{0%,38%,60%,100%{background:#3b434c;color:#d7dde3}43%,55%{background:#edf0f3;color:#182129}}
+@keyframes tap-step-three{0%,55%,100%{background:#3b434c;color:#d7dde3}60%,94%{background:#edf0f3;color:#182129}}
+@media(max-width:1100px){
+ .hero-tap-head{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+ .hero-tap-scene{height:270px}
+ .hero-tap-phone{right:7%;height:253px;width:160px}
+ .hero-tap-card{left:7%;top:63px;width:124px}
+ .hero-tap-waves{left:39%}
+}
+@media(max-width:800px){
+ .hero-tap-hero{padding:11px!important;width:100%}
+ .hero-tap-scene{height:252px}
+ .hero-tap-phone{right:15%;width:156px;height:236px;top:9px}
+ .hero-tap-card{left:18%;top:58px;width:129px}
+ .hero-tap-waves{left:46%}
+ .hero-tap-steps span{min-height:35px}
+}
+@media(max-width:450px){
+ .hero-tap-phone{right:6%;width:143px;height:235px}
+ .hero-tap-card{left:9%;top:62px;width:116px}
+ .hero-tap-waves{left:38%;top:38%}
+ .hero-tap-scene{height:253px}
+ .hero-tap-head strong{font-size:14px}
+ .hero-tap-steps span{font-size:10px}
+}
+@media(max-width:340px){
+ .hero-tap-phone{right:4%;width:136px;height:229px}
+ .hero-tap-card{left:4%;width:107px}
+ .hero-tap-steps{gap:3px}
+ .hero-tap-steps span{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-tap-card,.hero-tap-phone,.hero-tap-waves,.hero-tap-waves span,
+ .hero-tap-screen,.hero-tap-typing i,.hero-tap-steps span{animation:none!important;transition:none!important}
+ .hero-tap-screen-home,.hero-tap-screen-link{opacity:0}
+ .hero-tap-screen-review{opacity:1}
+}
