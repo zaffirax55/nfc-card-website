@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Fix review card portrait image side gutters on mobile, tested in Chromium
+# Replace photographic hand-and-desk NFC demo art with a clean Google Review Card face
 
 on:
   push:
