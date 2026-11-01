@@ -7,6 +7,7 @@
 .site-lang-group button:hover:not([aria-pressed="true"]){background:#e4e8eb;color:#161d25}
 .site-lang-group button:focus-visible{outline:2px solid #6d8598;outline-offset:2px}
 .header{box-shadow:0 1px 0 #00000008!important}
+.header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 .header-row{min-height:65px!important;gap:16px!important}
 .header .logo{width:122px!important}
 .header .desktop-nav{gap:15px}
@@ -47,4 +48,18 @@
  .header .logo{width:82px!important}
  .header .icon-btn{min-width:28px}
  .site-lang-group button{min-width:25px}
+}
+
+/* Older mobile templates used a 3-column header grid with an absolutely
+   positioned menu button; explicitly reset both to avoid overlapping PL/RU. */
+@media(max-width:800px){
+ .header-actions{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;width:auto!important;max-width:100%;min-width:0;margin-left:auto!important;position:static!important}
+ .header .mobile-menu{position:static!important;top:auto!important;right:auto!important;left:auto!important;bottom:auto!important;transform:none!important;width:auto!important;height:36px!important;flex:0 0 35px!important}
+ .header .icon-btn{flex-shrink:0!important;max-width:43px}
+ .site-preferences{flex:0 0 auto!important;min-width:0}
+}
+@media(max-width:370px){
+ .header .mobile-menu{flex-basis:29px!important;width:29px!important}
+ .site-lang-group button{padding:1px!important}
+ .header-actions{gap:0!important}
 }
