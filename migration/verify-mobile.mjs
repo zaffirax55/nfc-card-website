@@ -169,6 +169,30 @@ for(const width of widths){
  }
  await page.close();
 }
+
+// Homepage lower-section whitespace regression: FAQ must use the available
+// horizontal space and the contact CTA must sit close to the questions.
+for(const width of [390,1366]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ await page.goto(base+'/',{waitUntil:'load'});
+ const compact=await page.evaluate(()=>{
+   const faq=document.querySelector('.home-questions');
+   const grid=faq?.querySelector('.faq-list');
+   const help=document.querySelector('.home-contact>.wrap');
+   if(!faq||!grid||!help)return null;
+   const f=faq.getBoundingClientRect(),g=grid.getBoundingClientRect(),h=help.getBoundingClientRect();
+   return {cols:getComputedStyle(grid).gridTemplateColumns.split(' ').length,
+     faqHeight:f.height,gridWidth:g.width,faqWidth:f.width,
+     gapToHelp:Math.round(h.top-f.bottom),helpHeight:Math.round(h.height),
+     overflow:document.documentElement.scrollWidth-innerWidth};
+ });
+ console.log('FAQ_LAYOUT',width,JSON.stringify(compact));
+ if(!compact||compact.cols!==(width>=680?2:1)||compact.overflow>2||
+    compact.gapToHelp>42||compact.helpHeight>(width>=680?240:350))
+   errors.push(width+' FAQ and contact whitespace regression');
+ await page.screenshot({path:'faq-layout-'+width+'.png',fullPage:false});
+ await page.close();
+}
 await browser.close();
 if(errors.length){console.error('FAILED',JSON.stringify(errors));process.exit(1)}
 console.log('MOBILE_RESPONSIVE_TEST_SUCCESS');
