@@ -80,26 +80,28 @@ for(const width of widths){
   }
 
   if(route==='/' && [320,390,768].includes(width)){
-   await page.locator('[data-nfc-demo]').waitFor({timeout:10000});
-   const phone=await page.locator('[data-nfc-demo]').evaluate(el=>{
-     const stage=el.querySelector('.nfc-demo-stage').getBoundingClientRect();
-     const phone=el.querySelector('.nfc-demo-phone').getBoundingClientRect();
-     return {state:el.dataset.state,phoneWidth:phone.width,stageWidth:stage.width,buttons:el.querySelectorAll('[data-demo-reset],[data-demo-pause]').length};
-   });
-   console.log('PHONE_DEMO',width,JSON.stringify(phone));
-   const artwork=await page.locator('.nfc-demo-card img').evaluate(async img=>{
-     img.loading='eager';
-     await img.decode();
-     return {src:img.currentSrc,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight};
-   });
-   console.log('REVIEW_CARD_ARTWORK',width,JSON.stringify(artwork));
-   if(!artwork.src.endsWith('/assets/review-card-demo.svg')||artwork.naturalWidth!==640||artwork.naturalHeight!==640)
-     errors.push(width+' plain review card artwork missing or broken');
-   if(phone.phoneWidth<=0||phone.stageWidth<=0||phone.buttons!==2)errors.push(width+' phone demo failed to mount');
-   await page.locator('[data-demo-pause]').click();
-   if(await page.locator('[data-nfc-demo]').getAttribute('data-paused')!=='true')errors.push(width+' phone pause failed');
-   await page.locator('[data-demo-pause]').click();
-   await page.locator('[data-demo-reset]').click();
+    const demo=page.locator('.hero-tap-hero');
+    const info=await demo.evaluate(el=>{
+      const rect=el.getBoundingClientRect();
+      const image=el.querySelector('.hero-tap-card img');
+      const card=el.querySelector('.hero-tap-card');
+      const phone=el.querySelector('.hero-tap-phone');
+      return {width:rect.width,height:rect.height,image:image.currentSrc,
+        steps:el.querySelectorAll('.hero-tap-steps [role=listitem]').length,
+        cardAnimation:getComputedStyle(card).animationName,
+        phoneAnimation:getComputedStyle(phone).animationName,
+        sceneWidth:el.querySelector('.hero-tap-scene').getBoundingClientRect().width};
+    });
+    console.log('COMPACT_HERO',width,JSON.stringify(info));
+    if(info.height>440||info.steps!==3||!info.image.includes('review-card-demo.svg')||
+      info.cardAnimation==='none'||info.phoneAnimation==='none'||info.sceneWidth>width+2)
+      errors.push(width+' compact hero illustration failed');
+    if(await page.locator('.home-top-demo,[data-nfc-demo]').count()>0)
+      errors.push(width+' old oversized demo still present');
+    if(await page.locator('[data-site-theme]').count()>0)
+      errors.push(width+' unused theme button still present');
+    const img=await demo.locator('img').evaluate(async el=>{await el.decode();return el.naturalWidth});
+    if(img<100)errors.push(width+' demo artwork failed to decode');
   }
   if(m.scroll>m.inner+2)errors.push(width+' '+route+' horizontal overflow '+m.scroll);
  }
@@ -111,34 +113,16 @@ for(const width of widths){
  if(width===390){
    await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    await page.locator('[data-site-preferences]').waitFor({timeout:10000});
-   await page.locator('[data-site-theme]').click();
-   let theme=await page.evaluate(()=>document.documentElement.dataset.theme);
-   console.log('THEME',theme);
-   for(const route of ['/','/solutions/','/solutions/beauty-review-card/','/cart/','/order/']){
-     await page.goto(base+route,{waitUntil:'load'});
-     await page.waitForFunction(()=>getComputedStyle(document.body).backgroundColor==='rgb(10, 17, 26)',{timeout:8000});
-     const appearance=await page.evaluate(()=>{
-       const css=el=>getComputedStyle(document.querySelector(el));
-       const body=css('body'),header=css('.header');
-       const panel=document.querySelector('.product-card,.product-summary,.summary-box,.form-card,.nfc-demo');
-       const color=(val)=>{const v=val.match(/[0-9.]+/g)?.slice(0,3).map(Number)||[];return v};
-       const lightness=v=>{const rgb=color(v);return rgb.length===3?rgb.reduce((a,b)=>a+b,0)/3:255};
-       return {bodyBg:body.backgroundColor,headerBg:header.backgroundColor,bodyFg:body.color,panelBg:panel?getComputedStyle(panel).backgroundColor:null,dark:document.documentElement.dataset.theme,bodyLight:lightness(body.backgroundColor)};
-     });
-     console.log('DARK_ROUTE',width,route,JSON.stringify(appearance));
-     if(appearance.dark!=='dark'||appearance.bodyLight>90||!appearance.bodyFg.includes('232, 241, 250'))errors.push('dark theme not applied '+route);
-   }
-   await page.goto(base+'/',{waitUntil:'domcontentloaded'});
-   if(theme!=='dark'&&theme!=='light')errors.push('theme toggle unavailable');
+   if(await page.locator('[data-site-theme]').count())errors.push('unneeded theme control present');
    await page.locator('[data-site-language="ru"]').click();
    const translated=await page.locator('.hero h1').textContent();
    console.log('RUSSIAN_HERO',translated);
    if(!translated.includes('карточки'))errors.push('Russian language missing home translation');
    await page.reload({waitUntil:'domcontentloaded'});
    await page.locator('[data-site-preferences]').waitFor({timeout:10000});
-   const persisted=await page.evaluate(()=>({theme:document.documentElement.dataset.theme,lang:document.documentElement.dataset.uiLanguage}));
+   const persisted=await page.evaluate(()=>({lang:document.documentElement.dataset.uiLanguage}));
    console.log('PREFERENCES_PERSISTED',JSON.stringify(persisted));
-   if(persisted.theme!==theme||persisted.lang!=='ru')errors.push('settings not persistent');
+   if(persisted.lang!=='ru')errors.push('language setting not persistent');
    await page.locator('[data-site-language="en"]').click();
    await page.waitForURL('**/en/**');
    if((await page.locator('html').getAttribute('lang'))!=='en')errors.push('English locale switch failed');
@@ -214,11 +198,6 @@ for(const width of [390,1366]){
  if(count!==5||remaining!==0||pictureState.length!==6||pictureState.some(p=>!p.ok||p.w<100)||layout.overflow>2||
     layout.columns!==(width>=700?6:1)||!demoLink?.endsWith('/#nfc-phone-demo'))
    errors.push('design page imagery missing or broken '+width);
- await page.locator('[data-site-theme]').click();
- await page.waitForFunction(()=>document.documentElement.dataset.theme==='dark'&&getComputedStyle(document.querySelector('.editorial-media-example')).backgroundColor==='rgb(23, 40, 56)',null,{timeout:4000});
- const dark=await page.locator('.editorial-media-example').first().evaluate(el=>getComputedStyle(el).backgroundColor);
- console.log('DESIGN_DARK_THEME',width,dark);
- if(dark!=='rgb(23, 40, 56)')errors.push('design photo cards dark mode broken '+width);
  await page.close();
 }
 for(const l of ['en','pl']){
