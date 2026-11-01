@@ -215,6 +215,7 @@ for(const width of [390,1366]){
     layout.columns!==(width>=700?6:1)||!demoLink?.endsWith('/#nfc-phone-demo'))
    errors.push('design page imagery missing or broken '+width);
  await page.evaluate(()=>document.documentElement.dataset.theme='dark');
+ await page.waitForFunction(()=>getComputedStyle(document.querySelector('.editorial-media-example')).backgroundColor==='rgb(23, 40, 56)',null,{timeout:4000});
  const dark=await page.locator('.editorial-media-example').first().evaluate(el=>getComputedStyle(el).backgroundColor);
  console.log('DESIGN_DARK_THEME',width,dark);
  if(dark!=='rgb(23, 40, 56)')errors.push('design photo cards dark mode broken '+width);
