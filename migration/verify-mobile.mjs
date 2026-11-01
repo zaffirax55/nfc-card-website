@@ -66,6 +66,14 @@ for(const width of widths){
      return {state:el.dataset.state,phoneWidth:phone.width,stageWidth:stage.width,buttons:el.querySelectorAll('[data-demo-reset],[data-demo-pause]').length};
    });
    console.log('PHONE_DEMO',width,JSON.stringify(phone));
+   const artwork=await page.locator('.nfc-demo-card img').evaluate(async img=>{
+     img.loading='eager';
+     await img.decode();
+     return {src:img.currentSrc,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight};
+   });
+   console.log('REVIEW_CARD_ARTWORK',width,JSON.stringify(artwork));
+   if(!artwork.src.endsWith('/assets/review-card-demo.svg')||artwork.naturalWidth!==640||artwork.naturalHeight!==640)
+     errors.push(width+' plain review card artwork missing or broken');
    if(phone.phoneWidth<=0||phone.stageWidth<=0||phone.buttons!==2)errors.push(width+' phone demo failed to mount');
    await page.locator('[data-demo-pause]').click();
    if(await page.locator('[data-nfc-demo]').getAttribute('data-paused')!=='true')errors.push(width+' phone pause failed');
