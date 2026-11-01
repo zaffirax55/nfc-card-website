@@ -1,0 +1,36 @@
+/* NFC CARD — remove side gutters around real product photos on narrow screens.
+   Let each original image set the card's height; never crop the printed artwork.
+   Placeholder design cards intentionally keep their existing 1:1 layout. */
+@media(max-width:800px){
+ .product-card .card-image--photo{
+  display:block;
+  width:100%;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  padding:0!important;
+  margin:0;
+  overflow:hidden;
+  border-bottom:0;
+  background:transparent!important;
+ }
+ .product-card .card-image--photo>img{
+  display:block;
+  width:100%;
+  height:auto!important;
+  min-height:0;
+  max-height:none!important;
+  aspect-ratio:auto;
+  object-fit:cover;
+  object-position:50% 50%;
+  margin:0;
+  padding:0;
+  vertical-align:top;
+ }
+ /* Keep image and content as one seamless card in both themes. */
+ html[data-theme="light"] .product-card .card-image--photo,
+ html:not([data-theme]) .product-card .card-image--photo,
+ html[data-theme="dark"] .product-card .card-image--photo{
+  background:transparent!important;
+ }
+}
