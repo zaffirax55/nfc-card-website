@@ -14,6 +14,24 @@ for(const width of widths){
  return {viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,headerWidth:header?.getBoundingClientRect().width,cardWidth:card?.getBoundingClientRect().width,buttons:buttons.length,smallTaps:[...document.querySelectorAll('.nfc-glb-button')].filter(el=>el.getBoundingClientRect().height<44).length};
  });
  console.log('MOBILE',width,JSON.stringify(metrics));
+// The actual review-card portrait photo must occupy the card edge to edge,
+// not sit inside blue/grey side gutters. Keep its original uncropped ratio.
+ const reviewImg=page.locator('.product-card[data-product-id="review-card"] .card-image--photo img');
+ await reviewImg.waitFor({timeout:10000});
+ await reviewImg.evaluate(img=>img.decode());
+ const reviewFit=await reviewImg.evaluate(img=>{
+   const a=img.getBoundingClientRect();
+   const b=img.closest('.card-image').getBoundingClientRect();
+   return {imgWidth:a.width,containerWidth:b.width,imgHeight:a.height,containerHeight:b.height,
+     leftGap:a.left-b.left,rightGap:b.right-a.right,topGap:a.top-b.top,bottomGap:b.bottom-a.bottom,
+     imageRatio:img.naturalWidth/img.naturalHeight,displayRatio:a.width/a.height};
+ });
+ console.log('PHOTO_FIT',width,JSON.stringify(reviewFit));
+ if(Math.max(Math.abs(reviewFit.leftGap),Math.abs(reviewFit.rightGap),Math.abs(reviewFit.topGap),Math.abs(reviewFit.bottomGap))>1.5)
+   errors.push(width+' review photo side gutters remain');
+ if(Math.abs(reviewFit.imageRatio-reviewFit.displayRatio)>0.015)
+   errors.push(width+' review photo is cropped or distorted');
+
  if(width===390){
   const anim=await page.evaluate(()=>{
    const button=document.querySelector('.nfc-glb-button');
