@@ -32,24 +32,24 @@ const tapCopy={
 };
 function renderHeroTapDemo(locale){
  const w=tapCopy[locale]||tapCopy.uk;
- return \`<div class="hero-studio hero-tap-hero" id="nfc-phone-demo" aria-labelledby="hero-tap-title">
- <div class="hero-tap-head"><span class="hero-tap-eyebrow">\${w.eyebrow}</span><strong id="hero-tap-title">\${w.headline}</strong></div>
+ return `<div class="hero-studio hero-tap-hero" id="nfc-phone-demo" aria-labelledby="hero-tap-title">
+ <div class="hero-tap-head"><span class="hero-tap-eyebrow">${w.eyebrow}</span><strong id="hero-tap-title">${w.headline}</strong></div>
  <div class="hero-tap-scene" aria-hidden="true">
    <div class="hero-tap-card"><img src="/nfc-card-website/assets/review-card-demo.svg" alt="" width="640" height="640" decoding="async" loading="eager"></div>
    <div class="hero-tap-waves"><span></span><span></span></div>
    <div class="hero-tap-phone">
     <div class="hero-tap-notch"></div>
     <div class="hero-tap-screen hero-tap-screen-home"><span>9:41</span><div class="hero-tap-home-icons"><i>◉</i><i>▦</i><i>✿</i><i>⌘</i></div></div>
-    <div class="hero-tap-screen hero-tap-screen-link"><span class="hero-tap-link-icon">NFC</span><b>\${w.notification}</b><small>google.com</small></div>
-    <div class="hero-tap-screen hero-tap-screen-review"><span class="hero-tap-google">Google</span><b>\${w.example}</b><span class="hero-tap-stars">★★★★★</span><span class="hero-tap-typing"><i></i></span></div>
+    <div class="hero-tap-screen hero-tap-screen-link"><span class="hero-tap-link-icon">NFC</span><b>${w.notification}</b><small>google.com</small></div>
+    <div class="hero-tap-screen hero-tap-screen-review"><span class="hero-tap-google">Google</span><b>${w.example}</b><span class="hero-tap-stars">★★★★★</span><span class="hero-tap-typing"><i></i></span></div>
     <span class="hero-tap-homebar"></span>
    </div>
  </div>
  <div class="hero-tap-steps" role="list">
- <span role="listitem"><i>01</i>\${w.touch}</span><span role="listitem"><i>02</i>\${w.open}</span><span role="listitem"><i>03</i>\${w.review}</span>
+ <span role="listitem"><i>01</i>${w.touch}</span><span role="listitem"><i>02</i>${w.open}</span><span role="listitem"><i>03</i>${w.review}</span>
  </div>
- <p class="hero-tap-caption">\${w.note}</p>
- </div>\`;
+ <p class="hero-tap-caption">${w.note}</p>
+ </div>`;
 }
 export const HOME_FEATURED=Object.freeze(['beauty-review-card','restaurant-review-card','review-card','nfc-instagram-card']);
 export function renderHomeB({locale,card,productImage,faqGroups}){
