@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Design page photo examples: replace empty slots with existing products, comparison, and NFC demo
+# Simplify storefront: one graphite theme, lean mobile header, concise hero NFC animation
 
 on:
   push:
