@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Compact homepage FAQ layout and help CTA, tested on desktop and mobile
+# Design page photo examples: replace empty slots with existing products, comparison, and NFC demo
 
 on:
   push:
