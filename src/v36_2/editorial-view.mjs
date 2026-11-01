@@ -25,6 +25,59 @@ function sections(items,key,esc){return '<div class="editorial-sections">'+items
 function actions(c,esc,url){return '<div class="button-row editorial-actions"><a class="button" href="'+esc(url('/solutions/'))+'">'+esc(c.labels.catalog)+'</a><a class="button secondary" href="'+esc(url('/services/design/'))+'">'+esc(c.labels.design)+'</a><a class="text-link" href="'+esc(url('/contact/'))+'">'+esc(c.labels.contact)+'</a></div>';}
 function media(key,locale,c,esc){
  const slots=editorialMediaSlots(key,locale);if(!slots.length)return '';
+ if(key==='design'){
+  // These are photographs of existing ready-made products and an illustrative NFC
+  // simulation. They are NOT client-approved branded commissions or review proof.
+  const localized={
+   uk:{
+    ready:'Фото готової картки. Персональний дизайн погоджується окремо.',
+    process:'Ілюстрація: від макета до готової картки. Не є кейсом конкретного клієнта.',
+    demo:'Демонстрація NFC-переходу, не запис перевірки замовлення.',
+    open:'Переглянути товар',
+    replay:'Подивитися анімацію',
+    concept:'Приклад макета',
+    physical:'Готова картка'
+   },
+   en:{
+    ready:'Ready-made card photo. Custom artwork is agreed separately.',
+    process:'Illustration: from a concept to a finished card. Not a client case study.',
+    demo:'NFC interaction demonstration, not a recording of an actual order test.',
+    open:'View product',
+    replay:'Watch the animation',
+    concept:'Sample concept',
+    physical:'Finished card'
+   },
+   pl:{
+    ready:'Zdjęcie gotowej karty. Projekt indywidualny uzgadniamy osobno.',
+    process:'Ilustracja: od projektu do gotowej karty. Nie jest to realizacja dla konkretnego klienta.',
+    demo:'Symulacja działania NFC, nie nagranie z testu zamówienia klienta.',
+    open:'Zobacz produkt',
+    replay:'Zobacz animację',
+    concept:'Przykład projektu',
+    physical:'Gotowa karta'
+   }
+  }[locale];
+  const base='/nfc-card-website';
+  const u=route=>base+(locale==='uk'?'':'/'+locale)+route;
+  const image=(filename,label,cls='')=>'<img src="'+base+'/assets/'+filename+'" alt="'+esc(label)+'" width="640" height="640" loading="lazy" decoding="async" class="'+cls+'">';
+  const examples=[
+   {filename:'review.webp',route:'/solutions/review-card/'},
+   {filename:'beauty.webp',route:'/solutions/beauty-review-card/'},
+   {filename:'restaurant.webp',route:'/solutions/restaurant-review-card/'}
+  ];
+  const cards=slots.map((m,index)=>{
+   const id=esc(m.id),title=esc(m.title);
+   if(index<3){
+    const model=examples[index];
+    return '<figure class="editorial-media-example" data-media-slot="'+id+'" data-media-state="existing-ready-product-example" data-media-provenance="existing-product-photo"><a class="editorial-media-art-link" href="'+esc(u(model.route))+'" aria-label="'+title+'"><div class="editorial-media-image">'+image(model.filename,m.title)+'</div><figcaption><strong>'+title+'</strong><p>'+esc(localized.ready)+'</p><span class="editorial-media-cta">'+esc(localized.open)+' ↗</span></figcaption></a></figure>';
+   }
+   if(index===3){
+    return '<figure class="editorial-media-example editorial-media-example-wide" data-media-slot="'+id+'" data-media-state="illustrative-process" data-media-provenance="existing-sample-art-and-product-photo"><div class="editorial-media-comparison"><div><span>'+esc(localized.concept)+'</span>'+image('review-card-demo.svg',localized.concept)+'</div><span class="editorial-media-step-arrow" aria-hidden="true">→</span><div><span>'+esc(localized.physical)+'</span>'+image('review.webp',localized.physical)+'</div></div><figcaption><strong>'+title+'</strong><p>'+esc(localized.process)+'</p></figcaption></figure>';
+   }
+   return '<figure class="editorial-media-example editorial-media-example-wide" data-media-slot="'+id+'" data-media-state="illustrative-nfc-demo" data-media-provenance="existing-animation-illustration"><a class="editorial-media-art-link" href="'+esc(u('/#nfc-phone-demo'))+'" aria-label="'+title+'"><div class="editorial-media-image editorial-media-image-demo">'+image('review-demo-poster.webp',m.title)+'<span class="editorial-demo-play" aria-hidden="true">▶</span><span class="editorial-demo-label">NFC · DEMO</span></div><figcaption><strong>'+title+'</strong><p>'+esc(localized.demo)+'</p><span class="editorial-media-cta">'+esc(localized.replay)+' ↗</span></figcaption></a></figure>';
+  });
+  return '<div class="editorial-media-grid editorial-media-grid-filled" data-editorial-media="design">'+cards.join('')+'</div>';
+ }
  const icon=m=>m.id.includes('VIDEO')||m.id.includes('DEMO')||m.id.includes('SCREEN')?'<svg viewBox="0 0 48 48" fill="none"><rect x="7" y="8" width="34" height="32" rx="5"/><path d="m20 17 11 7-11 7Z"/></svg>':'<svg viewBox="0 0 48 48" fill="none"><rect x="7" y="8" width="34" height="32" rx="5"/><circle cx="18" cy="18" r="3"/><path d="m8 34 11-10 7 6 6-5 9 9"/></svg>';
  return '<div class="editorial-media-grid" data-editorial-media="'+key+'">'+slots.map(m=>'<figure class="editorial-media-placeholder" data-media-slot="'+esc(m.id)+'" data-media-state="awaiting-approved-material" role="group" aria-label="'+esc(m.title)+'"><div class="editorial-media-placeholder-face" aria-hidden="true">'+icon(m)+'</div><figcaption><strong>'+esc(m.title)+'</strong><p>'+esc(c.labels.example)+'</p></figcaption></figure>').join('')+'</div>';
 }
