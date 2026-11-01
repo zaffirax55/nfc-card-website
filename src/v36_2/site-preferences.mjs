@@ -1,14 +1,12 @@
-// NFC CARD appearance & language controls. Preferences only: no personal data.
+// Compact language controls only. No persistent appearance mode or theme toggle.
 const BASE='/nfc-card-website';
 const prefKey='nfc-card-ui-preferences-v1';
 const pref=(()=>{try{return JSON.parse(localStorage.getItem(prefKey)||'{}')}catch{return {}}})();
 const localeFromPath=()=>location.pathname.startsWith(BASE+'/en/')?'en':location.pathname.startsWith(BASE+'/pl/')?'pl':'uk';
 const selected=()=>['en','pl'].includes(localeFromPath())?localeFromPath():(pref.language==='ru'||new URLSearchParams(location.search).get('lang')==='ru'?'ru':'uk');
-const prefersDark=()=>matchMedia('(prefers-color-scheme: dark)').matches;
-let theme=pref.theme==='dark'||pref.theme==='light'?pref.theme:(prefersDark()?'dark':'light');
 let language=selected();
-const save=()=>{try{localStorage.setItem(prefKey,JSON.stringify({theme,language}))}catch{}};
-document.documentElement.dataset.theme=theme;
+const save=()=>{try{localStorage.setItem(prefKey,JSON.stringify({language}))}catch{}};
+document.documentElement.removeAttribute('data-theme');
 const ruTexts=new Map([
  ['Каталог','Каталог'],['Головна','Главная'],['Про нас','О нас'],['Допомога','Помощь'],['Пошук','Поиск'],['Кошик','Корзина'],['Залишити запит','Оставить заявку'],['Меню навігації','Меню навигации'],['Закрити','Закрыть'],['Детальніше','Подробнее'],['Зробити свій дизайн','Создать свой дизайн'],['Переглянути картки','Смотреть карточки'],['Переглянути каталог','Открыть каталог'],['Відгуки Google','Отзывы Google'],['Профіль Instagram','Профиль Instagram'],['Онлайн-меню','Онлайн-меню'],['Готовий дизайн','Готовый дизайн'],['Ваш дизайн','Ваш дизайн'],['Пауза','Пауза'],['Продовжити','Продолжить'],['Спробувати ще раз','Повторить'],['Мова','Язык'],
  ['NFC-картки для Google-відгуків та Instagram','NFC-карточки для отзывов Google и Instagram'],
@@ -71,16 +69,11 @@ function translateElement(root){
   }
  }finally{translating=false}
 }
-function themeLabels(){return {uk:['Світла тема','Темна тема','Мова сайту'],ru:['Светлая тема','Тёмная тема','Язык сайта'],en:['Light theme','Dark theme','Site language'],pl:['Jasny motyw','Ciemny motyw','Język strony']}[language]||[]}
 function updateControls(){
- document.documentElement.dataset.theme=theme;
  document.documentElement.dataset.uiLanguage=language;
- const label=themeLabels();
- const toggle=document.querySelector('[data-site-theme]');
- if(toggle){toggle.textContent=theme==='dark'?'☀':'☾';toggle.title=theme==='dark'?label[0]:label[1];toggle.setAttribute('aria-label',toggle.title);toggle.setAttribute('aria-pressed',String(theme==='dark'))}
  document.querySelectorAll('[data-site-language]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.siteLanguage===language)));
  const group=document.querySelector('[data-site-languages]');
- if(group)group.setAttribute('aria-label',label[2]);
+ if(group)group.setAttribute('aria-label',({uk:'Мова сайту',ru:'Язык сайта',en:'Site language',pl:'Język strony'})[language]);
 }
 function mount(){
  const header=document.querySelector('.header-actions');
@@ -89,18 +82,15 @@ function mount(){
  let settings=header.querySelector('[data-site-preferences]');
  if(!settings){
   settings=document.createElement('div');settings.className='site-preferences';settings.dataset.sitePreferences='';
-  settings.innerHTML='<button type="button" class="site-theme-toggle" data-site-theme aria-pressed="false">☾</button><div class="site-lang-group" data-site-languages role="group"><button type="button" data-site-language="uk">UA</button><button type="button" data-site-language="ru">RU</button><button type="button" data-site-language="en">EN</button><button type="button" data-site-language="pl">PL</button></div>';
+  settings.innerHTML='<div class="site-lang-group" data-site-languages role="group"><button type="button" data-site-language="uk">UA</button><button type="button" data-site-language="ru">RU</button><button type="button" data-site-language="en">EN</button><button type="button" data-site-language="pl">PL</button></div>';
   header.prepend(settings);
  }
  updateControls();
  if(language==='ru')translateElement(document.querySelector('#app')||document.body);
 }
 document.addEventListener('click',event=>{
- const button=event.target.closest('[data-site-theme],[data-site-language]');
+ const button=event.target.closest('[data-site-language]');
  if(!button)return;
- if(button.hasAttribute('data-site-theme')){
-  theme=theme==='dark'?'light':'dark';save();updateControls();return;
- }
  language=button.dataset.siteLanguage;save();
  const currentPath=location.pathname.replace(new RegExp('^'+BASE+'/(?:en/|pl/)?'),'/');
  const prefix=(language==='en'||language==='pl')?'/'+language:'';
