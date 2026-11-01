@@ -1,0 +1,121 @@
+/* NFC CARD readable layout / product photography / verified reviews.
+   Focused overrides; no changes to carts, pricing, model viewer or forms. */
+
+:root{--nfc-readable-body:17px;--nfc-readable-muted:16px}
+body{font-size:var(--nfc-readable-body);line-height:1.62}
+.page-head>p,.section-heading>p,.home-purpose p,.home-personalisation p,
+.home-contact p,.home-after-request p,.prose p,.prose li{font-size:clamp(16px,1.08vw,18px);line-height:1.67}
+.product-card .card-body>p{font-size:16px;line-height:1.58}
+.product-card .price .small{font-size:15px}
+.small,small,.caption,.product-card .caption{font-size:14px;line-height:1.55}
+.eyebrow{font-size:13px;line-height:1.55;letter-spacing:.055em}
+.filter-meta,.filter-row label,.field label{font-size:14px}
+.footer{padding:44px 0 25px}
+.footer-grid{gap:clamp(24px,3.6vw,54px)}
+.footer nav{gap:3px}
+.footer nav a{font-size:16px;line-height:1.5;min-height:42px}
+.footer p,.footer .footer-brand p{font-size:16px;line-height:1.63;max-width:48ch}
+.footer .text-link{font-size:16px}
+.footer .footer-bottom,.footer-bottom{font-size:14px;margin-top:26px;padding-top:18px}
+.footer .footer-bottom .language a{font-size:13px}
+
+.owner-home.hero{padding-block:48px 44px}
+.section{padding-block:clamp(36px,3.5vw,54px)}
+.section-heading{margin-bottom:24px}
+.home-selection,.home-purpose,.home-process,.home-personalisation,.home-questions{padding-block:clamp(36px,3.4vw,50px)}
+.home-top-demo{padding-block:clamp(22px,2.4vw,36px)}
+.home-personalisation .two-col{gap:clamp(26px,3.8vw,54px)}
+.owner-step-list{margin-top:24px;gap:clamp(16px,2vw,28px)}
+.home-questions .faq-list details summary{padding-block:17px}
+.home-questions .faq-list details p{padding-bottom:16px}
+.home-questions+.home-contact{padding:20px 0 35px}
+.home-contact{padding-top:20px!important;padding-bottom:34px!important}
+.home-contact>.wrap{padding:clamp(22px,3vw,34px);gap:clamp(20px,3vw,40px);border-radius:16px}
+.home-contact h2{font-size:clamp(27px,3vw,39px);line-height:1.1}
+.home-contact p{margin-bottom:14px;max-width:57ch}
+.home-contact .button{min-height:47px;margin-top:0}
+.nfc-demo .nfc-demo-disclaimer{font-size:13px;line-height:1.6}
+.nfc-demo .nfc-demo-intro{font-size:16px}
+.nfc-demo .nfc-demo-steps li{font-size:14px}
+.nfc-demo .nfc-demo-status{font-size:14px}
+.nfc-demo .nfc-demo-footnote{font-size:12px;line-height:1.55}
+.nfc-demo .nfc-demo-situations button{font-size:13px;min-height:41px}
+/* Keep text inside the simulated 2-inch phone at its original scale. */
+
+/* Real product photographs — not fabricated customer portraits or testimonials. */
+.nfc-proof-section{background:#f1f4f6;border-top:1px solid #e0e6eb;border-bottom:1px solid #dfe5ea}
+.nfc-proof-heading{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px;align-items:end;margin-bottom:23px}
+.nfc-proof-heading .eyebrow{display:block;margin-bottom:10px}
+.nfc-proof-heading h2{font-size:clamp(28px,3.1vw,42px);margin:0;max-width:none}
+.nfc-proof-heading p{font-size:17px;color:#4a5967;margin:0;max-width:51ch}
+.nfc-proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.nfc-proof-photo{display:block;min-width:0;color:inherit;text-decoration:none;background:#fff;border:1px solid #d3dce4;border-radius:16px;overflow:hidden;box-shadow:0 5px 18px #14283d09;transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+.nfc-proof-photo:hover{border-color:#91aec3;transform:translateY(-3px);box-shadow:0 14px 30px #14283d15}
+.nfc-proof-image{height:clamp(188px,19vw,276px);background:#e9eef2;overflow:hidden}
+.nfc-proof-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .34s ease}
+.nfc-proof-photo:hover img{transform:scale(1.025)}
+.nfc-proof-photo-label{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 17px}
+.nfc-proof-photo-label strong{font-size:17px;font-weight:650;line-height:1.4}
+.nfc-proof-photo-label span{font-size:14px;color:#3d566b;white-space:nowrap}
+.nfc-proof-feedback{display:flex;align-items:center;justify-content:space-between;gap:22px;background:#fff;border:1px solid #d3dce4;border-radius:16px;padding:23px 26px;margin-top:20px}
+.nfc-proof-feedback>.button{flex-shrink:0;white-space:nowrap}
+.nfc-proof-feedback .eyebrow{display:block;margin:0 0 6px}
+.nfc-proof-feedback h3{font-size:clamp(22px,2vw,27px);margin:0 0 5px}
+.nfc-proof-feedback p{max-width:75ch;font-size:16px;color:#465665;line-height:1.62;margin:0 0 7px}
+.nfc-proof-feedback small{color:#627080;font-size:13px;display:block;line-height:1.55}
+
+/* Matching graphite treatment in dark mode. */
+html[data-theme="dark"] .nfc-proof-section{background:#0d1925!important;border-color:#304354!important}
+html[data-theme="dark"] .nfc-proof-heading p{color:#bed0e0!important}
+html[data-theme="dark"] .nfc-proof-photo,html[data-theme="dark"] .nfc-proof-feedback{background:#182a3a!important;color:#eff6fc!important;border-color:#3c5367!important;box-shadow:0 8px 24px #0005}
+html[data-theme="dark"] .nfc-proof-photo:hover{border-color:#8caac0!important}
+html[data-theme="dark"] .nfc-proof-image{background:#223749!important}
+html[data-theme="dark"] .nfc-proof-photo-label strong,html[data-theme="dark"] .nfc-proof-feedback h3{color:#eff6fc!important}
+html[data-theme="dark"] .nfc-proof-photo-label span{color:#acc9df!important}
+html[data-theme="dark"] .nfc-proof-feedback p,html[data-theme="dark"] .nfc-proof-feedback small{color:#b8cbda!important}
+html[data-theme="dark"] .home-contact>.wrap{background:#203347!important;border-color:#486175!important}
+html[data-theme="dark"] .home-contact p{color:#c1d2e0!important}
+html[data-theme="dark"] .footer{background:#0d1b29!important}
+html[data-theme="dark"] .footer nav a{color:#dfebf6!important}
+html[data-theme="dark"] .footer p{color:#c3d3e0!important}
+
+@media(max-width:950px){
+ .nfc-proof-heading{grid-template-columns:1fr;gap:9px}
+ .nfc-proof-grid{gap:12px}
+ .nfc-proof-photo-label{flex-direction:column;align-items:flex-start;gap:5px}
+ .nfc-proof-image{height:210px}
+}
+@media(max-width:680px){
+ :root{--nfc-readable-body:16px}
+ .section{padding-block:32px}
+ .owner-home.hero{padding-block:28px}
+ .home-top-demo{padding-block:24px}
+ .home-selection,.home-purpose,.home-process,.home-personalisation,.home-questions{padding-block:32px}
+ .section-heading{margin-bottom:18px}
+ .home-personalisation .two-col{gap:24px}
+ .home-contact{padding-block:13px 28px!important}
+ .home-contact>.wrap{padding:21px 18px;gap:15px}
+ .home-contact h2{font-size:clamp(25px,7vw,33px)}
+ .home-contact p{font-size:16px;line-height:1.55}
+ .footer{padding:36px 0 21px}
+ .footer-grid{gap:23px}
+ .footer nav a{font-size:15px;min-height:42px}
+ .footer p,.footer .footer-brand p{font-size:15px}
+ .footer-bottom{font-size:13px}
+ .nfc-proof-heading h2{font-size:clamp(27px,7.5vw,34px)}
+ .nfc-proof-heading p{font-size:16px}
+ .nfc-proof-grid{grid-template-columns:1fr;gap:13px}
+ .nfc-proof-image{height:auto;aspect-ratio:1.45}
+ .nfc-proof-photo-label{flex-direction:row;align-items:center}
+ .nfc-proof-feedback{flex-direction:column;align-items:stretch;gap:14px;padding:20px 17px;margin-top:15px}
+ .nfc-proof-feedback .button{width:100%;white-space:normal}
+ .nfc-demo .nfc-demo-disclaimer{font-size:12px}
+ .nfc-demo .nfc-demo-steps li{font-size:12px}
+ .nfc-demo .nfc-demo-footnote{font-size:11px}
+}
+@media(max-width:365px){
+ .nfc-proof-photo-label{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+ .nfc-proof-photo,.nfc-proof-photo img{transition:none!important;transform:none!important}
+}
