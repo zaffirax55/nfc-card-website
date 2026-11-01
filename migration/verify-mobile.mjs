@@ -14,6 +14,19 @@ for(const width of widths){
  return {viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,headerWidth:header?.getBoundingClientRect().width,cardWidth:card?.getBoundingClientRect().width,buttons:buttons.length,smallTaps:[...document.querySelectorAll('.nfc-glb-button')].filter(el=>el.getBoundingClientRect().height<44).length};
  });
  console.log('MOBILE',width,JSON.stringify(metrics));
+ const headerHitTest=await page.evaluate(()=>{
+  const buttons=[...document.querySelectorAll('.site-lang-group button,.header .icon-btn')].filter(e=>getComputedStyle(e).display!=='none');
+  return buttons.map(el=>{
+   const r=el.getBoundingClientRect();const target=document.elementFromPoint(r.left+r.width/2,r.top+r.height/2);
+   return {label:el.dataset.siteLanguage||el.getAttribute('aria-label')||'menu',x:Math.round(r.x),
+     width:Math.round(r.width),height:Math.round(r.height),hit:target===el||el.contains(target),
+     inside:r.left>=0&&r.right<=innerWidth+1};
+  });
+ });
+ console.log('HEADER_HITS',width,JSON.stringify(headerHitTest));
+ if(headerHitTest.some(x=>!x.hit||!x.inside||x.width<23))
+  errors.push(width+' header controls overlap or fall outside viewport');
+
 // The actual review-card portrait photo must occupy the card edge to edge,
 // not sit inside blue/grey side gutters. Keep its original uncropped ratio.
  const reviewImg=page.locator('.product-card[data-product-id="review-card"] .card-image--photo img');
