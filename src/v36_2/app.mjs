@@ -165,7 +165,7 @@ function loadScenario(scenario){
 }
 function homeChoice(){
  const original=renderHomeB({locale,card:id=>card(product(id)),productImage:id=>productImage(product(id)),priceOne:id=>priceOne(product(id)),faqGroups:generalFAQGroups[locale]});
- const demo='<section class="section home-top-demo"><div class="wrap">'+nfcDemoView({locale,esc,asset:()=>({url:BASE+'/assets/review.webp'})})+'</div></section>';
+ const demo='<section class="section home-top-demo"><div class="wrap">'+nfcDemoView({locale,esc,asset:()=>({url:BASE+'/assets/review-card-demo.svg'})})+'</div></section>';
  return original.replace('</section>', '</section>'+demo);
 }
 function ownerMedia(){const technical=mediaReviewIndex(locale).replace('class="media-table-scroll"','class="media-table-scroll" role="region"').replace(/<h1>/g,'<h2>').replace(/<\/h1>/g,'</h2>');const label=({uk:'Вихідний реєстр v35.7 · 104 ролі · історичні статуси',en:'Original v35.7 register · 104 roles · historical statuses',pl:'Rejestr źródłowy v35.7 · 104 miejsca · statusy historyczne'})[locale];return renderOwnerMediaReview(locale)+`<section class="wrap owner-full-register"><details><summary>${label}</summary>${technical}</details></section>`;}
