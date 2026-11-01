@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Replace photographic hand-and-desk NFC demo art with a clean Google Review Card face
+# Publish readability improvements, reduced whitespace and real-product photo gallery with feedback invitation
 
 on:
   push:
