@@ -58,6 +58,27 @@ for(const width of widths){
   await page.goto(base+route,{waitUntil:'domcontentloaded'});
   const m=await page.evaluate(()=>({inner:innerWidth,scroll:document.documentElement.scrollWidth}));
   console.log('ROUTE',width,route,JSON.stringify(m));
+
+  if(route==='/' && [320,390,768].includes(width)){
+    const gallery=page.locator('.nfc-proof-photo');
+    const count=await gallery.count();
+    const textSize=await page.locator('.footer nav a').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+    const help=await page.locator('.home-contact>.wrap').evaluate(el=>{
+      const s=getComputedStyle(el),r=el.getBoundingClientRect();
+      return {padding:s.paddingTop,width:r.width,height:r.height};
+    });
+    const imageResults=await gallery.locator('img').evaluateAll(async images=>Promise.all(images.map(async img=>{
+      img.loading='eager';
+      try{await img.decode();return {ok:true,width:img.naturalWidth}}catch{return {ok:false,width:0}}
+    })));
+    console.log('CONTENT_POLISH',width,JSON.stringify({count,textSize,help,imageResults}));
+    if(count!==3||imageResults.some(x=>!x.ok||x.width<100))errors.push(width+' product-photo reviews module broken');
+    if(textSize<14.5)errors.push(width+' footer text still too small '+textSize);
+    if(help.height>320)errors.push(width+' excessive help banner height '+help.height);
+    const evidenceText=await page.locator('.nfc-proof-feedback').textContent();
+    if(!evidenceText.includes('Вже користуєтесь NFC CARD?'))errors.push(width+' honest reviews request missing');
+  }
+
   if(route==='/' && [320,390,768].includes(width)){
    await page.locator('[data-nfc-demo]').waitFor({timeout:10000});
    const phone=await page.locator('[data-nfc-demo]').evaluate(el=>{
