@@ -119,3 +119,122 @@ html[data-theme="dark"] .footer p{color:#c3d3e0!important}
 @media(prefers-reduced-motion:reduce){
  .nfc-proof-photo,.nfc-proof-photo img{transition:none!important;transform:none!important}
 }
+
+
+/* Compact FAQ + help section: distribute the questions across the page,
+   instead of leaving the entire left half empty below the FAQ title. */
+.home-questions{
+ padding-top:clamp(26px,3vw,38px)!important;
+ padding-bottom:5px!important;
+}
+.home-questions>.wrap.two-col{
+ display:grid;
+ grid-template-columns:minmax(0,1fr);
+ gap:16px;
+ align-items:start;
+}
+.home-questions>.wrap.two-col>div:first-child{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ flex-wrap:wrap;
+ gap:12px 24px;
+}
+.home-questions h2{max-width:none;margin:0;font-size:clamp(27px,2.6vw,37px)}
+.home-questions .text-link{
+ display:inline-flex;
+ align-items:center;
+ min-height:44px;
+ font-size:15px;
+ margin:0;
+}
+.home-questions .faq-list{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:0 24px;
+ border-top:0;
+ min-width:0;
+}
+.home-questions .faq-list details{
+ min-width:0;
+ border-top:1px solid #c7d1d9;
+ border-bottom:0;
+ margin:0;
+ padding:0;
+ align-self:start;
+}
+.home-questions .faq-list details:nth-last-child(-n+2){
+ border-bottom:1px solid #c7d1d9;
+}
+.home-questions .faq-list details summary{
+ min-height:60px;
+ display:flex;
+ align-items:center;
+ padding-block:13px;
+ font-size:16px;
+ line-height:1.4;
+}
+.home-questions .faq-list details p{
+ font-size:16px;
+ line-height:1.6;
+ padding:0 22px 16px 0;
+ margin:0;
+}
+.home-contact{
+ padding:15px 0 28px!important;
+}
+.home-contact>.wrap{
+ display:grid;
+ grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);
+ align-items:center;
+ gap:clamp(20px,2.7vw,36px);
+ padding:clamp(20px,2.2vw,29px);
+}
+.home-contact h2{
+ font-size:clamp(26px,2.6vw,36px);
+ max-width:17ch;
+}
+.home-contact>.wrap>div{
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:space-between;
+ gap:18px;
+ min-width:0;
+}
+.home-contact>.wrap>div p{
+ max-width:44ch;
+ font-size:16px;
+ line-height:1.55;
+ margin:0;
+}
+.home-contact>.wrap>div .button{
+ flex:0 0 auto;
+ min-height:46px;
+ margin:0;
+}
+html[data-theme="dark"] .home-questions .faq-list details{
+ border-color:#43576a!important;
+}
+@media(max-width:900px){
+ .home-questions .faq-list{gap:0 16px}
+ .home-questions .faq-list details summary{font-size:15px}
+ .home-contact>.wrap>div{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:12px;
+ }
+}
+@media(max-width:680px){
+ .home-questions{padding-top:27px!important;padding-bottom:0!important}
+ .home-questions>.wrap.two-col{gap:8px}
+ .home-questions h2{font-size:clamp(26px,7vw,32px)}
+ .home-questions .faq-list{grid-template-columns:minmax(0,1fr);gap:0}
+ .home-questions .faq-list details:nth-last-child(-n+2){border-bottom:0}
+ .home-questions .faq-list details:last-child{border-bottom:1px solid #c7d1d9}
+ .home-questions .faq-list details summary{min-height:54px;padding-block:12px;font-size:16px}
+ .home-contact{padding:16px 0 24px!important}
+ .home-contact>.wrap{grid-template-columns:minmax(0,1fr);padding:20px 18px;gap:13px}
+ .home-contact>.wrap>div{gap:13px}
+ .home-contact>.wrap>div .button{min-height:46px}
+}
