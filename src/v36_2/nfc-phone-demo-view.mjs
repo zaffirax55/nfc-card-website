@@ -97,7 +97,7 @@ export function nfcDemoView({locale,esc,asset}) {
    <div class="nfc-demo-scene-heading"><span>${esc(c.sceneTitle)}</span><span class="nfc-demo-badge">${esc(c.badge)}</span></div>
    <div class="nfc-demo-stage">
     <div class="nfc-demo-orbit" aria-hidden="true"></div>
-    <div class="nfc-demo-card" data-demo-card-tap role="img" aria-label="${esc(c.cardHint)}"><img src="${asset('01-review-card-design-render.webp').url}" alt="" loading="lazy" width="640" height="640"><span class="nfc-demo-card-cue">${nfcIcon}<span>NFC</span></span></div>
+    <div class="nfc-demo-card" data-demo-card-tap role="img" aria-label="${esc(c.cardHint)}"><img src="${asset('review-card-demo.svg').url}" alt="" loading="lazy" width="640" height="640"><span class="nfc-demo-card-cue">${nfcIcon}<span>NFC</span></span></div>
     <div class="nfc-demo-signal" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="nfc-demo-phone" role="group" aria-label="${esc(c.screen)}">
      <div class="nfc-demo-phone-top" aria-hidden="true"><span>9:41</span><span class="nfc-demo-island"></span><span>▰</span></div>
