@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 675,
+  "file_count_including_manifest": 678,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -38,13 +38,13 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 6718,
-      "sha256": "f69587d96fce3ff83ae5ad301bee55d88c0cb765b059efe3fc522b786ebc5dfc"
+      "bytes": 6345,
+      "sha256": "5a359b6c316235247149d0c8de828e1a59072d4d14d423c99146056ea2d25203"
     },
     {
       "path": ".github/workflows/fork-pages.yml",
-      "bytes": 1857,
-      "sha256": "09f5202bc7bb20080e6c2d0a530ee3174cdd799246d3b3b295c1b9ed3662b944"
+      "bytes": 7061,
+      "sha256": "5f06726c9a09d2b41ad7bd0ae2471db2b30ee52bdddf30083485bfece013b125"
     },
     {
       "path": ".gitignore",
@@ -53,8 +53,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2223,
-      "sha256": "7f7643eb124190ff517fec0028afd1f779e3c71497fe80ef8ce877abb334217e"
+      "bytes": 3408,
+      "sha256": "5af2bc434d52d42713ba7b824c3336e3c6588f499ea73309c5075d32830318c3"
     },
     {
       "path": "DEPLOYMENT.md",
@@ -110,6 +110,11 @@
       "path": "SECURITY.md",
       "bytes": 1659,
       "sha256": "fde4e9ded5cd94817b583639a35ad1078ed44710345402ee7c5248ccf4c8bc02"
+    },
+    {
+      "path": "docs/designer-handoff/GITHUB_WORKFLOW.md",
+      "bytes": 4905,
+      "sha256": "c19ca6d6c165dba4a105ecbf79a6b4649dcd08ce27f63cfc114e3489a24125c8"
     },
     {
       "path": "docs/pages-v17/ACCEPTANCE.md",
@@ -787,9 +792,14 @@
       "sha256": "c15a9812b523893e595967c774474cc13000c7c2aa69c403873edba79ce9891e"
     },
     {
+      "path": "scripts/pages_artifact.py",
+      "bytes": 6383,
+      "sha256": "ba69bd90c3a91293fa970c0f8b97e4dfd7e6c6d17d5f455bc705ea37184ff9eb"
+    },
+    {
       "path": "scripts/release_guard.py",
-      "bytes": 14630,
-      "sha256": "698b62a37ddf3f335a81041137453a45e45baee32c629713a98dbb062928e4da"
+      "bytes": 16859,
+      "sha256": "7b4f629b98050cd6ddc18f40b6231862a45b90243fa8e3ed507afe861e7a960e"
     },
     {
       "path": "scripts/run_tests.py",
@@ -818,8 +828,13 @@
     },
     {
       "path": "scripts/verify_manifest.py",
-      "bytes": 6924,
-      "sha256": "5e7c44262fd352595d820fdf3160b928915e2655f816041ee4ab3f08d08f9f6d"
+      "bytes": 7883,
+      "sha256": "03c9c1352fd616d99509a844fc66b0f9a67830f3892cb61e1f55a2f4a9aaed69"
+    },
+    {
+      "path": "scripts/verify_storefront_lineage.py",
+      "bytes": 3107,
+      "sha256": "31725c5245decb917785ab152119a66855195bb6216d1713067bbee7d53f98e6"
     },
     {
       "path": "server/adapters.py",
@@ -3343,8 +3358,8 @@
     },
     {
       "path": "tests/test_release_packaging.py",
-      "bytes": 14365,
-      "sha256": "5fa115a15548d67f2710a19b6b6397de2166b3742d089f125d87c4af9ef18304"
+      "bytes": 15986,
+      "sha256": "b83d1d037dee9a352b3c3f2d68da2e1c47a808c5e076cfb0535a70aa338e078f"
     },
     {
       "path": "tests/test_review3d_v26.py",

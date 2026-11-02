@@ -1,41 +1,124 @@
-name: Deploy fork preview to GitHub Pages
-# Slim phone hero v2 and larger NFC CARD logo; verified mobile and desktop
+name: Publish exact-source Pages preview
+run-name: Pages preview — storefront ${{ inputs.storefront_sha }}
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+    inputs:
+      storefront_sha:
+        description: 'Owner-authorized full 40-character storefront commit SHA'
+        required: true
+        type: string
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
+# One boundary covers validation, assembly, upload and deployment.
 concurrency:
-  group: fork-pages-model-fix
-  cancel-in-progress: true
+  group: nfc-github-pages
+  cancel-in-progress: false
 
 jobs:
+  sources:
+    if: >-
+      github.event_name == 'workflow_dispatch' &&
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'zaffirax55/nfc-card-website'
+    runs-on: ubuntu-24.04
+    outputs:
+      main_sha: ${{ steps.identity.outputs.main_sha }}
+      storefront_sha: ${{ steps.identity.outputs.storefront_sha }}
+      workflow_sha: ${{ steps.identity.outputs.workflow_sha }}
+      preview_tip_sha: ${{ steps.lineage.outputs.preview_tip_sha }}
+    steps:
+      - name: Require immutable source inputs
+        env:
+          MAIN_SHA: ${{ github.sha }}
+          STOREFRONT_SHA: ${{ inputs.storefront_sha }}
+          WORKFLOW_SHA: ${{ github.workflow_sha }}
+        run: |
+          python3 - <<'PY_SHA'
+          import os, re
+          for name in ('MAIN_SHA', 'STOREFRONT_SHA', 'WORKFLOW_SHA'):
+              assert re.fullmatch(r'[0-9a-f]{40}', os.environ[name]), name + ' must be a full commit SHA'
+          assert os.environ['MAIN_SHA'] == os.environ['WORKFLOW_SHA'], 'Main/workflow identity mismatch'
+          PY_SHA
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify authorized preview lineage before storefront checkout
+        id: lineage
+        env:
+          STOREFRONT_SHA: ${{ inputs.storefront_sha }}
+        run: |
+          git fetch --no-tags origin refs/heads/optidigital-3d-preview:refs/remotes/origin/optidigital-3d-preview
+          PREVIEW_TIP_SHA=$(git rev-parse 'refs/remotes/origin/optidigital-3d-preview^{commit}')
+          python3 -B scripts/verify_storefront_lineage.py --storefront-sha "$STOREFRONT_SHA" --preview-tip-sha "$PREVIEW_TIP_SHA"
+          echo "preview_tip_sha=$PREVIEW_TIP_SHA" >> "$GITHUB_OUTPUT"
+          echo "Verified preview lineage tip: $PREVIEW_TIP_SHA" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          ref: ${{ inputs.storefront_sha }}
+          path: optidigital-copy
+          persist-credentials: false
+      - name: Verify resolved commits and record source identity
+        id: identity
+        env:
+          MAIN_SHA: ${{ github.sha }}
+          STOREFRONT_SHA: ${{ inputs.storefront_sha }}
+          WORKFLOW_SHA: ${{ github.workflow_sha }}
+        run: |
+          test "$(git rev-parse 'HEAD^{commit}')" = "$MAIN_SHA"
+          test "$(git -C optidigital-copy rev-parse 'HEAD^{commit}')" = "$STOREFRONT_SHA"
+          {
+            echo "main_sha=$MAIN_SHA"
+            echo "storefront_sha=$STOREFRONT_SHA"
+            echo "workflow_sha=$WORKFLOW_SHA"
+          } >> "$GITHUB_OUTPUT"
+          {
+            echo "Main source: $MAIN_SHA"
+            echo "Storefront source: $STOREFRONT_SHA"
+            echo "Publishing workflow: $WORKFLOW_SHA"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  validate-main:
+    needs: sources
+    uses: ./.github/workflows/ci.yml
+    with:
+      source_sha: ${{ needs.sources.outputs.main_sha }}
+
+  validate-storefront:
+    needs: sources
+    uses: ./.github/workflows/ci.yml
+    with:
+      source_sha: ${{ needs.sources.outputs.storefront_sha }}
+      storefront: true
+
   build:
+    needs: [sources, validate-main, validate-storefront]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
         with:
+          ref: ${{ needs.sources.outputs.main_sha }}
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Install dependencies
+      - name: Retain and recheck immutable storefront lineage evidence
+        env:
+          STOREFRONT_SHA: ${{ needs.sources.outputs.storefront_sha }}
+          PREVIEW_TIP_SHA: ${{ needs.sources.outputs.preview_tip_sha }}
         run: |
-          npm ci
-          npm install --no-save @google/model-viewer@4.4.0
-          cp node_modules/@google/model-viewer/dist/model-viewer.min.js src/model-viewer.min.js
-          test -s src/model-viewer.min.js
-          python -m pip install --disable-pip-version-check numpy Pillow trimesh
-          python scripts/build_review_card_fullbleed.py
-          test -s src/nfc-review-card-3d.glb
-      - name: Build fork preview
+          git fetch --no-tags origin "$PREVIEW_TIP_SHA"
+          python3 -B scripts/verify_storefront_lineage.py --storefront-sha "$STOREFRONT_SHA" --preview-tip-sha "$PREVIEW_TIP_SHA" --output work/publication-evidence/storefront-lineage.json
+      # Use the committed, validated GLB and integrity-locked model-viewer.
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Build root PUBLIC_PREVIEW
         env:
           NFC_ENV: production
           NFC_DEPLOYMENT_TARGET: github-pages
@@ -44,39 +127,36 @@ jobs:
           NFC_PUBLICATION_MODE: PUBLIC_PREVIEW
           NFC_TELEGRAM_ENABLED: 'false'
         run: npm run build
-      - name: Checkout isolated OptiDigital 3D copy
-        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
         with:
-          ref: optidigital-3d-preview
+          ref: ${{ needs.sources.outputs.storefront_sha }}
           path: optidigital-copy
           persist-credentials: false
-      - name: Build and mount OptiDigital 3D as a separate preview
+      - name: Build and validate the exact designer preview
+        working-directory: optidigital-copy
         run: |
-          cd optidigital-copy
+          npm ci
           npm run designer:build
-          cd ..
-          mkdir -p site/optidigital-3d
-          cp -a optidigital-copy/work/designer-preview-v36_2/nfc-card-website/. site/optidigital-3d/
-          python - <<'PY'
-          from pathlib import Path
-          root=Path('site/optidigital-3d')
-          count=0
-          for p in root.rglob('*'):
-              if p.is_file() and p.suffix in {'.html','.mjs','.js','.css','.xml','.txt','.json'}:
-                  raw=p.read_text(encoding='utf-8')
-                  edited=(raw.replace('https://optidigitalagent.github.io','https://zaffirax55.github.io')
-                      .replace('/nfc-card-website/','/nfc-card-website/optidigital-3d/')
-                      .replace("'/nfc-card-website'", "'/nfc-card-website/optidigital-3d'"))
-                  if edited != raw:
-                      p.write_text(edited,encoding='utf-8')
-                      count+=1
-          assert (root/'assets/models/review-standard.glb').is_file()
-          assert len(list((root/'assets/models').glob('*.glb')))==12
-          assert (root/'assets/model-viewer.min.js').is_file()
-          print('Published OptiDigital 3D preview assets; rewritten files:',count)
-          PY
-      - name: Disable Jekyll
-        run: touch site/.nojekyll
+          npm run designer:seo
+          npm run designer:test:contracts
+          npm run designer:test:transport
+          npm run designer:check
+      - name: Assemble and validate final artifact and source identity
+        env:
+          MAIN_SHA: ${{ needs.sources.outputs.main_sha }}
+          STOREFRONT_SHA: ${{ needs.sources.outputs.storefront_sha }}
+          WORKFLOW_SHA: ${{ needs.sources.outputs.workflow_sha }}
+        run: >-
+          python3 -B scripts/pages_artifact.py --storefront optidigital-copy
+          --main-sha "$MAIN_SHA" --storefront-sha "$STOREFRONT_SHA"
+          --workflow-sha "$WORKFLOW_SHA"
+      - name: Retain source and assembled artifact checksums
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: pages-source-and-artifact-identity
+          path: work/publication-evidence
+          if-no-files-found: error
+          retention-days: 30
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
         with:
           path: site
@@ -84,11 +164,16 @@ jobs:
 
   deploy:
     needs: build
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy GitHub Pages
+      - name: Deploy validated exact-source Pages preview
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
