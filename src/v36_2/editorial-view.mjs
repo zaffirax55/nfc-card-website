@@ -94,6 +94,14 @@ export function renderEditorialPage(key,locale='uk',h={}){
  let body=heading(page.title,page.intro,esc,heroActions);
  if(key==='about')body='<div class="editorial-hero editorial-founder-hero">'+body+'<figure class="editorial-founder"><img src="/nfc-card-website/assets/founder-primary.webp" alt="'+esc(page.founderAlt)+'" width="800" height="1000" loading="lazy" data-media-provenance="user_provided_business_asset" data-media-claim-role="founder_portrait"><figcaption>'+esc(page.founderCaption)+'</figcaption></figure></div>';
  if(key==='how')body='<div class="editorial-hero editorial-how-hero">'+body+howPhoto+'</div>';
+ if(key==='design'){
+  const sampleLabel=({uk:'Приклади готових NFC-карток. Власний дизайн узгоджуємо окремо.',en:'Examples of finished NFC cards. Your custom artwork is agreed separately.',pl:'Przykłady gotowych kart NFC. Indywidualny projekt uzgadniamy osobno.'})[locale];
+  const sampleAlt=({uk:['Готова Google Review Card','Готова Beauty Mini','Готова Restaurant Mini'],en:['Ready Google Review Card','Ready Beauty Mini','Ready Restaurant Mini'],pl:['Gotowa Google Review Card','Gotowa Beauty Mini','Gotowa Restaurant Mini']})[locale];
+  const pics=['review.webp','beauty.webp','restaurant.webp'];
+  const showcase='<figure class="editorial-design-showcase" data-media-provenance="existing-product-photography"><div class="editorial-design-photo-main"><img src="/nfc-card-website/assets/'+pics[0]+'" alt="'+esc(sampleAlt[0])+'" width="900" height="900" decoding="async" loading="eager"></div><div class="editorial-design-photo-side">'+pics.slice(1).map((file,i)=>'<img src="/nfc-card-website/assets/'+file+'" alt="'+esc(sampleAlt[i+1])+'" width="900" height="900" decoding="async" loading="lazy">').join('')+'</div><figcaption>'+esc(sampleLabel)+'</figcaption></figure>';
+  body='<div class="editorial-hero editorial-design-hero">'+body+showcase+'</div>';
+ }
+
  body+=sections(page.sections,key,esc);
  if(key==='how'){
   const links=[['review-card','Google Review Card'],['beauty-review-card','Beauty Mini'],['restaurant-review-card','Restaurant Mini'],['nfc-instagram-card','NFC Instagram Card'],['nfc-menu-card','NFC Menu Card']];
