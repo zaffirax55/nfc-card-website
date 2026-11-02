@@ -24,15 +24,18 @@ const product = (id, slug, name, design, purpose, format, fields = {}) => ({
   id, slug, name, design, purpose, format, niche: null, status: 'active',
   route: `/solutions/${slug}/`, revision: 'NFC-CARD-CONTENT-TRUTH-PRICE-v33', ...fields
 });
+// Restaurant ready-made Mini follows the same currently approved UA mini pricing as Beauty ready-made Mini.
+// Share the frozen value to keep 1-card and 2-card quote behavior identical.
+const READY_MINI_UA_PRICES=freeze({1:800,2:1400});
 export const catalog = freeze([
   product('review-card', 'review-card', 'Google Review Card', 'ready', 'google_review', 'standard_100', {fixedUA:{1:1500,2:2600},fixedPL:{1:129,2:219}}),
   product('branded-review-card', 'branded-review-card', 'Branded Review Card', 'branded', 'google_review', 'standard_100', {fixedUA:{1:2000,2:3600},fixedPL:{1:169,2:299},revision:OWNER_UA_SOURCE_REVISION}),
   product('nfc-instagram-card', 'instagram-card', 'NFC Instagram Card', 'ready', 'instagram_profile', 'standard_100', {fixedUA:{1:1500,2:2600},fixedPL:{1:129,2:219},revision:'NFC-INSTAGRAM-UA-2026-09-v18'}),
   product('nfc-menu-card', 'menu-card', 'NFC Menu Card', 'ready', 'online_menu', 'menu_variants', {revision:'NFC-MENU-UA-2026-09-v23'}),
   product('review-card-3d', 'review-card-3d', 'NFC Review Card 3D', 'fixed_shown_design', 'google_review', 'three_d', {unitUA:4000,unitPL:349,prototype:true,madeToOrder:true,revision:'NFC-REVIEW-3D-UA-2026-09-v26'}),
-  product('beauty-review-card', 'beauty-review-card', 'Beauty Review Card Mini', 'ready', 'google_review', 'mini', {niche:'beauty',fixedUA:{1:800,2:1400},legacy:true}),
+  product('beauty-review-card', 'beauty-review-card', 'Beauty Review Card Mini', 'ready', 'google_review', 'mini', {niche:'beauty',fixedUA:READY_MINI_UA_PRICES,legacy:true}),
   product('branded-beauty-review-card', 'branded-beauty-review-card', 'Branded Beauty Review Card Mini', 'branded', 'google_review', 'mini', {niche:'beauty',fixedUA:{1:800,2:1600},legacy:true}),
-  product('restaurant-review-card', 'restaurant-review-card', 'Restaurant Review Card Mini', 'ready', 'google_review', 'mini', {niche:'restaurant',legacy:true}),
+  product('restaurant-review-card', 'restaurant-review-card', 'Restaurant Review Card Mini', 'ready', 'google_review', 'mini', {niche:'restaurant',fixedUA:READY_MINI_UA_PRICES,legacy:true}),
   product('branded-restaurant-review-card', 'branded-restaurant-review-card', 'Branded Restaurant Review Card Mini', 'branded', 'google_review', 'mini', {niche:'restaurant',legacy:true}),
   product('universal-ready-mini', 'universal-mini-card', 'Universal Ready Mini', 'ready', 'google_review', 'mini', {status:'draft',revision:null}),
   product('universal-branded-mini', 'branded-mini-card', 'Universal Branded Mini', 'branded', 'google_review', 'mini', {status:'draft',revision:null})
