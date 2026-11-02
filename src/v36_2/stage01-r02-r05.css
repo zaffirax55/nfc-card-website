@@ -1,0 +1,120 @@
+
+/* NFC CARD | R02–R05 owner-review stage 01.
+   Targeted composition only; preserve product prices, cart and forms. */
+
+/* R02 — logo remains proportional, with a readable desktop footprint. */
+.header .logo{width:156px!important;max-width:156px;flex:0 0 156px!important;align-self:center}
+.header .logo img{display:block;width:100%;height:auto!important;object-fit:contain;object-position:left center}
+.header-row{align-items:center}
+.header .desktop-nav{gap:clamp(10px,1.45vw,22px);min-width:0}
+.header .desktop-nav a{font-size:14px!important;white-space:nowrap}
+
+/* R03 — use the existing NFC sequence, not a new animation or video.
+   Increase the real phone/card while retaining their portrait/square ratios. */
+@media(min-width:1101px){
+ .owner-home .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(30px,3.4vw,54px)}
+ .owner-home.hero{padding-block:46px 44px}
+ .hero-tap-hero{padding:17px!important}
+ .hero-tap-head{min-height:43px}
+ .hero-tap-head strong{font-size:16px}
+ .hero-tap-scene{height:348px;background:radial-gradient(ellipse at 48% 42%,#3b4147,#191d22 77%);border-color:#54585e}
+ .hero-tap-card{width:clamp(151px,36%,183px);left:8%;top:75px}
+ .hero-tap-phone{width:205px;height:321px;top:13px;right:8%;border-radius:32px}
+ .hero-tap-waves{left:43%;top:37%}
+ .hero-tap-head .hero-tap-eyebrow{font-size:11px}
+ .hero-tap-steps span{min-height:42px;font-size:12px}
+ .hero-tap-caption{font-size:12px!important}
+}
+@media(min-width:801px) and (max-width:1100px){
+ .owner-home .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+ .hero-tap-scene{height:297px}
+ .hero-tap-phone{height:273px;width:177px;right:6%}
+ .hero-tap-card{width:clamp(130px,35%,160px);left:6%;top:64px}
+}
+.hero-tap-scene::before,.hero-tap-scene::after{display:none}
+.hero-tap-card{border-color:#fff}
+.hero-tap-steps span{background:#33383e;color:#eef1f4}
+.hero-tap-head strong{color:#fff}
+.hero-tap-hero{border-color:#62686f;background:#262b30}
+@media(max-width:800px){
+ .hero-tap-hero{padding:12px!important}
+ .hero-tap-scene{background:radial-gradient(ellipse at 45% 40%,#3e464e,#1c2229 79%)}
+}
+
+/* R04 — the storefront uses the same card component on home, catalog, related.
+   Reorder visual content without changing accessible text or checkout behavior. */
+.product-grid{align-items:stretch;gap:clamp(14px,1.8vw,24px)}
+.product-grid>.product-card,.owner-home-products .product-card{height:100%;min-width:0}
+.product-card .card-body{
+ display:flex!important;flex-direction:column!important;
+ gap:9px!important;padding:18px!important;flex:1 1 auto;min-width:0
+}
+.product-card .card-body>.caption{order:0;margin:0}
+.product-card .card-body>div:first-child:not(.card-bottom):not(.card-design-slot){order:1}
+.product-card .card-body>h3{order:2;margin:0;line-height:1.28}
+.product-card .card-body>p:not(.caption){order:3;margin:0!important;flex:1 1 auto;min-height:55px;font-size:15px;line-height:1.54}
+.product-card .card-body>.card-bottom{
+ order:4;margin-top:4px!important;padding-top:12px!important;
+ border-top:1px solid #e1e2e3;
+ gap:8px;display:flex;align-items:center
+}
+.product-card .card-bottom>.price{font-size:21px;max-width:75%;font-weight:650}
+.product-card .card-bottom>.text-link{font-size:14px;min-height:40px;align-self:center}
+.product-card .card-body>.card-design-slot{
+ order:5;min-height:41px;max-width:100%;
+ display:flex;align-items:center;
+ margin:0;padding:0;border:0
+}
+.product-card .card-design-slot>[data-testid="design-product-cta"]{
+ display:inline-flex;align-items:center;min-height:40px;
+ color:#1a1b1d!important;font-size:14px;font-weight:550;
+ padding:4px 0;margin:0;line-height:1.42;border:0;
+ text-decoration-color:#74777b
+}
+.product-card .card-body>.nfc-glb-button{
+ order:6;display:flex;width:100%;min-height:48px;
+ margin:0!important;padding:11px 15px;border:1px solid #121416;
+ border-radius:9px;background:#151719!important;color:#fff!important;
+ font-size:15px;line-height:1.4;font-weight:650;
+ box-shadow:none!important
+}
+.product-card .card-body>.nfc-glb-button:hover{
+ background:#2e3033!important;border-color:#2e3033;transform:translateY(-1px)
+}
+/* Images keep their native proportions; the mobile full-photo rule stays. */
+.product-card .card-image{background:#f0f0ee!important}
+.product-card .badge{background:#eeeef0;color:#37393c;border-color:#dbdddf}
+@media(max-width:800px){
+ .product-card .card-body{padding:17px!important;gap:9px!important}
+ .product-card .card-body>p:not(.caption){min-height:0}
+ .product-card .card-body>.card-bottom{margin-top:5px!important}
+}
+@media(max-width:520px){
+ .product-card .card-body>.nfc-glb-button{min-height:48px}
+ .product-card .card-body>.card-design-slot{min-height:36px}
+}
+
+/* R05 — remove desaturated blue/lavender from selected promo and CTA surfaces. */
+.footer{background:#121416!important;color:#f4f4f4;border-top-color:#232528!important}
+.footer nav a,.footer a{color:#ecedef}
+.footer p,.footer-bottom{color:#c8cace}
+.footer .text-link{color:#fff;border-color:#686d72}
+.home-personalisation{
+ background:#181a1d!important;color:#fafafa!important;
+ border-color:#35373a!important
+}
+.home-personalisation h2,.home-personalisation h3{color:#fff!important}
+.home-personalisation p,.home-personalisation li{color:#d4d6d8!important}
+.home-personalisation .home-after-request{border-color:#525459!important}
+.home-personalisation .button{
+ background:#f6f6f5!important;color:#131415!important;
+ border-color:#f6f6f5!important
+}
+.home-personalisation .button:hover{background:#fff!important}
+.design-catalog-cta{background:#191b1e!important;border-color:#33363a!important;color:#f4f5f6!important}
+.design-catalog-cta h2{color:#fff!important}
+.design-catalog-cta p{color:#d5d7d9!important}
+.design-catalog-cta .button{background:#f3f3f3!important;color:#17191b!important}
+@media(prefers-reduced-motion:reduce){
+ .product-card .card-body>.nfc-glb-button:hover{transform:none}
+}
