@@ -38,7 +38,7 @@
 .hero-tap-caption{color:#c6cfd8!important;font-size:11px!important;line-height:1.4!important;margin:0!important;text-align:center}
 @keyframes tap-phone-move{
  0%,17%,84%,100%{transform:translate3d(0,0,0) rotate(0deg)}
- 30%,37%{transform:translate3d(-39px,14px,0) rotate(-6deg)}
+ 30%,37%{transform:translate3d(-32px,4px,0) rotate(-2deg)}
  49%,75%{transform:translate3d(0,0,0) rotate(0deg)}
 }
 @keyframes tap-card-move{
