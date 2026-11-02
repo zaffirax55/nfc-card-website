@@ -135,3 +135,125 @@
 @media(max-width:325px){
  .header .logo{width:84px!important;max-width:84px!important;flex:0 0 84px!important}
 }
+
+
+/* R02 refinement: brand presence without expanding the header height. */
+@media(min-width:1201px){
+ .header .logo{width:184px!important;max-width:184px!important;flex:0 0 184px!important}
+}
+@media(min-width:1001px) and (max-width:1200px){
+ .header .logo{width:160px!important;max-width:160px!important;flex:0 0 160px!important}
+}
+@media(min-width:801px) and (max-width:1000px){
+ .header .logo{width:142px!important;max-width:142px!important;flex:0 0 142px!important}
+}
+@media(min-width:521px) and (max-width:800px){
+ .header .logo{width:124px!important;max-width:124px!important;flex:0 0 124px!important}
+}
+@media(min-width:371px) and (max-width:520px){
+ .header .logo{width:112px!important;max-width:112px!important;flex:0 0 112px!important}
+}
+@media(min-width:326px) and (max-width:370px){
+ .header .logo{width:96px!important;max-width:96px!important;flex:0 0 96px!important}
+}
+@media(max-width:325px){
+ .header .logo{width:86px!important;max-width:86px!important;flex:0 0 86px!important}
+}
+.header .logo img{max-width:100%;height:auto!important;object-fit:contain}
+
+/* R03 refinement: a slim ~2.06:1 smartphone, not a wide tablet.
+   Device stays fully inside the animated scene at every breakpoint. */
+.hero-tap-hero{
+ background:#262b30!important;
+ border-color:#596069!important;
+ box-shadow:0 12px 32px rgba(0,0,0,.16);
+}
+.hero-tap-phone{
+ box-sizing:border-box;
+ border:5px solid #0d1015!important;
+ border-radius:36px!important;
+ background:#fdfdfd;
+ box-shadow:
+  0 0 0 1px #9a9fa5,
+  0 0 0 3px #343940,
+  0 23px 39px rgba(0,0,0,.47)!important;
+}
+.hero-tap-notch{
+ top:5px!important;
+ height:13px!important;
+ width:37%!important;
+ border-radius:999px!important;
+ background:#0b0d11!important;
+ box-shadow:0 0 0 1px rgba(255,255,255,.14);
+}
+.hero-tap-homebar{
+ height:4px!important;
+ bottom:7px!important;
+ border-radius:999px!important;
+ background:#1a1e25!important;
+}
+.hero-tap-screen{
+ border-radius:inherit;
+ padding:28px 12px 21px!important;
+}
+.hero-tap-screen-home{
+ background:radial-gradient(circle at 72% 24%,#8b9ba9 0,#536474 36%,#222c39 100%)!important;
+}
+.hero-tap-home-icons{grid-template-columns:repeat(2,42px);gap:8px}
+.hero-tap-home-icons i{
+ width:42px;height:42px;
+ border-radius:12px;
+ background:rgba(255,255,255,.24);
+ box-shadow:inset 0 1px rgba(255,255,255,.12);
+}
+.hero-tap-screen-link b,.hero-tap-screen-review>b{
+ max-width:140px;font-size:12px;line-height:1.38;
+}
+.hero-tap-card{
+ border-radius:15px!important;
+ border:2px solid #f8f8f8;
+ box-shadow:0 16px 29px rgba(0,0,0,.5);
+}
+.hero-tap-scene{
+ background:radial-gradient(ellipse at 48% 39%,#454c52,#20252b 74%,#191d22 100%)!important;
+ border-color:#515960!important;
+}
+@media(min-width:1101px){
+ .hero-tap-scene{height:371px!important}
+ .hero-tap-phone{width:170px!important;height:350px!important;top:11px!important;right:14%!important}
+ .hero-tap-card{width:clamp(157px,33%,181px)!important;left:13%!important;top:87px!important}
+ .hero-tap-waves{left:46%!important;top:39%!important}
+}
+@media(min-width:801px) and (max-width:1100px){
+ .hero-tap-scene{height:314px!important}
+ .hero-tap-phone{width:140px!important;height:290px!important;top:12px!important;right:9%!important}
+ .hero-tap-card{width:clamp(115px,31%,143px)!important;left:8%!important;top:77px!important}
+ .hero-tap-waves{left:43%!important;top:39%!important}
+}
+@media(min-width:451px) and (max-width:800px){
+ .hero-tap-scene{height:292px!important}
+ .hero-tap-phone{width:128px!important;height:263px!important;top:13px!important;right:15%!important}
+ .hero-tap-card{width:141px!important;left:15%!important;top:75px!important}
+ .hero-tap-waves{left:43%!important;top:39%!important}
+}
+@media(min-width:341px) and (max-width:450px){
+ .hero-tap-scene{height:271px!important}
+ .hero-tap-phone{width:116px!important;height:239px!important;top:14px!important;right:8%!important}
+ .hero-tap-card{width:118px!important;left:8%!important;top:79px!important}
+ .hero-tap-waves{left:39%!important;top:40%!important}
+}
+@media(max-width:340px){
+ .hero-tap-scene{height:258px!important}
+ .hero-tap-phone{width:108px!important;height:224px!important;top:15px!important;right:6%!important}
+ .hero-tap-card{width:103px!important;left:6%!important;top:83px!important}
+ .hero-tap-waves{left:36%!important;top:42%!important}
+}
+@media(max-width:450px){
+ .hero-tap-home-icons{grid-template-columns:repeat(2,35px);gap:7px}
+ .hero-tap-home-icons i{width:35px;height:35px;border-radius:10px;font-size:17px}
+ .hero-tap-screen-home>span{font-size:24px}
+ .hero-tap-link-icon{width:51px;height:51px;font-size:11px}
+ .hero-tap-screen-review>b{font-size:11px}
+ .hero-tap-stars{font-size:15px}
+ .hero-tap-typing{height:30px}
+}
