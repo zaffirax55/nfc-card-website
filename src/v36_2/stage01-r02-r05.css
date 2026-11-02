@@ -257,3 +257,10 @@
  .hero-tap-stars{font-size:15px}
  .hero-tap-typing{height:30px}
 }
+
+/* Preserve compact first-screen height around tablet breakpoints. */
+@media(min-width:451px) and (max-width:800px){
+ .hero-tap-hero{gap:7px!important}
+ .hero-tap-head{min-height:29px!important;gap:3px}
+ .hero-tap-steps span{min-height:34px!important;padding-block:6px}
+}
