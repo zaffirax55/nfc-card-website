@@ -119,3 +119,6 @@
 @media(prefers-reduced-motion:reduce){
  .catalog-category-tab,.catalog-advanced>summary span{transition:none!important}
 }
+
+/* Design CTAs must jump directly to the existing form even when the page is long. */
+html:has(#design-request){scroll-behavior:auto!important}
