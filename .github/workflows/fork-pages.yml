@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Simplify storefront: one graphite theme, lean mobile header, concise hero NFC animation
+# Owner review R02-R05 stage 01: larger logo and hero, aligned product buttons, black accents
 
 on:
   push:
