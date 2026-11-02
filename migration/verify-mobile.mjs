@@ -247,8 +247,25 @@ for(const width of [320,390,768,1366]){
     overflow:document.documentElement.scrollWidth-innerWidth};
  });
  console.log('HANDOFF_R02_R05',width,JSON.stringify(info));
+ const handset=await page.locator('.hero-tap-phone').evaluate(el=>{
+   const stage=el.closest('.hero-tap-scene');
+   const frame=el.getBoundingClientRect(),box=stage.getBoundingClientRect();
+   const ratio=frame.height/frame.width;
+   const radius=getComputedStyle(el).borderRadius;
+   const island=el.querySelector('.hero-tap-notch').getBoundingClientRect();
+   const movement=el.getAnimations().find(anim=>anim.animationName==='tap-phone-move');
+   if(movement)movement.currentTime=2400;
+   const moving=el.getBoundingClientRect();
+   return {ratio,radius,notchWidth:island.width,frameWidth:frame.width,frameHeight:frame.height,
+     stageWidth:box.width,stillInside:frame.top>=box.top-2&&frame.bottom<=box.bottom+2,
+     movingInside:moving.top>=box.top-2&&moving.bottom<=box.bottom+2};
+ });
+ console.log('SMARTPHONE_SHAPE',width,JSON.stringify(handset));
+ if(handset.ratio<1.95||handset.ratio>2.16||handset.notchWidth<30||!handset.stillInside||!handset.movingInside)
+   errors.push(width+' phone must be slim, recognizable and uncut during NFC tap');
+
  if(info.overflow>2||info.logo<(width>=1101?140:width>=801?115:width>=371?100:80)||
-    info.phoneH/info.phoneW<1.43||info.phoneH/info.phoneW>1.75||
+    info.phoneH/info.phoneW<1.95||info.phoneH/info.phoneW>2.16||
     (width>=1101&&(info.heroH<338||info.cardW<145))||
     info.footer!=='rgb(18, 20, 22)'||info.promo!=='rgb(24, 26, 29)')
   errors.push('stage01 header/hero/brand check failed '+width);
