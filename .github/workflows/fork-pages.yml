@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Owner review R02-R05 stage 01: larger logo and hero, aligned product buttons, black accents
+# Slim phone hero v2 and larger NFC CARD logo; verified mobile and desktop
 
 on:
   push:
