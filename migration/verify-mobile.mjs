@@ -222,6 +222,56 @@ for(const l of ['en','pl']){
  if(count!==5||(!text.includes('Ready-made')&&!text.includes('Zdjęcie')))errors.push('design locale missing '+l);
  await page.close();
 }
+
+/* Owner handoff stage R02–R05: logo / larger hero / shared card actions / exact black promos. */
+for(const width of [320,390,768,1366]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ page.on('pageerror',e=>errors.push('stage01 '+width+' JS '+e.message));
+ await page.goto(base+'/',{waitUntil:'load'});
+ await page.waitForSelector('.owner-home-products .product-card .nfc-glb-button',{timeout:12000});
+ await page.waitForTimeout(250);
+ const info=await page.evaluate(()=>{
+  const box=el=>el?.getBoundingClientRect();
+  const bg=el=>el?getComputedStyle(el).backgroundColor:null;
+  const logo=box(document.querySelector('.header .logo'));
+  const hero=box(document.querySelector('.hero-tap-scene'));
+  const phone=box(document.querySelector('.hero-tap-phone'));
+  const card=box(document.querySelector('.hero-tap-card'));
+  const products=[...document.querySelectorAll('.owner-home-products .product-card')];
+  const ctas=products.map(el=>box(el.querySelector('.nfc-glb-button'))?.top).filter(v=>Number.isFinite(v));
+  const custom=products.map(el=>box(el.querySelector('.card-design-slot'))?.top).filter(v=>Number.isFinite(v));
+  return {logo:logo?.width,phoneW:phone?.width,phoneH:phone?.height,cardW:card?.width,
+    heroH:hero?.height,products:products.length,ctaTops:ctas.map(Math.round),
+    designTops:custom.map(Math.round),footer:bg(document.querySelector('.footer')),
+    promo:bg(document.querySelector('.home-personalisation')),
+    overflow:document.documentElement.scrollWidth-innerWidth};
+ });
+ console.log('HANDOFF_R02_R05',width,JSON.stringify(info));
+ if(info.overflow>2||info.logo<(width>=1101?140:width>=801?115:width>=371?100:80)||
+    info.phoneH/info.phoneW<1.43||info.phoneH/info.phoneW>1.75||
+    (width>=1101&&(info.heroH<338||info.cardW<145))||
+    info.footer!=='rgb(18, 20, 22)'||info.promo!=='rgb(24, 26, 29)')
+  errors.push('stage01 header/hero/brand check failed '+width);
+ if(width===1366){
+   if(info.products!==4||info.ctaTops.length<4||
+       Math.max(...info.ctaTops)-Math.min(...info.ctaTops)>5||
+       Math.max(...info.designTops)-Math.min(...info.designTops)>5)
+     errors.push('stage01 desktop product CTA alignment failed');
+ }
+ await page.goto(base+'/solutions/',{waitUntil:'load'});
+ await page.waitForSelector('.product-grid .product-card .nfc-glb-button',{timeout:12000});
+ const cardState=await page.locator('.product-grid .product-card').evaluateAll(elements=>elements.slice(0,4).map(el=>{
+  const a=el.querySelector('.card-design-slot');
+  const b=el.querySelector('.nfc-glb-button');
+  return {slot:!!a,button:!!b,buttonBg:b?getComputedStyle(b).backgroundColor:null,
+    slotBeforeBtn:a&&b?a.getBoundingClientRect().bottom<=b.getBoundingClientRect().top+1:null};
+ }));
+ console.log('HANDOFF_CATALOG',width,JSON.stringify(cardState));
+ if(cardState.length<4||cardState.some(x=>!x.slot||!x.button||x.buttonBg!=='rgb(21, 23, 25)'||!x.slotBeforeBtn))
+  errors.push('stage01 shared catalog card styles missing '+width);
+ await page.screenshot({path:'stage01-'+width+'.png',fullPage:false});
+ await page.close();
+}
 await browser.close();
 if(errors.length){console.error('FAILED',JSON.stringify(errors));process.exit(1)}
 console.log('MOBILE_RESPONSIVE_TEST_SUCCESS');
