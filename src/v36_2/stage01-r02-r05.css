@@ -220,13 +220,13 @@
 }
 @media(min-width:1101px){
  .hero-tap-scene{height:371px!important}
- .hero-tap-phone{width:170px!important;height:350px!important;top:11px!important;right:14%!important}
+ .hero-tap-phone{width:166px!important;height:344px!important;top:11px!important;right:14%!important}
  .hero-tap-card{width:clamp(157px,33%,181px)!important;left:13%!important;top:87px!important}
  .hero-tap-waves{left:46%!important;top:39%!important}
 }
 @media(min-width:801px) and (max-width:1100px){
  .hero-tap-scene{height:314px!important}
- .hero-tap-phone{width:140px!important;height:290px!important;top:12px!important;right:9%!important}
+ .hero-tap-phone{width:139px!important;height:286px!important;top:10px!important;right:9%!important}
  .hero-tap-card{width:clamp(115px,31%,143px)!important;left:8%!important;top:77px!important}
  .hero-tap-waves{left:43%!important;top:39%!important}
 }
