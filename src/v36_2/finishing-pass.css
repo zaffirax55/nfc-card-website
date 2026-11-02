@@ -1,0 +1,121 @@
+/* NFC CARD · finishing pass: compact catalog, custom-artwork entry and review steps.
+   Keeps existing product routes, real gallery files, quote policy and form fields. */
+
+/* R16 — three unambiguous options: all cards / Google / Instagram.
+   Menu Card remains accessible in "All"; advanced filters are available on demand. */
+.catalog-category-tabs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 15px;padding:0}
+.catalog-category-tab{
+ display:inline-flex;min-height:48px;align-items:center;justify-content:center;
+ padding:10px 22px;border:1px solid #bec6cc;border-radius:10px;
+ background:#fff;color:#22292e;text-decoration:none;font-size:16px;font-weight:600;
+ transition:border-color .17s ease,background-color .17s ease,color .17s ease
+}
+.catalog-category-tab:hover{border-color:#34393e;background:#f1f2f2}
+.catalog-category-tab.is-active,.catalog-category-tab[aria-current=page]{
+ background:#1b1d1f;color:#fff;border-color:#1b1d1f
+}
+.catalog-category-tab:focus-visible{outline:3px solid #777;outline-offset:3px}
+.catalog-advanced{border:0;margin:0 0 12px;padding:0}
+.catalog-advanced>summary{
+ cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;
+ gap:16px;border:1px solid #d1d5d7;border-radius:9px;
+ background:#f5f6f6;color:#384149;font-weight:550;
+ font-size:14px;max-width:310px;min-height:44px;padding:9px 14px
+}
+.catalog-advanced>summary::-webkit-details-marker{display:none}
+.catalog-advanced>summary span{font-size:21px;line-height:1;transition:transform .18s ease}
+.catalog-advanced[open]>summary span{transform:rotate(180deg)}
+.catalog-advanced .filters{margin:12px 0 0;padding:21px 22px 17px;border-color:#d8dddf;box-shadow:none}
+.catalog-advanced .filter-caption{margin:0;font-size:14px}
+.catalog-results-count{color:#59616b;font-size:14px;margin:7px 0 19px;line-height:1.45}
+.catalog-advanced[open]+.catalog-results-count{margin-top:15px}
+@media(max-width:600px){
+ .catalog-category-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+ .catalog-category-tab{min-height:46px;padding:8px 9px;font-size:14px;text-align:center}
+ .catalog-advanced>summary{width:100%;max-width:none}
+ .catalog-advanced .filters{padding:17px 14px}
+ .catalog-results-count{margin:9px 0 16px}
+}
+
+/* R17 / R18 — real photos of existing ready-made cards, not fabricated clients. */
+.editorial-page.editorial-design .editorial-intro::before,
+.editorial-page.editorial-design .editorial-intro::after{content:none!important;display:none!important}
+.editorial-page.editorial-design .editorial-design-hero{
+ display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);
+ gap:clamp(18px,3vw,46px);align-items:center;padding:19px 0 36px
+}
+.editorial-page.editorial-design .editorial-design-hero .editorial-intro{
+ padding:21px 0!important;max-width:none;min-width:0
+}
+.editorial-design-hero .editorial-intro h1{max-width:16ch;line-height:1.07}
+.editorial-design-hero .editorial-hero-actions{display:flex;gap:13px;margin-top:21px;flex-wrap:wrap}
+.editorial-design-hero .editorial-hero-actions>.button:first-child{
+ background:#17191b!important;border-color:#17191b!important;color:white!important;
+ padding:15px 22px;min-height:53px;border-radius:9px;
+ font-size:16px;font-weight:700;white-space:normal;box-shadow:0 7px 17px #15171a26
+}
+.editorial-design-hero .editorial-hero-actions>.button:first-child:hover{
+ background:#343638!important;border-color:#343638!important
+}
+.editorial-design-showcase{
+ margin:0;min-width:0;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);
+ grid-template-rows:auto auto;gap:10px;align-items:stretch
+}
+.editorial-design-photo-main,.editorial-design-photo-side img{
+ background:#e5e8e9;border-radius:12px;overflow:hidden;border:1px solid #d6dcdf
+}
+.editorial-design-photo-main{height:318px}
+.editorial-design-photo-main img{width:100%;height:100%;object-fit:cover}
+.editorial-design-photo-side{display:grid;grid-template-rows:1fr 1fr;gap:10px;min-width:0}
+.editorial-design-photo-side img{width:100%;height:154px;object-fit:cover}
+.editorial-design-showcase figcaption{
+ grid-column:1/-1;margin:0;color:#626b73;font-size:13px;line-height:1.55
+}
+#design-request{scroll-margin-top:clamp(77px,8vw,106px)}
+#design-request .form-card{scroll-margin-top:105px}
+@media(max-width:900px){
+ .editorial-page.editorial-design .editorial-design-hero{grid-template-columns:minmax(0,1fr) minmax(235px,.8fr);gap:18px}
+ .editorial-design-photo-main{height:260px}
+ .editorial-design-photo-side img{height:125px}
+}
+@media(max-width:700px){
+ .editorial-page.editorial-design .editorial-design-hero{
+  grid-template-columns:1fr;gap:6px;padding:8px 0 28px
+ }
+ .editorial-page.editorial-design .editorial-design-hero .editorial-intro{padding:12px 0 17px!important}
+ .editorial-design-hero .editorial-intro h1{max-width:none}
+ .editorial-design-hero .editorial-hero-actions>.button:first-child{width:100%}
+ .editorial-design-photo-main{height:clamp(198px,61vw,310px)}
+ .editorial-design-photo-side img{height:calc(clamp(198px,61vw,310px) / 2 - 5px)}
+}
+
+/* R14 — explicit three actions for Google Review Card only, no automatic review. */
+.google-review-steps{background:#f2f3f3;border-block:1px solid #d9dddf}
+.google-review-steps .section-heading h2{max-width:none;margin-bottom:0}
+.review-tap-sequence{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.review-tap-sequence li{
+ display:flex;gap:15px;align-items:flex-start;min-width:0;
+ background:#fff;border:1px solid #d7dadd;border-radius:12px;padding:18px 16px
+}
+.review-step-number{
+ flex:0 0 37px;height:37px;display:grid;place-items:center;
+ border-radius:9px;background:#181b1d;color:#fff;font:700 14px/1 Onest,Arial,sans-serif
+}
+.review-tap-sequence h3{font-size:18px;line-height:1.28;margin:2px 0 8px;letter-spacing:-.025em}
+.review-tap-sequence p{font-size:15px;line-height:1.55;color:#525a61;margin:0}
+@media(max-width:850px){.review-tap-sequence{grid-template-columns:1fr;gap:10px}}
+@media(max-width:600px){.review-tap-sequence li{padding:15px 13px}.review-tap-sequence h3{font-size:17px}}
+
+/* R11/R12 — larger, clean product gallery boundaries without cropping image art. */
+.product-layout:has(#product-config[data-product="review-card"]) .gallery-main{
+ border:1px solid #24282b;border-radius:12px;background:#fff;box-shadow:0 3px 15px #1515150c
+}
+.product-layout:has(#product-config[data-product="review-card"]) .gallery-main .gallery-open{
+ width:100%;height:100%;padding:0!important;display:block
+}
+.product-layout:has(#product-config[data-product="review-card"]) .gallery-main img{
+ width:100%;height:100%;object-fit:contain!important
+}
+@media(prefers-reduced-motion:reduce){
+ .catalog-category-tab,.catalog-advanced>summary span{transition:none!important}
+}
