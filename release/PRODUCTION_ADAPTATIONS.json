@@ -13,8 +13,23 @@
     {
       "path": "src/v36_2/app.mjs",
       "archiveSHA256": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
-      "releaseSHA256": "a85f269110044649701540bd8f5215614c851516d76a6c928775dc556e06b09e",
-      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+      "releaseSHA256": "4a8c6af4259063ffdbb6363ecc91967ab61294d7341586186981324028712097",
+      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "repositoryProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
+        "lastSourceChangeCommit": "9d1e8dc73513a8f30d22bb1f41d19a33fcc8b9a1",
+        "gitBlob": "903e486a990188725b15dfab32f2bc96db249ae2",
+        "changeCommits": [
+          "9d1e8dc73513a8f30d22bb1f41d19a33fcc8b9a1",
+          "bccf67ed67124b7e8131c56da0d681384db5d124",
+          "4ee07b5e711c9f9efa94ff8517e192111c424bfa",
+          "82fad6a1cc676f089454b61b3e4ae7066da6a874",
+          "26239535dd11729814f5b4c6d4306c84223f5612",
+          "96871b100acf5b2971a194762a7cdd4a21fa9584",
+          "5f45bdc8e83a5df1f061aee94aa1eb2801d006ad"
+        ]
+      }
     },
     {
       "path": "src/v36_2/seo.mjs",
@@ -27,6 +42,67 @@
       "archiveSHA256": "f6c2625da2402350318c5aa49b12d40de0684defd035ad3f4dc2e055daa32a0a",
       "releaseSHA256": "a2214c9d904c3cecba72fe0606fd3e7c06cf5a7e470731da6ffefdcf8b13ec2b",
       "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+    },
+    {
+      "path": "src/v36_2/home-composition.mjs",
+      "archiveSHA256": "31ba26eba2d99be375b89d73359306bae6cf242f01ed3daecdd4ff54e2267c33",
+      "releaseSHA256": "7c55978e3c17077606870a82e79a6ff55c5e490e4945fa3233f352e7a4eb0781",
+      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "repositoryProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
+        "lastSourceChangeCommit": "7572c362c15103bb37697b881504762645d06884",
+        "gitBlob": "e2e53a1545510179b569163b3e1d3f8b1a704ff2",
+        "changeCommits": [
+          "7572c362c15103bb37697b881504762645d06884",
+          "b0de2641fcb8a15bf2f32311c9eb370ec77a22cf",
+          "4ff12c39c9f625264d1331ffba5939faffa06714"
+        ]
+      }
+    },
+    {
+      "path": "src/v36_2/editorial-view.mjs",
+      "archiveSHA256": "13b9335a893f0a0ae414191576b95dc0198cd15e0d8a571186bf50cdf053371e",
+      "releaseSHA256": "f299997ade46c66a5a0a3cb0f5093d7ca04ea5f5192483495490633aec457fb4",
+      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "repositoryProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
+        "lastSourceChangeCommit": "9b910cbb5f90f299247e0a77be6a22bf71899e51",
+        "gitBlob": "1ba3cafdb01a1d8c5c877df5926a37a535ba5d7a",
+        "changeCommits": [
+          "9b910cbb5f90f299247e0a77be6a22bf71899e51"
+        ]
+      }
+    },
+    {
+      "path": "src/v36_2/static-render.mjs",
+      "archiveSHA256": "12201670102697b17fc17a91ac31187ae1311529ed2fac7d5fe6376ef653b9a2",
+      "releaseSHA256": "dfd873aae34cd21e2964b153c2c0dce500bb827884c21f8aa2dd905e02de6236",
+      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "repositoryProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
+        "lastSourceChangeCommit": "600c1ebe9411408c234a3639d7f03c042027ecf3",
+        "gitBlob": "d27a036d1a5771df5d8032ecabf45eeb4b420c85",
+        "changeCommits": [
+          "600c1ebe9411408c234a3639d7f03c042027ecf3",
+          "ad8cd402f5e139eb5e3f072d96c78d4d7c5d268d",
+          "918c96b3f2384657ab19bb9db66a921ad4379a05",
+          "a4f91f7be52a6d6ae56e73a1589067ef65c941af",
+          "e0c22e9186de4b5a22ec5fac1fb481e1f5b42a2f",
+          "28e692bf2ba278523243d688a627a31e6a48ead8",
+          "cf73f60419ce1071befe7b346eafb968629cb57d",
+          "f96eef980c0e07a7d0e1948e90d888059451b377",
+          "be4329be149bf57fef8187dd93b41e0fb02534be",
+          "3d90b485329fe116fcdc94d13ee3ed7f68ecdd38",
+          "94e4b01bdc5fb8b6986644c1f8823c204febd0eb",
+          "c361b1e471713376254af0a60c61db31f46feff6",
+          "e6ec86f9f7ad5f69fe4d75ec8efa69baa18f1af8",
+          "9d4e9281372a8a894cb22ce69c33875b4a64923d",
+          "c4f327d91a92655fa53ea57ca477ae86614a058b"
+        ]
+      }
     }
   ]
 }
