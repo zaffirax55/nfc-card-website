@@ -44,7 +44,62 @@ def ready(page):
         page.wait_for_function("() => { const form = document.querySelector('[data-review-form]'); return form.noValidate && typeof form.onsubmit === 'function'; }")
     if page.locator('[data-admin-loading]').count():expect(page.locator('[data-admin-loading]')).to_be_hidden()
     visible_images(page)
-def geometry(page):return page.evaluate('''()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,h1:document.querySelectorAll('h1').length,missingAlt:[...document.images].filter(e=>!e.hasAttribute('alt')).length,zeroReviews:!document.querySelector('#client-reviews,a[href="#client-reviews"]'),brokenImages:[...document.images].filter(e=>e.getBoundingClientRect().width>0&&e.complete&&e.currentSrc&&e.naturalWidth===0).map(e=>e.currentSrc),galleryDisplay:document.querySelector('.commerce-product-layout')?getComputedStyle(document.querySelector('.commerce-product-layout')).display:null})''')
+def public_reviews_are_empty(page):
+    # The owner-added home section explicitly says there are no verified reviews.
+    # Its anchor is allowed; published cases or ratings are still forbidden here.
+    return page.evaluate('''() => {
+        const messages = {
+            uk: 'Підтверджених відгуків для цієї сторінки поки немає.',
+            en: 'There are no verified reviews for this page yet.',
+        };
+        const sections = [...document.querySelectorAll('#client-reviews')];
+        const disclosure = messages[document.documentElement.lang];
+        if (document.body.dataset.route === '/' && sections.length !== 1) return false;
+        return !document.querySelector('.client-review,.client-reviews,.cases,[data-case-id],.review-rating,.review-stars') &&
+            sections.every(section =>
+                section.matches('section.client-proof') && typeof disclosure === 'string' &&
+                section.querySelector('.client-proof-intro')?.textContent.includes(disclosure) &&
+                !section.querySelector('blockquote,.review-rating,.review-stars'));
+    }''')
+
+@pytest.mark.parametrize('locale',['uk','en'])
+def test_home_empty_reviews_contract_requires_one_disclosed_section(browser,locale):
+    """Probe the public empty-state gate without creating or publishing reviews."""
+    from bs4 import BeautifulSoup
+    path=ROOT/'site'/('en/index.html' if locale=='en' else 'index.html')
+    sections=BeautifulSoup(path.read_text('utf-8'),'html.parser').select('#client-reviews')
+    assert len(sections)==1
+    context=browser.new_context();page=context.new_page()
+    def home():
+        page.set_content(f'<html lang="{locale}"><body data-route="/">{sections[0]}</body></html>')
+        assert public_reviews_are_empty(page)
+    try:
+        home()
+        page.locator('#client-reviews').evaluate('(section)=>section.remove()')
+        assert not public_reviews_are_empty(page), 'Removing the entire home empty-state section must fail.'
+        home()
+        page.locator('#client-reviews').evaluate('(section)=>section.after(section.cloneNode(true))')
+        assert not public_reviews_are_empty(page), 'Duplicate home empty-state sections must fail.'
+        home()
+        other_disclosure={'uk':'There are no verified reviews for this page yet.',
+                          'en':'Підтверджених відгуків для цієї сторінки поки немає.'}[locale]
+        page.locator('.client-proof-intro').evaluate('(node,text)=>node.textContent=text',other_disclosure)
+        assert not public_reviews_are_empty(page)
+        for markup in ['<article class="client-review">Synthetic unapproved case</article>',
+                       '<p class="review-rating">Synthetic 5/5</p>',
+                       '<span class="review-stars">Synthetic rating</span>']:
+            home()
+            page.locator('body').evaluate('(node,markup)=>node.insertAdjacentHTML("beforeend",markup)',markup)
+            assert not public_reviews_are_empty(page)
+        page.set_content(f'<html lang="{locale}"><body data-route="/solutions/review-card"><h1>Technical product fixture</h1></body></html>')
+        assert public_reviews_are_empty(page), 'A product route does not require the home empty-state section.'
+    finally:
+        context.close()
+
+def geometry(page):
+    data=page.evaluate('''()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,h1:document.querySelectorAll('h1').length,missingAlt:[...document.images].filter(e=>!e.hasAttribute('alt')).length,brokenImages:[...document.images].filter(e=>e.getBoundingClientRect().width>0&&e.complete&&e.currentSrc&&e.naturalWidth===0).map(e=>e.currentSrc),galleryDisplay:document.querySelector('.commerce-product-layout')?getComputedStyle(document.querySelector('.commerce-product-layout')).display:null})''')
+    data['zeroReviews']=public_reviews_are_empty(page)
+    return data
 def capture(page,name,full=False):
     visible_images(page)
     page.screenshot(path=SHOTS/(name+'-top.png'),animations='disabled')
@@ -171,7 +226,8 @@ def test_review_public_pending_form_and_private_admin(web,browser,locale):
     page.goto(origin+prefix+'/admin/reviews/new');ready(page);capture(page,locale+'-admin-empty-manual-form-390',True)
     page.locator('#admin-reviewText').fill('Unsaved isolated technical draft.');page.locator('.admin-locale').click();expect(page.locator('[data-admin-error]')).to_be_visible();assert prefix+'/admin/reviews/new' in page.url
     page.locator('[data-logout]').click();page.wait_for_url('**/admin/login');page.goto(origin+prefix+'/admin/reviews/'+id);page.wait_for_url('**/admin/login')
-    page.goto(origin+('/en' if locale=='en' else '/'));ready(page);assert not page.locator('#client-reviews,a[href="#client-reviews"]').count();assert not errors
+    assert server.reviews.runtime.service.public_list(locale)['items']==[]
+    page.goto(origin+('/en' if locale=='en' else '/'));ready(page);assert public_reviews_are_empty(page);assert not errors
     (EVIDENCE/(locale+'-review-admin-flow.json')).write_text(json.dumps({'pass':True,'rating':3,'submit':'pending only; same reference retry after response lost','admin':'protected login, read-only raw/rating, blockers, unsaved locale protection, save, logout','publishedCases':0,'pageErrors':errors},indent=2),'utf-8');context.close()
 
 def test_reduced_motion_zoom_reflow_and_story_control_contrast(web,browser):

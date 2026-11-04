@@ -1,5 +1,6 @@
 name: Publish exact-source Pages preview
 run-name: Pages preview — storefront ${{ inputs.storefront_sha }}
+# Deploy NFC CARD storefront finish pass: Mini pricing, tabs, design hero and Google review steps
 
 on:
   workflow_dispatch:

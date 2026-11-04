@@ -43,8 +43,8 @@
     },
     {
       "path": ".github/workflows/fork-pages.yml",
-      "bytes": 7061,
-      "sha256": "5f06726c9a09d2b41ad7bd0ae2471db2b30ee52bdddf30083485bfece013b125"
+      "bytes": 7159,
+      "sha256": "9ee2e196219ed6d5fe6f986a23527e5d483b02b2250591cf46d18fdca6180d73"
     },
     {
       "path": ".gitignore",
@@ -3283,23 +3283,23 @@
     },
     {
       "path": "tests/test_instagram_browser.py",
-      "bytes": 18685,
-      "sha256": "27b8d2da4e93c53831afb370cb216b9f5cc9eb3dbeb50bc5e135c131136506ad"
+      "bytes": 19140,
+      "sha256": "d11067695f9949f89eef88f8c1991ae5992e53106b418080a0933efa7a8b1ece"
     },
     {
       "path": "tests/test_instagram_v18.py",
-      "bytes": 18587,
-      "sha256": "01ef8aa9fce9c6deef7291a937e00c9bc7bf8a29004f04df67f461ee2927d427"
+      "bytes": 21069,
+      "sha256": "4dccac3c838f643b1990b33d9617d82dc0d1b9833938de862ef91287404b6238"
     },
     {
       "path": "tests/test_instagram_v20.py",
-      "bytes": 4235,
-      "sha256": "38c6406357838d61a0267dc9e4f2cf0cf011752af463c058532b67d80e92ea4a"
+      "bytes": 7451,
+      "sha256": "e1293b3ba7f44adca9a03438c8e27c792cfd344a8129cf20b6a3aa23ff39e96b"
     },
     {
       "path": "tests/test_instagram_v22.py",
-      "bytes": 14133,
-      "sha256": "2b84b2763bb677b90e70725ac0de1e51df6ef209b54339fdd48f0771892a0736"
+      "bytes": 14911,
+      "sha256": "d4d5f7c04b45ecaf41f26298ca101809ba00fd0328b5ac9f91afc9f346ec24bc"
     },
     {
       "path": "tests/test_leads.py",
@@ -3373,13 +3373,13 @@
     },
     {
       "path": "tests/test_site.py",
-      "bytes": 16377,
-      "sha256": "09378f6ffc98e788c25429b1f11d1ad2bc0003b8119d955c955e72df660e6a02"
+      "bytes": 16947,
+      "sha256": "30b1ba4b91d8624a26c999777ed91f8c6b7d01039e4226ca13e2f309f72857d4"
     },
     {
       "path": "tests/test_v12_browser.py",
-      "bytes": 31651,
-      "sha256": "81784100704f421b6c6eddd0765c1486f6766bbd87fa3afaeea012080eda8820"
+      "bytes": 35027,
+      "sha256": "29e1adb9fc8e10a7541aa3fe09a9e1c82b3deed433289cfc664c8b21d3e23c0a"
     },
     {
       "path": "tests/test_v12_reviews.py",
@@ -3393,8 +3393,8 @@
     },
     {
       "path": "tests/test_v13_browser.py",
-      "bytes": 21278,
-      "sha256": "26415802a2713ba458e4624fc3ccb2ab0c4f23c582c85b2a60acb10d21687a82"
+      "bytes": 22029,
+      "sha256": "550696fc73be9686a80a5e0fddefbe655863a4bc8d80dece2a1865f701a0e8dd"
     },
     {
       "path": "tests/test_v25_followup.py",
