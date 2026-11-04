@@ -1,19 +1,82 @@
-# Designer branch and PR workflow
+# Canonical collaboration and exact-source Pages workflow
 
-Repository: https://github.com/optidigitalagent/nfc-card-website . Handoff branch: `design/nfc-card-v36-2`. Start at the immutable handoff commit supplied by the owner; verify `git rev-parse HEAD`.
+Repository: `https://github.com/zaffirax55/nfc-card-website.git`.
+Current designer integration branch: `optidigital-3d-preview`; root source and
+sole publication workflow: `main`. This NFC-COLLAB-01 decision (2026-11-02)
+supersedes the earlier `optidigitalagent` upstream/fork and
+`design/nfc-card-v36-2` PR-target directions. Do not create a replacement fork.
 
-Create a child branch for each design iteration:
+## Branches and review
 
-```sh
-git switch -c design/your-visual-iteration
-```
+Fetch the relevant refs and record their full SHAs before creating separate
+worktrees. Branch designer iterations from `optidigital-3d-preview`; target
+that branch in the review. Branch root SEO/technical changes from `main`;
+storefront SEO implementations target preview separately. Use `design/<task>`,
+`seo/<task>` or `codex/<task>-<role>`. Preserve newer work and dirty checkouts.
+Do not reset either branch or merge all designer code into main.
 
-If you have repository write access, push that child branch normally and open a PR **into `design/nfc-card-v36-2`**, with before/after screenshots, changed-file list, owner direction, test evidence, content-count/route/price/media non-regression and known limits. No force push. If you do not have write access, use a fork and fetch the exact upstream handoff branch rather than starting from stale main. No fork or account access is created by this handoff. The designer's GitHub username and collaborator permissions are not known or verified.
+PR evidence includes the target/base SHA, narrow diff, owner direction,
+applicable test/build results, limitations and independent review. Visual work
+also needs before/after screenshots and existing route/locale, price, media,
+order, keyboard and responsive checks. Exact public copy and SEO research come
+from ChatGPT. Missing write access means retain a local patch for review.
 
-Read root `AGENTS.md` together with the explicit designer-only override and this handoff. Earlier default main/deployment directions do not authorize release of this branch. The owner permits source-branch transfer only.
+## Coordinated NFC-COLLAB-01 application order
 
-At transfer preflight, existing `.github/workflows/ci.yml` pushes were restricted to `main` and `release/public-v19` (plusv*tags); a push to this designer branch does **not** automatically run that workflow. Pages build is separately gated to `refs/heads/main` and the Pages-enabled variable. Do not claim a green GitHub Actions run for a feature push unless an actual run exists. PR validation may run, but must never merge or trigger deployment without explicit release approval. Do not change workflows, branch protection, default branch, Pages settings or Railway.
+These are proposed local patches, not already applied remote controls:
 
-Before each PR: build preview/SEO fixture, contract+transport+static checks, real local browser screenshots in all 3languages, narrow widths/native 200%zoom/keyboard/reduced motion, and independent review. Keep generated output, local synthetic state, logs, PII, `.env`, archives, node_modules and credentials out of Git. Public evidence must be sanitized; never publish private owner/CRM logs or real form submissions.
+1. Review and later integrate the preview patch first: convert
+   `publish-optidigital-3d.yml` into validation only, remove Pages jobs from its
+   `ci.yml`, and update instructions. Preserve every storefront source file.
+2. Review and later integrate the main patch: remove the optional Pages jobs
+   from `ci.yml`, make its Release job callable for an exact SHA, and replace
+   `fork-pages.yml` with the manual main-only entry plus the artifact guard.
+3. Verify both remote workflow inventories after integration. Until both
+   patches are applied, competing old publishers remain possible. Previously
+   queued/in-progress runs use their old workflow bytes; a separately authorized
+   release must wait for them to finish or be cancelled before dispatch.
+4. Resolve existing Release/manifest/guard failures in a separately approved
+   task without weakening validation. This local patch does not make them green.
 
-A future production release requires its own owner authorization and production gates. Do not merge to main, create release tags or publish from the designer branch.
+Commit/push/PR/merge, workflow runs and deployment are excluded from
+NFC-COLLAB-01. Neither step 1 nor step 2 authorizes a release.
+
+## Later explicit owner-authorized publication
+
+Only dispatch `main:.github/workflows/fork-pages.yml` on `main`, with the
+owner-approved full lowercase 40-character `storefront_sha`. A branch name or
+short SHA is rejected. Capture `github.sha` and `github.workflow_sha`; require
+them to match, checkout both sources by full SHA and verify their resolutions.
+Do not build a moving preview branch. Ordinary pushes/PRs only validate.
+
+The workflow calls the existing complete Release validation for both source
+SHAs. Storefront validation retains its production-policy tests and verified
+gateway build gate; root validation retains its synthetic-origin preview build.
+The separate assembled preview keeps the existing PUBLIC_PREVIEW behavior.
+Manifest/history guards, full tests and post-build source checks remain required.
+A failure skips artifact upload and deployment; a green preview is insufficient.
+
+After successful validation, build the root with locked npm dependencies and
+the committed GLB (no unpinned model regeneration or source mutation), build the
+explicit designer preview, run existing contract/transport/static checks, and
+mount it under `site/optidigital-3d`. Retain media, storefront paths and the
+existing URL rewrite. The final artifact guard requires noindex on every HTML
+page, local HTML URL targets and all 12 designer models. Both source trees must
+still match their checked-out commits.
+
+`site/PUBLICATION_IDENTITY.json` records main/storefront/workflow SHAs and a
+payload digest excluding that identity file. The separate
+`pages-source-and-artifact-identity` Actions artifact records checks and a full
+file manifest/tree digest including the identity file. The digest is a content
+tree identity, not a Git SHA or an uploaded tar checksum. Both uploads depend
+on final validation. Deployment consumes that run's Pages artifact.
+
+The single workflow-level `nfc-github-pages` concurrency boundary covers the
+whole publication. Only the deploy job has `pages: write` and `id-token: write`;
+existing `github-pages` environment protections remain in place.
+
+No publication setting, new domain or production behavior is introduced.
+Full Actions execution and a later live identity check require their own
+release authorization. Existing historical release statements do not prove
+this proposed artifact is deployed. Keep source manifests and private data
+separate from generated QA evidence; never test with real production submissions.

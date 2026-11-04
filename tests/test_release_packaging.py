@@ -368,3 +368,19 @@ def test_history_diagnostics_never_include_secret_filename():
     _, value = payloads()[0]
     finding = rg.Finding("src/" + value, "unsafe-path")
     assert value not in finding.diagnostic()
+
+
+def test_reviewed_history_lines_require_exact_blob_path_and_historical_context(monkeypatch):
+    path = "migration/reviewed-example.sh"
+    line = "password" + " = " + repr("synthetic-reviewed-placeholder")
+    data = (line + "\n").encode()
+    key = (path, "credential-literal", hashlib.sha256(data).hexdigest(),
+           hashlib.sha256(line.encode()).hexdigest())
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {key: "Synthetic exact-scope regression fixture"})
+    assert not rg.scan_bytes(path, data, "a" * 12)
+    assert rg.scan_bytes(path, data)
+    assert rg.scan_bytes(path, data, "index")
+    assert rg.scan_bytes(path, data, "not-a-history-commit")
+    assert rg.scan_bytes("migration/other.sh", data, "a" * 12)
+    assert rg.scan_bytes(path, data + b"# new surrounding bytes\n", "a" * 12)
+    assert rg.scan_bytes(path, (line + " # edited\n").encode(), "a" * 12)

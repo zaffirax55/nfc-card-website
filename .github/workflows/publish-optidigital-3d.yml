@@ -1,29 +1,27 @@
-name: Publish OptiDigital 3D preview to GitHub Pages
+name: Validate OptiDigital 3D preview (no publication)
 on:
   push:
-    branches: [optidigital-3d-preview]
-    paths:
-      - '.github/workflows/publish-optidigital-3d.yml'
-      - 'src/v36_2/**'
+    branches: [optidigital-3d-preview, 'design/**', 'codex/**']
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
-  group: optidigital-3d-pages
-  cancel-in-progress: false
+  group: nfc-designer-validation-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  publish:
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-    runs-on: ubuntu-latest
+  validate:
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24'
+          package-manager-cache: false
+      - run: npm ci
       - name: Build preview
         run: npm run designer:build
       - name: Validate copied GLB models
@@ -31,11 +29,9 @@ jobs:
           test "$(find work/designer-preview-v36_2/nfc-card-website/assets/models -type f -name '*.glb' | wc -l)" -eq 12
           test -f work/designer-preview-v36_2/nfc-card-website/assets/model-viewer.min.js
           test -f work/designer-preview-v36_2/nfc-card-website/index.html
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: work/designer-preview-v36_2/nfc-card-website
-      - id: deploy
-        uses: actions/deploy-pages@v4
+      - name: Validate designer fixtures, contracts, transport and static output
+        run: |
+          npm run designer:seo
+          npm run designer:test:contracts
+          npm run designer:test:transport
+          npm run designer:check
