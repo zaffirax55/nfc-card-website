@@ -185,7 +185,10 @@ def test_about_responsive_media_route_top_and_safe_hash_navigation(web,browser,l
         assert page.evaluate('scrollY')<=1
         assert not page_errors and not console_errors
         assert page.evaluate('Array.isArray(window.nfcAnalyticsEvents)')
-        page.locator('a[href="#about-founder-story"]').click();expect(page.locator('#about-founder-story')).to_be_in_viewport()
+        # Owner-added quick navigation shares this anchor; exercise the original
+        # story link explicitly rather than relying on the old unique href.
+        expect(page.locator('.about-quicknav a[href="#about-founder-story"]')).to_have_count(1)
+        page.locator('a.about-story-link[href="#about-founder-story"]').click();expect(page.locator('#about-founder-story')).to_be_in_viewport()
         header=page.locator('header').bounding_box();story=page.locator('#about-founder-story').bounding_box()
         assert story['y']>=header['y']+header['height']-1
         sources=[]
@@ -217,7 +220,9 @@ def test_catalog_reserves_delayed_media_before_first_paint(web,browser,locale,ro
     def network_boundary(request):
         if not request.request.url.startswith(origin+'/'):
             blocked.append(request.request.url);return request.abort()
-        if '05-promo-direct-review-form' in request.request.url and not released:
+        # 9199a95c changed this card to the supplied front photograph. Hold all
+        # responsive candidates; the current image must still be undecoded at FCP.
+        if '/assets/media/2026-09/review-card-front' in request.request.url and not released:
             delayed.append(request);return
         request.continue_()
     context.route('**/*',network_boundary)
@@ -243,16 +248,19 @@ def test_catalog_reserves_delayed_media_before_first_paint(web,browser,locale,ro
             page.wait_for_timeout(50)
         assert first_paint is not None,'The delayed image must remain blocked through a real first contentful paint.'
         image=page.locator('.commerce-card[data-variant=standard] .catalog-product-image')
+        frame=page.locator('.commerce-card[data-variant=standard] .catalog-card-media.catalog-card-with-photos')
         copy=page.locator('.commerce-card[data-variant=standard] .commerce-card-copy')
         page.evaluate('()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))')
-        before={'image':image.bounding_box(),'copy':copy.bounding_box()}
+        before={'image':image.bounding_box(),'copy':copy.bounding_box(),'frame':frame.bounding_box()}
         assert delayed,'The image must actually be held by the local network boundary.'
         assert image.evaluate('(e)=>!e.complete&&e.naturalWidth===0')
-        assert before['image'] and before['copy']
-        reserved=before['image']
-        # v33 uses the shared square media frame on narrow catalog cards.
-        # Its reserved box must exist before the delayed image arrives.
-        assert reserved['height']>300 and abs(reserved['height']-reserved['width'])<=1
+        assert before['image'] and before['copy'] and before['frame']
+        reserved=before['frame']
+        # Owner's photo-choice layout reserves a 320px frame at 390px width:
+        # 220px image row + 64px choices + 8px gap + 28px padding.
+        assert reserved['width']>300 and abs(reserved['height']-320)<=1
+        assert abs(before['image']['height']-220)<=1
+        expect(frame.locator('[data-catalog-photo]')).to_have_count(4)
         assert abs(before['copy']['y']-(reserved['y']+reserved['height']))<=1
         name=f'{locale}-{("home" if route=="/" else "catalog")}-delayed-media-390'
         # Do not use shot(): its image.decode() wait must not release this deliberate delay.
@@ -267,8 +275,8 @@ def test_catalog_reserves_delayed_media_before_first_paint(web,browser,locale,ro
         assert image.evaluate('(e)=>e.complete&&e.naturalWidth>0')
         page.evaluate('()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))')
         page.wait_for_timeout(100)
-        after={'image':image.bounding_box(),'copy':copy.bounding_box()}
-        for target in ['image','copy']:
+        after={'image':image.bounding_box(),'copy':copy.bounding_box(),'frame':frame.bounding_box()}
+        for target in ['image','copy','frame']:
             for coordinate in ['x','y','width','height']:
                 assert abs(after[target][coordinate]-before[target][coordinate])<=1,(target,coordinate,before,after)
         performance=page.evaluate('window.nfcDelayedMedia')

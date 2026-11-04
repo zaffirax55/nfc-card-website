@@ -97,6 +97,21 @@ def test_generated_boundary_must_be_a_directory(tree):
         vm.verify(tree)
 
 
+def test_only_reciprocal_registered_git_worktree_marker_is_excluded(tree, tmp_path):
+    metadata = tmp_path.parent / (tmp_path.name + "-gitmeta")
+    registration = metadata / "worktrees" / "release"
+    registration.mkdir(parents=True)
+    put(metadata, "config", b"[core]\nrepositoryformatversion = 0\n")
+    put(metadata, "HEAD", b"ref: refs/heads/main\n")
+    put(registration, "commondir", b"../..\n")
+    put(registration, "gitdir", str(tree / ".git").encode() + b"\n")
+    put(tree, ".git", ("gitdir: " + str(registration) + "\n").encode())
+    vm.verify(tree)
+    put(registration, "gitdir", str(tree / "other").encode() + b"\n")
+    with pytest.raises(vm.ManifestError, match="replaced with a file"):
+        vm.verify(tree)
+
+
 @pytest.mark.parametrize("name", ["../escape", "/absolute", "a/../b", "a//b", "./a", "a/",
                                  "C:/drive", "a\\b", "a\nb", "a/.", "a. ", "site/index.html",
                                  vm.MANIFEST])
@@ -353,3 +368,19 @@ def test_history_diagnostics_never_include_secret_filename():
     _, value = payloads()[0]
     finding = rg.Finding("src/" + value, "unsafe-path")
     assert value not in finding.diagnostic()
+
+
+def test_reviewed_history_lines_require_exact_blob_path_and_historical_context(monkeypatch):
+    path = "migration/reviewed-example.sh"
+    line = "password" + " = " + repr("synthetic-reviewed-placeholder")
+    data = (line + "\n").encode()
+    key = (path, "credential-literal", hashlib.sha256(data).hexdigest(),
+           hashlib.sha256(line.encode()).hexdigest())
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {key: "Synthetic exact-scope regression fixture"})
+    assert not rg.scan_bytes(path, data, "a" * 12)
+    assert rg.scan_bytes(path, data)
+    assert rg.scan_bytes(path, data, "index")
+    assert rg.scan_bytes(path, data, "not-a-history-commit")
+    assert rg.scan_bytes("migration/other.sh", data, "a" * 12)
+    assert rg.scan_bytes(path, data + b"# new surrounding bytes\n", "a" * 12)
+    assert rg.scan_bytes(path, (line + " # edited\n").encode(), "a" * 12)
