@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 857,
+  "file_count_including_manifest": 858,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -58,8 +58,8 @@
     },
     {
       "path": ".github/workflows/verify-mobile.yml",
-      "bytes": 1190,
-      "sha256": "60395901981e022b22e53ed5e7679d706ea76923bd0581aea710f44ad997d8db"
+      "bytes": 1329,
+      "sha256": "78c4e73cc0c0899406cdf2f8b735fc68d71e1e4e7d2c40de72bc2d3c81f66b6d"
     },
     {
       "path": ".gitignore",
@@ -573,8 +573,8 @@
     },
     {
       "path": "migration/verify-mobile.mjs",
-      "bytes": 18609,
-      "sha256": "83d31302013bd97c295a96a395effc0e37f4bc90569a44478a14f6c4cf03a01c"
+      "bytes": 22834,
+      "sha256": "f0b6bd0f1475475fecd43f1a0606282ca6d6c77fa3335e9cb22ad67295110548"
     },
     {
       "path": "package-lock.json",
@@ -1153,8 +1153,8 @@
     },
     {
       "path": "release/PRODUCTION_ADAPTATIONS.json",
-      "bytes": 5875,
-      "sha256": "08e6cae40d2dc0c0b7d889169d96129ca1f2c41747c302d25240f11741d5dd32"
+      "bytes": 8385,
+      "sha256": "4f1f653939039a4c2d1a6f394b5657282586470b162af87092e33da360b41f4c"
     },
     {
       "path": "release/gateway-release.json",
@@ -3543,8 +3543,8 @@
     },
     {
       "path": "src/v36_2/app.mjs",
-      "bytes": 81709,
-      "sha256": "4a8c6af4259063ffdbb6363ecc91967ab61294d7341586186981324028712097"
+      "bytes": 84607,
+      "sha256": "5dfed509c1498392376d9cc47b9360e3e54c931fc55d9f369467a265546f9e56"
     },
     {
       "path": "src/v36_2/assets/IBMPlexMono-OFL.txt",
@@ -3808,8 +3808,8 @@
     },
     {
       "path": "src/v36_2/commerce.mjs",
-      "bytes": 17265,
-      "sha256": "24457d4968513e15013f22aa91c4476e5ed81b875686bfcbe19c7c18af429582"
+      "bytes": 18281,
+      "sha256": "a8e09bcedb88618d3fdd1aeff58c81653701f40bf8fa741586b3a0f3972d38d8"
     },
     {
       "path": "src/v36_2/contacts.mjs",
@@ -3843,8 +3843,8 @@
     },
     {
       "path": "src/v36_2/editorial-view.mjs",
-      "bytes": 13115,
-      "sha256": "f299997ade46c66a5a0a3cb0f5093d7ca04ea5f5192483495490633aec457fb4"
+      "bytes": 14448,
+      "sha256": "3e81f77c9deca2abc23e824155f4c6789474d83bc795f044c726daf20ae6f1ec"
     },
     {
       "path": "src/v36_2/editorial.css",
@@ -3860,6 +3860,11 @@
       "path": "src/v36_2/email-proposal.mjs",
       "bytes": 6406,
       "sha256": "376fe12d44da8e5866344685bee14b49a41e36b3c277335fa3c59cb25c5dbd67"
+    },
+    {
+      "path": "src/v36_2/finishing-pass.css",
+      "bytes": 6977,
+      "sha256": "8e3a8ecfcb8f77dfe91ae6ca8434f7d5604bad8451fc942fc0cf993cd7d512bd"
     },
     {
       "path": "src/v36_2/hero-tap-compact.css",
@@ -4083,8 +4088,8 @@
     },
     {
       "path": "src/v36_2/static-render.mjs",
-      "bytes": 4047,
-      "sha256": "dfd873aae34cd21e2964b153c2c0dce500bb827884c21f8aa2dd905e02de6236"
+      "bytes": 4104,
+      "sha256": "3cc65450483c99e9cd0e7d2cd934928848bb856d466055a5cbcb43b9f4db21b2"
     },
     {
       "path": "src/v36_2/styles.css",
@@ -4148,13 +4153,13 @@
     },
     {
       "path": "tests/test_instagram_v18.py",
-      "bytes": 18587,
-      "sha256": "e895f10f17f63a12461702543e4ea29d335b17035c03baef2c625a1d9a2791f9"
+      "bytes": 21069,
+      "sha256": "b50cafa14f64c0140040a808957e73ed88d521f305e2f0a3878a18be0a07d58f"
     },
     {
       "path": "tests/test_instagram_v20.py",
-      "bytes": 4235,
-      "sha256": "38c6406357838d61a0267dc9e4f2cf0cf011752af463c058532b67d80e92ea4a"
+      "bytes": 7451,
+      "sha256": "e1293b3ba7f44adca9a03438c8e27c792cfd344a8129cf20b6a3aa23ff39e96b"
     },
     {
       "path": "tests/test_instagram_v22.py",
@@ -4273,8 +4278,8 @@
     },
     {
       "path": "tests/v36_2-price.test.mjs",
-      "bytes": 4655,
-      "sha256": "1ae3efa017abbbe1d64369bcbc2356f8eed178a38631e8740f04d7da1ba60f3c"
+      "bytes": 7285,
+      "sha256": "a1a1dae5c9a5cffecc6d6ca7bc2629dfb24933dbb8db9096cc425085fc718c41"
     },
     {
       "path": "tests/v36_2-production.test.mjs",

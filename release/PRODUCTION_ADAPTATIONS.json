@@ -13,8 +13,8 @@
     {
       "path": "src/v36_2/app.mjs",
       "archiveSHA256": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
-      "releaseSHA256": "4a8c6af4259063ffdbb6363ecc91967ab61294d7341586186981324028712097",
-      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "releaseSHA256": "5dfed509c1498392376d9cc47b9360e3e54c931fc55d9f369467a265546f9e56",
+      "reason": "NFC-RECONCILE-01: preserve exact current owner-committed designer bytes; provenance metadata only, no designer edit or publication authorization.",
       "repositoryProvenance": {
         "repository": "zaffirax55/nfc-card-website",
         "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
@@ -28,6 +28,17 @@
           "26239535dd11729814f5b4c6d4306c84223f5612",
           "96871b100acf5b2971a194762a7cdd4a21fa9584",
           "5f45bdc8e83a5df1f061aee94aa1eb2801d006ad"
+        ]
+      },
+      "reconciliationProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewTarget": "783dbb5fbbec95147596dc7a14da15f6db35e304",
+        "lastSourceChangeCommit": "b97f0f0654df60288f72a84fce3094469550413d",
+        "gitBlob": "cb2797564be1bb3d9ba1439b40f49ea9c815f061",
+        "changeCommits": [
+          "b97f0f0654df60288f72a84fce3094469550413d",
+          "f3a931d61521dd6b996255b6fbc0bd9647a38f06",
+          "a218dec2df9100155f4a53da6ed5c5f0120d7357"
         ]
       }
     },
@@ -63,8 +74,8 @@
     {
       "path": "src/v36_2/editorial-view.mjs",
       "archiveSHA256": "13b9335a893f0a0ae414191576b95dc0198cd15e0d8a571186bf50cdf053371e",
-      "releaseSHA256": "f299997ade46c66a5a0a3cb0f5093d7ca04ea5f5192483495490633aec457fb4",
-      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "releaseSHA256": "3e81f77c9deca2abc23e824155f4c6789474d83bc795f044c726daf20ae6f1ec",
+      "reason": "NFC-RECONCILE-01: preserve exact current owner-committed designer bytes; provenance metadata only, no designer edit or publication authorization.",
       "repositoryProvenance": {
         "repository": "zaffirax55/nfc-card-website",
         "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
@@ -73,13 +84,22 @@
         "changeCommits": [
           "9b910cbb5f90f299247e0a77be6a22bf71899e51"
         ]
+      },
+      "reconciliationProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewTarget": "783dbb5fbbec95147596dc7a14da15f6db35e304",
+        "lastSourceChangeCommit": "6e0f6da303392af4112be0e08b3dedbb5adde139",
+        "gitBlob": "6289f47463affc2ef9034162866f60aaa756ba42",
+        "changeCommits": [
+          "6e0f6da303392af4112be0e08b3dedbb5adde139"
+        ]
       }
     },
     {
       "path": "src/v36_2/static-render.mjs",
       "archiveSHA256": "12201670102697b17fc17a91ac31187ae1311529ed2fac7d5fe6376ef653b9a2",
-      "releaseSHA256": "dfd873aae34cd21e2964b153c2c0dce500bb827884c21f8aa2dd905e02de6236",
-      "reason": "NFC-BLOCKERS-01: reconcile existing committed designer changes preserved in the accepted preview base; metadata only, no visual or release authorization added.",
+      "releaseSHA256": "3cc65450483c99e9cd0e7d2cd934928848bb856d466055a5cbcb43b9f4db21b2",
+      "reason": "NFC-RECONCILE-01: preserve exact current owner-committed designer bytes; provenance metadata only, no designer edit or publication authorization.",
       "repositoryProvenance": {
         "repository": "zaffirax55/nfc-card-website",
         "observedPreviewBase": "714a101c1c129df6cd6d1baed2e0e759696e6870",
@@ -102,6 +122,37 @@
           "9d4e9281372a8a894cb22ce69c33875b4a64923d",
           "c4f327d91a92655fa53ea57ca477ae86614a058b"
         ]
+      },
+      "reconciliationProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewTarget": "783dbb5fbbec95147596dc7a14da15f6db35e304",
+        "lastSourceChangeCommit": "8c4cacde8496d44c1de28ad6bca535d26d439d9a",
+        "gitBlob": "c8cd50684a8cf1bf7b937219033d48c0f91c5aea",
+        "changeCommits": [
+          "8c4cacde8496d44c1de28ad6bca535d26d439d9a"
+        ]
+      }
+    },
+    {
+      "path": "src/v36_2/commerce.mjs",
+      "archiveSHA256": "24457d4968513e15013f22aa91c4476e5ed81b875686bfcbe19c7c18af429582",
+      "releaseSHA256": "a8e09bcedb88618d3fdd1aeff58c81653701f40bf8fa741586b3a0f3972d38d8",
+      "reason": "NFC-RECEIPT-01 local candidate: reviewed version-specific historical receipt calculation; current catalog prices and server contract unchanged. Integrity provenance only; no publication/business approval.",
+      "reconciliationProvenance": {
+        "repository": "zaffirax55/nfc-card-website",
+        "observedPreviewTarget": "783dbb5fbbec95147596dc7a14da15f6db35e304",
+        "lastSourceChangeCommit": "2a91b2641885c52810b79b6ce864783036660072",
+        "gitBlob": "9cbf3308280acaa2ab1d3a8b3042592da371a2e7",
+        "changeCommits": [
+          "2a91b2641885c52810b79b6ce864783036660072"
+        ]
+      },
+      "localCandidateProvenance": {
+        "task": "NFC-RECEIPT-01",
+        "baseTreeSha": "9a75c0834818da47d27c05f6790fabf2f605ff77",
+        "beforeSHA256": "7cad9c6054e4eda301f0cb4a488965ef7126ab097491d3d2b1fad7650e549be6",
+        "contracts": "105/105 after actual review; all82 frozen fixtures unchanged",
+        "notCommittedOrReleased": true
       }
     }
   ]

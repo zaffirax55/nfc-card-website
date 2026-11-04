@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import {priceCart} from '../src/v36_2/commerce.mjs';
 const browser=await chromium.launch({headless:true,args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader']});
 const base='http://127.0.0.1:8731/nfc-card-website';
 const widths=[320,360,375,390,430,768];
@@ -287,6 +288,59 @@ for(const width of [320,390,768,1366]){
  if(cardState.length<4||cardState.some(x=>!x.slot||!x.button||x.buttonBg!=='rgb(21, 23, 25)'||!x.slotBeforeBtn))
   errors.push('stage01 shared catalog card styles missing '+width);
  await page.screenshot({path:'stage01-'+width+'.png',fullPage:false});
+ await page.close();
+}
+
+// Finishing pass: shared Mini prices are read from the actual priceCart function,
+// not copied from static mock text.
+for(const quantity of [1,2]){
+ const quote=id=>priceCart([{lineId:'test-'+id,productId:id,quantity}], 'UA');
+ const a=quote('beauty-review-card'),b=quote('restaurant-review-card');
+ console.log('MINI_PRICE_PARITY',quantity,JSON.stringify({beauty:a.total,restaurant:b.total}));
+ if(a.kind!=='fixed'||b.kind!=='fixed'||a.total!==b.total)
+   errors.push('R06 Restaurant Mini price differs from Beauty Mini at quantity '+quantity);
+}
+for(const width of [390,1366]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ page.on('pageerror',e=>errors.push('finishing '+width+' JS '+e.message));
+ await page.goto(base+'/solutions/',{waitUntil:'load'});
+ const nav=page.locator('[data-catalog-categories]');
+ const chipCount=await nav.locator('a').count();
+ const advancedClosed=await page.locator('.catalog-advanced').evaluate(el=>!el.open);
+ const allCount=await page.locator('#results .product-card').count();
+ console.log('COMPACT_CATALOG',width,JSON.stringify({chipCount,advancedClosed,allCount}));
+ if(chipCount!==3||!advancedClosed||allCount<6)errors.push('R16 compact catalog not available at '+width);
+ await nav.locator('a[href*="google-review"]').click();
+ await page.waitForURL('**/collections/google-review/');
+ const google=await page.locator('#results .product-card').evaluateAll(els=>els.map(el=>el.dataset.productId));
+ if(!google.includes('review-card')||google.includes('nfc-instagram-card'))errors.push('R16 Google category broken '+width);
+ await page.locator('[data-catalog-categories] a[href*="/collections/instagram/"]').click();
+ await page.waitForURL('**/collections/instagram/');
+ const insta=await page.locator('#results .product-card').evaluateAll(els=>els.map(el=>el.dataset.productId));
+ if(insta.length!==1||insta[0]!=='nfc-instagram-card')errors.push('R16 Instagram category broken '+width);
+ await page.locator('[data-catalog-categories] a[href$="/solutions/"]').click();
+ await page.waitForURL('**/solutions/');
+ if(!await page.locator('#results .product-card[data-product-id="nfc-menu-card"]').count())errors.push('R16 Menu Card disappeared '+width);
+ await page.locator('.catalog-advanced summary').click();
+ if(!await page.locator('#filters-form #q').isVisible())errors.push('R16 advanced search not available '+width);
+ await page.goto(base+'/services/design/',{waitUntil:'load'});
+ const sample=page.locator('.editorial-design-showcase img');
+ const samples=await sample.evaluateAll(async imgs=>Promise.all(imgs.map(async img=>{await img.decode();return img.naturalWidth})));
+ const circle=await page.locator('.editorial-design-hero .editorial-intro').evaluate(el=>getComputedStyle(el,'::before').content);
+ await page.locator('.editorial-design-hero .editorial-hero-actions a[href="#design-request"]').click();
+ await page.waitForTimeout(150);
+ const requestPos=await page.locator('#design-request').evaluate(el=>({top:Math.round(el.getBoundingClientRect().top),form:!!el.querySelector('#request-form'),scrollY}));
+ console.log('DESIGN_REQUEST',width,JSON.stringify({samples,circle,requestPos}));
+ if(samples.length!==3||samples.some(n=>n<100)||!['none','normal'].includes(circle)||!requestPos.form||requestPos.scrollY<200||requestPos.top>140)
+  errors.push('R17/R18 photo hero or existing request form jump failed '+width);
+ await page.goto(base+'/solutions/review-card/',{waitUntil:'load'});
+ const noNote=await page.locator('[data-google-link-later]').count()===0;
+ const threeSteps=await page.locator('.review-tap-sequence li').count();
+ const headings=await page.locator('.review-tap-sequence h3').allTextContents();
+ const orderForm=await page.locator('#product-config input[name="quantity"]').count();
+ console.log('REVIEW_DETAIL',width,JSON.stringify({noNote,threeSteps,headings,orderForm}));
+ if(!noNote||threeSteps!==3||orderForm!==1||!headings[0]?.includes('Піднесіть')||!headings[1]?.includes('Відкрийте')||!headings[2]?.includes('Залиште'))
+  errors.push('R09/R14 Google Review Card steps or configuration failed '+width);
  await page.close();
 }
 await browser.close();

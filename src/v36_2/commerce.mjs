@@ -12,10 +12,13 @@ const freeze = value => {
 };
 export const OWNER_UA_PRICING_REVISION='NFC-V35-V2-OWNER-20261027-UA';
 export const OWNER_UA_SOURCE_REVISION='NFC-CARD-BRANDED-PAIR-OWNER-20261026';
+// Local estimate provenance for the existing owner catalog change, not a new
+// server-authorized receipt profile or a commercial approval.
+export const RESTAURANT_UA_ESTIMATE_SOURCE='NFC-CARD-RESTAURANT-MINI-ESTIMATE-2A91B264';
 const legacyUASources=['NFC-CARD-CONTENT-TRUTH-PRICE-v33','NFC-INSTAGRAM-UA-2026-09-v18','NFC-MENU-UA-2026-09-v23','NFC-REVIEW-3D-UA-2026-09-v26'];
 const pricingProfiles=freeze({
- 'NFC-V35-V2-CANDIDATE-01-UA':{revision:'NFC-V35-V2-CANDIDATE-01-UA',market:'UA',sourcePriceRevisions:legacyUASources,brandedUaPair:2600},
- [OWNER_UA_PRICING_REVISION]:{revision:OWNER_UA_PRICING_REVISION,market:'UA',sourcePriceRevisions:[...legacyUASources,OWNER_UA_SOURCE_REVISION],brandedUaPair:3600},
+ 'NFC-V35-V2-CANDIDATE-01-UA':{revision:'NFC-V35-V2-CANDIDATE-01-UA',market:'UA',sourcePriceRevisions:legacyUASources,brandedUaPair:2600,restaurantUaPrices:null},
+ [OWNER_UA_PRICING_REVISION]:{revision:OWNER_UA_PRICING_REVISION,market:'UA',sourcePriceRevisions:[...legacyUASources,OWNER_UA_SOURCE_REVISION],brandedUaPair:3600,restaurantUaPrices:null},
  'NFC-V35-V2-CANDIDATE-01-PL':{revision:'NFC-V35-V2-CANDIDATE-01-PL',market:'PL',sourcePriceRevisions:['NFC-CARD-PL-2026-09-v28'],brandedUaPair:null},
 });
 export function pricingRevision(market){if(market==='UA')return OWNER_UA_PRICING_REVISION;if(market==='PL')return 'NFC-V35-V2-CANDIDATE-01-PL';throw new RangeError('Invalid pricing market');}
@@ -24,15 +27,18 @@ const product = (id, slug, name, design, purpose, format, fields = {}) => ({
   id, slug, name, design, purpose, format, niche: null, status: 'active',
   route: `/solutions/${slug}/`, revision: 'NFC-CARD-CONTENT-TRUTH-PRICE-v33', ...fields
 });
+// Restaurant ready-made Mini follows the same currently approved UA mini pricing as Beauty ready-made Mini.
+// Share the frozen value to keep 1-card and 2-card quote behavior identical.
+const READY_MINI_UA_PRICES=freeze({1:800,2:1400});
 export const catalog = freeze([
   product('review-card', 'review-card', 'Google Review Card', 'ready', 'google_review', 'standard_100', {fixedUA:{1:1500,2:2600},fixedPL:{1:129,2:219}}),
   product('branded-review-card', 'branded-review-card', 'Branded Review Card', 'branded', 'google_review', 'standard_100', {fixedUA:{1:2000,2:3600},fixedPL:{1:169,2:299},revision:OWNER_UA_SOURCE_REVISION}),
   product('nfc-instagram-card', 'instagram-card', 'NFC Instagram Card', 'ready', 'instagram_profile', 'standard_100', {fixedUA:{1:1500,2:2600},fixedPL:{1:129,2:219},revision:'NFC-INSTAGRAM-UA-2026-09-v18'}),
   product('nfc-menu-card', 'menu-card', 'NFC Menu Card', 'ready', 'online_menu', 'menu_variants', {revision:'NFC-MENU-UA-2026-09-v23'}),
   product('review-card-3d', 'review-card-3d', 'NFC Review Card 3D', 'fixed_shown_design', 'google_review', 'three_d', {unitUA:4000,unitPL:349,prototype:true,madeToOrder:true,revision:'NFC-REVIEW-3D-UA-2026-09-v26'}),
-  product('beauty-review-card', 'beauty-review-card', 'Beauty Review Card Mini', 'ready', 'google_review', 'mini', {niche:'beauty',fixedUA:{1:800,2:1400},legacy:true}),
+  product('beauty-review-card', 'beauty-review-card', 'Beauty Review Card Mini', 'ready', 'google_review', 'mini', {niche:'beauty',fixedUA:READY_MINI_UA_PRICES,legacy:true}),
   product('branded-beauty-review-card', 'branded-beauty-review-card', 'Branded Beauty Review Card Mini', 'branded', 'google_review', 'mini', {niche:'beauty',fixedUA:{1:800,2:1600},legacy:true}),
-  product('restaurant-review-card', 'restaurant-review-card', 'Restaurant Review Card Mini', 'ready', 'google_review', 'mini', {niche:'restaurant',legacy:true}),
+  product('restaurant-review-card', 'restaurant-review-card', 'Restaurant Review Card Mini', 'ready', 'google_review', 'mini', {niche:'restaurant',fixedUA:READY_MINI_UA_PRICES,legacy:true}),
   product('branded-restaurant-review-card', 'branded-restaurant-review-card', 'Branded Restaurant Review Card Mini', 'branded', 'google_review', 'mini', {niche:'restaurant',legacy:true}),
   product('universal-ready-mini', 'universal-mini-card', 'Universal Ready Mini', 'ready', 'google_review', 'mini', {status:'draft',revision:null}),
   product('universal-branded-mini', 'branded-mini-card', 'Universal Branded Mini', 'branded', 'google_review', 'mini', {status:'draft',revision:null})
@@ -156,7 +162,12 @@ export function priceCart(lines = [], market = 'UA', revision) {
     } else if (p.id==='review-card-3d') {unitPrice=market==='PL'?p.unitPL:p.unitUA; amount=q*unitPrice;}
     else amount=(market==='PL'?p.fixedPL:p.fixedUA)?.[q] ?? null;
     if(p.id==='branded-review-card'&&market==='UA'&&q===2)amount=profile.brandedUaPair;
-    return {...g,groupId:`${market}:${p.id}`,amount,unitPrice,pricingRevision:market==='PL'?'NFC-CARD-PL-2026-09-v28':p.id==='branded-review-card'&&profile.revision==='NFC-V35-V2-CANDIDATE-01-UA'?'NFC-CARD-CONTENT-TRUTH-PRICE-v33':p.revision};
+    const restaurantUA=p.id==='restaurant-review-card'&&market==='UA';
+    // Explicit revisions replay immutable receipt semantics. Without a revision,
+    // this function remains the current, non-authoritative catalog estimate.
+    // expectedQuote() always supplies the receipt's validated profile revision.
+    if(restaurantUA&&revision!==undefined)amount=profile.restaurantUaPrices?.[q]??null;
+    return {...g,groupId:`${market}:${p.id}`,amount,unitPrice,pricingRevision:market==='PL'?'NFC-CARD-PL-2026-09-v28':restaurantUA&&revision===undefined?RESTAURANT_UA_ESTIMATE_SOURCE:p.id==='branded-review-card'&&profile.revision==='NFC-V35-V2-CANDIDATE-01-UA'?'NFC-CARD-CONTENT-TRUTH-PRICE-v33':p.revision};
   });
   const knownSubtotal=groups.reduce((sum,g)=>sum+(g.amount??0),0);
   const quote=groups.some(g=>g.amount===null),fixed=groups.some(g=>g.amount!==null);
