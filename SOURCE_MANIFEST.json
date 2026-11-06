@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 858,
+  "file_count_including_manifest": 867,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -583,8 +583,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1036,
-      "sha256": "90d798fc8cf491b7ac2931406dd1f78560e4f4470834356724134b8c533d461d"
+      "bytes": 1153,
+      "sha256": "842337a917de190b4fb1706ed74d4f9845f76f90e10b7f46de0082cde0bc59ff"
     },
     {
       "path": "refinements/instagram-v18/ACCEPTANCE_REPORT.md",
@@ -1153,8 +1153,8 @@
     },
     {
       "path": "release/PRODUCTION_ADAPTATIONS.json",
-      "bytes": 8385,
-      "sha256": "4f1f653939039a4c2d1a6f394b5657282586470b162af87092e33da360b41f4c"
+      "bytes": 13835,
+      "sha256": "073e3dd079fbf6911c927de04eb9803bd2d9c2e8e94734ce66420c0bbe937afc"
     },
     {
       "path": "release/gateway-release.json",
@@ -3543,8 +3543,8 @@
     },
     {
       "path": "src/v36_2/app.mjs",
-      "bytes": 84607,
-      "sha256": "5dfed509c1498392376d9cc47b9360e3e54c931fc55d9f369467a265546f9e56"
+      "bytes": 86472,
+      "sha256": "d6fe54ca84c8edb6405c524e51c9e79baefb39c27e96ca1a2c0848d8688762b5"
     },
     {
       "path": "src/v36_2/assets/IBMPlexMono-OFL.txt",
@@ -3802,6 +3802,11 @@
       "sha256": "bcd58ff51dab736d2b6a3d20619b4d6f53b6acd1e85e7582dc5870e634618742"
     },
     {
+      "path": "src/v36_2/branded-content.mjs",
+      "bytes": 6284,
+      "sha256": "68106a30bea2382c2563d214a5ace47a49d95a2b3e372093e82a3062c3bf9a34"
+    },
+    {
       "path": "src/v36_2/build-config.mjs",
       "bytes": 350,
       "sha256": "ef43680bcf4ef304def797fad181c2efd1ffd45203ce956319e5916f79c6b0af"
@@ -3843,8 +3848,8 @@
     },
     {
       "path": "src/v36_2/editorial-view.mjs",
-      "bytes": 14448,
-      "sha256": "3e81f77c9deca2abc23e824155f4c6789474d83bc795f044c726daf20ae6f1ec"
+      "bytes": 14518,
+      "sha256": "8845fbfbb49847ab871b96c25c95bfc2fb3c2f5f40f1681ea41849d2e73aa06b"
     },
     {
       "path": "src/v36_2/editorial.css",
@@ -3867,6 +3872,11 @@
       "sha256": "8e3a8ecfcb8f77dfe91ae6ca8434f7d5604bad8451fc942fc0cf993cd7d512bd"
     },
     {
+      "path": "src/v36_2/google-review-content.mjs",
+      "bytes": 6491,
+      "sha256": "9ad5ba125208340e570951f2da1c47a20730b4015c31abf48b4abd01b3479046"
+    },
+    {
       "path": "src/v36_2/hero-tap-compact.css",
       "bytes": 7116,
       "sha256": "c6642cdd53c03cf1aa1aa08358ef2b158a65ecc4f61508a2224c5e303450c7e3"
@@ -3885,6 +3895,11 @@
       "path": "src/v36_2/i18n.mjs",
       "bytes": 57603,
       "sha256": "d3e670cb2a14dff988091274c5049ce4962f277d7223c7d8663caba8e3cf15ea"
+    },
+    {
+      "path": "src/v36_2/instagram-content.mjs",
+      "bytes": 5519,
+      "sha256": "97d0ed47dd29354272b09e95fa0482b6c4a1a3fe09325b12a49e41e930bba801"
     },
     {
       "path": "src/v36_2/legacy-v36/commerce-contract.mjs",
@@ -4058,8 +4073,8 @@
     },
     {
       "path": "src/v36_2/seo.mjs",
-      "bytes": 16237,
-      "sha256": "a9cab713db1ac2a7f8c0d23094894c32779c52fc540b84039f4898e0dea5aa00"
+      "bytes": 16564,
+      "sha256": "546ce75971cdf8febb9dea4de552038d6b0e4f8395b36f00c8751b43b36d2669"
     },
     {
       "path": "src/v36_2/shop-design.css",
@@ -4115,6 +4130,21 @@
       "path": "tests/browser_qa.py",
       "bytes": 19366,
       "sha256": "85a866dd6970a2b151375c4748b3df9ce0b3ef1573df7a7de5e29f676ec4d236"
+    },
+    {
+      "path": "tests/fixtures/nfc-seo-content-01.json",
+      "bytes": 9009,
+      "sha256": "bfee4cc2b3def00628419b97c5dac245c9cc235bcb2e9442610f70edf8c3ff13"
+    },
+    {
+      "path": "tests/fixtures/nfc-seo-content-02.json",
+      "bytes": 7588,
+      "sha256": "759395ac128573215201e62ed7f53407fbf45bd3c7dc5b958747b4c96c21eb61"
+    },
+    {
+      "path": "tests/fixtures/nfc-seo-content-03.json",
+      "bytes": 6813,
+      "sha256": "fb949b44b477ee4b041365c72b6421d99a5e846d06bac2e54c08634b34f8bb90"
     },
     {
       "path": "tests/fixtures/nfc-v35-client.json",
@@ -4267,6 +4297,11 @@
       "sha256": "70f9c81d804577952b319646cc398df4d1cfbf454d0f5184cf9a71b286e239b2"
     },
     {
+      "path": "tests/v36_2-branded-seo-content.test.mjs",
+      "bytes": 4826,
+      "sha256": "0f64e63a239694804528dfe13e3a1eb64cc2b9b406aee3093259075a11bd77b2"
+    },
+    {
       "path": "tests/v36_2-challenge-renewal.test.mjs",
       "bytes": 4954,
       "sha256": "5ae69d5657a4cb0f467cd35b4f9f983e271a5486041ade573494b37f4a072a22"
@@ -4275,6 +4310,11 @@
       "path": "tests/v36_2-client.test.mjs",
       "bytes": 3837,
       "sha256": "e5e9f23ef38a4b1d070c2cc9b883f49f098529803f5aa0d9f19804165e0cd450"
+    },
+    {
+      "path": "tests/v36_2-instagram-seo-content.test.mjs",
+      "bytes": 5728,
+      "sha256": "0790d632abe02de12b24016ab324a0d9c3380fb431114cb25577185faa650b50"
     },
     {
       "path": "tests/v36_2-price.test.mjs",
@@ -4290,6 +4330,11 @@
       "path": "tests/v36_2-readiness.test.mjs",
       "bytes": 1868,
       "sha256": "81d187399dd61aa8020001b65498b360bfc5881c4b1c264b42a0c4263c7d87f4"
+    },
+    {
+      "path": "tests/v36_2-seo-content.test.mjs",
+      "bytes": 5127,
+      "sha256": "67d045832badd2899484ad93d2596c58c2bfae35607fa27720d68d5e12e23cab"
     },
     {
       "path": "tools/designer-check.mjs",

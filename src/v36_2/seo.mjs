@@ -1,3 +1,6 @@
+import {brandedContent} from './branded-content.mjs';
+import {instagramContent} from './instagram-content.mjs';
+import {googleReviewContent} from './google-review-content.mjs';
 import {PUBLIC_RETAIL_CATALOG} from './public-catalog.mjs';
 /* Shared raw-HTML and client metadata; release mode is explicit and gated. */
 import {catalog,menuVariants,priceCart} from './commerce.mjs';
@@ -56,6 +59,7 @@ const titleText={
 export function isKnownRoute(route){route=normalizeRoute(route);return Object.hasOwn(titleText,route)||catalog.some(p=>p.route===route);}
 export function pageMetadata(locale,route='/',config=BUILD_CONFIG){
  route=normalizeRoute(route);
+ const content=googleReviewContent(locale,route)??instagramContent(locale,route)??brandedContent(locale,route);
  const draft=catalog.some(p=>route===p.route&&p.status==='draft');
  const p=catalog.find(p=>route===p.route&&p.status==='active'),t=key=>translate(key,locale);
  const productTitle=p?`${productCopy(p.id,locale).name} · ${localized(p.status==='draft'?['варіант на погодженні','variant awaiting approval','wariant do akceptacji']:p.purpose==='instagram_profile'?['перехід до Instagram','access your Instagram profile','przejście do profilu Instagram']:p.purpose==='online_menu'?['доступ до онлайн-меню','access your online menu','dostęp do menu online']:['доступ до відгуків Google','access Google reviews','dostęp do opinii Google'],locale)}`:null;
@@ -68,9 +72,9 @@ export function pageMetadata(locale,route='/',config=BUILD_CONFIG){
   '/collections/branded/':localized(['Власний дизайн для Google Review 10 × 10, Beauty Mini або Restaurant Mini. Окремий безкоштовний початковий запит, без фізичної покупки чи передоплати.','Your own design for Google Review 10 × 10, Beauty Mini or Restaurant Mini. A separate free initial enquiry, without a physical purchase or deposit.','Własny projekt dla Google Review 10 × 10, Beauty Mini lub Restaurant Mini. Osobne bezpłatne pierwsze zapytanie, bez zakupu fizycznych kart ani zaliczki.'],locale)
  };
  const catalogDescription=localized(['Шість фізичних NFC-карток: Google Review, Instagram, Menu, 3D, Beauty Mini та Restaurant Mini. Власний дизайн — окремий запит.','Six physical NFC cards: Google Review, Instagram, Menu, 3D, Beauty Mini and Restaurant Mini. Custom design is a separate service enquiry.','Sześć fizycznych kart NFC: Google Review, Instagram, Menu, 3D, Beauty Mini i Restaurant Mini. Własny projekt to osobna usługa.'],locale);
- const description=scopedDescriptions[route]??(['/solutions/','/catalog/','/collections/'].includes(route)?catalogDescription:isPublic(config)&&['/privacy/','/terms/'].includes(route)?label:p?productCopy(p.id,locale).description:info[route]?t(info[route]):route==='/instagram-card/'?productCopy('nfc-instagram-card',locale).description:route==='/menu-card/'?productCopy('nfc-menu-card',locale).description:t('heroBody'));
+ const description=content?.description??scopedDescriptions[route]??(['/solutions/','/catalog/','/collections/'].includes(route)?catalogDescription:isPublic(config)&&['/privacy/','/terms/'].includes(route)?label:p?productCopy(p.id,locale).description:info[route]?t(info[route]):route==='/instagram-card/'?productCopy('nfc-instagram-card',locale).description:route==='/menu-card/'?productCopy('nfc-menu-card',locale).description:t('heroBody'));
  const known=isKnownRoute(route)&&!(isPublic(config)&&route.startsWith('/review/'));
- return {locale,route,title:label+(route==='/about/'?' | NFC CARD · Antonov Digital':' | NFC CARD'),description,canonical:known?canonicalURL(locale,route):null,alternates:known?LOCALES.map(language=>({language,href:canonicalURL(language,route)})):[],robots:!isPublic(config)||!isKnownRoute(route)||route.startsWith('/review/')||route.startsWith('/privacy/archive/')||draft||['/cart/','/order/','/thank-you/','/search/','/services/email-proposal/'].includes(route)?ROBOTS:'index,follow,max-image-preview:large'};
+ return {locale,route,title:content?.title??label+(route==='/about/'?' | NFC CARD · Antonov Digital':' | NFC CARD'),description,canonical:known?canonicalURL(locale,route):null,alternates:known?LOCALES.map(language=>({language,href:canonicalURL(language,route)})):[],robots:!isPublic(config)||!isKnownRoute(route)||route.startsWith('/review/')||route.startsWith('/privacy/archive/')||draft||['/cart/','/order/','/thank-you/','/search/','/services/email-proposal/'].includes(route)?ROBOTS:'index,follow,max-image-preview:large'};
 }
 export function productStructuredData(locale,route='/'){
  const p=productForRoute(route);if(!p)return null;
