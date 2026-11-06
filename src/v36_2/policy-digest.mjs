@@ -18,3 +18,4 @@ export function sha256(text){
 export function canonicalPolicy(value){if(value===null||typeof value!=='object')return JSON.stringify(value);if(Array.isArray(value))return '['+value.map(canonicalPolicy).join(',')+']';return '{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonicalPolicy(value[k])).join(',')+'}';}
 export function policyBody(p){return {scope:p.scope,formVersion:p.formVersion,privacyNoticeVersion:p.privacyNoticeVersion,legacyNoticeSha256:p.legacyNoticeSha256,checkbox:p.checkbox,sections:p.sections};}
 export const policyDigest=p=>sha256(canonicalPolicy(policyBody(p)));
+export const publicTextDigest=p=>sha256(canonicalPolicy({checkbox:p.checkbox,sections:p.sections}));
