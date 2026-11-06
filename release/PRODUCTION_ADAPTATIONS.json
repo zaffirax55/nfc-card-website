@@ -13,7 +13,7 @@
     {
       "path": "src/v36_2/app.mjs",
       "archiveSHA256": "d4f1989104059e4ebdb2de3ffcd1c5483433d4cfbb8b3166a92b5101bd1e579c",
-      "releaseSHA256": "5dfed509c1498392376d9cc47b9360e3e54c931fc55d9f369467a265546f9e56",
+      "releaseSHA256": "d6fe54ca84c8edb6405c524e51c9e79baefb39c27e96ca1a2c0848d8688762b5",
       "reason": "NFC-RECONCILE-01: preserve exact current owner-committed designer bytes; provenance metadata only, no designer edit or publication authorization.",
       "repositoryProvenance": {
         "repository": "zaffirax55/nfc-card-website",
@@ -40,13 +40,83 @@
           "f3a931d61521dd6b996255b6fbc0bd9647a38f06",
           "a218dec2df9100155f4a53da6ed5c5f0120d7357"
         ]
-      }
+      },
+      "contentCandidateProvenance": {
+        "task": "NFC-SEO-CONTENT-01",
+        "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+        "beforeSHA256": "5dfed509c1498392376d9cc47b9360e3e54c931fc55d9f369467a265546f9e56",
+        "copySpecSHA256": "bfee4cc2b3def00628419b97c5dac245c9cc235bcb2e9442610f70edf8c3ff13",
+        "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+        "publicationAuthorized": false,
+        "note": "Integrity hash for supplied UK/EN content implementation only; historic approval and archive hashes retained unchanged."
+      },
+      "contentCandidateProvenanceChain": [
+        {
+          "task": "NFC-SEO-CONTENT-02",
+          "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+          "acceptedBeforeTree": "be638dabbd6ae04793a0816096a7441ae124169b",
+          "beforeSHA256": "0d9007371f543d4e2f8938abe16d7ec6d7ce5b1d19d2d2a481b00b7aeb531535",
+          "afterSHA256": "b6c0deb9ba42e0b650a50ffbdec2004d8d0302b608da47a871784d3a8c49a088",
+          "acceptedContent01PatchSHA256": "1079c1a9cf3236cc8193fed0ee1e0ed005d078831772bee2694d6b395f80eb99",
+          "copySpecSHA256": "759395ac128573215201e62ed7f53407fbf45bd3c7dc5b958747b4c96c21eb61",
+          "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+          "publicationAuthorized": false,
+          "note": "Instagram UK/EN only. Prior Google candidate provenance and historical approval hashes retained unchanged."
+        },
+        {
+          "task": "NFC-SEO-CONTENT-03",
+          "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+          "acceptedBeforeTree": "9fe2daf04172b2eed722e4c401f54722e637bded",
+          "beforeSHA256": "b6c0deb9ba42e0b650a50ffbdec2004d8d0302b608da47a871784d3a8c49a088",
+          "afterSHA256": "d6fe54ca84c8edb6405c524e51c9e79baefb39c27e96ca1a2c0848d8688762b5",
+          "acceptedContent01Content02PatchSHA256": "61a0d248a5fb28415e127ab9eb0b2f16d27e0638a19ed1c12992025a33527e0c",
+          "copySpecSHA256": "fb949b44b477ee4b041365c72b6421d99a5e846d06bac2e54c08634b34f8bb90",
+          "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+          "publicationAuthorized": false,
+          "note": "Branded hub/design UK/EN only; prior content provenance and historical approvals retained unchanged."
+        }
+      ]
     },
     {
       "path": "src/v36_2/seo.mjs",
       "archiveSHA256": "4540b059a372b65b8e5b36b22d8915e2db952eb72f24f8cc9847a0a81af08b21",
-      "releaseSHA256": "a9cab713db1ac2a7f8c0d23094894c32779c52fc540b84039f4898e0dea5aa00",
-      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style."
+      "releaseSHA256": "546ce75971cdf8febb9dea4de552038d6b0e4f8395b36f00c8751b43b36d2669",
+      "reason": "Owner-authorized production integration with approved B05 disclosure; preserves accepted structure, commerce and style.",
+      "contentCandidateProvenance": {
+        "task": "NFC-SEO-CONTENT-01",
+        "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+        "beforeSHA256": "a9cab713db1ac2a7f8c0d23094894c32779c52fc540b84039f4898e0dea5aa00",
+        "copySpecSHA256": "bfee4cc2b3def00628419b97c5dac245c9cc235bcb2e9442610f70edf8c3ff13",
+        "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+        "publicationAuthorized": false,
+        "note": "Integrity hash for supplied UK/EN content implementation only; historic approval and archive hashes retained unchanged."
+      },
+      "contentCandidateProvenanceChain": [
+        {
+          "task": "NFC-SEO-CONTENT-02",
+          "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+          "acceptedBeforeTree": "be638dabbd6ae04793a0816096a7441ae124169b",
+          "beforeSHA256": "eb79b73a6bbeaf09fdc073b2ae0068d0a3ed12a07db515dc8e59351b20f44fff",
+          "afterSHA256": "2bcc6d5e13dfab2d8964707f52fe605f5612e6aca63ae31931d015d3261e4130",
+          "acceptedContent01PatchSHA256": "1079c1a9cf3236cc8193fed0ee1e0ed005d078831772bee2694d6b395f80eb99",
+          "copySpecSHA256": "759395ac128573215201e62ed7f53407fbf45bd3c7dc5b958747b4c96c21eb61",
+          "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+          "publicationAuthorized": false,
+          "note": "Instagram UK/EN only. Prior Google candidate provenance and historical approval hashes retained unchanged."
+        },
+        {
+          "task": "NFC-SEO-CONTENT-03",
+          "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+          "acceptedBeforeTree": "9fe2daf04172b2eed722e4c401f54722e637bded",
+          "beforeSHA256": "2bcc6d5e13dfab2d8964707f52fe605f5612e6aca63ae31931d015d3261e4130",
+          "afterSHA256": "546ce75971cdf8febb9dea4de552038d6b0e4f8395b36f00c8751b43b36d2669",
+          "acceptedContent01Content02PatchSHA256": "61a0d248a5fb28415e127ab9eb0b2f16d27e0638a19ed1c12992025a33527e0c",
+          "copySpecSHA256": "fb949b44b477ee4b041365c72b6421d99a5e846d06bac2e54c08634b34f8bb90",
+          "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+          "publicationAuthorized": false,
+          "note": "Branded hub/design UK/EN only; prior content provenance and historical approvals retained unchanged."
+        }
+      ]
     },
     {
       "path": "src/v36_2/legacy-v36/pages.mjs",
@@ -74,7 +144,7 @@
     {
       "path": "src/v36_2/editorial-view.mjs",
       "archiveSHA256": "13b9335a893f0a0ae414191576b95dc0198cd15e0d8a571186bf50cdf053371e",
-      "releaseSHA256": "3e81f77c9deca2abc23e824155f4c6789474d83bc795f044c726daf20ae6f1ec",
+      "releaseSHA256": "8845fbfbb49847ab871b96c25c95bfc2fb3c2f5f40f1681ea41849d2e73aa06b",
       "reason": "NFC-RECONCILE-01: preserve exact current owner-committed designer bytes; provenance metadata only, no designer edit or publication authorization.",
       "repositoryProvenance": {
         "repository": "zaffirax55/nfc-card-website",
@@ -93,7 +163,21 @@
         "changeCommits": [
           "6e0f6da303392af4112be0e08b3dedbb5adde139"
         ]
-      }
+      },
+      "contentCandidateProvenanceChain": [
+        {
+          "task": "NFC-SEO-CONTENT-03",
+          "baseCommit": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+          "acceptedBeforeTree": "9fe2daf04172b2eed722e4c401f54722e637bded",
+          "beforeSHA256": "3e81f77c9deca2abc23e824155f4c6789474d83bc795f044c726daf20ae6f1ec",
+          "afterSHA256": "8845fbfbb49847ab871b96c25c95bfc2fb3c2f5f40f1681ea41849d2e73aa06b",
+          "acceptedContent01Content02PatchSHA256": "61a0d248a5fb28415e127ab9eb0b2f16d27e0638a19ed1c12992025a33527e0c",
+          "copySpecSHA256": "fb949b44b477ee4b041365c72b6421d99a5e846d06bac2e54c08634b34f8bb90",
+          "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_ONLY",
+          "publicationAuthorized": false,
+          "note": "Branded hub/design UK/EN only; prior content provenance and historical approvals retained unchanged."
+        }
+      ]
     },
     {
       "path": "src/v36_2/static-render.mjs",

@@ -1,0 +1,121 @@
+/* NFC-SEO-CONTENT-03: supplied ChatGPT copy, local candidate; no publication approval. */
+const content={
+  "uk": {
+    "/collections/branded/": {
+      "title": "Брендовані NFC-картки для Google-відгуків | Antonov Digital NFC Card",
+      "description": "Оберіть основу NFC-картки для Google-відгуків з вашим логотипом: Google Review 10 × 10, Beauty Mini або Restaurant Mini. Початковий запит на дизайн безкоштовний.",
+      "h1": "Брендовані NFC-картки для Google-відгуків",
+      "intro": "Оберіть фізичну основу для картки у стилі вашого бізнесу: Google Review 10 × 10 см, Beauty Mini або Restaurant Mini. Логотип, кольори й текст погодимо в окремому запиті на дизайн.",
+      "after_promotion_section": {
+        "heading": "Від вибору картки до погодженого макета",
+        "paragraphs": [
+          [
+            {
+              "text": "Для стандартної Google-картки перейдіть до "
+            },
+            {
+              "text": "запиту дизайну Google Review 10 × 10 см",
+              "href": "/services/design/?entry=branded-review-card#design-request"
+            },
+            {
+              "text": ". На сторінці дизайну також можна обрати Beauty Mini або Restaurant Mini."
+            }
+          ],
+          [
+            {
+              "text": "Початковий запит на дизайн безкоштовний і не оформлює покупку. Виготовлення, кількість та умови фізичного замовлення погоджуємо окремо."
+            }
+          ],
+          [
+            {
+              "text": "Потрібне готове оформлення без логотипа вашого бізнесу? Перегляньте "
+            },
+            {
+              "text": "готову Google Review Card",
+              "href": "/solutions/review-card/"
+            },
+            {
+              "text": "."
+            }
+          ]
+        ]
+      }
+    },
+    "/services/design/": {
+      "title": "NFC-картки Google з логотипом: власний дизайн | Antonov Digital NFC Card",
+      "description": "Замовте власний дизайн NFC-картки для Google-відгуків: оберіть основу, погодьте логотип, кольори й макет. Перший запит безкоштовний; виготовлення — окремо.",
+      "h1": "Власний дизайн NFC-картки для Google-відгуків",
+      "intro": "Погодимо логотип, кольори й текст для Google Review 10 × 10 см, Beauty Mini або Restaurant Mini. Перший запит на дизайн безкоштовний; кількість, ціну та виготовлення фізичних карток погоджуємо окремо.",
+      "related_links": [
+        {
+          "text": "Переглянути напрям брендованих Google-карток",
+          "href": "/collections/branded/"
+        },
+        {
+          "text": "Як NFC-картка відкриває форму відгуку",
+          "href": "/what-is-nfc-card/"
+        }
+      ]
+    }
+  },
+  "en": {
+    "/collections/branded/": {
+      "title": "Branded NFC cards for Google reviews | Antonov Digital NFC Card",
+      "description": "Choose a base for a Google review NFC card with your logo: Google Review 10 × 10, Beauty Mini or Restaurant Mini. The initial design enquiry is free.",
+      "h1": "Branded NFC cards for Google reviews",
+      "intro": "Choose a physical base for a card in your business style: Google Review 10 × 10 cm, Beauty Mini or Restaurant Mini. Your logo, colours and text are agreed through a separate design enquiry.",
+      "after_promotion_section": {
+        "heading": "From choosing a card to approving the artwork",
+        "paragraphs": [
+          [
+            {
+              "text": "For the standard Google card, open a "
+            },
+            {
+              "text": "Google Review 10 × 10 cm design enquiry",
+              "href": "/services/design/?entry=branded-review-card#design-request"
+            },
+            {
+              "text": ". You can also select Beauty Mini or Restaurant Mini on the design page."
+            }
+          ],
+          [
+            {
+              "text": "The initial design enquiry is free and does not place a purchase order. Production, quantities and the terms of the physical order are agreed separately."
+            }
+          ],
+          [
+            {
+              "text": "Prefer a ready-made design without your business logo? See the "
+            },
+            {
+              "text": "ready-made Google Review Card",
+              "href": "/solutions/review-card/"
+            },
+            {
+              "text": "."
+            }
+          ]
+        ]
+      }
+    },
+    "/services/design/": {
+      "title": "Custom Google review NFC cards with your logo | Antonov Digital NFC Card",
+      "description": "Request a custom design for a Google review NFC card: choose a base and agree the logo, colours and artwork. The first enquiry is free; production is separate.",
+      "h1": "Custom design for Google review NFC cards",
+      "intro": "We agree your logo, colours and text for Google Review 10 × 10 cm, Beauty Mini or Restaurant Mini. The first design enquiry is free; quantities, prices and production of physical cards are agreed separately.",
+      "related_links": [
+        {
+          "text": "Explore branded Google review cards",
+          "href": "/collections/branded/"
+        },
+        {
+          "text": "How an NFC card opens the review form",
+          "href": "/what-is-nfc-card/"
+        }
+      ]
+    }
+  }
+};
+// Logical routes only; callers resolve links with the existing locale/base helper.
+export const brandedContent=(locale,route)=>content[locale]?.[route]??null;
