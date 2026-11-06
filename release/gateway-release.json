@@ -1,9 +1,11 @@
 {
-  "gatewayCommit": "73072817fa337b0f1530a63cd2ef73e70853c0ab",
+  "gatewayCommit": "f6bf96331c86555cca814e1bcfe1d58c5489f542",
   "repository": "optidigitalagent/iadds-website",
   "contractId": "NFC-CARD-V35-P4-02-CF-01",
-  "policySha256": "d76bda8aff9b69e79731a2a536254e8c6e6b9d8b62faa986407f06e3e05806b4",
+  "policySha256": "38e50676b7b5dc0149cb4f0bdbeb878d75add296da7274b4d509124f6c78c8e0",
   "requiredMode": "approved-intake",
   "requiredBeforePages": true,
-  "verification": "Actual read-only status GET must match during both CI builds; commit pin alone is insufficient."
+  "verification": "Actual read-only status GET must match during both CI builds; commit pin alone is insufficient.",
+  "policyFile": "release/nfc-card-v38-orders-policy.json",
+  "approvalDecision": "NFC-CARD-SITE-ORDERS-OWNER-20261105"
 }

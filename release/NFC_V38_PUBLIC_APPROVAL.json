@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "NFC-CARD-SITE-ORDERS-OWNER-20261105",
+  "supersedesOnly": "B05 D2 delivery restriction for NEW site applications routed through the existing Telegram ORDERS groups; necessary storage/notification paragraph and version identifiers.",
+  "previousPolicySHA256": "d76bda8aff9b69e79731a2a536254e8c6e6b9d8b62faa986407f06e3e05806b4",
+  "policyBodySHA256": "38e50676b7b5dc0149cb4f0bdbeb878d75add296da7274b4d509124f6c78c8e0",
+  "publicTextSHA256": "93f3f4076208c624ee9c0933e7aa535b4e07b04c5065fb68f7ccb8a6f503c02e",
+  "source": {
+    "repository": "optidigitalagent/iadds-website",
+    "commit": "21d42592fab7b117edc471f6494a9a8f8f1b0ddb",
+    "path": "services/lead-gateway/policies/ORDER_ROUTING_OWNER_APPROVAL.json",
+    "gitBlob": "f972cc53c61e2981e8f8934a929dc5c04772e3be",
+    "rawSHA256": "44c639b4dbb9261447cbbfe21a059bd2168777340e24fe7ebd2ec1a400a0feb6"
+  },
+  "policySource": {
+    "path": "services/lead-gateway/policies/nfc-card-v38-orders-approved.json",
+    "gitBlob": "a53f29a2567385662cb57b1c3a0714df6bae4deb",
+    "rawSHA256": "4361a78448876965fd47e391c806bbb19d3d23080fd64f35b46c2c99a01429f1"
+  },
+  "projection": "Public hash binding verified against the complete pinned source. Private routing identifiers and owner messages are deliberately excluded. No publication authorization."
+}

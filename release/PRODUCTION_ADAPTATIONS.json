@@ -238,6 +238,45 @@
         "contracts": "105/105 after actual review; all82 frozen fixtures unchanged",
         "notCommittedOrReleased": true
       }
+    },
+    {
+      "path": "src/v36_2/api-client.mjs",
+      "archiveSHA256": "47e9265e7a533ad40a4bf8e15921747dd7ef267626b50ea270ea14367ef098c0",
+      "releaseSHA256": "bd4af6d162c535cf7364f3274536fe3a459a029cd467ed4be06d4753c32b5fc6",
+      "reason": "NFC-FRONTEND-V38-01 authorized local candidate: exact V38 policy/profile binding and disabled|queued receipt compatibility only; no publication authorization.",
+      "localCandidateProvenance": {
+        "task": "NFC-FRONTEND-V38-01",
+        "baseCommit": "2de0fcc9182866a9fdb643f2ba633cc8b4b280ca",
+        "beforeSHA256": "47e9265e7a533ad40a4bf8e15921747dd7ef267626b50ea270ea14367ef098c0",
+        "gatewaySource": "21d42592fab7b117edc471f6494a9a8f8f1b0ddb",
+        "notCommittedOrReleased": true
+      }
+    },
+    {
+      "path": "src/v36_2/release-policy.mjs",
+      "archiveSHA256": "93b8311359519f6c44506420dc8820f85eec752efcd648996bde92760be52463",
+      "releaseSHA256": "4450a8bd8420baddcd870c6048e3dcc35d2a16789f2b226d766216fc1f6fc168",
+      "reason": "NFC-FRONTEND-V38-01 authorized local candidate: exact V38 policy/profile binding and disabled|queued receipt compatibility only; no publication authorization.",
+      "localCandidateProvenance": {
+        "task": "NFC-FRONTEND-V38-01",
+        "baseCommit": "2de0fcc9182866a9fdb643f2ba633cc8b4b280ca",
+        "beforeSHA256": "93b8311359519f6c44506420dc8820f85eec752efcd648996bde92760be52463",
+        "gatewaySource": "21d42592fab7b117edc471f6494a9a8f8f1b0ddb",
+        "notCommittedOrReleased": true
+      }
+    },
+    {
+      "path": "src/v36_2/policy-digest.mjs",
+      "archiveSHA256": "1a1af432a56cf2c38efe8d278778242e75e17c405a41258af78758e2e856734a",
+      "releaseSHA256": "825b97c2b9eb9ee561b805d69c71fcc24735172c6b66c005e1449b558505f8d6",
+      "reason": "NFC-FRONTEND-V38-01 authorized local candidate: exact V38 policy/profile binding and disabled|queued receipt compatibility only; no publication authorization.",
+      "localCandidateProvenance": {
+        "task": "NFC-FRONTEND-V38-01",
+        "baseCommit": "2de0fcc9182866a9fdb643f2ba633cc8b4b280ca",
+        "beforeSHA256": "1a1af432a56cf2c38efe8d278778242e75e17c405a41258af78758e2e856734a",
+        "gatewaySource": "21d42592fab7b117edc471f6494a9a8f8f1b0ddb",
+        "notCommittedOrReleased": true
+      }
     }
   ]
 }

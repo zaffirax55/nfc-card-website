@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 867,
+  "file_count_including_manifest": 872,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -583,8 +583,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1153,
-      "sha256": "842337a917de190b4fb1706ed74d4f9845f76f90e10b7f46de0082cde0bc59ff"
+      "bytes": 1187,
+      "sha256": "6df6030721da6e9edbd221f3c3e3cf1a0a6a3e0c1d8a4c2fce98be2825957b7d"
     },
     {
       "path": "refinements/instagram-v18/ACCEPTANCE_REPORT.md",
@@ -1152,19 +1152,29 @@
       "sha256": "a761169434cf3ff9fc4cc5b57be5ef4c03531e54ef16f29cd167b93f973286a7"
     },
     {
+      "path": "release/NFC_V38_PUBLIC_APPROVAL.json",
+      "bytes": 1337,
+      "sha256": "bb4f8393c6eaafa657c35087583778d194252f0f13e1d560aea1ba68248142f2"
+    },
+    {
       "path": "release/PRODUCTION_ADAPTATIONS.json",
-      "bytes": 13835,
-      "sha256": "073e3dd079fbf6911c927de04eb9803bd2d9c2e8e94734ce66420c0bbe937afc"
+      "bytes": 16134,
+      "sha256": "38918d4ce12254a4afb009694e7e47cfece93abcb149c352e10bc05666c48d9f"
     },
     {
       "path": "release/gateway-release.json",
-      "bytes": 431,
-      "sha256": "477a51bb6b94358b5e7bfa1f99240c85098b62b48470c0be9d94f7777130b9b5"
+      "bytes": 551,
+      "sha256": "e5e794550bd95d9c0469369783e5500b3cbea888e6367cb422d0ac90847825be"
     },
     {
       "path": "release/nfc-card-v36-2-policy.json",
       "bytes": 24140,
       "sha256": "f9196cf0721e2dd8aa47da248150ef978a388611f8ac286cf12d5ef44f6a22c6"
+    },
+    {
+      "path": "release/nfc-card-v38-orders-policy.json",
+      "bytes": 24577,
+      "sha256": "14b72e1e38fbf07c47b041c6a6d73196e6db8b948696f9823bfb496934666ea3"
     },
     {
       "path": "requirements-test.in",
@@ -1188,8 +1198,8 @@
     },
     {
       "path": "scripts/build-public.mjs",
-      "bytes": 3395,
-      "sha256": "d66b2c9f2818ecac5d4df3a3931e0477f0c1a03dbbc5851336af9ecf0635bf4f"
+      "bytes": 2985,
+      "sha256": "83c5bb9cab518f79f765412e00aa15cc8b8b086cc74adbd224e683444ffb9313"
     },
     {
       "path": "scripts/build-v36_2.mjs",
@@ -1198,8 +1208,13 @@
     },
     {
       "path": "scripts/check-gateway-ready.mjs",
-      "bytes": 1893,
-      "sha256": "2110bfd610e83b121875d49f7ef44707c5a88d6e4a7dd9ddb8ae2af3c8b16ac2"
+      "bytes": 1890,
+      "sha256": "e9926002d7cbc57477c9af48a06a49908b2a48f1e88712b61a7671aafbae4fa9"
+    },
+    {
+      "path": "scripts/release-policy-input.mjs",
+      "bytes": 2225,
+      "sha256": "f3cc5f57b49c837cab3df3b4bd48a8199e8922e67ac813720343804e43530939"
     },
     {
       "path": "scripts/release_guard.py",
@@ -3538,8 +3553,8 @@
     },
     {
       "path": "src/v36_2/api-client.mjs",
-      "bytes": 12161,
-      "sha256": "47e9265e7a533ad40a4bf8e15921747dd7ef267626b50ea270ea14367ef098c0"
+      "bytes": 12181,
+      "sha256": "bd4af6d162c535cf7364f3274536fe3a459a029cd467ed4be06d4753c32b5fc6"
     },
     {
       "path": "src/v36_2/app.mjs",
@@ -4018,8 +4033,8 @@
     },
     {
       "path": "src/v36_2/policy-digest.mjs",
-      "bytes": 2591,
-      "sha256": "1a1af432a56cf2c38efe8d278778242e75e17c405a41258af78758e2e856734a"
+      "bytes": 2692,
+      "sha256": "825b97c2b9eb9ee561b805d69c71fcc24735172c6b66c005e1449b558505f8d6"
     },
     {
       "path": "src/v36_2/privacy-view.mjs",
@@ -4068,8 +4083,8 @@
     },
     {
       "path": "src/v36_2/release-policy.mjs",
-      "bytes": 2699,
-      "sha256": "93b8311359519f6c44506420dc8820f85eec752efcd648996bde92760be52463"
+      "bytes": 4318,
+      "sha256": "4450a8bd8420baddcd870c6048e3dcc35d2a16789f2b226d766216fc1f6fc168"
     },
     {
       "path": "src/v36_2/seo.mjs",
@@ -4150,6 +4165,11 @@
       "path": "tests/fixtures/nfc-v35-client.json",
       "bytes": 618460,
       "sha256": "3d14e7560bdbfe314eaa948e91e01bfdd5bb116a2319749c281f591a3828dc1a"
+    },
+    {
+      "path": "tests/fixtures/nfc-v38-gateway-status.json",
+      "bytes": 492,
+      "sha256": "e758de74a4c9f4ff3c388b458db59b3211c04c63a5a319c34d383927d0a6a588"
     },
     {
       "path": "tests/staging_inbound_e2e.mjs",
@@ -4335,6 +4355,11 @@
       "path": "tests/v36_2-seo-content.test.mjs",
       "bytes": 5127,
       "sha256": "67d045832badd2899484ad93d2596c58c2bfae35607fa27720d68d5e12e23cab"
+    },
+    {
+      "path": "tests/v36_2-v38-contract.test.mjs",
+      "bytes": 9861,
+      "sha256": "24f92cbf296df6b7708cbce5ecec399d34ae450cd2b5bb13e31d6d92e520e781"
     },
     {
       "path": "tools/designer-check.mjs",
