@@ -1164,7 +1164,7 @@
     {
       "path": "release/gateway-release.json",
       "bytes": 551,
-      "sha256": "7e0dc411481fe1d55eb327a1385ca7fc9d7ffcf21e05f8d4a6a689c752fd1b79"
+      "sha256": "e5e794550bd95d9c0469369783e5500b3cbea888e6367cb422d0ac90847825be"
     },
     {
       "path": "release/nfc-card-v36-2-policy.json",
@@ -4358,8 +4358,8 @@
     },
     {
       "path": "tests/v36_2-v38-contract.test.mjs",
-      "bytes": 9150,
-      "sha256": "ed5beba1adaf74af14e3f8f169ee9d1b9a692180c469f995dac5f6082537511b"
+      "bytes": 9861,
+      "sha256": "24f92cbf296df6b7708cbce5ecec399d34ae450cd2b5bb13e31d6d92e520e781"
     },
     {
       "path": "tools/designer-check.mjs",

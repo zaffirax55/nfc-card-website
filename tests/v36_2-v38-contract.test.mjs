@@ -14,8 +14,9 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p)));
 const envelope=loadReleasePolicy(root),config={mode:'production',...envelope,v2Enabled:true};
 const old=read('release/nfc-card-v36-2-policy.json'),pin=read('release/gateway-release.json');
-// One immutable recorded observation, not a new request or current-live claim.
-const snapshot=read('tests/fixtures/nfc-v38-gateway-status.json');
+// Preserve the historical observation; derive a runtime fixture without changing it.
+const recordedSnapshot=read('tests/fixtures/nfc-v38-gateway-status.json');
+const snapshot={...recordedSnapshot,gatewayCommit:pin.gatewayCommit};
 const frozen=read('tests/fixtures/nfc-v35-client.json');
 const policyFiles=['release/B05_OWNER_APPROVAL.json','release/nfc-card-v36-2-policy.json',EFFECTIVE_POLICY_FILE,'release/NFC_V38_PUBLIC_APPROVAL.json'];
 function sandbox(change){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'nfc-v38-policy-'));try{for(const p of policyFiles){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});fs.copyFileSync(path.join(root,p),path.join(dir,p));}change(dir);assert.throws(()=>loadReleasePolicy(dir));}finally{fs.rmSync(dir,{recursive:true,force:true});}}
@@ -58,7 +59,13 @@ for(const locale of ['uk','en','pl'])test(locale+' current displayed V38 notice 
 const ready=value=>checkGatewayReady({policy:config.policy,expected:pin,endpoint:envelope.v2Endpoint,fetcher:async(url,options)=>{
  assert.equal(url,envelope.v2Endpoint+'/status');assert.equal(options.method,'GET');assert.equal(options.redirect,'error');assert.deepEqual(options.headers,{Accept:'application/json',Origin:'https://optidigitalagent.github.io'});return {ok:true,json:async()=>value};
 }});
-test('all 11 comparisons match the recorded V38 observation offline',async()=>assert.equal((await ready(snapshot)).status,'PASS'));
+test('all 11 comparisons match the configured runtime fixture offline',async()=>assert.equal((await ready(snapshot)).status,'PASS'));
+test('runtime pin advances without rewriting the historical observation or approval source',async()=>{
+ assert.equal(pin.gatewayCommit,'f6bf96331c86555cca814e1bcfe1d58c5489f542');
+ assert.equal(recordedSnapshot.gatewayCommit,'21d42592fab7b117edc471f6494a9a8f8f1b0ddb');
+ const approval=read('release/NFC_V38_PUBLIC_APPROVAL.json');assert.equal(approval.source.commit,recordedSnapshot.gatewayCommit);
+ await assert.rejects(checkGatewayReady({policy:config.policy,expected:{...pin,gatewayCommit:recordedSnapshot.gatewayCommit},endpoint:envelope.v2Endpoint,fetcher:async()=>({ok:true,json:async()=>snapshot})}),/mismatch/);
+});
 test('old tuple and repin-only remain blocked',async()=>{
  for(const expected of [{gatewayCommit:'73072817fa337b0f1530a63cd2ef73e70853c0ab'},pin])await assert.rejects(checkGatewayReady({policy:old.policy,expected,endpoint:envelope.v2Endpoint,fetcher:async()=>({ok:true,json:async()=>snapshot})}),/mismatch/);
 });
