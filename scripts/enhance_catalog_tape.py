@@ -101,11 +101,17 @@ def top_film(points, z, cx, cy, width, height, texture):
     )
 
 
-def enhance_model(path, texture):
+def enhance_model(path, texture, standalone=False):
     scene = trimesh.load(path, force="scene", process=False)
-    legacy = set(scene.geometry) & OLD_RIBBON_MESHES
-    if legacy != OLD_RIBBON_MESHES:
-        raise RuntimeError(f"{path.name}: original tape meshes missing: {OLD_RIBBON_MESHES-legacy}")
+    if standalone:
+        # The detail-page model is first rebuilt with two box-shaped tape strips.
+        legacy = {name for name in scene.geometry if name.startswith("RearAdhesiveStrip")}
+        if len(legacy) != 2:
+            raise RuntimeError(f"{path.name}: expected 2 legacy adhesive strips, found {sorted(legacy)}")
+    else:
+        legacy = set(scene.geometry) & OLD_RIBBON_MESHES
+        if legacy != OLD_RIBBON_MESHES:
+            raise RuntimeError(f"{path.name}: original tape meshes missing: {OLD_RIBBON_MESHES-legacy}")
     scene.delete_geometry(sorted(legacy))
     if not scene.geometry:
         raise RuntimeError(f"{path.name}: no card geometry left")
@@ -164,6 +170,11 @@ def main():
         width, height = enhance_model(found[name], texture)
         print(f"Realistic adhesive tape: {name} ({width*1000:.1f} x {height*1000:.1f} mm)")
     print(f"Refined rear ribbon geometry for all {len(found)} catalog 3D models")
+    detail = ROOT / "src/nfc-review-card-3d.glb"
+    if not detail.is_file():
+        raise RuntimeError("Missing detail-page 3D Review Card")
+    enhance_model(detail, texture, standalone=True)
+    print("Refined rear ribbon geometry for the Google Review Card detail-page model")
 
 
 if __name__ == "__main__":
