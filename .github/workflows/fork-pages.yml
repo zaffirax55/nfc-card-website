@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Publish edge-to-edge catalog photography for Google, Instagram, and Menu cards
+# Deploy unified full-bleed NFC product photography for all catalog and homepage cards
 
 on:
   push:
