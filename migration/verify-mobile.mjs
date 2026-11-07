@@ -367,7 +367,7 @@ for(const width of [390,1366]){
  const samples=await sample.evaluateAll(async imgs=>Promise.all(imgs.map(async img=>{await img.decode();return img.naturalWidth})));
  const circle=await page.locator('.editorial-design-hero .editorial-intro').evaluate(el=>getComputedStyle(el,'::before').content);
  await page.locator('.editorial-design-hero .editorial-hero-actions a[href="#design-request"]').click();
- await page.waitForTimeout(150);
+ await page.waitForFunction(()=>scrollY>200&&document.querySelector('#design-request')?.getBoundingClientRect().top<170,null,{timeout:6000});
  const requestPos=await page.locator('#design-request').evaluate(el=>({top:Math.round(el.getBoundingClientRect().top),form:!!el.querySelector('#request-form'),scrollY}));
  console.log('DESIGN_REQUEST',width,JSON.stringify({samples,circle,requestPos}));
  if(samples.length!==3||samples.some(n=>n<100)||!['none','normal'].includes(circle)||!requestPos.form||requestPos.scrollY<200||requestPos.top>140)
