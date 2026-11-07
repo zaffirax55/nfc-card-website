@@ -1,5 +1,5 @@
 name: Deploy fork preview to GitHub Pages
-# Deploy consistent realistic rear adhesive ribbons on all 12 3D catalog cards
+# Deploy unified full-bleed NFC product photography for all catalog and homepage cards
 
 on:
   push:
@@ -35,7 +35,6 @@ jobs:
           python -m pip install --disable-pip-version-check numpy Pillow trimesh
           python scripts/build_review_card_fullbleed.py
           test -s src/nfc-review-card-3d.glb
-          python scripts/enhance_catalog_tape.py
       - name: Build fork preview
         env:
           NFC_ENV: production
