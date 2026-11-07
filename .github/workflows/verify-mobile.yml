@@ -11,7 +11,6 @@ on:
       - 'src/v36_2/app.mjs'
       - 'src/v36_2/editorial-view.mjs'
       - 'src/v36_2/finishing-pass.css'
-      - 'src/v36_2/catalog-photo-fill.css'
       - 'migration/verify-mobile.mjs'
       - '.github/workflows/verify-mobile.yml'
       - 'src/v36_2/static-render.mjs'

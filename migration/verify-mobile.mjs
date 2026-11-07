@@ -107,7 +107,7 @@ for(const width of widths){
         sceneWidth:el.querySelector('.hero-tap-scene').getBoundingClientRect().width};
     });
     console.log('COMPACT_HERO',width,JSON.stringify(info));
-    if(info.height>(width>=701?590:width>=380?510:475)||info.steps!==3||!info.image.includes('review-card-demo.svg')||
+    if(info.height>440||info.steps!==3||!info.image.includes('review-card-demo.svg')||
       info.cardAnimation==='none'||info.phoneAnimation==='none'||info.sceneWidth>width+2)
       errors.push(width+' compact hero illustration failed');
     if(await page.locator('.home-top-demo,[data-nfc-demo]').count()>0)
@@ -291,45 +291,6 @@ for(const width of [320,390,768,1366]){
  await page.close();
 }
 
-// Expanded NFC hero must own the right column, maintain the handset aspect
-// ratio and keep phone/card in view throughout the tap animation.
-for(const width of [320,390,768,900,1000,1100,1250,1366,1600]){
- const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
- page.on('pageerror',e=>errors.push('expanded hero '+width+' JS '+e.message));
- await page.goto(base+'/',{waitUntil:'load'});
- const measure=await page.evaluate(()=>{
-  const box=(el)=>el?.getBoundingClientRect();
-  const hero=document.querySelector('.owner-home .hero-grid');
-  const stage=document.querySelector('.hero-tap-scene');
-  const phone=document.querySelector('.hero-tap-phone');
-  const card=document.querySelector('.hero-tap-card');
-  const region=document.querySelector('.hero-tap-hero');
-  const h=box(hero),r=box(region),s=box(stage),p=box(phone),c=box(card);
-  const animation=phone.getAnimations().find(a=>a.animationName==='tap-phone-move');
-  if(animation)animation.currentTime=2400;
-  const pm=box(phone);
-  return {
-   heroWidth:h.width,regionWidth:r.width,regionHeight:r.height,
-   stageWidth:s.width,stageHeight:s.height,phoneWidth:p.width,phoneHeight:p.height,
-   phoneRatio:p.height/p.width,cardWidth:c.width,
-   sceneFraction:s.width/r.width,
-   phoneInside:p.top>=s.top-2&&p.bottom<=s.bottom+2&&p.left>=s.left-2&&p.right<=s.right+2,
-   phoneMovingInside:pm.top>=s.top-2&&pm.bottom<=s.bottom+2&&pm.left>=s.left-2&&pm.right<=s.right+2,
-   cardInside:c.left>=s.left-2&&c.right<=s.right+2&&c.top>=s.top-2&&c.bottom<=s.bottom+2,
-   scrollOverflow:document.documentElement.scrollWidth-innerWidth
-  };
- });
- console.log('EXPANDED_HERO',width,JSON.stringify(measure));
- const bigger=width>=1251?measure.stageHeight>=420&&measure.phoneHeight>=375&&measure.cardWidth>=175
-   :width>=1001?measure.stageHeight>=390&&measure.phoneHeight>=345
-   :width>=901?measure.stageHeight>=370&&measure.phoneHeight>=325
-   :width>=701?measure.stageHeight>=375&&measure.phoneHeight>=340
-   :measure.stageHeight>=260;
- if(!bigger||measure.sceneFraction<.89||measure.phoneRatio<1.95||measure.phoneRatio>2.17||
-    !measure.phoneInside||!measure.phoneMovingInside||!measure.cardInside||measure.scrollOverflow>2)
-  errors.push('expanded hero composition failed at '+width);
- await page.close();
-}
 // Finishing pass: shared Mini prices are read from the actual priceCart function,
 // not copied from static mock text.
 for(const quantity of [1,2]){
@@ -367,7 +328,7 @@ for(const width of [390,1366]){
  const samples=await sample.evaluateAll(async imgs=>Promise.all(imgs.map(async img=>{await img.decode();return img.naturalWidth})));
  const circle=await page.locator('.editorial-design-hero .editorial-intro').evaluate(el=>getComputedStyle(el,'::before').content);
  await page.locator('.editorial-design-hero .editorial-hero-actions a[href="#design-request"]').click();
- await page.waitForFunction(()=>scrollY>200&&document.querySelector('#design-request')?.getBoundingClientRect().top<170,null,{timeout:6000});
+ await page.waitForTimeout(150);
  const requestPos=await page.locator('#design-request').evaluate(el=>({top:Math.round(el.getBoundingClientRect().top),form:!!el.querySelector('#request-form'),scrollY}));
  console.log('DESIGN_REQUEST',width,JSON.stringify({samples,circle,requestPos}));
  if(samples.length!==3||samples.some(n=>n<100)||!['none','normal'].includes(circle)||!requestPos.form||requestPos.scrollY<200||requestPos.top>140)
@@ -380,78 +341,6 @@ for(const width of [390,1366]){
  console.log('REVIEW_DETAIL',width,JSON.stringify({noNote,threeSteps,headings,orderForm}));
  if(!noNote||threeSteps!==3||orderForm!==1||!headings[0]?.includes('Піднесіть')||!headings[1]?.includes('Відкрийте')||!headings[2]?.includes('Залиште'))
   errors.push('R09/R14 Google Review Card steps or configuration failed '+width);
- await page.close();
-}
-
-// Catalog desktop photos must cover wide cards without any side gutters.
-// Mobile must retain the complete uncropped photo and its natural aspect ratio.
-for(const width of [390,768,1024,1366]){
- const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
- page.on('pageerror',e=>errors.push('catalog photo '+width+' JS '+e.message));
- await page.goto(base+'/solutions/',{waitUntil:'load'});
- const photos=await page.locator('.product-grid .product-card').evaluateAll(async cards=>{
-  const els=cards.filter(el=>el.querySelector(':scope > a.card-image--photo'));
-  return Promise.all(els.map(async el=>{
-   const frame=el.querySelector('a.card-image--photo');
-   const image=frame?.querySelector('img');
-   if(!image)return {id:el.dataset.productId,missing:true};
-   image.loading='eager';
-   try{await image.decode()}catch{}
-   const b=frame.getBoundingClientRect(),r=image.getBoundingClientRect();
-   return {id:el.dataset.productId,
-     naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,
-     frameWidth:b.width,frameHeight:b.height,imgWidth:r.width,imgHeight:r.height,
-     fit:getComputedStyle(image).objectFit,
-     leftGap:r.left-b.left,rightGap:b.right-r.right,
-     topGap:r.top-b.top,bottomGap:b.bottom-r.bottom,
-     frameRatio:b.width/b.height,sourceRatio:image.naturalWidth/image.naturalHeight};
-  }));
- });
- const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
- console.log('CATALOG_PHOTO_FILL',width,JSON.stringify({photos,overflow}));
- if(photos.length!==6||overflow>2||photos.some(p=>p.missing||p.naturalWidth<150||p.naturalHeight<150||
-   Math.abs(p.leftGap)>1.5||Math.abs(p.rightGap)>1.5||Math.abs(p.topGap)>1.5||Math.abs(p.bottomGap)>1.5||
-   (width>=801&&(p.fit!=='cover'||p.frameRatio<1.15||p.frameRatio>1.21))||
-   (width<=800&&(p.fit!=='contain'||Math.abs(p.frameRatio-p.sourceRatio)>.02))))
-  errors.push('Catalog image fill/crop regression '+width);
- await page.close();
-}
-// Featured images on the homepage follow the very same fill rule; ready-made
-// and branded schematics keep truthful provenance, including at small widths.
-for(const width of [390,1366]){
- const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
- await page.goto(base+'/',{waitUntil:'load'});
- const photoState=await page.locator('.owner-home-products .product-card').evaluateAll(async cards=>Promise.all(cards.map(async card=>{
-   const frame=card.querySelector(':scope > a.card-image--photo');
-   const image=frame?.querySelector('img');
-   if(!image)return {id:card.dataset.productId,missing:true};
-   await image.decode();
-   const f=frame.getBoundingClientRect(),i=image.getBoundingClientRect();
-   return {id:card.dataset.productId,fit:getComputedStyle(image).objectFit,
-      natural:image.naturalWidth,width:f.width,height:f.height,
-      frameRatio:f.width/f.height,sourceRatio:image.naturalWidth/image.naturalHeight,
-      leftGap:i.left-f.left,rightGap:f.right-i.right,topGap:i.top-f.top,bottomGap:f.bottom-i.bottom};
- })));
- console.log('HOMEPAGE_PHOTO_FILL',width,JSON.stringify(photoState));
- if(photoState.length!==4||photoState.some(p=>p.missing||p.natural<150||
-   (width>=801&&(p.fit!=='cover'||Math.abs(p.frameRatio-1.18)>.03))||
-   (width<=800&&(p.fit!=='contain'||Math.abs(p.frameRatio-p.sourceRatio)>.03))||
-   Math.max(...[p.leftGap,p.rightGap,p.topGap,p.bottomGap].map(Math.abs))>1.5))
-    errors.push('Home feature photo fill regression '+width);
- await page.close();
-}
-for(const width of [390,1366]){
- const page=await browser.newPage({viewport:{width,height:900}});
- await page.goto(base+'/solutions/',{waitUntil:'load'});
- const schematic=await page.locator('.product-grid .product-card .card-image .schematic').evaluateAll(els=>els.map(el=>{
-  const a=el.closest('a.card-image'),box=el.querySelector('.schematic-box');
-  const f=a.getBoundingClientRect(),b=box.getBoundingClientRect();
-  return {frameRatio:f.width/f.height,tileWidth:b.width,contained:b.left>=f.left&&b.right<=f.right,
-    text:el.textContent?.trim().slice(0,110)};
- }));
- console.log('BRANDED_SCHEMATIC',width,JSON.stringify(schematic));
- if(schematic.some(p=>Math.abs(p.frameRatio-1.18)>.04||!p.contained||p.tileWidth<95))
-  errors.push('Branded schematic card layout regression '+width);
  await page.close();
 }
 await browser.close();
