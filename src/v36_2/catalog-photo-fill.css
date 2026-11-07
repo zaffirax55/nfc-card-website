@@ -1,79 +1,72 @@
-/* Catalog image crop: keep product artwork prominent on wide storefront cards.
-   Source photography is unchanged, and the image remains clickable. */
+/* Unified product-photo stage for every photographed NFC CARD product.
+   Use the available actual/product-preview image; do not fabricate imagery
+   for made-to-order branded products whose card remains a schematic. */
 
-/* Portrait photo source in a landscape card previously used object-fit:contain,
-   leaving broad grey gutters. Fill the stage instead without stretching assets. */
-@media(min-width:801px){
- .product-grid .product-card:is(
-   [data-product-id="review-card"],
-   [data-product-id="nfc-instagram-card"],
-   [data-product-id="nfc-menu-card"]
- ) > a.card-image--photo{
-   display:block;
+/* Wide catalog, collections, related items, and featured homepage cards:
+   photograph extends right to the frame edge. No aspect distortion. */
+@media (min-width:801px) {
+ .product-card > a.card-image--photo {
    position:relative;
+   display:block;
    width:100%;
    height:auto!important;
    min-height:0!important;
    aspect-ratio:1.18!important;
    overflow:hidden;
-   background:#f0f0ef!important;
    border-bottom:1px solid #dfe3e5;
+   background:#f0f0ef!important;
  }
- .product-grid .product-card:is(
-   [data-product-id="review-card"],
-   [data-product-id="nfc-instagram-card"],
-   [data-product-id="nfc-menu-card"]
- ) > a.card-image--photo > img{
+ .product-card > a.card-image--photo > img {
+   display:block;
    width:100%!important;
    height:100%!important;
    max-width:none!important;
    max-height:none!important;
+   padding:0;
+   margin:0;
    object-fit:cover!important;
    object-position:center 53%;
-   display:block;
-   margin:0;
-   padding:0;
    transform:none;
  }
- .product-grid .product-card:is(
-   [data-product-id="review-card"],
-   [data-product-id="nfc-instagram-card"],
-   [data-product-id="nfc-menu-card"]
- ) > a.card-image--photo:hover > img{
+ .product-card > a.card-image--photo:hover > img {
    transform:scale(1.035);
  }
 }
-/* The mobile layout already uses edge-to-edge uncropped photographs.
-   Preserve it, including the original portrait ratio and the visible hand. */
-@media(max-width:800px){
- .product-grid .product-card:is(
-   [data-product-id="review-card"],
-   [data-product-id="nfc-instagram-card"],
-   [data-product-id="nfc-menu-card"]
- ) > a.card-image--photo{
+
+/* Mobile: keep each entire original image visible edge to edge,
+   matching the old mobile layout rather than cropping hands/card edges. */
+@media (max-width:800px) {
+ .product-card > a.card-image--photo {
+   position:relative;
    display:block;
    width:100%;
    height:auto!important;
    min-height:0!important;
+   max-height:none!important;
    aspect-ratio:auto!important;
    overflow:hidden;
    background:transparent!important;
+   padding:0!important;
+   border-bottom:0;
  }
- .product-grid .product-card:is(
-   [data-product-id="review-card"],
-   [data-product-id="nfc-instagram-card"],
-   [data-product-id="nfc-menu-card"]
- ) > a.card-image--photo > img{
+ .product-card > a.card-image--photo > img {
    display:block;
    width:100%!important;
    height:auto!important;
+   min-height:0!important;
    max-height:none!important;
+   margin:0;
+   padding:0;
    object-fit:contain!important;
    transform:none!important;
+   vertical-align:top;
  }
 }
-@media(prefers-reduced-motion:reduce){
- .product-grid .product-card > a.card-image--photo img{
+
+/* Product cards without final photos keep their existing schematic and
+   must not be treated as photographs or misleading client examples. */
+@media (prefers-reduced-motion:reduce) {
+ .product-card > a.card-image--photo > img {
    transition:none!important;
    transform:none!important;
  }
