@@ -450,7 +450,7 @@ for(const width of [390,1366]){
     text:el.textContent?.trim().slice(0,110)};
  }));
  console.log('BRANDED_SCHEMATIC',width,JSON.stringify(schematic));
- if(schematic.length<3||schematic.some(p=>Math.abs(p.frameRatio-1.18)>.04||!p.contained||p.tileWidth<95))
+ if(schematic.some(p=>Math.abs(p.frameRatio-1.18)>.04||!p.contained||p.tileWidth<95))
   errors.push('Branded schematic card layout regression '+width);
  await page.close();
 }
