@@ -382,6 +382,41 @@ for(const width of [390,1366]){
   errors.push('R09/R14 Google Review Card steps or configuration failed '+width);
  await page.close();
 }
+
+// Catalog desktop photos must cover wide cards without any side gutters.
+// Mobile must retain the complete uncropped photo and its natural aspect ratio.
+for(const width of [390,768,1024,1366]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ page.on('pageerror',e=>errors.push('catalog photo '+width+' JS '+e.message));
+ await page.goto(base+'/solutions/',{waitUntil:'load'});
+ const photos=await page.locator('.product-grid .product-card').evaluateAll(async cards=>{
+  const ids=new Set(['review-card','nfc-instagram-card','nfc-menu-card']);
+  const els=cards.filter(el=>ids.has(el.dataset.productId));
+  return Promise.all(els.map(async el=>{
+   const frame=el.querySelector('a.card-image--photo');
+   const image=frame?.querySelector('img');
+   if(!image)return {id:el.dataset.productId,missing:true};
+   image.loading='eager';
+   try{await image.decode()}catch{}
+   const b=frame.getBoundingClientRect(),r=image.getBoundingClientRect();
+   return {id:el.dataset.productId,
+     naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,
+     frameWidth:b.width,frameHeight:b.height,imgWidth:r.width,imgHeight:r.height,
+     fit:getComputedStyle(image).objectFit,
+     leftGap:r.left-b.left,rightGap:b.right-r.right,
+     topGap:r.top-b.top,bottomGap:b.bottom-r.bottom,
+     frameRatio:b.width/b.height,sourceRatio:image.naturalWidth/image.naturalHeight};
+  }));
+ });
+ const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+ console.log('CATALOG_PHOTO_FILL',width,JSON.stringify({photos,overflow}));
+ if(photos.length!==3||overflow>2||photos.some(p=>p.missing||p.naturalWidth<150||p.naturalHeight<150||
+   Math.abs(p.leftGap)>1.5||Math.abs(p.rightGap)>1.5||Math.abs(p.topGap)>1.5||Math.abs(p.bottomGap)>1.5||
+   (width>=801&&(p.fit!=='cover'||p.frameRatio<1.15||p.frameRatio>1.21))||
+   (width<=800&&(p.fit!=='contain'||Math.abs(p.frameRatio-p.sourceRatio)>.02))))
+  errors.push('Catalog image fill/crop regression '+width);
+ await page.close();
+}
 await browser.close();
 if(errors.length){console.error('FAILED',JSON.stringify(errors));process.exit(1)}
 console.log('MOBILE_RESPONSIVE_TEST_SUCCESS');
