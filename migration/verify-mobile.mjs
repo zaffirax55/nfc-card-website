@@ -390,8 +390,7 @@ for(const width of [390,768,1024,1366]){
  page.on('pageerror',e=>errors.push('catalog photo '+width+' JS '+e.message));
  await page.goto(base+'/solutions/',{waitUntil:'load'});
  const photos=await page.locator('.product-grid .product-card').evaluateAll(async cards=>{
-  const ids=new Set(['review-card','nfc-instagram-card','nfc-menu-card']);
-  const els=cards.filter(el=>ids.has(el.dataset.productId));
+  const els=cards.filter(el=>el.querySelector(':scope > a.card-image--photo'));
   return Promise.all(els.map(async el=>{
    const frame=el.querySelector('a.card-image--photo');
    const image=frame?.querySelector('img');
@@ -410,11 +409,49 @@ for(const width of [390,768,1024,1366]){
  });
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
  console.log('CATALOG_PHOTO_FILL',width,JSON.stringify({photos,overflow}));
- if(photos.length!==3||overflow>2||photos.some(p=>p.missing||p.naturalWidth<150||p.naturalHeight<150||
+ if(photos.length!==6||overflow>2||photos.some(p=>p.missing||p.naturalWidth<150||p.naturalHeight<150||
    Math.abs(p.leftGap)>1.5||Math.abs(p.rightGap)>1.5||Math.abs(p.topGap)>1.5||Math.abs(p.bottomGap)>1.5||
    (width>=801&&(p.fit!=='cover'||p.frameRatio<1.15||p.frameRatio>1.21))||
    (width<=800&&(p.fit!=='contain'||Math.abs(p.frameRatio-p.sourceRatio)>.02))))
   errors.push('Catalog image fill/crop regression '+width);
+ await page.close();
+}
+// Featured images on the homepage follow the very same fill rule; ready-made
+// and branded schematics keep truthful provenance, including at small widths.
+for(const width of [390,1366]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ await page.goto(base+'/',{waitUntil:'load'});
+ const photoState=await page.locator('.owner-home-products .product-card').evaluateAll(async cards=>Promise.all(cards.map(async card=>{
+   const frame=card.querySelector(':scope > a.card-image--photo');
+   const image=frame?.querySelector('img');
+   if(!image)return {id:card.dataset.productId,missing:true};
+   await image.decode();
+   const f=frame.getBoundingClientRect(),i=image.getBoundingClientRect();
+   return {id:card.dataset.productId,fit:getComputedStyle(image).objectFit,
+      natural:image.naturalWidth,width:f.width,height:f.height,
+      frameRatio:f.width/f.height,sourceRatio:image.naturalWidth/image.naturalHeight,
+      leftGap:i.left-f.left,rightGap:f.right-i.right,topGap:i.top-f.top,bottomGap:f.bottom-i.bottom};
+ })));
+ console.log('HOMEPAGE_PHOTO_FILL',width,JSON.stringify(photoState));
+ if(photoState.length!==4||photoState.some(p=>p.missing||p.natural<150||
+   (width>=801&&(p.fit!=='cover'||Math.abs(p.frameRatio-1.18)>.03))||
+   (width<=800&&(p.fit!=='contain'||Math.abs(p.frameRatio-p.sourceRatio)>.03))||
+   Math.max(...[p.leftGap,p.rightGap,p.topGap,p.bottomGap].map(Math.abs))>1.5))
+    errors.push('Home feature photo fill regression '+width);
+ await page.close();
+}
+for(const width of [390,1366]){
+ const page=await browser.newPage({viewport:{width,height:900}});
+ await page.goto(base+'/solutions/',{waitUntil:'load'});
+ const schematic=await page.locator('.product-grid .product-card .card-image .schematic').evaluateAll(els=>els.map(el=>{
+  const a=el.closest('a.card-image'),box=el.querySelector('.schematic-box');
+  const f=a.getBoundingClientRect(),b=box.getBoundingClientRect();
+  return {frameRatio:f.width/f.height,tileWidth:b.width,contained:b.left>=f.left&&b.right<=f.right,
+    text:el.textContent?.trim().slice(0,110)};
+ }));
+ console.log('BRANDED_SCHEMATIC',width,JSON.stringify(schematic));
+ if(schematic.length<3||schematic.some(p=>Math.abs(p.frameRatio-1.18)>.04||!p.contained||p.tileWidth<95))
+  errors.push('Branded schematic card layout regression '+width);
  await page.close();
 }
 await browser.close();
