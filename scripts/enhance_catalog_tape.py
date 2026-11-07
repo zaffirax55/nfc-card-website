@@ -124,11 +124,15 @@ def enhance_model(path, texture):
         metallicFactor=0,
         doubleSided=True,
     )
-    strip_width = width * 0.195
-    strip_height = height * 0.845
+    # Round Menu models have circular backs: shorten/inset the ribbons so
+    # their rounded tips never protrude past the physical card perimeter.
+    circular = path.stem.startswith("menu-round-")
+    strip_width = width * (0.15 if circular else 0.195)
+    strip_height = height * (0.74 if circular else 0.845)
+    center_offset = 0.22 if circular else 0.24
     radius = min(strip_width * 0.19, 0.0035)
     for side, sign in (("left", -1), ("right", 1)):
-        x = cx + sign * width * 0.24
+        x = cx + sign * width * center_offset
         profile = outline(x, cy, strip_width, strip_height, radius)
         scene.add_geometry(
             prism(profile, back_z-0.00007, back_z-0.00094, side_material),
