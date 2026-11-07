@@ -1,0 +1,80 @@
+/* Catalog image crop: keep product artwork prominent on wide storefront cards.
+   Source photography is unchanged, and the image remains clickable. */
+
+/* Portrait photo source in a landscape card previously used object-fit:contain,
+   leaving broad grey gutters. Fill the stage instead without stretching assets. */
+@media(min-width:801px){
+ .product-grid .product-card:is(
+   [data-product-id="review-card"],
+   [data-product-id="nfc-instagram-card"],
+   [data-product-id="nfc-menu-card"]
+ ) > a.card-image--photo{
+   display:block;
+   position:relative;
+   width:100%;
+   height:auto!important;
+   min-height:0!important;
+   aspect-ratio:1.18!important;
+   overflow:hidden;
+   background:#f0f0ef!important;
+   border-bottom:1px solid #dfe3e5;
+ }
+ .product-grid .product-card:is(
+   [data-product-id="review-card"],
+   [data-product-id="nfc-instagram-card"],
+   [data-product-id="nfc-menu-card"]
+ ) > a.card-image--photo > img{
+   width:100%!important;
+   height:100%!important;
+   max-width:none!important;
+   max-height:none!important;
+   object-fit:cover!important;
+   object-position:center 53%;
+   display:block;
+   margin:0;
+   padding:0;
+   transform:none;
+ }
+ .product-grid .product-card:is(
+   [data-product-id="review-card"],
+   [data-product-id="nfc-instagram-card"],
+   [data-product-id="nfc-menu-card"]
+ ) > a.card-image--photo:hover > img{
+   transform:scale(1.035);
+ }
+}
+/* The mobile layout already uses edge-to-edge uncropped photographs.
+   Preserve it, including the original portrait ratio and the visible hand. */
+@media(max-width:800px){
+ .product-grid .product-card:is(
+   [data-product-id="review-card"],
+   [data-product-id="nfc-instagram-card"],
+   [data-product-id="nfc-menu-card"]
+ ) > a.card-image--photo{
+   display:block;
+   width:100%;
+   height:auto!important;
+   min-height:0!important;
+   aspect-ratio:auto!important;
+   overflow:hidden;
+   background:transparent!important;
+ }
+ .product-grid .product-card:is(
+   [data-product-id="review-card"],
+   [data-product-id="nfc-instagram-card"],
+   [data-product-id="nfc-menu-card"]
+ ) > a.card-image--photo > img{
+   display:block;
+   width:100%!important;
+   height:auto!important;
+   max-height:none!important;
+   object-fit:contain!important;
+   transform:none!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .product-grid .product-card > a.card-image--photo img{
+   transition:none!important;
+   transform:none!important;
+ }
+}
