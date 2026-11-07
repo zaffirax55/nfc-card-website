@@ -107,7 +107,7 @@ for(const width of widths){
         sceneWidth:el.querySelector('.hero-tap-scene').getBoundingClientRect().width};
     });
     console.log('COMPACT_HERO',width,JSON.stringify(info));
-    if(info.height>440||info.steps!==3||!info.image.includes('review-card-demo.svg')||
+    if(info.height>(width>=701?590:width>=380?510:475)||info.steps!==3||!info.image.includes('review-card-demo.svg')||
       info.cardAnimation==='none'||info.phoneAnimation==='none'||info.sceneWidth>width+2)
       errors.push(width+' compact hero illustration failed');
     if(await page.locator('.home-top-demo,[data-nfc-demo]').count()>0)
@@ -291,6 +291,45 @@ for(const width of [320,390,768,1366]){
  await page.close();
 }
 
+// Expanded NFC hero must own the right column, maintain the handset aspect
+// ratio and keep phone/card in view throughout the tap animation.
+for(const width of [320,390,768,900,1000,1100,1250,1366,1600]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
+ page.on('pageerror',e=>errors.push('expanded hero '+width+' JS '+e.message));
+ await page.goto(base+'/',{waitUntil:'load'});
+ const measure=await page.evaluate(()=>{
+  const box=(el)=>el?.getBoundingClientRect();
+  const hero=document.querySelector('.owner-home .hero-grid');
+  const stage=document.querySelector('.hero-tap-scene');
+  const phone=document.querySelector('.hero-tap-phone');
+  const card=document.querySelector('.hero-tap-card');
+  const region=document.querySelector('.hero-tap-hero');
+  const h=box(hero),r=box(region),s=box(stage),p=box(phone),c=box(card);
+  const animation=phone.getAnimations().find(a=>a.animationName==='tap-phone-move');
+  if(animation)animation.currentTime=2400;
+  const pm=box(phone);
+  return {
+   heroWidth:h.width,regionWidth:r.width,regionHeight:r.height,
+   stageWidth:s.width,stageHeight:s.height,phoneWidth:p.width,phoneHeight:p.height,
+   phoneRatio:p.height/p.width,cardWidth:c.width,
+   sceneFraction:s.width/r.width,
+   phoneInside:p.top>=s.top-2&&p.bottom<=s.bottom+2&&p.left>=s.left-2&&p.right<=s.right+2,
+   phoneMovingInside:pm.top>=s.top-2&&pm.bottom<=s.bottom+2&&pm.left>=s.left-2&&pm.right<=s.right+2,
+   cardInside:c.left>=s.left-2&&c.right<=s.right+2&&c.top>=s.top-2&&c.bottom<=s.bottom+2,
+   scrollOverflow:document.documentElement.scrollWidth-innerWidth
+  };
+ });
+ console.log('EXPANDED_HERO',width,JSON.stringify(measure));
+ const bigger=width>=1251?measure.stageHeight>=420&&measure.phoneHeight>=375&&measure.cardWidth>=175
+   :width>=1001?measure.stageHeight>=390&&measure.phoneHeight>=345
+   :width>=901?measure.stageHeight>=370&&measure.phoneHeight>=325
+   :width>=701?measure.stageHeight>=375&&measure.phoneHeight>=340
+   :measure.stageHeight>=260;
+ if(!bigger||measure.sceneFraction<.89||measure.phoneRatio<1.95||measure.phoneRatio>2.17||
+    !measure.phoneInside||!measure.phoneMovingInside||!measure.cardInside||measure.scrollOverflow>2)
+  errors.push('expanded hero composition failed at '+width);
+ await page.close();
+}
 // Finishing pass: shared Mini prices are read from the actual priceCart function,
 // not copied from static mock text.
 for(const quantity of [1,2]){
