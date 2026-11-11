@@ -381,6 +381,26 @@ def test_reviewed_history_lines_require_exact_blob_path_and_historical_context(m
     assert rg.scan_bytes(path, data)
     assert rg.scan_bytes(path, data, "index")
     assert rg.scan_bytes(path, data, "not-a-history-commit")
+    for revision in ("a" * 11, "a" * 13, "a" * 40, "A" * 12):
+        assert rg.scan_bytes(path, data, revision)
     assert rg.scan_bytes("migration/other.sh", data, "a" * 12)
     assert rg.scan_bytes(path, data + b"# new surrounding bytes\n", "a" * 12)
     assert rg.scan_bytes(path, (line + " # edited\n").encode(), "a" * 12)
+    assignment = "password" + " = " + repr("synthetic-unreviewed-value")
+    assert rg.scan_bytes(path, data + (assignment + "\n").encode(), "a" * 12)
+    other_rule = (path, "credential-url", key[2], key[3])
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {other_rule: "Different rule"})
+    assert rg.scan_bytes(path, data, "a" * 12)
+
+
+@pytest.mark.parametrize("rule,value", payloads())
+def test_reviewed_history_line_does_not_exempt_other_findings(monkeypatch, rule, value):
+    path = "migration/reviewed-example.sh"
+    line = "password" + " = " + repr("synthetic-reviewed-placeholder")
+    data = (line + "\n" + value + "\n").encode()
+    key = (path, "credential-literal", hashlib.sha256(data).hexdigest(),
+           hashlib.sha256(line.encode()).hexdigest())
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {key: "Only the first line is reviewed"})
+    findings = rg.scan_bytes(path, data, "a" * 12)
+    assert not any(f.line == 1 for f in findings)
+    assert any(f.rule == rule and f.line == 2 for f in findings)
