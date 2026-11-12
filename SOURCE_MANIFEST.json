@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 876,
+  "file_count_including_manifest": 879,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -583,8 +583,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1218,
-      "sha256": "72159748b987e95657d671fedefc213f74ba3ff1dab9fd902365b5108a7ca5ec"
+      "bytes": 1259,
+      "sha256": "5a9fb468a5a79fc098f929abe3e6cc45ddebbf38f9e99e33241562b1b57eb228"
     },
     {
       "path": "refinements/instagram-v18/ACCEPTANCE_REPORT.md",
@@ -4347,6 +4347,11 @@
       "sha256": "e5e9f23ef38a4b1d070c2cc9b883f49f098529803f5aa0d9f19804165e0cd450"
     },
     {
+      "path": "tests/v36_2-designer-provenance.test.mjs",
+      "bytes": 4456,
+      "sha256": "65946a975deffe7a858f1f5e07f6f1bfdd03a98c1f4491a024bd8d21fa8b7b6a"
+    },
+    {
       "path": "tests/v36_2-instagram-seo-content.test.mjs",
       "bytes": 5863,
       "sha256": "471837df649004a489ffe704ab5243abc9c1f434697a64675f400d04574a60d4"
@@ -4383,8 +4388,8 @@
     },
     {
       "path": "tools/designer-check.mjs",
-      "bytes": 8006,
-      "sha256": "f3c6972bbbeae3ec15f30e165f69511c6f2f5e08cc829228aa9171ef29e0b303"
+      "bytes": 7084,
+      "sha256": "38a49e4e42ed70347654a79ed47b40ec5901dd9bec0c651ad04c7ab16a64cef2"
     },
     {
       "path": "tools/designer-preview-test.mjs",
@@ -4395,6 +4400,16 @@
       "path": "tools/designer-preview.mjs",
       "bytes": 13346,
       "sha256": "79b0a7e84a179d692c14b8046ce9e8c4fcf05ae4c3e156e4c9daef27fa10d061"
+    },
+    {
+      "path": "tools/designer-provenance.mjs",
+      "bytes": 4362,
+      "sha256": "395b1da512f42d0af44a18f1c459fb8f947e5cbcd824701ecddcd5b99f5646d6"
+    },
+    {
+      "path": "tools/nfc-ru-01-local-source.json",
+      "bytes": 2054,
+      "sha256": "82d9d2f536e92ac9c8923e6611490ada3cbee4a499b8481089174a43f2df98ce"
     }
   ]
 }
