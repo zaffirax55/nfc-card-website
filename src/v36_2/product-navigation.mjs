@@ -1,9 +1,17 @@
+import {russianSupplementText,russianUIText} from './ru-copy.mjs';
 import {productContentEntryIds} from './product-content.mjs';
 
 const activeEntries=new Set(productContentEntryIds);
 const activeByEntry=new Map();
 export const PRODUCT_TAB_KEYS=Object.freeze(['overview','specs','payment','faq']);
 export const productTabWords=Object.freeze({
+ ru:{
+  label:russianSupplementText('product-navigation.mjs','productTabWords.uk.label'),
+  overview:russianUIText('overview'),specs:russianUIText('specs'),
+  payment:russianUIText('payment'),faq:russianUIText('productFaq'),
+  configure:russianUIText('productHandoffButton'),
+  noScript:russianSupplementText('product-navigation.mjs','productTabWords.uk.noScript')
+ },
  uk:{label:'Розділи про картку',overview:'Огляд',specs:'Характеристики',payment:'Оплата й доставка',faq:'Питання',configure:'До вибору картки',noScript:'Усі розділи про картку наведено нижче.'},
  en:{label:'Card information',overview:'Overview',specs:'Specifications',payment:'Payment & delivery',faq:'FAQ',configure:'Back to configuration',noScript:'All card information sections are shown below.'},
  pl:{label:'Informacje o karcie',overview:'Opis',specs:'Specyfikacja',payment:'Płatność i dostawa',faq:'Pytania',configure:'Wróć do konfiguracji',noScript:'Wszystkie informacje o karcie znajdują się poniżej.'}

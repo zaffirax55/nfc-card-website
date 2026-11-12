@@ -13,7 +13,8 @@ for(const page of spec.pages)for(const config of configs)test(`${config.mode} ${
  assert.equal(meta.title,page.title);assert.equal(meta.description,page.description);
  assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.ok(html.includes(`<h1>${esc(page.h1)}</h1>`));assert.ok(html.includes(`<p>${esc(page.intro)}</p>`));
  assert.ok(html.includes(`<title>${esc(page.title)}</title>`));assert.ok(html.includes(`<meta name="description" content="${esc(page.description)}">`));
- assert.ok(!meta.title.includes(' | NFC CARD'));assert.equal(meta.alternates.length,3);
+ assert.ok(!meta.title.includes(' | NFC CARD'));assert.deepEqual(meta.alternates.map(a=>a.language),['uk','en','pl','ru-UA']);
+ assert.equal(meta.alternates.at(-1).href,new URL(publicPath('ru',route),meta.canonical).href);
  if(config.mode==='preview')assert.equal(meta.robots,'noindex,nofollow,noarchive');
  if(page.eyebrow)assert.ok(html.includes(`<div class="eyebrow">${page.eyebrow}</div>`));
  const links=page.related_link?[page.related_link]:page.after_grid_section.paragraphs.flat().filter(x=>x.href);

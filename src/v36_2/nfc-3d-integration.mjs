@@ -1,9 +1,15 @@
+import {russianSupplementText,russianUIText} from './ru-copy.mjs';
 // Genuine Zaffirax GLB models, progressively enhanced in the OptiDigital storefront.
 const ROOT='/nfc-card-website';
 const models={'review-card':'review-standard','branded-review-card':'review-branded','review-card-3d':'review-acrylic','nfc-instagram-card':'instagram','beauty-review-card':'beauty','branded-beauty-review-card':'beauty-branded','restaurant-review-card':'restaurant','branded-restaurant-review-card':'restaurant-branded','nfc-menu-card':'menu-square-black'};
 const menu=['menu-square-black','menu-square-white','menu-round-black','menu-round-white'];
 const labels={uk:{open:'Переглянути в 3D',close:'Закрити',rotate:'Обертайте мишею або пальцем',loading:'Завантаження 3D…',failed:'Не вдалося завантажити 3D'},en:{open:'View in 3D',close:'Close',rotate:'Drag to rotate the card',loading:'Loading 3D…',failed:'3D preview unavailable'},pl:{open:'Zobacz w 3D',close:'Zamknij',rotate:'Przeciągnij, aby obrócić kartę',loading:'Wczytywanie 3D…',failed:'Podgląd 3D niedostępny'}};
-const t=()=>labels[document.documentElement.lang]||labels.uk;
+const russian=()=>document.documentElement.lang==='ru';
+const t=()=>russian()?{
+ open:russianUIText('view3d'),close:russianUIText('close'),
+ rotate:russianSupplementText('nfc-3d-integration.mjs','labels.uk.rotate'),
+ failed:russianSupplementText('nfc-3d-integration.mjs','labels.uk.failed')
+}:labels[document.documentElement.lang]||labels.uk;
 let dialog,loader,request=0;
 const faceLabels={uk:['Лицьова сторона','Зворотна сторона'],en:['Front','Back'],pl:['Przód','Tył']};
 const posterFor={'review-standard':'review.webp','review-branded':'review.webp','review-acrylic':'three-d.webp','instagram':'instagram.webp','beauty':'beauty.webp','beauty-branded':'beauty.webp','restaurant':'restaurant.webp','restaurant-branded':'restaurant.webp','menu-square-black':'menu-square_100_black.webp','menu-square-white':'menu-square_100_white.webp','menu-round-black':'menu-round_70_black.webp','menu-round-white':'menu-round_70_white.webp'};
@@ -35,6 +41,7 @@ document.addEventListener('click',async e=>{
  const control=e.target.closest('[data-glb-model]');if(!control)return;
  e.preventDefault();e.stopPropagation();
  const d=ensureDialog(),stage=d.querySelector('.nfc-glb-stage'),current=++request;
+ d.querySelector('.nfc-glb-close').textContent=t().close;
  stage.replaceChildren();
  const preview=document.createElement('div');preview.className='nfc-glb-poster';
  const poster=document.createElement('img');poster.src=ROOT+'/assets/'+(posterFor[control.dataset.glbModel]||'review.webp');poster.alt='';
@@ -58,7 +65,7 @@ document.addEventListener('click',async e=>{
   viewer.setAttribute('alt','NFC CARD 3D');
   stage.replaceChildren(viewer);
   const faces=document.createElement('div');faces.className='nfc-glb-faces';
-  (faceLabels[document.documentElement.lang]||faceLabels.uk).forEach((label,index)=>{
+  (russian()?[russianUIText('front'),russianUIText('back')]:faceLabels[document.documentElement.lang]||faceLabels.uk).forEach((label,index)=>{
     const button=document.createElement('button');button.type='button';button.textContent=label;
     button.setAttribute('aria-pressed',String(index===0));
     button.addEventListener('click',()=>{
@@ -70,7 +77,7 @@ document.addEventListener('click',async e=>{
   viewer.addEventListener('error',()=>{if(current!==request)return;stage.replaceChildren(preview);d.querySelector('.nfc-glb-hint').textContent=t().failed},{once:true});
   if(menu.includes(control.dataset.glbModel)){
    const variants=document.createElement('div');variants.className='nfc-glb-variants';
-   const titles=['□ Black','□ White','○ Black','○ White'];
+   const titles=russian()?[0,1,2,3].map(i=>russianSupplementText('nfc-3d-integration.mjs','titles['+i+']')):['□ Black','□ White','○ Black','○ White'];
    menu.forEach((id,index)=>{const option=document.createElement('button');option.type='button';option.textContent=titles[index];option.addEventListener('click',()=>viewer.setAttribute('src',ROOT+'/assets/models/'+id+'.glb'));variants.append(option)});
    stage.append(variants);
   }

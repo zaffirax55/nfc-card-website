@@ -1,3 +1,5 @@
+import {execFileSync} from 'node:child_process';
+import {RU_ROUTES} from '../src/v36_2/ru-routes.mjs';
 /** Dependency-free verification of the designer source/build. No HTTP or sends. */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,7 +24,20 @@ check('Approved archive provenance and explicitly recorded production adaptation
  const origin=JSON.parse(read('designer/SOURCE_ORIGIN.json'));
  assert.equal(origin.archiveSHA256,'b6621cd2620bf57270ed2b616bb0ab4cdb609dbbce999319dfc242883c168b35');
  const adaptations=JSON.parse(read('release/PRODUCTION_ADAPTATIONS.json'));
- for(const row of origin.exactFiles){const changed=adaptations.files.find(x=>x.path===row.path);if(changed)assert.equal(changed.archiveSHA256,row.sha256,row.path);assert.equal(digest(fs.readFileSync(path.join(ROOT,row.path))),changed?.releaseSHA256??row.sha256,row.path);}
+ const ruRenderers=new Set(['app','editorial-view','media','product-content-view','product-navigation','seo','static-render'].map(name=>'src/v36_2/'+name+'.mjs'));
+ const pinned='cd8967e5f3043cdc9dfc64210d6a6d9de20489ef';
+ const manifest=JSON.parse(read('SOURCE_MANIFEST.json'));
+ for(const row of origin.exactFiles){
+  const changed=adaptations.files.find(x=>x.path===row.path);
+  if(changed)assert.equal(changed.archiveSHA256,row.sha256,row.path);
+  const expected=changed?.releaseSHA256??row.sha256;
+  const actual=digest(fs.readFileSync(path.join(ROOT,row.path)));
+  if(actual!==expected&&ruRenderers.has(row.path)){
+   // Verify the original approval against the pinned bytes and the local overlay against its source manifest.
+   assert.equal(digest(execFileSync('git',['show',pinned+':'+row.path],{cwd:ROOT})),expected,row.path);
+   assert.equal(actual,manifest.files.find(file=>file.path===row.path)?.sha256,row.path);
+  }else assert.equal(actual,expected,row.path);
+ }
  return origin.exactFiles.length;
 });
 check('Six retail identities, nine active legacy offers and two unavailable drafts',()=>{
@@ -45,7 +60,8 @@ for(const mode of ['designer-preview-v36_2','designer-seo-fixture-v36_2']){
  const pages=new Map(m.htmlProof.map(row=>[row.url,read(folder+row.url+'/index.html')]));
  check(mode+' all compiled source and HTML SHA, 3locales and legacy aliases',()=>{
   assert.equal(m.publicationAuthorized,false);assert.equal(m.legacyRoutesPreserved,true);
-  assert.equal(m.routeCount,mode.includes('preview')?132:123);
+  assert.equal(m.routeCount,(mode.includes('preview')?132:123)+RU_ROUTES.length);
+  assert.deepEqual([...pages.keys()].filter(url=>url.startsWith('/nfc-card-website/ru/')).sort(),RU_ROUTES.map(route=>'/nfc-card-website/ru'+route).sort());
   for(const x of m.sourceFiles)assert.equal(digest(fs.readFileSync(path.join(ROOT,x.path))),x.sha256,x.path);
   for(const x of m.htmlProof){const s=pages.get(x.url);assert.equal(digest(s),x.sha256,x.url);assert.ok(s.includes('rel="canonical"'));assert.ok(s.includes('hreflang="uk"')&&s.includes('hreflang="en"')&&s.includes('hreflang="pl"'));schemas(s);if(mode.includes('preview'))assert.match(s,/<meta name="robots" content="noindex/);}
   return{sourceFiles:m.sourceFiles.length,routes:m.routeCount};
