@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 884,
+  "file_count_including_manifest": 886,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -583,8 +583,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1259,
-      "sha256": "5a9fb468a5a79fc098f929abe3e6cc45ddebbf38f9e99e33241562b1b57eb228"
+      "bytes": 1415,
+      "sha256": "164370eeaa592f4ef8665a062a69e1532ed6dffaf6a15fcb7efa540457d85952"
     },
     {
       "path": "refinements/instagram-v18/ACCEPTANCE_REPORT.md",
@@ -4373,8 +4373,8 @@
     },
     {
       "path": "tests/v36_2-designer-provenance.test.mjs",
-      "bytes": 4456,
-      "sha256": "65946a975deffe7a858f1f5e07f6f1bfdd03a98c1f4491a024bd8d21fa8b7b6a"
+      "bytes": 4672,
+      "sha256": "fa6e4201379e1d6ef01c5470688302a5198e402e0bbd01ac7a1d35a9895243a1"
     },
     {
       "path": "tests/v36_2-instagram-seo-content.test.mjs",
@@ -4387,9 +4387,14 @@
       "sha256": "a1a1dae5c9a5cffecc6d6ca7bc2629dfb24933dbb8db9096cc425085fc718c41"
     },
     {
+      "path": "tests/v36_2-primary-release-provenance.test.mjs",
+      "bytes": 5693,
+      "sha256": "15fc084e01627dd647405545b6da9561f1240ef4c1e2753fa5181c8d3f8bbbf4"
+    },
+    {
       "path": "tests/v36_2-production.test.mjs",
-      "bytes": 6534,
-      "sha256": "8a90332f6742f2c4ef26b92626c31d90362949fc0786e2c3a982eb6e02d3bfce"
+      "bytes": 6736,
+      "sha256": "f198f9cc6ac50cd4cce0ee8c04fd1e6f4b760835f1c3119ba067f152e11e653c"
     },
     {
       "path": "tests/v36_2-readiness.test.mjs",
@@ -4413,8 +4418,8 @@
     },
     {
       "path": "tools/designer-check.mjs",
-      "bytes": 7084,
-      "sha256": "38a49e4e42ed70347654a79ed47b40ec5901dd9bec0c651ad04c7ab16a64cef2"
+      "bytes": 7104,
+      "sha256": "cfdf0af8683bcf54e4bbed01fc24e80632988eca0e8a3fec9b972681f530aaa2"
     },
     {
       "path": "tools/designer-preview-test.mjs",
@@ -4428,8 +4433,13 @@
     },
     {
       "path": "tools/designer-provenance.mjs",
-      "bytes": 4362,
-      "sha256": "395b1da512f42d0af44a18f1c459fb8f947e5cbcd824701ecddcd5b99f5646d6"
+      "bytes": 8324,
+      "sha256": "5c82a2ad63f8d4b05eedb9baa8405eaae5cfeb960a7e09913dccdb8ad99ec365"
+    },
+    {
+      "path": "tools/nfc-primary-release-01-local-reconciliation.json",
+      "bytes": 1945,
+      "sha256": "4a5d63e19ea8f1117a5bac53a3b1b5464f4d5859f6cdc910b4e6844c07735e0c"
     },
     {
       "path": "tools/nfc-ru-01-local-source.json",

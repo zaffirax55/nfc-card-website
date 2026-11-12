@@ -10,7 +10,9 @@ const root=new URL('../',import.meta.url);
 const baseline='cd8967e5f3043cdc9dfc64210d6a6d9de20489ef';
 const binding='tools/nfc-ru-01-local-source.json';
 const renderer='src/v36_2/app.mjs';
-const current=file=>readFileSync(new URL(file,root));
+// The retained local-RU profile is positively tested on its exact accepted tree.
+// The reconciled filesystem has its own explicit profile and separate tests.
+const current=file=>execFileSync('git',['show','98977a119e508663074939cd2320a94c91f8dea8:'+file],{cwd:root});
 const historical=(commit,file)=>execFileSync('git',['show',commit+':'+file],{cwd:root});
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const record=()=>JSON.parse(current(binding));

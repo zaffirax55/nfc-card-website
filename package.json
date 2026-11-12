@@ -11,7 +11,7 @@
     "designer:build": "node scripts/build-v36_2.mjs preview",
     "designer:seo": "node scripts/build-v36_2.mjs production-fixture",
     "designer:preview": "node tools/designer-preview.mjs --port 4196",
-    "designer:test:contracts": "node --test tests/v36_2-client.test.mjs tests/v36_2-price.test.mjs tests/v36_2-challenge-renewal.test.mjs tests/v36_2-seo-content.test.mjs tests/v36_2-instagram-seo-content.test.mjs tests/v36_2-branded-seo-content.test.mjs tests/v36_2-v38-contract.test.mjs tests/v36_2-ru-source.test.mjs tests/v36_2-designer-provenance.test.mjs",
+    "designer:test:contracts": "node --test tests/v36_2-client.test.mjs tests/v36_2-price.test.mjs tests/v36_2-challenge-renewal.test.mjs tests/v36_2-seo-content.test.mjs tests/v36_2-instagram-seo-content.test.mjs tests/v36_2-branded-seo-content.test.mjs tests/v36_2-v38-contract.test.mjs tests/v36_2-ru-source.test.mjs tests/v36_2-designer-provenance.test.mjs tests/v36_2-primary-release-provenance.test.mjs tests/v36_2-control-context.test.mjs tests/v36_2-control-transport.test.mjs tests/release-identity.test.mjs",
     "designer:test:transport": "node tools/designer-preview-test.mjs",
     "designer:check": "node tools/designer-check.mjs",
     "build:legacy": "node src/build.mjs",

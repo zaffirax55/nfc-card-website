@@ -21,8 +21,8 @@ const ids=s=>[...s.matchAll(/<[^>]+class="[^"]*\bproduct-card\b[^"]*"[^>]*>/g)].
 const schemas=s=>[...s.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(x=>JSON.parse(x[1]));
 const flatten=x=>Array.isArray(x)?x.flatMap(flatten):x&&typeof x==='object'?[x,...Object.values(x).flatMap(flatten)]:[];
 const prefix=l=>'/nfc-card-website'+(l==='uk'?'':'/'+l);
-check('Historical designer provenance and exact reviewed local RU bindings',()=>verifyDesignerProvenance({
- mode:'local-ru',
+check('Historical designer, RU and independently reviewed reconciliation bindings',()=>verifyDesignerProvenance({
+ mode:'local-primary-release',
  readFile:file=>fs.readFileSync(path.join(ROOT,file)),
  readBaseline:(commit,file)=>execFileSync('git',['show',commit+':'+file],{cwd:ROOT})
 }));
