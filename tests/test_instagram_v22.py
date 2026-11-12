@@ -143,7 +143,18 @@ def test_media_placement_avif_and_product_schema(source, locale):
     catalog = BeautifulSoup((site / prefix / "solutions/index.html").read_text("utf-8"), "html.parser")
     product = BeautifulSoup((site / prefix / "solutions/instagram-card/index.html").read_text("utf-8"), "html.parser")
     info = BeautifulSoup((site / prefix / "instagram-card/index.html").read_text("utf-8"), "html.parser")
-    assert "clean-front-render" in catalog.select_one('.commerce-card[data-variant="instagram"] img')["src"]
+    # Owner-authored ff1cc926/86b679db made the supplied artwork poster the
+    # catalog fallback; the five approved AVIF/PDP images stay a separate contract.
+    from urllib.parse import urlsplit
+    card = catalog.select_one('.commerce-card[data-variant="instagram"]')
+    poster = card.select_one('img.catalog-product-image.catalog-artwork-poster')
+    assert poster is not None
+    assert urlsplit(poster['src']).path == BASE + '/assets/model-posters/instagram.webp'
+    assert (site / 'assets/model-posters/instagram.webp').read_bytes() == (ROOT / 'src/model-posters/instagram.webp').read_bytes()
+    assert card.select_one('[data-card-model="instagram"]')
+    photos = card.select('.catalog-photo-choices [data-catalog-photo]')
+    assert len(photos) == 5 and photos[0]['data-photo-src'] == poster['src']
+    assert all('real-' in photo['data-photo-src'] for photo in photos[1:])
     slides = product.select("[data-slide]")
     assert len(slides) == 5 and not product.select("[data-placeholder]")
     assert all(slide.select_one('source[type="image/avif"]') for slide in slides)

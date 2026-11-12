@@ -71,6 +71,19 @@ SAFE_FIXTURES: dict[tuple[str, str, str], str] = {
     (".github/workflows/ci.yml", "credential-url", "5892d60942fe56d2d0fa9a5cfc49fba5278f8b2e732ecfd5dee0880d7231c497"): "exact loopback connection to that nfc_v12_test service",
 }
 
+# Historical false positives only: exact path, rule, whole-file SHA-256 and
+# stripped-line SHA-256. Never exempts the working tree or index; detector
+# patterns, complete history traversal and all other findings remain unchanged.
+SAFE_HISTORY_FIXTURES: dict[tuple[str, str, str, str], str] = {
+    ('migration/build-optidigital-3d.sh', 'credential-url', 'e48452c30419acb3edd1d1c5cf3a30104b7157111ed2c4092b8bab926ee04c22', 'fcd1a544316d401a297c32b6bd49a0130cb425fc244984364e99efe6d191cdb8'): 'Git remote URL constructed with a shell variable; no literal credential bytes in the line; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
+    ('src/v36_2/api-client.mjs', 'credential-literal', '47e9265e7a533ad40a4bf8e15921747dd7ef267626b50ea270ea14367ef098c0', '75ddb62862e54661e82143d0791cea8ad0466257688e34df04abf0ed86932afb'): 'Fetch request credentials option, not a stored secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
+    ('src/v36_2/api-client.mjs', 'credential-literal', 'bd4af6d162c535cf7364f3274536fe3a459a029cd467ed4be06d4753c32b5fc6', '75ddb62862e54661e82143d0791cea8ad0466257688e34df04abf0ed86932afb'): 'Fetch RequestInit credentials mode omit; no credential material; NFC-RELEASE-GATE-01 reviewed exact PR5 historical blob and line.',
+    ('src/v36_2/assets/model-viewer.min.js', 'credential-literal', '8367184a607fbe07a78b650c0d359e5ebbd96f7e2b22f95f761f559b63430386', 'f5297f36a4cc24f8dd3534453b5d208479cf3b024b73e7b429dc49ba5997fe8a'): 'Vendored JS Fetch request credentials mode derived from the crossOrigin enum; no authentication secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
+    ('src/v36_2/legacy-v36/pages.mjs', 'credential-literal', 'a2214c9d904c3cecba72fe0606fd3e7c06cf5a7e470731da6ffefdcf8b13ec2b', 'c69d8f3d1537648b69d5e4792668ce05f6afc6deebe85a20ba150355766a6cb0'): 'Fetch request credentials option, not a stored secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
+    ('src/v36_2/legacy-v36/pages.mjs', 'credential-literal', 'a2214c9d904c3cecba72fe0606fd3e7c06cf5a7e470731da6ffefdcf8b13ec2b', '42fff62a2d917c178ec83a013dcece0a1bc0458648c77cf7167a083d143887bd'): 'Fetch request credentials option, not a stored secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
+    ("<commit-message>", "credential-literal", "4a9a06ec46adf9078bf33dafa9d51645dc0a32c3564d483072a5529a5c0bce0f", "e48d50ad399beb193d88a18e527ca026c0f9bd7a819e14ea3e1b92be4859d3e4"): "Exact Git commit message object reviewed for a Fetch mode literal; no secret; NFC-RELEASE-GATE-01.",
+}
+
 PRIVATE_COMPONENTS = {
     ".aws", ".ssh", ".kube", ".azure", ".codex", ".agents", "governance",
     "private", "private-uploads", "uploads", "sessions", "cookies",
@@ -135,7 +148,10 @@ def scan_bytes(name: str, data: bytes, revision: str = "working-tree") -> list[F
                 if not pattern.search(line):
                     continue
                 key = (name, rule, hashlib.sha256(line.strip().encode("utf-8")).hexdigest())
-                if key not in SAFE_FIXTURES:
+                historical_key = (name, rule, hashlib.sha256(data).hexdigest(), key[2])
+                reviewed_history = (re.fullmatch(r"[0-9a-f]{12}", revision) is not None
+                                    and historical_key in SAFE_HISTORY_FIXTURES)
+                if key not in SAFE_FIXTURES and not reviewed_history:
                     findings.add(Finding(name, rule, number, revision))
     if name == ".env.example":
         try:

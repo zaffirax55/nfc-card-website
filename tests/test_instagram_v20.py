@@ -1,5 +1,6 @@
 """Corrective-release regressions for the complete Instagram product pages."""
 from pathlib import Path
+import re
 
 import pytest
 from bs4 import BeautifulSoup
@@ -87,6 +88,57 @@ def test_approved_gallery_has_five_images_and_zoom_control(source):
 
 
 def test_repository_scoped_release_policy_is_persistent():
-    policy = (ROOT / "AGENTS.md").read_text("utf-8")
-    for phrase in ["push it to the existing `main`", "wait for green CI", "GitHub Pages deployment", "without force"]:
-        assert phrase in policy
+    policy = " ".join((ROOT / "AGENTS.md").read_text("utf-8").split())
+    handoff = " ".join((ROOT / "docs/designer-handoff/GITHUB_WORKFLOW.md").read_text("utf-8").split())
+    assert "https://github.com/zaffirax55/nfc-card-website.git" in policy
+    assert "Designer PRs target `optidigital-3d-preview`" in policy
+    assert "`seo/<task>`" in policy and "`codex/<task>-seo`" in policy
+    assert "Local work does not imply permission to commit, push, open/merge PRs or release" in policy
+    assert "explicit authorization" in policy and "owner-authorized release" in policy
+    assert "review" in handoff and "preview patch first" in handoff
+
+    workflows = ROOT / ".github/workflows"
+    ci = (workflows / "ci.yml").read_text()
+    assert "scripts/verify_manifest.py" in ci and "scripts/release_guard.py --history" in ci
+    assert "run: npm test" in ci
+    assert "actions/deploy-pages@" not in ci and "actions/upload-pages-artifact@" not in ci
+    publisher = workflows / "fork-pages.yml"
+    if publisher.exists():
+        text = publisher.read_text()
+        events = re.search(r"(?m)^on:\s*\n((?:[ \t]+.*\n|\n)*)", text).group(1)
+        assert re.findall(r"(?m)^  ([a-z_]+):", events) == ["workflow_dispatch"]
+        assert "storefront_sha:" in events and "required: true" in events
+
+        def job(name):
+            return re.search(r"(?ms)^  " + re.escape(name) + r":\n(.*?)(?=^  [a-zA-Z][\w-]*:|\Z)", text).group(1)
+
+        sources = job("sources")
+        assert "github.event_name == 'workflow_dispatch'" in sources
+        assert "github.ref == 'refs/heads/main'" in sources
+        assert "github.repository == 'zaffirax55/nfc-card-website'" in sources
+        assert "github.workflow_sha" in sources
+        assert "ref: ${{ inputs.storefront_sha }}" in sources
+        assert "scripts/verify_storefront_lineage.py" in sources
+        assert "ref: optidigital-3d-preview" not in text
+        assert "uses: ./.github/workflows/ci.yml" in job("validate-main")
+        assert "uses: ./.github/workflows/ci.yml" in job("validate-storefront")
+        build = job("build")
+        needs = re.search(r"(?m)^    needs:\s*\[([^]]+)\]", build).group(1)
+        assert {value.strip() for value in needs.split(',')} == {"sources", "validate-main", "validate-storefront"}
+        assert build.index("scripts/pages_artifact.py") < build.index("uses: actions/upload-pages-artifact@")
+        assert "ref: ${{ needs.sources.outputs.storefront_sha }}" in build
+        deploy = job("deploy")
+        assert "needs: build" in deploy and "github.ref == 'refs/heads/main'" in deploy
+        assert "pages: write" in deploy and "id-token: write" in deploy
+        assert "pages: write" not in text.replace(deploy, "")
+        assert "group: nfc-github-pages" in text and "cancel-in-progress: false" in text
+        expected_publishers = ["fork-pages.yml"]
+    else:
+        # Storefront branch validates; publication is a separate main-only route.
+        text = (workflows / "publish-optidigital-3d.yml").read_text()
+        assert "npm run designer:build" in text and "npm run designer:check" in text
+        assert "pages: write" not in text and "id-token: write" not in text
+        expected_publishers = []
+    publishers = sorted(p.name for p in workflows.glob("*.yml")
+                        if re.search(r"uses:\s*actions/deploy-pages@", p.read_text()))
+    assert publishers == expected_publishers

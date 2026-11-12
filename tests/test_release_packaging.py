@@ -97,6 +97,21 @@ def test_generated_boundary_must_be_a_directory(tree):
         vm.verify(tree)
 
 
+def test_only_reciprocal_registered_git_worktree_marker_is_excluded(tree, tmp_path):
+    metadata = tmp_path.parent / (tmp_path.name + "-gitmeta")
+    registration = metadata / "worktrees" / "release"
+    registration.mkdir(parents=True)
+    put(metadata, "config", b"[core]\nrepositoryformatversion = 0\n")
+    put(metadata, "HEAD", b"ref: refs/heads/main\n")
+    put(registration, "commondir", b"../..\n")
+    put(registration, "gitdir", str(tree / ".git").encode() + b"\n")
+    put(tree, ".git", ("gitdir: " + str(registration) + "\n").encode())
+    vm.verify(tree)
+    put(registration, "gitdir", str(tree / "other").encode() + b"\n")
+    with pytest.raises(vm.ManifestError, match="replaced with a file"):
+        vm.verify(tree)
+
+
 @pytest.mark.parametrize("name", ["../escape", "/absolute", "a/../b", "a//b", "./a", "a/",
                                  "C:/drive", "a\\b", "a\nb", "a/.", "a. ", "site/index.html",
                                  vm.MANIFEST])
@@ -353,3 +368,62 @@ def test_history_diagnostics_never_include_secret_filename():
     _, value = payloads()[0]
     finding = rg.Finding("src/" + value, "unsafe-path")
     assert value not in finding.diagnostic()
+
+
+def test_reviewed_history_lines_require_exact_blob_path_and_historical_context(monkeypatch):
+    path = "migration/reviewed-example.sh"
+    line = "password" + " = " + repr("synthetic-reviewed-placeholder")
+    data = (line + "\n").encode()
+    key = (path, "credential-literal", hashlib.sha256(data).hexdigest(),
+           hashlib.sha256(line.encode()).hexdigest())
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {key: "Synthetic exact-scope regression fixture"})
+    assert not rg.scan_bytes(path, data, "a" * 12)
+    assert rg.scan_bytes(path, data)
+    assert rg.scan_bytes(path, data, "index")
+    assert rg.scan_bytes(path, data, "not-a-history-commit")
+    for revision in ("a" * 11, "a" * 13, "a" * 40, "A" * 12):
+        assert rg.scan_bytes(path, data, revision)
+    assert rg.scan_bytes("migration/other.sh", data, "a" * 12)
+    assert rg.scan_bytes(path, data + b"# new surrounding bytes\n", "a" * 12)
+    assert rg.scan_bytes(path, (line + " # edited\n").encode(), "a" * 12)
+    assignment = "password" + " = " + repr("synthetic-unreviewed-value")
+    assert rg.scan_bytes(path, data + (assignment + "\n").encode(), "a" * 12)
+    other_rule = (path, "credential-url", key[2], key[3])
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {other_rule: "Different rule"})
+    assert rg.scan_bytes(path, data, "a" * 12)
+
+
+@pytest.mark.parametrize("rule,value", payloads())
+def test_reviewed_history_line_does_not_exempt_other_findings(monkeypatch, rule, value):
+    path = "migration/reviewed-example.sh"
+    line = "password" + " = " + repr("synthetic-reviewed-placeholder")
+    data = (line + "\n" + value + "\n").encode()
+    key = (path, "credential-literal", hashlib.sha256(data).hexdigest(),
+           hashlib.sha256(line.encode()).hexdigest())
+    monkeypatch.setattr(rg, "SAFE_HISTORY_FIXTURES", {key: "Only the first line is reviewed"})
+    findings = rg.scan_bytes(path, data, "a" * 12)
+    assert not any(f.line == 1 for f in findings)
+    assert any(f.rule == rule and f.line == 2 for f in findings)
+
+
+def test_reviewed_pr3_commit_message_is_only_exempt_in_exact_history():
+    """The reviewed Git object is safe; altered history, paths and values remain blocked."""
+    commit = "77c7955e0481414db0d8abe569dac9f9bb6f1d80"
+    revision = commit[:12]
+    path = "<commit-message>"
+    raw = rg.git(ROOT, "cat-file", "commit", commit)
+    assert hashlib.sha256(raw).hexdigest() == "4a9a06ec46adf9078bf33dafa9d51645dc0a32c3564d483072a5529a5c0bce0f"
+    lines = [(i, line) for i, line in enumerate(raw.splitlines(), 1)
+             if rg.PATTERNS["credential-literal"].search(line.decode("utf-8"))]
+    assert len(lines) == 1 and lines[0][0] == 10
+    matched = lines[0][1]
+    assert hashlib.sha256(matched.strip()).hexdigest() == "e48d50ad399beb193d88a18e527ca026c0f9bd7a819e14ea3e1b92be4859d3e4"
+    assert not rg.scan_bytes(path, raw, revision)
+    for context in ("working-tree", "index", "x" * 11, "x" * 13, commit, revision.upper()):
+        assert rg.scan_bytes(path, raw, context)
+    assert rg.scan_bytes("docs/other.txt", raw, revision)
+    assert rg.scan_bytes(path, raw + b"\n", revision)
+    assert rg.scan_bytes(path, raw.replace(matched, matched + b" # altered", 1), revision)
+    extra = ("password" + " = " + repr("synthetic-negative-secret")).encode()
+    findings = rg.scan_bytes(path, raw + b"\n" + extra + b"\n", revision)
+    assert any(f.rule == "credential-literal" for f in findings)

@@ -222,13 +222,45 @@ def test_instagram_routes_schema_faq_media_and_links(source,locale):
     assert ORIGIN+BASE+'/'+prefix+'solutions/instagram-card' in sitemap
 
 
-def test_menu_v24_publication_approval_covers_current_content():
-    from server.publication import content_hash
-    approval=json.loads((ROOT/'src/publication-approval.json').read_text())
-    assert approval['publicLaunch']['ownerAuthorizedPublication'] is True
-    assert approval['publicLaunch']['reviewedContentSha256']==content_hash(ROOT)
-    assert 'release pack v24' in approval['publicLaunch']['approvalReference']
-    assert json.loads((ROOT/'src/commerce.json').read_text())['products']['nfc-instagram-card']['offers'].keys()=={'ready'}
+def test_menu_v24_approval_does_not_authorize_unreviewed_current_content(tmp_path):
+    """Historical PUBLIC approval is not a prerequisite for noindex preview."""
+    import shutil
+    from test_publication import build as publication_build
+
+    approval_path = ROOT / 'src/publication-approval.json'
+    original_approval = approval_path.read_bytes()
+    shutil.copytree(ROOT / 'src', tmp_path / 'src')
+    routes = tmp_path / 'refinements/instagram-v18'
+    routes.mkdir(parents=True)
+    shutil.copyfile(ROOT / 'refinements/instagram-v18/routes.json', routes / 'routes.json')
+    # Unlike the isolated mocked-PUBLIC fixture, this copy never rewrites a
+    # reviewed hash or grants publication/indexing approval.
+    result = publication_build(tmp_path, NFC_PUBLICATION_MODE='PUBLIC_PREVIEW',
+                               NFC_DEPLOYMENT_TARGET='github-pages', NFC_PUBLIC_BASE_PATH=BASE)
+    assert result.returncode == 0, result.stderr
+    assert not (tmp_path / 'server/templates').exists()  # Pages must not expose private templates.
+    html = list((tmp_path / 'site').rglob('*.html'))
+    assert html
+    assert all(BeautifulSoup(p.read_text(), 'html.parser').select_one('meta[name=robots]')['content']
+               == 'noindex,nofollow' for p in html)
+    assert (tmp_path / 'site/robots.txt').read_text() == 'User-agent: *\nDisallow: /\n'
+
+    node("import fs from 'node:fs';"
+         + "const {config,flags}=await import(" + json.dumps((ROOT/'src/model.mjs').as_uri()) + ");"
+         + "const {resolvePublication,reviewedContentSha256}=await import(" + json.dumps((ROOT/'src/publication.mjs').as_uri()) + ");"
+         + "const approval=JSON.parse(fs.readFileSync(" + json.dumps(str(approval_path)) + ",'utf8'));"
+         + "const before=JSON.stringify(approval);"
+         + "const current=reviewedContentSha256(" + json.dumps(str(ROOT)) + ");"
+         + "const env={NFC_ENV:'production',NFC_DEPLOYMENT_TARGET:'github-pages',NFC_PUBLIC_ORIGIN:'https://nfc-card.example',NFC_PUBLIC_BASE_PATH:'/nfc-card-website'};"
+         + "const preview=resolvePublication({env:{...env,NFC_PUBLICATION_MODE:'PUBLIC_PREVIEW'},config,flags,approval,contentHash:current});"
+         + "assert.deepEqual(preview.indexableRoutes,[]);"
+         # Change the candidate content identity in memory, never an approval.
+         + "const unreviewed=['0'.repeat(64),'1'.repeat(64),'2'.repeat(64)].find(h=>h!==approval.reviewedContentSha256&&h!==approval.publicLaunch?.reviewedContentSha256);"
+         + "for(const mode of ['PUBLIC','PUBLIC_INDEXABLE'])assert.throws(()=>resolvePublication({env:{...env,NFC_PUBLICATION_MODE:mode},config,flags,approval,contentHash:unreviewed}),/Indexing blocked/);"
+         + "assert.equal(JSON.stringify(approval),before);")
+    assert approval_path.read_bytes() == original_approval
+    assert (tmp_path / 'src/publication-approval.json').read_bytes() == original_approval
+    assert json.loads((ROOT/'src/commerce.json').read_text())['products']['nfc-instagram-card']['offers'].keys() == {'ready'}
 
 
 def test_media_slots_require_approved_product_specific_provenance():

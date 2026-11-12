@@ -110,7 +110,18 @@ def test_canonical_hreflang_are_bidirectional_and_current(route):
 @pytest.mark.parametrize('route', ['/', '/en', '/solutions', '/en/solutions'])
 def test_catalog_is_first_meaningful_section_with_four_mini_products_and_original_prices(route):
     soup = soup_at(route)
-    assert soup.main.find('section')['id'] == 'catalog'
+    # The approved NFC demo/guide (6fe23633; owner request in the retained
+    # publication record) precedes the catalog on home, not on /solutions.
+    catalog = soup.main.find('section', recursive=False)
+    assert catalog['id'] == 'catalog'
+    children = soup.main.find_all(recursive=False)
+    prefix = children[:children.index(catalog)]
+    if route in ('/', '/en'):
+        assert [(node.name, node.get('class')) for node in prefix] == [
+            ('div', ['section', 'home-top-demo']), ('nav', ['section', 'home-guide'])]
+        assert prefix[0].select_one('[data-nfc-demo]')
+    else:
+        assert prefix == []
     cards = soup.select('.commerce-card')
     assert len(cards) == 9
     assert [c.get('data-variant') for c in cards[:2]] == ['standard', 'branded']
