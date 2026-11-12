@@ -48,8 +48,8 @@
     },
     {
       "path": ".github/workflows/publish-optidigital-3d.yml",
-      "bytes": 1325,
-      "sha256": "f751449f7b0eccb5625a187d36015776d35dde5ef0d09eb4002d82a35e00b36a"
+      "bytes": 1350,
+      "sha256": "7658cae984390e30090a7cfa1a737fed2b527c96f5b624efa2bca459340206c8"
     },
     {
       "path": ".github/workflows/verify-3d.yml",
