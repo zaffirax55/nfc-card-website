@@ -4,6 +4,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync,execFileSync} from 'node:child_process';
 import {EFFECTIVE_POLICY_FILE,loadReleasePolicy} from './release-policy-input.mjs';
+import {releaseIdentity} from './release-identity.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const origin='https://optidigitalagent.github.io',base='/nfc-card-website';
 if(process.env.NFC_PUBLIC_ORIGIN&&process.env.NFC_PUBLIC_ORIGIN!==origin)throw Error('existing_production_origin_required');
@@ -22,8 +23,8 @@ const stage=path.join(root,'work/pages-stage-v36_2');if(fs.existsSync(stage))fs.
 fs.cpSync(path.join(built,base),stage,{recursive:true});
 fs.copyFileSync(path.join(built,'BUILD_MANIFEST.json'),path.join(stage,'BUILD_MANIFEST.json'));
 fs.writeFileSync(path.join(stage,'.nojekyll'),'');
-const commit=process.env.GITHUB_SHA||process.env.NFC_RELEASE_COMMIT||execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
+const {commit,publisherWorkflowCommit}=releaseIdentity({head:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim()});
 if(!/^[a-f0-9]{40}$/.test(commit))throw Error('exact_release_commit_required');
-fs.writeFileSync(path.join(stage,'DEPLOYED_VERSION.json'),JSON.stringify({revision:'v36.2',commit,base,origin,mode:'production',policySha256:input.policy.policySha256,contractId:m.contractId,ownerApprovalReference:input.policy.approvalReference},null,2)+'\n');
+fs.writeFileSync(path.join(stage,'DEPLOYED_VERSION.json'),JSON.stringify({revision:'v36.2',commit,publisherWorkflowCommit,base,origin,mode:'production',policySha256:input.policy.policySha256,contractId:m.contractId,ownerApprovalReference:input.policy.approvalReference},null,2)+'\n');
 const site=path.join(root,'site');if(fs.existsSync(site))fs.rmSync(site,{recursive:true});fs.renameSync(stage,site);
 console.log(JSON.stringify({site:'site/',revision:'v36.2',mode:'production',routeCount:m.routeCount,commit,v1:true,v2:true,policySha256:input.policy.policySha256,publication:'Build only; deployment requires the separate verified gateway/receiver/recovery gates'}));

@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 879,
+  "file_count_including_manifest": 884,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -1198,8 +1198,8 @@
     },
     {
       "path": "scripts/build-public.mjs",
-      "bytes": 2985,
-      "sha256": "83c5bb9cab518f79f765412e00aa15cc8b8b086cc74adbd224e683444ffb9313"
+      "bytes": 3059,
+      "sha256": "52c45143c4904b0e5a3782fcaf89ddc59d933d398184a8b50cb2bc764bf5668d"
     },
     {
       "path": "scripts/build-v36_2.mjs",
@@ -1212,14 +1212,19 @@
       "sha256": "e9926002d7cbc57477c9af48a06a49908b2a48f1e88712b61a7671aafbae4fa9"
     },
     {
+      "path": "scripts/release-identity.mjs",
+      "bytes": 676,
+      "sha256": "4e828fa0149c05c56beaa9e9a547cdbed68d136d28c6791425683f7664d1d69a"
+    },
+    {
       "path": "scripts/release-policy-input.mjs",
       "bytes": 2225,
       "sha256": "f3cc5f57b49c837cab3df3b4bd48a8199e8922e67ac813720343804e43530939"
     },
     {
       "path": "scripts/release_guard.py",
-      "bytes": 17758,
-      "sha256": "8c981711bc4d9c01cbeb3f6d0c5a5458e6d332a5ac4dc483cf5f3dc3cfca4809"
+      "bytes": 18044,
+      "sha256": "cf282cf99d770f9add26f0cae268434714f65766b275f1fa7540549184d50c55"
     },
     {
       "path": "scripts/run_tests.py",
@@ -3553,13 +3558,13 @@
     },
     {
       "path": "src/v36_2/api-client.mjs",
-      "bytes": 12181,
-      "sha256": "bd4af6d162c535cf7364f3274536fe3a459a029cd467ed4be06d4753c32b5fc6"
+      "bytes": 12445,
+      "sha256": "80845f297d7383174b381a651172d0c2fdc7d629953f647f453bfb9a395debc1"
     },
     {
       "path": "src/v36_2/app.mjs",
-      "bytes": 90766,
-      "sha256": "aa96f37392819bc7da7beee00be3409c3873024c2713f00acabadec993a71b43"
+      "bytes": 91848,
+      "sha256": "bf519b82a9836a5704742ab8f465184cad2d753874f59fc84a0ae4fc9b20c93e"
     },
     {
       "path": "src/v36_2/assets/IBMPlexMono-OFL.txt",
@@ -3835,6 +3840,11 @@
       "path": "src/v36_2/contacts.mjs",
       "bytes": 834,
       "sha256": "ddd9ac1ccea733760800d9342b693c453311a6d9583be5eedea81610abda696b"
+    },
+    {
+      "path": "src/v36_2/control-context.mjs",
+      "bytes": 2177,
+      "sha256": "8ca7e3f362f55d8ae31521da50ac1727a4a083eb99410cfaf0ec4334265709df"
     },
     {
       "path": "src/v36_2/delivery-content.mjs",
@@ -4187,6 +4197,11 @@
       "sha256": "e758de74a4c9f4ff3c388b458db59b3211c04c63a5a319c34d383927d0a6a588"
     },
     {
+      "path": "tests/release-identity.test.mjs",
+      "bytes": 1203,
+      "sha256": "727dfdd7a287743e0c9fa26071ff74c45159d45dba9dd4c4feeb0ae5aa1c9cd8"
+    },
+    {
       "path": "tests/staging_inbound_e2e.mjs",
       "bytes": 1959,
       "sha256": "758da8e2e0b5548d2268abd3e3ab4bab64c00e6e1f4d6c3857e19a852d969186"
@@ -4345,6 +4360,16 @@
       "path": "tests/v36_2-client.test.mjs",
       "bytes": 3837,
       "sha256": "e5e9f23ef38a4b1d070c2cc9b883f49f098529803f5aa0d9f19804165e0cd450"
+    },
+    {
+      "path": "tests/v36_2-control-context.test.mjs",
+      "bytes": 3136,
+      "sha256": "04f260f12ab7c0b13cb8f9a0f31db7a3be9c155b8a2308405d0cb21754614352"
+    },
+    {
+      "path": "tests/v36_2-control-transport.test.mjs",
+      "bytes": 2386,
+      "sha256": "e6d2300fa5bc8453fbc4a4562b62c139486daf3eca622c2a10443c35995c6b80"
     },
     {
       "path": "tests/v36_2-designer-provenance.test.mjs",
