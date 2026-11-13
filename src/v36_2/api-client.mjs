@@ -30,7 +30,7 @@ if(ui.intent!=='physical_order'){
 // Ingress is already normalized by toWire. This builds the expected server snapshot;
 // the backend independently validates every raw/wire/semantic constraint.
 export function expectedNormalized(wire){const n=structuredClone(wire);delete n.website;delete n.challenge;n.normalizationProfile='NFC-V35-NORM-1';n.source='NFC_CARD';n.market=n.language==='pl'?'PL':'UA';n.currency=n.market==='PL'?'PLN':'UAH';n.utm=n.utm||{};n.serviceContext=n.serviceContext||null;n.serviceNotes=n.serviceNotes||null;n.lines=n.lines.map(l=>({...l,niche:identity[l.entryId].niche,designMode:identity[l.entryId].designMode})).sort((a,b)=>a.lineId.localeCompare(b.lineId,'en'));if(n.serviceContext)n.serviceContext={...n.serviceContext,niche:identity[n.serviceContext.entryId].niche,designMode:identity[n.serviceContext.entryId].designMode};return n;}
-export function createAttempt(wire,key=crypto.randomUUID()){if(!UUID.test(key))throw Error('invalid_id');return freeze({key,body:structuredClone(wire),normalized:expectedNormalized(wire)});}
+export function createAttempt(wire,key=crypto.randomUUID(),control=null){if(!UUID.test(key))throw Error('invalid_id');if(control?.invalid||control&&control.nonce!==key)throw Error('invalid_control_context');return freeze({key,body:structuredClone(wire),normalized:expectedNormalized(wire),...(control?{control:{token:control.token,caseId:control.caseId,runId:control.runId}}:{})});}
 export function makeRecoveryMarker(attempt){return {version:1,attemptId:attempt.key,state:'unknown'};}
 export function parseRecoveryMarker(raw){try{const m=JSON.parse(raw);return m&&Object.keys(m).sort().join(',')==='attemptId,state,version'&&m.version===1&&m.state==='unknown'&&UUID.test(m.attemptId)?m:null;}catch{return null;}}
 let previewFault='';
@@ -52,7 +52,7 @@ export async function submitAttempt(attempt,{config=BUILD_CONFIG,wait=ms=>new Pr
    await wait(Math.max(2000,Math.min(5000,Number(challenge.minimumDelayMs)||2000))+30);
    const body={...structuredClone(attempt.body),challenge:challenge.challenge};
    if(appliedFault===undefined){appliedFault=isPreview(config)?previewFault:'';previewFault='';}
-   const headers={'Content-Type':'application/json','Idempotency-Key':attempt.key,...(appliedFault?{'X-NFC-Preview-Fault':appliedFault}:{})};
+   const headers={'Content-Type':'application/json','Idempotency-Key':attempt.key,...(attempt.control?{'X-NFC-Control-Context':attempt.control.token}:{}),...(appliedFault?{'X-NFC-Preview-Fault':appliedFault}:{})};
    const {response,data}=await request(config.v2Endpoint,{method:'POST',headers,body:JSON.stringify(body)});
    if(response.status===202)return {status:'success',receipt:data};
    const rejectedChallenge=response.status===422&&data.ok===false&&data.schemaVersion===2&&data.code==='expired_or_early_challenge'&&data.retryable===true;

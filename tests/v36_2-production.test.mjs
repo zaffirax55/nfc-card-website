@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
-import {spawnSync} from 'node:child_process';
+import {spawnSync,execFileSync} from 'node:child_process';
 import {validateBuildConfig} from '../src/v36_2/release-policy.mjs';
 import {policyDigest} from '../src/v36_2/policy-digest.mjs';
 import {renderStaticDocument} from '../src/v36_2/static-render.mjs';
@@ -44,9 +44,21 @@ test('V36 email and legacy messenger retain identity while binding the actually 
  const generic=currentEmailProposalPayload({...common,messenger:'viber',phone:'+12025550123'},context,config);assert.equal(generic.formVersion,'NFC-CARD-FORM-V34');assert.equal(generic.emailProposal,undefined);assert.equal(generic.privacyNoticeVersion,'NFC-CARD-PRIVACY-V37');
 });
 test('root npm build produces new shop in exactly the existing Pages artifact layout',()=>{
- const p=spawnSync(process.execPath,['scripts/build-public.mjs'],{cwd:root,env:{...process.env,NFC_PUBLIC_ORIGIN:'https://optidigitalagent.github.io',NFC_PUBLICATION_MODE:'PUBLIC',GITHUB_SHA:'1'.repeat(40),NFC_RELEASE_COMMIT:'1'.repeat(40),NFC_REQUIRE_GATEWAY_READY:'false'},encoding:'utf8'});assert.equal(p.status,0,p.stderr);
+ const sourceSha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
+ const p=spawnSync(process.execPath,['scripts/build-public.mjs'],{cwd:root,env:{...process.env,NFC_PUBLIC_ORIGIN:'https://optidigitalagent.github.io',NFC_PUBLICATION_MODE:'PUBLIC',GITHUB_SHA:'1'.repeat(40),NFC_RELEASE_COMMIT:sourceSha,NFC_PUBLISHER_WORKFLOW_COMMIT:'1'.repeat(40),NFC_REQUIRE_GATEWAY_READY:'false'},encoding:'utf8'});assert.equal(p.status,0,p.stderr);
  const html=fs.readFileSync(path.join(root,'site/index.html'),'utf8');assert.ok(html.includes('data-home-featured-product="beauty-review-card"'));assert.ok(!fs.existsSync(path.join(root,'site/nfc-card-website/index.html')));
- const manifest=JSON.parse(fs.readFileSync(path.join(root,'site/BUILD_MANIFEST.json'),'utf8'));assert.equal(manifest.mode,'production');assert.equal(manifest.revision,'v36.2');assert.equal(manifest.routeCount,123);assert.equal(manifest.sitemapRoutes.length,93);
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'site/BUILD_MANIFEST.json'),'utf8'));assert.equal(manifest.mode,'production');assert.equal(manifest.revision,'v36.2');assert.equal(manifest.routeCount,129);assert.equal(manifest.sitemapRoutes.length,93);
+ const russian=manifest.routes.filter(route=>route.startsWith('/nfc-card-website/ru/'));
+ assert.deepEqual(russian,[
+  '/nfc-card-website/ru/collections/branded/','/nfc-card-website/ru/collections/google-review/',
+  '/nfc-card-website/ru/collections/instagram/','/nfc-card-website/ru/services/design/',
+  '/nfc-card-website/ru/solutions/instagram-card/','/nfc-card-website/ru/solutions/review-card/'
+ ]);
+ assert.ok(!manifest.sitemapRoutes.some(route=>route.includes('/ru/')));
+ for(const route of russian){
+  const page=fs.readFileSync(path.join(root,'site',route.slice('/nfc-card-website/'.length),'index.html'),'utf8');
+  assert.ok(page.includes('<meta name="robots" content="noindex,nofollow,noarchive">'));
+ }
  const cfg=fs.readFileSync(path.join(root,'site/build-config.mjs'),'utf8');assert.ok(cfg.includes('"mode":"production"'));assert.ok(cfg.includes('lead-gateway-production-6c25.up.railway.app'));assert.ok(!cfg.includes('127.0.0.1'));
- const version=JSON.parse(fs.readFileSync(path.join(root,'site/DEPLOYED_VERSION.json'),'utf8'));assert.equal(version.commit,'1'.repeat(40));assert.equal(version.mode,'production');
+ const version=JSON.parse(fs.readFileSync(path.join(root,'site/DEPLOYED_VERSION.json'),'utf8'));assert.equal(version.commit,sourceSha);assert.equal(version.publisherWorkflowCommit,'1'.repeat(40));assert.equal(version.mode,'production');
 });

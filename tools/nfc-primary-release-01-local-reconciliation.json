@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "task": "NFC-PRIMARY-RELEASE-01/FINALIZE-01",
+  "mode": "LOCAL_RECONCILIATION",
+  "publicationAuthority": false,
+  "reviewId": "NFC-PRIMARY-RELEASE-01-INDEPENDENT-REVIEW-20261112",
+  "baselineCommit": "cd8967e5f3043cdc9dfc64210d6a6d9de20489ef",
+  "reviewedInputTree": "5d4f7f8b3dbd5e565a18135f1f00eba1a6f5525f",
+  "reviewedInputEvidenceSha256": "a61cdabc14010e5327401be349fce7547d2c39fb6fee56dbda34cd285c5acdeb",
+  "priorRUTree": "98977a119e508663074939cd2320a94c91f8dea8",
+  "priorRUBinding": {
+    "path": "tools/nfc-ru-01-local-source.json",
+    "sha256": "82d9d2f536e92ac9c8923e6611490ada3cbee4a499b8481089174a43f2df98ce"
+  },
+  "destination": {
+    "repository": "optidigitalagent/nfc-card-website",
+    "commit": "812f9c9515ce9afb001d0bdc0be9a180304d68df",
+    "controlOriginCommit": "ed9f207562c653a7732ceb2001a518e8073d9d6f"
+  },
+  "files": [
+    {
+      "path": "scripts/build-public.mjs",
+      "priorRUSha256": "83c5bb9cab518f79f765412e00aa15cc8b8b086cc74adbd224e683444ffb9313",
+      "reviewedSha256": "52c45143c4904b0e5a3782fcaf89ddc59d933d398184a8b50cb2bc764bf5668d"
+    },
+    {
+      "path": "scripts/release-identity.mjs",
+      "priorRUSha256": null,
+      "reviewedSha256": "4e828fa0149c05c56beaa9e9a547cdbed68d136d28c6791425683f7664d1d69a"
+    },
+    {
+      "path": "src/v36_2/api-client.mjs",
+      "priorRUSha256": "bd4af6d162c535cf7364f3274536fe3a459a029cd467ed4be06d4753c32b5fc6",
+      "reviewedSha256": "80845f297d7383174b381a651172d0c2fdc7d629953f647f453bfb9a395debc1"
+    },
+    {
+      "path": "src/v36_2/app.mjs",
+      "priorRUSha256": "aa96f37392819bc7da7beee00be3409c3873024c2713f00acabadec993a71b43",
+      "reviewedSha256": "bf519b82a9836a5704742ab8f465184cad2d753874f59fc84a0ae4fc9b20c93e"
+    },
+    {
+      "path": "src/v36_2/control-context.mjs",
+      "priorRUSha256": null,
+      "reviewedSha256": "8ca7e3f362f55d8ae31521da50ac1727a4a083eb99410cfaf0ec4334265709df"
+    }
+  ]
+}

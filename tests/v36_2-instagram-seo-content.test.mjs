@@ -15,7 +15,8 @@ for(const page of spec.pages)for(const config of configs)test(`Instagram ${confi
  assert.equal(meta.title,page.title);assert.equal(meta.description,page.description);
  assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.ok(html.includes(`<h1>${esc(page.h1)}</h1>`));assert.ok(html.includes(`<p>${esc(page.intro)}</p>`));
  assert.ok(html.includes(`<title>${esc(page.title)}</title>`));assert.ok(html.includes(`<meta name="description" content="${esc(page.description)}">`));
- assert.equal(meta.alternates.length,3);if(config.mode==='preview')assert.equal(meta.robots,'noindex,nofollow,noarchive');
+ assert.deepEqual(meta.alternates.map(a=>a.language),['uk','en','pl','ru-UA']);
+ assert.equal(meta.alternates.at(-1).href,new URL(publicPath('ru',route),meta.canonical).href);if(config.mode==='preview')assert.equal(meta.robots,'noindex,nofollow,noarchive');
  const links=page.related_links??page.after_grid_section.paragraphs.flat().filter(x=>x.href);
  for(const link of links){
   assert.ok(isKnownRoute(link.href),link.href);
