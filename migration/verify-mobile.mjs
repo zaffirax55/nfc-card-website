@@ -128,15 +128,54 @@ for(const width of widths){
    await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    await page.locator('[data-site-preferences]').waitFor({timeout:10000});
    if(await page.locator('[data-site-theme]').count())errors.push('unneeded theme control present');
-   await page.locator('[data-site-language="ru"]').click();
-   const translated=await page.locator('.hero h1').textContent();
-   console.log('RUSSIAN_HERO',translated);
-   if(!translated.includes('карточки'))errors.push('Russian language missing home translation');
-   await page.reload({waitUntil:'domcontentloaded'});
+   // RU is limited to supplied descriptive URLs; the homepage has no RU destination.
+   const {readFile}=await import('node:fs/promises');
+   const suppliedCopy=JSON.parse(await readFile(new URL('../tests/fixtures/nfc-ru-01-supplied-copy.json',import.meta.url),'utf8'));
+   const approvedReview=suppliedCopy.copy.pages.find(p=>p.route==='/solutions/review-card/');
+   for(const phase of ['initial','reload']){
+     if(phase==='reload')await page.reload({waitUntil:'domcontentloaded'});
+     await page.waitForFunction(()=>document.querySelector('button[data-site-language="ru"]')?.disabled===true,null,{timeout:10000});
+     const rootState={url:page.url(),lang:await page.locator('html').getAttribute('lang'),
+       ruDisabled:await page.locator('button[data-site-language="ru"]').isDisabled(),
+       ruLinks:await page.locator('a[data-locale="ru"]').count()};
+     console.log('RU_ROOT_UNSUPPORTED',phase,JSON.stringify(rootState));
+     if(rootState.url!==base+'/'||rootState.lang!=='uk'||!rootState.ruDisabled||rootState.ruLinks!==0)
+       errors.push('unsupported RU homepage control or UK URL/language failed '+phase);
+   }
+   await page.goto(base+'/solutions/review-card/',{waitUntil:'domcontentloaded'});
+   const ruLink=page.locator('.header a[data-locale="ru"]');
+   await ruLink.waitFor({timeout:10000});
+   const ruHref=await ruLink.getAttribute('href');
+   if(ruHref!=='/nfc-card-website/ru/solutions/review-card/')errors.push('RU product navigation link has wrong destination');
+   await ruLink.click();
+   await page.waitForURL(base+'/ru/solutions/review-card/',{timeout:10000});
+   for(const phase of ['initial','reload']){
+     if(phase==='reload')await page.reload({waitUntil:'domcontentloaded'});
+     await page.waitForFunction(()=>document.documentElement.dataset.uiLanguage==='ru',null,{timeout:10000});
+     const ruState={url:page.url(),lang:await page.locator('html').getAttribute('lang'),
+       h1:(await page.locator('h1').textContent()).trim(),
+       transactionControls:await page.locator('form#product-config, #request-form, [data-testid="submit-request"], input[name="quantity"], input[name="destination"], input[name*="contact"], input[name*="consent"], textarea[name*="contact"]').count()};
+     console.log('RU_DESCRIPTION_ROUTE',phase,JSON.stringify(ruState));
+     if(ruState.url!==base+'/ru/solutions/review-card/'||ruState.lang!=='ru'||
+        ruState.h1!==approvedReview.h1||ruState.transactionControls!==0)
+       errors.push('RU descriptive URL/language/approved copy or transaction boundary failed '+phase);
+   }
+   const ukHandoff=page.locator('#product-config a[data-uk-handoff]');
+   const handoffHref=await ukHandoff.getAttribute('href');
+   if(handoffHref!=='/nfc-card-website/solutions/review-card/#product-config')errors.push('RU product handoff has wrong Ukrainian destination');
+   await ukHandoff.click();
+   await page.waitForURL(base+'/solutions/review-card/#product-config',{timeout:10000});
+   await page.locator('form#product-config input[name="quantity"]').waitFor({timeout:10000});
+   const ukState={url:page.url(),lang:await page.locator('html').getAttribute('lang'),
+     forms:await page.locator('form#product-config').count(),
+     product:await page.locator('form#product-config').getAttribute('data-product'),
+     quantityVisible:await page.locator('form#product-config input[name="quantity"]').isVisible()};
+   console.log('RU_UK_HANDOFF',JSON.stringify(ukState));
+   if(ukState.url!==base+'/solutions/review-card/#product-config'||ukState.lang!=='uk'||
+      ukState.forms!==1||ukState.product!=='review-card'||!ukState.quantityVisible)
+     errors.push('RU explicit Ukrainian product configuration handoff failed');
+   await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    await page.locator('[data-site-preferences]').waitFor({timeout:10000});
-   const persisted=await page.evaluate(()=>({lang:document.documentElement.dataset.uiLanguage}));
-   console.log('PREFERENCES_PERSISTED',JSON.stringify(persisted));
-   if(persisted.lang!=='ru')errors.push('language setting not persistent');
    await page.locator('[data-site-language="en"]').click();
    await page.waitForURL('**/en/**');
    if((await page.locator('html').getAttribute('lang'))!=='en')errors.push('English locale switch failed');
