@@ -1,0 +1,163 @@
+{
+  "task_id": "NFC-SEO-CONTENT-01",
+  "prepared_on": "2026-11-05",
+  "status": "CHATGPT_PREPARED_LOCAL_IMPLEMENTATION_CANDIDATE_NOT_PUBLICATION_APPROVAL",
+  "repository": "zaffirax55/nfc-card-website",
+  "reviewed_storefront_sha": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154",
+  "brand": "Antonov Digital NFC Card",
+  "market": "UA",
+  "search_languages": [
+    "uk",
+    "ru",
+    "en"
+  ],
+  "implementation_locales_this_slice": [
+    "uk",
+    "en"
+  ],
+  "route_model": "Logical application paths. Use the existing locale/base-path helpers; do not hard-code a future domain or duplicate /optidigital-3d.",
+  "pages": [
+    {
+      "route": "/collections/google-review/",
+      "locale": "uk",
+      "intent": "Select a physical Google review NFC card; category, not a duplicate product page.",
+      "title": "NFC-картки для відгуків Google | Antonov Digital NFC Card",
+      "description": "Оберіть NFC-картку для переходу до форми відгуку вашої Google-локації. Готові формати, власний дизайн і налаштування посилання для бізнесу в Україні.",
+      "h1": "NFC-картки для відгуків Google",
+      "eyebrow": "Antonov Digital NFC Card",
+      "intro": "NFC-картка допомагає клієнту відкрити форму відгуку потрібної Google-локації без ручного пошуку. Порівняйте готові формати або перейдіть до запиту власного дизайну.",
+      "after_grid_section": {
+        "heading": "Як обрати картку для Google-відгуків",
+        "paragraphs": [
+          [
+            {
+              "text": "Для готового рішення перегляньте "
+            },
+            {
+              "text": "Google Review Card",
+              "href": "/solutions/review-card/"
+            },
+            {
+              "text": ". Потрібні логотип і кольори вашого бізнесу? Залиште "
+            },
+            {
+              "text": "запит власного дизайну Google-картки",
+              "href": "/services/design/?entry=branded-review-card"
+            },
+            {
+              "text": "; виготовлення погоджується окремо."
+            }
+          ],
+          [
+            {
+              "text": "Клієнт підносить NFC-сумісний смартфон до картки й відкриває запропоноване посилання. Для роботи потрібен інтернет; Google може попросити увійти в обліковий запис. Оцінку, текст і публікацію відгуку обирає сам клієнт."
+            }
+          ],
+          [
+            {
+              "text": "Докладніше про налаштування та використання — на сторінці "
+            },
+            {
+              "text": "«Як працює NFC-картка»",
+              "href": "/what-is-nfc-card/"
+            },
+            {
+              "text": "."
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "route": "/collections/google-review/",
+      "locale": "en",
+      "intent": "Select a Google review NFC card for a business in Ukraine.",
+      "title": "Google review NFC cards | Antonov Digital NFC Card",
+      "description": "Choose a physical NFC card that opens your Google location’s review form. Compare ready-made formats or request a custom design for your business in Ukraine.",
+      "h1": "NFC cards for Google reviews",
+      "eyebrow": "Antonov Digital NFC Card",
+      "intro": "An NFC card helps customers open the review form for the correct Google location without searching for your business manually. Compare ready-made formats or request your own design.",
+      "after_grid_section": {
+        "heading": "Choose a card for Google reviews",
+        "paragraphs": [
+          [
+            {
+              "text": "For a ready-made option, see "
+            },
+            {
+              "text": "Google Review Card",
+              "href": "/solutions/review-card/"
+            },
+            {
+              "text": ". Need your business logo and colours? Submit a "
+            },
+            {
+              "text": "custom Google card design enquiry",
+              "href": "/services/design/?entry=branded-review-card"
+            },
+            {
+              "text": "; physical production is agreed separately."
+            }
+          ],
+          [
+            {
+              "text": "The customer brings an NFC-compatible smartphone close to the card and opens the link offered by the phone. An internet connection is required, and Google may ask the customer to sign in. The customer chooses the rating, writes the review and decides whether to publish it."
+            }
+          ],
+          [
+            {
+              "text": "Read "
+            },
+            {
+              "text": "how an NFC card works",
+              "href": "/what-is-nfc-card/"
+            },
+            {
+              "text": " for more about setup and use."
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "route": "/solutions/review-card/",
+      "locale": "uk",
+      "intent": "Evaluate/order the existing standard Google Review Card. Preserve all current commercial facts.",
+      "title": "Google Review Card — NFC-картка для відгуків | Antonov Digital NFC Card",
+      "description": "Google Review Card відкриває форму відгуку потрібної Google-локації. Перегляньте формат, комплектацію, налаштування та умови замовлення в Україні.",
+      "h1": "Google Review Card — NFC-картка для відгуків Google",
+      "intro": "Фізична NFC-картка з готовим дизайном для переходу до форми відгуку вашої Google-локації. Клієнт відкриває посилання зі смартфона та сам обирає оцінку й текст відгуку.",
+      "related_link": {
+        "text": "Порівняти NFC-картки для Google-відгуків",
+        "href": "/collections/google-review/"
+      },
+      "placement": "Replace only the main visible H1 and short lead/summary. Add the category link in an existing related-navigation area; preserve the detailed product overview, FAQ, specifications, media, controls and all existing approved commercial text."
+    },
+    {
+      "route": "/solutions/review-card/",
+      "locale": "en",
+      "intent": "Evaluate/order the existing standard Google Review Card in Ukraine.",
+      "title": "Google Review Card — NFC review card | Antonov Digital NFC Card",
+      "description": "Google Review Card opens the review form for the correct Google location. See the format, included setup and ordering information for businesses in Ukraine.",
+      "h1": "Google Review Card: NFC card for Google reviews",
+      "intro": "A physical NFC card with a ready-made design that links to your Google location’s review form. The customer opens the link on their phone and chooses the rating and review text.",
+      "related_link": {
+        "text": "Compare NFC cards for Google reviews",
+        "href": "/collections/google-review/"
+      },
+      "placement": "Replace only the main visible H1 and short lead/summary. Add the category link in an existing related-navigation area; preserve the detailed product overview, FAQ, specifications, media, controls and all existing approved commercial text."
+    }
+  ],
+  "content_constraints": [
+    "All text supplied by ChatGPT. Codex may escape/format but must not add SEO claims, facts or translations.",
+    "No guarantee of reviews, stars, customers, automatic posting, Google ranking or official Google partnership.",
+    "Do not copy competitor prices, dimensions, compatibility claims or QR availability.",
+    "No hard-coded prices, delivery times or new product specifications in this slice.",
+    "Do not replace product identifiers, wire values, receipt names or the technical source token NFC_CARD with the public brand.",
+    "Do not restore excluded branded products to the retail catalog: preserve the existing separate design-enquiry flow.",
+    "Keep existing noindex/preview controls, canonical/hreflang/origin configuration and all PL pages unchanged.",
+    "Russian queries are in scope of the project; new ru routes and translations are NOT implemented in this slice.",
+    "All exact titles include the full brand. Suppress duplicate suffixes only for these overrides; no site-wide rewrite.",
+    "Preserve product JSON-LD facts and pricing. No new ratings/reviews/FAQPage markup."
+  ]
+}

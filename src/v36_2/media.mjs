@@ -1,3 +1,4 @@
+import {russianMediaText} from './ru-copy.mjs';
 // B-R06 original native review composition. No network, playback or claims generation.
 const coverage = [
   {
@@ -1515,7 +1516,7 @@ const words={
 };
 let reviewMode=true;
 export function setMediaReviewMode(value){reviewMode=value===true;}
-const w=(key,locale)=>key==='hold'&&!reviewMode?pick(['Очікує погодженого матеріалу','Awaiting approved material','Oczekuje na zatwierdzony materiał'],locale):key==='proofBody'&&!reviewMode?pick(['Реальний логотип, встановлення й відгук потребують дозволу та джерела.','Real logos, installations and attributed reviews require permission and a source.','Rzeczywiste logotypy, instalacje i przypisane opinie wymagają zgody oraz źródła.'],locale):pick(words[key],locale);
+const w=(key,locale)=>locale==='ru'?esc(russianMediaText(key)):key==='hold'&&!reviewMode?pick(['Очікує погодженого матеріалу','Awaiting approved material','Oczekuje na zatwierdzony materiał'],locale):key==='proofBody'&&!reviewMode?pick(['Реальний логотип, встановлення й відгук потребують дозволу та джерела.','Real logos, installations and attributed reviews require permission and a source.','Rzeczywiste logotypy, instalacje i przypisane opinie wymagają zgody oraz źródła.'],locale):pick(words[key],locale);
 const url=(route,locale)=>(locale==='uk'?'':`/${locale}`)+route;
 const label=(ids)=>`data-media-slot="${esc(ids)}"`;
 const note=(ids,title,body,locale)=>`<article class="media-review-note" ${label(ids)}><p class="media-review-tag">${w('hold',locale)}</p><h3>${w(title,locale)}</h3><p>${w(body,locale)}</p><code>${esc(ids)}</code></article>`;

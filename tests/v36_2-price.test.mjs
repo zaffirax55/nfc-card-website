@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {catalog,priceCart,pricingProfile,pricingRevision,OWNER_UA_PRICING_REVISION,OWNER_UA_SOURCE_REVISION} from '../src/v36_2/commerce.mjs';
+import {catalog,priceCart,pricingProfile,pricingRevision,OWNER_UA_PRICING_REVISION,OWNER_UA_SOURCE_REVISION,RESTAURANT_UA_ESTIMATE_SOURCE} from '../src/v36_2/commerce.mjs';
 import {createAttempt,validReceipt} from '../src/v36_2/api-client.mjs';
 
 const fixtures=JSON.parse(fs.readFileSync(new URL('./fixtures/nfc-v35-client.json',import.meta.url)));
@@ -15,14 +15,14 @@ const ownerReceipt=original=>{
  return r;
 };
 
-test('owner pair clarification changes only ordinary UA Branded two-card price',()=>{
+test('current estimates preserve owner prices while historical UA profiles retain quote semantics',()=>{
  const expected={
   'review-card':{UA:[1500,2600],PL:[129,219]},
   'branded-review-card':{UA:[2000,3600],PL:[169,299]},
   'nfc-instagram-card':{UA:[1500,2600],PL:[129,219]},
   'beauty-review-card':{UA:[800,1400],PL:[null,null]},
   'branded-beauty-review-card':{UA:[800,1600],PL:[null,null]},
-  'restaurant-review-card':{UA:[null,null],PL:[null,null]},
+  'restaurant-review-card':{UA:[800,1400],PL:[null,null]},
   'branded-restaurant-review-card':{UA:[null,null],PL:[null,null]},
  };
  for(const [productId,markets]of Object.entries(expected))for(const [market,prices]of Object.entries(markets))for(const [i,amount]of prices.entries())assert.equal(priceCart([{lineId:'line',productId,quantity:i+1}],market).total,amount,productId+market+(i+1));
@@ -30,6 +30,11 @@ test('owner pair clarification changes only ordinary UA Branded two-card price',
  assert.equal(priceCart([{lineId:'one',productId:'branded-review-card',quantity:1},{lineId:'two',productId:'branded-review-card',quantity:1}],'UA').total,3600);
  assert.equal(priceCart([{lineId:'one',productId:'branded-review-card',quantity:1},{lineId:'two',productId:'branded-review-card',quantity:1}],'UA',oldUA).total,2600);
  assert.equal(priceCart([{lineId:'one',productId:'branded-review-card',quantity:2}],'UA',oldUA).groups[0].pricingRevision,'NFC-CARD-CONTENT-TRUTH-PRICE-v33');
+ for(const revision of [oldUA,OWNER_UA_PRICING_REVISION])for(const quantity of [1,2,3]){
+  const quote=priceCart([{lineId:'historical',productId:'restaurant-review-card',quantity}],'UA',revision);
+  assert.equal(quote.kind,'quote');assert.equal(quote.total,null);assert.equal(quote.groups[0].amount,null);
+  assert.equal(quote.groups[0].pricingRevision,'NFC-CARD-CONTENT-TRUTH-PRICE-v33');
+ }
 });
 
 test('known profile selection is immutable, market-bound and fails closed',()=>{
@@ -65,3 +70,42 @@ test('relabel-only, price, source, unknown and wrong-market receipt mutations ar
  for(const mutate of mutations){const r=structuredClone(fresh);mutate(r);assert.equal(await validReceipt(attempt,r),false);}
  const relabel=structuredClone(example.receipt);relabel.quote.pricingRevision=OWNER_UA_PRICING_REVISION;for(const g of relabel.quote.groups)g.pricingRevision=OWNER_UA_PRICING_REVISION;relabel.quote.sourcePriceRevisions.push(OWNER_UA_SOURCE_REVISION);assert.equal(await validReceipt(attempt,relabel),false);
 });
+
+test('current Restaurant estimate provenance cannot authorize or relabel a receipt profile',async()=>{
+ for(const quantity of [1,2]){
+  const quote=priceCart([{lineId:'current',productId:'restaurant-review-card',quantity}],'UA');
+  assert.equal(quote.total,quantity===1?800:1400);
+  assert.equal(quote.groups[0].pricingRevision,RESTAURANT_UA_ESTIMATE_SOURCE);
+ }
+ assert.throws(()=>pricingProfile('UA',RESTAURANT_UA_ESTIMATE_SOURCE),RangeError);
+ for(const id of ['uk_restaurant-review-card','en_restaurant-review-card']){
+  const example=fixtures.positive.find(row=>row.id===id),attempt=createAttempt(example.wire,example.idempotencyKey);
+  assert.equal(await validReceipt(attempt,example.receipt),true);
+  for(const revision of [RESTAURANT_UA_ESTIMATE_SOURCE,'NFC-RECEIPT-UNAPPROVED-UA','NFC-V35-V2-CANDIDATE-01-PL']){
+   const changed=structuredClone(example.receipt);changed.quote.pricingRevision=revision;
+   assert.equal(await validReceipt(attempt,changed),false);
+  }
+ }
+});
+
+test('all retained receipts reject altered amounts, sources, market, identity and digest without mutation',async()=>{
+ const before=canonicalFixtures();let rejected=0;
+ const mutations=[
+  r=>{r.quote.totalMinor=1;},
+  r=>{r.quote.pricingRevision='NFC-RECEIPT-UNKNOWN-UA';},
+  r=>{r.quote.sourcePriceRevisions.push('SYNTHETIC-UNAPPROVED-SOURCE');},
+  r=>{r.quote.market=r.quote.market==='UA'?'PL':'UA';},
+  r=>{r.acceptedRequest.customerName+=' altered synthetic identity';},
+  r=>{r.requestDigest.sha256=(r.requestDigest.sha256[0]==='0'?'1':'0')+r.requestDigest.sha256.slice(1);},
+  r=>{r.requestDigest.profile='SYNTHETIC-UNAPPROVED-DIGEST';},
+  r=>{r.requestId='not-a-server-request-id';},
+  r=>{r.quote.paymentRequired=true;},
+  r=>{r.quote.depositPolicy.amountMinor=1;},
+ ];
+ for(const example of fixtures.positive){
+  const attempt=createAttempt(example.wire,example.idempotencyKey);
+  for(const mutate of mutations){const changed=structuredClone(example.receipt);mutate(changed);assert.equal(await validReceipt(attempt,changed),false,example.id);rejected++;}
+ }
+ assert.equal(rejected,820);assert.equal(canonicalFixtures(),before);
+});
+function canonicalFixtures(){return JSON.stringify(fixtures);}

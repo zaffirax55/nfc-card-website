@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "apiVersion": 2,
+  "mode": "approved-intake",
+  "service": "antonov-lead-gateway",
+  "gatewayCommit": "21d42592fab7b117edc471f6494a9a8f8f1b0ddb",
+  "contractId": "NFC-CARD-V35-P4-02-CF-01",
+  "policySha256": "38e50676b7b5dc0149cb4f0bdbeb878d75add296da7274b4d509124f6c78c8e0",
+  "formVersion": "NFC-CARD-FORM-V38",
+  "privacyNoticeVersion": "NFC-CARD-PRIVACY-V38",
+  "pricingRevision": {
+    "UA": "NFC-V35-V2-OWNER-20261027-UA",
+    "PL": "NFC-V35-V2-CANDIDATE-01-PL"
+  }
+}

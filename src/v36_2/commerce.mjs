@@ -12,10 +12,13 @@ const freeze = value => {
 };
 export const OWNER_UA_PRICING_REVISION='NFC-V35-V2-OWNER-20261027-UA';
 export const OWNER_UA_SOURCE_REVISION='NFC-CARD-BRANDED-PAIR-OWNER-20261026';
+// Local estimate provenance for the existing owner catalog change, not a new
+// server-authorized receipt profile or a commercial approval.
+export const RESTAURANT_UA_ESTIMATE_SOURCE='NFC-CARD-RESTAURANT-MINI-ESTIMATE-2A91B264';
 const legacyUASources=['NFC-CARD-CONTENT-TRUTH-PRICE-v33','NFC-INSTAGRAM-UA-2026-09-v18','NFC-MENU-UA-2026-09-v23','NFC-REVIEW-3D-UA-2026-09-v26'];
 const pricingProfiles=freeze({
- 'NFC-V35-V2-CANDIDATE-01-UA':{revision:'NFC-V35-V2-CANDIDATE-01-UA',market:'UA',sourcePriceRevisions:legacyUASources,brandedUaPair:2600},
- [OWNER_UA_PRICING_REVISION]:{revision:OWNER_UA_PRICING_REVISION,market:'UA',sourcePriceRevisions:[...legacyUASources,OWNER_UA_SOURCE_REVISION],brandedUaPair:3600},
+ 'NFC-V35-V2-CANDIDATE-01-UA':{revision:'NFC-V35-V2-CANDIDATE-01-UA',market:'UA',sourcePriceRevisions:legacyUASources,brandedUaPair:2600,restaurantUaPrices:null},
+ [OWNER_UA_PRICING_REVISION]:{revision:OWNER_UA_PRICING_REVISION,market:'UA',sourcePriceRevisions:[...legacyUASources,OWNER_UA_SOURCE_REVISION],brandedUaPair:3600,restaurantUaPrices:null},
  'NFC-V35-V2-CANDIDATE-01-PL':{revision:'NFC-V35-V2-CANDIDATE-01-PL',market:'PL',sourcePriceRevisions:['NFC-CARD-PL-2026-09-v28'],brandedUaPair:null},
 });
 export function pricingRevision(market){if(market==='UA')return OWNER_UA_PRICING_REVISION;if(market==='PL')return 'NFC-V35-V2-CANDIDATE-01-PL';throw new RangeError('Invalid pricing market');}
@@ -159,7 +162,12 @@ export function priceCart(lines = [], market = 'UA', revision) {
     } else if (p.id==='review-card-3d') {unitPrice=market==='PL'?p.unitPL:p.unitUA; amount=q*unitPrice;}
     else amount=(market==='PL'?p.fixedPL:p.fixedUA)?.[q] ?? null;
     if(p.id==='branded-review-card'&&market==='UA'&&q===2)amount=profile.brandedUaPair;
-    return {...g,groupId:`${market}:${p.id}`,amount,unitPrice,pricingRevision:market==='PL'?'NFC-CARD-PL-2026-09-v28':p.id==='branded-review-card'&&profile.revision==='NFC-V35-V2-CANDIDATE-01-UA'?'NFC-CARD-CONTENT-TRUTH-PRICE-v33':p.revision};
+    const restaurantUA=p.id==='restaurant-review-card'&&market==='UA';
+    // Explicit revisions replay immutable receipt semantics. Without a revision,
+    // this function remains the current, non-authoritative catalog estimate.
+    // expectedQuote() always supplies the receipt's validated profile revision.
+    if(restaurantUA&&revision!==undefined)amount=profile.restaurantUaPrices?.[q]??null;
+    return {...g,groupId:`${market}:${p.id}`,amount,unitPrice,pricingRevision:market==='PL'?'NFC-CARD-PL-2026-09-v28':restaurantUA&&revision===undefined?RESTAURANT_UA_ESTIMATE_SOURCE:p.id==='branded-review-card'&&profile.revision==='NFC-V35-V2-CANDIDATE-01-UA'?'NFC-CARD-CONTENT-TRUTH-PRICE-v33':p.revision};
   });
   const knownSubtotal=groups.reduce((sum,g)=>sum+(g.amount??0),0);
   const quote=groups.some(g=>g.amount===null),fixed=groups.some(g=>g.amount!==null);

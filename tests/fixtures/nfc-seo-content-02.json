@@ -1,0 +1,150 @@
+{
+  "task_id": "NFC-SEO-CONTENT-02",
+  "prepared_on": "2026-11-05",
+  "status": "CHATGPT_PREPARED_LOCAL_CANDIDATE_NOT_OWNER_PUBLICATION_APPROVAL",
+  "repository": "zaffirax55/nfc-card-website",
+  "site_id": "NFC_GOOGLE_REVIEWS",
+  "brand": "Antonov Digital NFC Card",
+  "market": "UA",
+  "search_languages": [
+    "uk",
+    "ru",
+    "en"
+  ],
+  "implementation_locales": [
+    "uk",
+    "en"
+  ],
+  "baseline": "bf7e47ed5a1fc44b7a91e79ee1ff37c6af694154 + accepted CONTENT-01 patch",
+  "pages": [
+    {
+      "route": "/collections/instagram/",
+      "locale": "uk",
+      "intent": "Вхід у напрям Instagram; одна існуюча товарна позиція, без дублювання детальної товарної сторінки.",
+      "title": "NFC-картки для переходу в Instagram | Antonov Digital NFC Card",
+      "description": "Перегляньте готову NFC-картку для переходу до Instagram-профілю та інструкцію з використання. Для бізнесу в Україні, без автоматичної підписки.",
+      "h1": "NFC-картки для переходу в Instagram",
+      "eyebrow": "Antonov Digital NFC Card",
+      "intro": "Фізична NFC-картка допомагає клієнту відкрити ваш Instagram-профіль без ручного пошуку. Перегляньте готовий варіант і дізнайтеся, як відбувається перехід.",
+      "after_grid_section": {
+        "heading": "Перехід до профілю — не автоматична підписка",
+        "paragraphs": [
+          [
+            {
+              "text": "Перегляньте "
+            },
+            {
+              "text": "NFC-картку для Instagram",
+              "href": "/solutions/instagram-card/"
+            },
+            {
+              "text": ", щоб ознайомитися з форматом, налаштуванням і умовами замовлення."
+            }
+          ],
+          [
+            {
+              "text": "Клієнт підносить NFC-сумісний смартфон до картки та відкриває запропоноване посилання. Рішення підписатися на профіль він приймає сам. Докладніше — "
+            },
+            {
+              "text": "як працює Instagram-картка",
+              "href": "/instagram-card/"
+            },
+            {
+              "text": "."
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "route": "/collections/instagram/",
+      "locale": "en",
+      "intent": "Instagram category navigation for businesses in Ukraine; preserve one existing SKU.",
+      "title": "NFC cards for Instagram profiles | Antonov Digital NFC Card",
+      "description": "Explore a ready-made NFC card that links to an Instagram profile and learn how to use it. For businesses in Ukraine, with no automatic following.",
+      "h1": "NFC cards for Instagram profiles",
+      "eyebrow": "Antonov Digital NFC Card",
+      "intro": "A physical NFC card helps customers open your Instagram profile without searching manually. Explore the ready-made option and see how the link works.",
+      "after_grid_section": {
+        "heading": "Open a profile without automatic following",
+        "paragraphs": [
+          [
+            {
+              "text": "See the "
+            },
+            {
+              "text": "Instagram NFC card",
+              "href": "/solutions/instagram-card/"
+            },
+            {
+              "text": " for its format, setup and ordering information."
+            }
+          ],
+          [
+            {
+              "text": "The customer brings an NFC-compatible smartphone close to the card and opens the link offered by the phone. They decide whether to follow the profile. Read "
+            },
+            {
+              "text": "how the Instagram card works",
+              "href": "/instagram-card/"
+            },
+            {
+              "text": " for more details."
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "route": "/solutions/instagram-card/",
+      "locale": "uk",
+      "intent": "Основна комерційна сторінка Instagram-картки; наявний товар та чинний шлях заявки.",
+      "title": "NFC-картка для Instagram | Antonov Digital NFC Card",
+      "description": "Готова NFC-картка відкриває ваш профіль Instagram на смартфоні клієнта. Перегляньте формат, налаштування та умови замовлення в Україні.",
+      "h1": "NFC-картка для Instagram",
+      "intro": "Готова фізична NFC-картка для переходу до вашого профілю Instagram. Клієнт підносить NFC-сумісний смартфон, відкриває посилання та сам вирішує, чи підписуватися.",
+      "related_links": [
+        {
+          "text": "Як працює Instagram-картка",
+          "href": "/instagram-card/"
+        },
+        {
+          "text": "Переглянути напрям NFC-карток для Instagram",
+          "href": "/collections/instagram/"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/instagram-card/",
+      "locale": "en",
+      "intent": "Primary commercial Instagram product page for the Ukrainian market; preserve existing purchase/enquiry flow.",
+      "title": "Instagram NFC card | Antonov Digital NFC Card",
+      "description": "A ready-made NFC card opens your Instagram profile on the customer’s smartphone. See the format, setup and ordering information for businesses in Ukraine.",
+      "h1": "NFC card for Instagram",
+      "intro": "A ready-made physical NFC card that links to your Instagram profile. The customer brings an NFC-compatible smartphone close to the card, opens the link and decides whether to follow.",
+      "related_links": [
+        {
+          "text": "How the Instagram card works",
+          "href": "/instagram-card/"
+        },
+        {
+          "text": "Explore NFC cards for Instagram profiles",
+          "href": "/collections/instagram/"
+        }
+      ]
+    }
+  ],
+  "placement": {
+    "category": "Replace only main H1, lead, eyebrow and metadata. Add supplied short after-grid section using existing layout; preserve exactly the existing one-SKU catalog and service promotion.",
+    "product": "Replace main H1/lead/metadata only; add the two supplied links to existing related-navigation area. Preserve detailed product copy, gallery, FAQ, compatibility, pricing, controls and policy disclosures.",
+    "guide": "/instagram-card/ is a link destination only; do not edit it."
+  },
+  "constraints": [
+    "Exact provided copy only; no new SEO research or invented translations by Codex.",
+    "No automatic follows, follower guarantees, all-phone compatibility, no-app promises, QR availability or official Meta partnership claims.",
+    "No new prices, specifications or delivery guarantees.",
+    "No global branding, product ID, payload, receipt, schema fact or route changes.",
+    "PL, RU route model, Google CONTENT-01 rendered output, branded flow and unrelated pages remain unchanged.",
+    "Keep noindex, canonical/hreflang/base-path/sitemap behavior and existing approval hashes."
+  ]
+}
