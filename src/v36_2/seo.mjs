@@ -1,3 +1,8 @@
+import {requireRussianPageCopy,russianUIText,RU_UI_COPY} from './ru-copy.mjs';
+import {descriptionAlternates,descriptionPath,hasRussianRoute,RU_ROBOTS} from './ru-routes.mjs';
+import {brandedContent} from './branded-content.mjs';
+import {instagramContent} from './instagram-content.mjs';
+import {googleReviewContent} from './google-review-content.mjs';
 import {PUBLIC_RETAIL_CATALOG} from './public-catalog.mjs';
 /* Shared raw-HTML and client metadata; release mode is explicit and gated. */
 import {catalog,menuVariants,priceCart} from './commerce.mjs';
@@ -14,7 +19,7 @@ export const LEGACY_ALIASES=Object.freeze({'/solutions/counter-stand/':'/solutio
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const localized=(values,locale)=>values[LOCALES.indexOf(locale)];
 export function normalizeRoute(route='/'){const clean=String(route).split(/[?#]/,1)[0];return (clean.startsWith('/')?clean:'/'+clean).replace(/\/+$/,'')+'/';}
-export function publicPath(locale,route='/'){if(!LOCALES.includes(locale))throw new TypeError('Unsupported locale');return BASE+(locale==='uk'?'':'/'+locale)+normalizeRoute(route);}
+export function publicPath(locale,route='/'){if(locale==='ru')return descriptionPath(locale,normalizeRoute(route),{base:BASE});if(!LOCALES.includes(locale))throw new TypeError('Unsupported locale');return BASE+(locale==='uk'?'':'/'+locale)+normalizeRoute(route);}
 export function canonicalURL(locale,route='/'){route=normalizeRoute(route);return PUBLIC_ORIGIN+publicPath(locale,LEGACY_ALIASES[route]||route);}
 export function productForRoute(route){route=normalizeRoute(route);return catalog.find(p=>p.status==='active'&&route===p.route)||null;}
 const titleText={
@@ -56,6 +61,14 @@ const titleText={
 export function isKnownRoute(route){route=normalizeRoute(route);return Object.hasOwn(titleText,route)||catalog.some(p=>p.route===route);}
 export function pageMetadata(locale,route='/',config=BUILD_CONFIG){
  route=normalizeRoute(route);
+ const russian=hasRussianRoute(route);
+ const alternateOptions={base:BASE,origin:PUBLIC_ORIGIN};
+ if(locale==='ru'){
+  if(!russian)return {locale,route,title:russianUIText('notFound'),description:'',canonical:null,alternates:[],robots:RU_ROBOTS};
+  const {title,description}=requireRussianPageCopy(route);
+  return {locale,route,title,description,canonical:canonicalURL(locale,route),alternates:descriptionAlternates(route,alternateOptions),robots:RU_ROBOTS};
+ }
+ const content=googleReviewContent(locale,route)??instagramContent(locale,route)??brandedContent(locale,route);
  const draft=catalog.some(p=>route===p.route&&p.status==='draft');
  const p=catalog.find(p=>route===p.route&&p.status==='active'),t=key=>translate(key,locale);
  const productTitle=p?`${productCopy(p.id,locale).name} · ${localized(p.status==='draft'?['варіант на погодженні','variant awaiting approval','wariant do akceptacji']:p.purpose==='instagram_profile'?['перехід до Instagram','access your Instagram profile','przejście do profilu Instagram']:p.purpose==='online_menu'?['доступ до онлайн-меню','access your online menu','dostęp do menu online']:['доступ до відгуків Google','access Google reviews','dostęp do opinii Google'],locale)}`:null;
@@ -68,21 +81,25 @@ export function pageMetadata(locale,route='/',config=BUILD_CONFIG){
   '/collections/branded/':localized(['Власний дизайн для Google Review 10 × 10, Beauty Mini або Restaurant Mini. Окремий безкоштовний початковий запит, без фізичної покупки чи передоплати.','Your own design for Google Review 10 × 10, Beauty Mini or Restaurant Mini. A separate free initial enquiry, without a physical purchase or deposit.','Własny projekt dla Google Review 10 × 10, Beauty Mini lub Restaurant Mini. Osobne bezpłatne pierwsze zapytanie, bez zakupu fizycznych kart ani zaliczki.'],locale)
  };
  const catalogDescription=localized(['Шість фізичних NFC-карток: Google Review, Instagram, Menu, 3D, Beauty Mini та Restaurant Mini. Власний дизайн — окремий запит.','Six physical NFC cards: Google Review, Instagram, Menu, 3D, Beauty Mini and Restaurant Mini. Custom design is a separate service enquiry.','Sześć fizycznych kart NFC: Google Review, Instagram, Menu, 3D, Beauty Mini i Restaurant Mini. Własny projekt to osobna usługa.'],locale);
- const description=scopedDescriptions[route]??(['/solutions/','/catalog/','/collections/'].includes(route)?catalogDescription:isPublic(config)&&['/privacy/','/terms/'].includes(route)?label:p?productCopy(p.id,locale).description:info[route]?t(info[route]):route==='/instagram-card/'?productCopy('nfc-instagram-card',locale).description:route==='/menu-card/'?productCopy('nfc-menu-card',locale).description:t('heroBody'));
+ const description=content?.description??scopedDescriptions[route]??(['/solutions/','/catalog/','/collections/'].includes(route)?catalogDescription:isPublic(config)&&['/privacy/','/terms/'].includes(route)?label:p?productCopy(p.id,locale).description:info[route]?t(info[route]):route==='/instagram-card/'?productCopy('nfc-instagram-card',locale).description:route==='/menu-card/'?productCopy('nfc-menu-card',locale).description:t('heroBody'));
  const known=isKnownRoute(route)&&!(isPublic(config)&&route.startsWith('/review/'));
- return {locale,route,title:label+(route==='/about/'?' | NFC CARD · Antonov Digital':' | NFC CARD'),description,canonical:known?canonicalURL(locale,route):null,alternates:known?LOCALES.map(language=>({language,href:canonicalURL(language,route)})):[],robots:!isPublic(config)||!isKnownRoute(route)||route.startsWith('/review/')||route.startsWith('/privacy/archive/')||draft||['/cart/','/order/','/thank-you/','/search/','/services/email-proposal/'].includes(route)?ROBOTS:'index,follow,max-image-preview:large'};
+ return {locale,route,title:content?.title??label+(route==='/about/'?' | NFC CARD · Antonov Digital':' | NFC CARD'),description,canonical:known?canonicalURL(locale,route):null,alternates:known?(russian?descriptionAlternates(route,alternateOptions):LOCALES.map(language=>({language,href:canonicalURL(language,route)}))):[],robots:!isPublic(config)||!isKnownRoute(route)||route.startsWith('/review/')||route.startsWith('/privacy/archive/')||draft||['/cart/','/order/','/thank-you/','/search/','/services/email-proposal/'].includes(route)?ROBOTS:'index,follow,max-image-preview:large'};
 }
 export function productStructuredData(locale,route='/'){
+ if(locale==='ru'&&!hasRussianRoute(normalizeRoute(route)))return null;
  const p=productForRoute(route);if(!p)return null;
  const market=locale==='pl'?'PL':'UA';
  const quote=priceCart([{lineId:'schema',productId:p.id,quantity:1,...(p.id==='nfc-menu-card'?{variantId:menuVariants[0]}:{})}],market);
  if(quote.kind!=='fixed'||!Number.isFinite(quote.total)||quote.total<=0)return null;
- const copy=productCopy(p.id,locale),url=canonicalURL(locale,route);
+ const copy=locale==='ru'?{
+  name:RU_UI_COPY.schemaProductNames[p.id],description:RU_UI_COPY.productDescriptions[p.id]
+ }:productCopy(p.id,locale);
+ const url=canonicalURL(locale,route);
  return {'@context':'https://schema.org','@type':'Product','@id':url+'#product',name:copy.name,description:copy.description,sku:p.id,url,offers:{'@type':'Offer',url,price:quote.total,priceCurrency:market==='PL'?'PLN':'UAH'}};
 }
 /** Only public physical retail entries; service promotions and legacy-only offers are excluded. */
 export function catalogStructuredData(locale,route='/',entryIds=null){
- route=normalizeRoute(route);if(!['/solutions/','/catalog/','/collections/'].includes(route))return null;
+ route=normalizeRoute(route);if(locale==='ru')return null;if(!['/solutions/','/catalog/','/collections/'].includes(route))return null;
  const entries=entryIds===null?PUBLIC_RETAIL_CATALOG:entryIds.map(id=>PUBLIC_RETAIL_CATALOG.find(p=>p.id===id)).filter(Boolean);
  const url=canonicalURL(locale,route);
  return {'@context':'https://schema.org','@type':'ItemList','@id':url+'#catalog',name:translate('catalog',locale),numberOfItems:entries.length,itemListElement:entries.map((p,i)=>({'@type':'ListItem',position:i+1,name:productCopy(p.id,locale).name,url:canonicalURL(locale,p.route)}))};
@@ -99,7 +116,9 @@ export function updateDocumentMetadata(locale,route='/',doc=globalThis.document,
  set('meta[name="robots"]','meta',{name:'robots',content:m.robots});
  set('meta[name="description"]','meta',{name:'description',content:m.description});
  if(m.canonical)set('link[rel="canonical"]','link',{rel:'canonical',href:m.canonical});else doc.head.querySelector('link[rel="canonical"]')?.remove();
- if(!m.alternates.length)doc.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el=>el.remove());
+ for(const link of doc.head.querySelectorAll('link[rel="alternate"][hreflang]')){
+  if(!m.alternates.some(a=>a.language===link.hreflang))link.remove();
+ }
  for(const a of m.alternates)set(`link[rel="alternate"][hreflang="${a.language}"]`,'link',{rel:'alternate',hreflang:a.language,href:a.href});
  const grid=doc.querySelector('#results'),entries=grid?[...grid.querySelectorAll('[data-product-id]')].map(el=>el.dataset.productId):null;
  const list=catalogStructuredData(locale,route,entries);let listEl=doc.getElementById('catalog-structured-data');

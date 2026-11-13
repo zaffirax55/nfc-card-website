@@ -1,3 +1,6 @@
+import {RU_EDITORIAL_COPY,RU_UI_COPY,russianSupplementText,russianUIText} from './ru-copy.mjs';
+import {russianContentLink,ukrainianDesignHandoff} from './ru-routes.mjs';
+import {isKnownRoute} from './seo.mjs';
 /** Deterministic editorial rendering shared by static HTML and enhanced navigation. */
 import {editorialContent,generalFAQGroups} from './editorial-content.mjs';
 export {editorialContent,generalFAQGroups,designEntryLabels} from './editorial-content.mjs';
@@ -7,15 +10,16 @@ const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&
 const localeOf=locale=>['uk','en','pl'].includes(locale)?locale:'uk';
 const physicalById=new Map(catalog.map(p=>[p.id,p]));
 export function designPriceSummary(entry,locale='uk'){
- locale=localeOf(locale);const c=editorialContent[locale],p=physicalById.get(entry);
+ locale=locale==='ru'?'ru':localeOf(locale);
+ const c=locale==='ru'?{labels:RU_UI_COPY}:editorialContent[locale],p=physicalById.get(entry);
  if(!p||p.status!=='active'||p.design!=='branded')throw new Error('Invalid design base');
  const market=locale==='pl'?'PL':'UA',currency=market==='PL'?'PLN':locale==='uk'?'грн':'UAH';
- const fmt=value=>new Intl.NumberFormat(locale==='uk'?'uk-UA':locale==='pl'?'pl-PL':'en-GB',{maximumFractionDigits:0}).format(value)+' '+currency;
+ const fmt=value=>new Intl.NumberFormat(locale==='ru'?'ru-UA':locale==='uk'?'uk-UA':locale==='pl'?'pl-PL':'en-GB',{maximumFractionDigits:0}).format(value)+' '+currency;
  const rows=[1,2].map(quantity=>({quantity,amount:priceCart([{lineId:'price-summary',productId:entry,quantity,destination:'',notes:''}],market).total}));
  return rows.every(r=>r.amount!==null)?rows.map(r=>(r.quantity===1?c.labels.one:c.labels.two)+' — '+fmt(r.amount)).join(' · '):c.labels.quote;
 }
 export function editorialMediaSlots(key,locale='uk'){
- return (editorialContent[localeOf(locale)][key]?.media??[]).map(m=>({...m,locale:localeOf(locale),status:'awaiting_approved_material',provenance:'unfilled_placeholder',notCustomerProof:true}));
+ return ((locale==='ru'?RU_EDITORIAL_COPY:editorialContent[localeOf(locale)])[key]?.media??[]).map(m=>({...m,locale:locale==='ru'?'ru':localeOf(locale),status:'awaiting_approved_material',provenance:'unfilled_placeholder',notCustomerProof:true}));
 }
 function helpers(locale,h){
  return {esc:h.esc||escape,url:h.url||(route=>BASE+(locale==='uk'?'':'/'+locale)+route)};
@@ -28,7 +32,7 @@ function media(key,locale,c,esc){
  if(key==='design'){
   // These are photographs of existing ready-made products and an illustrative NFC
   // simulation. They are NOT client-approved branded commissions or review proof.
-  const localized={
+  const localized=locale==='ru'?RU_EDITORIAL_COPY.mediaCaptions:{
    uk:{
     ready:'Фото готової картки. Персональний дизайн погоджується окремо.',
     process:'Ілюстрація: від макета до готової картки. Не є кейсом конкретного клієнта.',
@@ -58,7 +62,9 @@ function media(key,locale,c,esc){
    }
   }[locale];
   const base='/nfc-card-website';
-  const u=route=>base+(locale==='uk'?'':'/'+locale)+route;
+  const target=route=>russianContentLink(route,{base,isKnownRoute});
+  const u=route=>locale==='ru'?target(route).href:base+(locale==='uk'?'':'/'+locale)+route;
+  const suffix=route=>locale==='ru'&&target(route).requiresUkrainianLabel?russianUIText('ukSuffix'):'';
   const image=(filename,label,cls='')=>'<img src="'+base+'/assets/'+filename+'" alt="'+esc(label)+'" width="640" height="640" loading="lazy" decoding="async" class="'+cls+'">';
   const examples=[
    {filename:'review.webp',route:'/solutions/review-card/'},
@@ -69,12 +75,12 @@ function media(key,locale,c,esc){
    const id=esc(m.id),title=esc(m.title);
    if(index<3){
     const model=examples[index];
-    return '<figure class="editorial-media-example" data-media-slot="'+id+'" data-media-state="existing-ready-product-example" data-media-provenance="existing-product-photo"><a class="editorial-media-art-link" href="'+esc(u(model.route))+'" aria-label="'+title+'"><div class="editorial-media-image">'+image(model.filename,m.title)+'</div><figcaption><strong>'+title+'</strong><p>'+esc(localized.ready)+'</p><span class="editorial-media-cta">'+esc(localized.open)+' ↗</span></figcaption></a></figure>';
+    return '<figure class="editorial-media-example" data-media-slot="'+id+'" data-media-state="existing-ready-product-example" data-media-provenance="existing-product-photo"><a class="editorial-media-art-link" href="'+esc(u(model.route))+'" aria-label="'+title+'"><div class="editorial-media-image">'+image(model.filename,m.title)+'</div><figcaption><strong>'+title+'</strong><p>'+esc(localized.ready)+'</p><span class="editorial-media-cta">'+esc(localized.open+suffix(model.route))+' ↗</span></figcaption></a></figure>';
    }
    if(index===3){
     return '<figure class="editorial-media-example editorial-media-example-wide" data-media-slot="'+id+'" data-media-state="illustrative-process" data-media-provenance="existing-sample-art-and-product-photo"><div class="editorial-media-comparison"><div><span>'+esc(localized.concept)+'</span>'+image('review-card-demo.svg',localized.concept)+'</div><span class="editorial-media-step-arrow" aria-hidden="true">→</span><div><span>'+esc(localized.physical)+'</span>'+image('review.webp',localized.physical)+'</div></div><figcaption><strong>'+title+'</strong><p>'+esc(localized.process)+'</p></figcaption></figure>';
    }
-   return '<figure class="editorial-media-example editorial-media-example-wide" data-media-slot="'+id+'" data-media-state="illustrative-nfc-demo" data-media-provenance="existing-animation-illustration"><a class="editorial-media-art-link" href="'+esc(u('/#nfc-phone-demo'))+'" aria-label="'+title+'"><div class="editorial-media-image editorial-media-image-demo">'+image('review-demo-poster.webp',m.title)+'<span class="editorial-demo-play" aria-hidden="true">▶</span><span class="editorial-demo-label">NFC · DEMO</span></div><figcaption><strong>'+title+'</strong><p>'+esc(localized.demo)+'</p><span class="editorial-media-cta">'+esc(localized.replay)+' ↗</span></figcaption></a></figure>';
+   return '<figure class="editorial-media-example editorial-media-example-wide" data-media-slot="'+id+'" data-media-state="illustrative-nfc-demo" data-media-provenance="existing-animation-illustration"><a class="editorial-media-art-link" href="'+esc(u('/#nfc-phone-demo'))+'" aria-label="'+title+'"><div class="editorial-media-image editorial-media-image-demo">'+image('review-demo-poster.webp',m.title)+'<span class="editorial-demo-play" aria-hidden="true">▶</span><span class="editorial-demo-label">NFC · DEMO</span></div><figcaption><strong>'+title+'</strong><p>'+esc(localized.demo)+'</p><span class="editorial-media-cta">'+esc(localized.replay+suffix('/#nfc-phone-demo'))+' ↗</span></figcaption></a></figure>';
   });
   return '<div class="editorial-media-grid editorial-media-grid-filled" data-editorial-media="design">'+cards.join('')+'</div>';
  }
@@ -86,17 +92,26 @@ export function renderGeneralFAQ(locale='uk',h={},options={}){
  return '<div class="editorial-faq-layout"><nav class="editorial-faq-navigation" aria-label="'+esc(c.labels.faq)+'">'+groups.map(g=>'<a href="#general-faq-'+esc(g.id)+'">'+esc(g.title)+'<span aria-hidden="true">↗</span></a>').join('')+'</nav><div class="editorial-faq-groups">'+groups.map(g=>'<section class="editorial-faq-group" aria-labelledby="general-faq-'+esc(g.id)+'"><h2 id="general-faq-'+esc(g.id)+'">'+esc(g.title)+'</h2><div class="faq-list">'+g.items.map(q=>'<details id="general-faq-'+esc(q.id)+'" data-general-faq="'+esc(q.id)+'"><summary>'+esc(q.q)+'</summary><div class="prose"><p>'+esc(q.a)+'</p>'+(q.href?'<p><a class="text-link" href="'+esc(url(q.href))+'">'+esc(c.labels.details)+' →</a></p>':'')+'</div></details>').join('')+'</div></section>').join('')+'</div></div>'+(options.withActions===false?'':actions(c,esc,url));
 }
 export function renderEditorialPage(key,locale='uk',h={}){
- locale=localeOf(locale);const c=editorialContent[locale],{esc,url}=helpers(locale,h);
+ const russian=locale==='ru';
+ if(russian&&key!=='design')throw new RangeError('Unsupported Russian editorial page');
+ locale=russian?'ru':localeOf(locale);
+ const c=russian?{design:RU_EDITORIAL_COPY.design,labels:{
+  enquire:russianUIText('designRequest'),
+  freeMockup:russianSupplementText('editorial-content.mjs','editorialContent.uk.labels.freeMockup'),
+  googleLater:russianSupplementText('editorial-content.mjs','editorialContent.uk.labels.googleLater')
+ }}:editorialContent[locale];
+ const {esc,url}=helpers(locale,h);
  if(key==='faq')return '<div class="wrap editorial-page editorial-faq" data-editorial-page="faq">'+heading(c.labels.faq,({uk:'Відповіді про NFC, вибір картки, власний дизайн, заявку та отримання.',en:'Answers about NFC, choosing a card, custom artwork, enquiries and delivery.',pl:'Odpowiedzi o NFC, wyborze karty, własnym projekcie, zgłoszeniu i dostawie.'})[locale],esc)+renderGeneralFAQ(locale,h)+'</div>';
  const page=c[key];if(!page)throw new Error('Unknown editorial page');
  const howPhoto='<figure class="editorial-product-photo"><img src="/nfc-card-website/assets/review-hand.webp" width="900" height="900" loading="lazy" data-media-provenance="user_provided_business_asset" data-media-claim-role="actual_product" alt="'+esc(({uk:'Готова фізична Google Review Card',en:'Ready-made physical Google Review Card',pl:'Gotowa fizyczna Google Review Card'})[locale])+'"><figcaption>'+esc(({uk:'Google Review Card · фото фізичної готової картки.',en:'Google Review Card · photograph of the physical ready-made card.',pl:'Google Review Card · zdjęcie fizycznej gotowej karty.'})[locale])+'</figcaption></figure>';
  const heroActions='<div class="button-row editorial-hero-actions">'+(key==='design'?'<a class="button" href="#design-request">'+esc(c.labels.enquire)+'</a><a class="text-link" href="#design-bases-title">'+esc(page.basesTitle)+' ↓</a>':key==='about'?'<a class="button" href="'+esc(url('/contact/'))+'">'+esc(c.labels.contact)+'</a>':'<a class="button" href="'+esc(url('/solutions/'))+'">'+esc(c.labels.catalog)+'</a><a class="text-link" href="'+esc(url('/services/design/'))+'">'+esc(c.labels.design)+' →</a>')+'</div>';
- let body=heading(page.title,page.intro,esc,heroActions);
+ const hero=key==='design'?h.heroContent:null;
+ let body=heading(hero?.h1??page.title,hero?.intro??page.intro,esc,heroActions);
  if(key==='about')body='<div class="editorial-hero editorial-founder-hero">'+body+'<figure class="editorial-founder"><img src="/nfc-card-website/assets/founder-primary.webp" alt="'+esc(page.founderAlt)+'" width="800" height="1000" loading="lazy" data-media-provenance="user_provided_business_asset" data-media-claim-role="founder_portrait"><figcaption>'+esc(page.founderCaption)+'</figcaption></figure></div>';
  if(key==='how')body='<div class="editorial-hero editorial-how-hero">'+body+howPhoto+'</div>';
  if(key==='design'){
-  const sampleLabel=({uk:'Приклади готових NFC-карток. Власний дизайн узгоджуємо окремо.',en:'Examples of finished NFC cards. Your custom artwork is agreed separately.',pl:'Przykłady gotowych kart NFC. Indywidualny projekt uzgadniamy osobno.'})[locale];
-  const sampleAlt=({uk:['Готова Google Review Card','Готова Beauty Mini','Готова Restaurant Mini'],en:['Ready Google Review Card','Ready Beauty Mini','Ready Restaurant Mini'],pl:['Gotowa Google Review Card','Gotowa Beauty Mini','Gotowa Restaurant Mini']})[locale];
+  const sampleLabel=russian?russianSupplementText('editorial-view.mjs','sampleLabel'):({uk:'Приклади готових NFC-карток. Власний дизайн узгоджуємо окремо.',en:'Examples of finished NFC cards. Your custom artwork is agreed separately.',pl:'Przykłady gotowych kart NFC. Indywidualny projekt uzgadniamy osobno.'})[locale];
+  const sampleAlt=russian?[0,1,2].map(i=>russianSupplementText('editorial-view.mjs','sampleAlt['+i+']')):({uk:['Готова Google Review Card','Готова Beauty Mini','Готова Restaurant Mini'],en:['Ready Google Review Card','Ready Beauty Mini','Ready Restaurant Mini'],pl:['Gotowa Google Review Card','Gotowa Beauty Mini','Gotowa Restaurant Mini']})[locale];
   const pics=['review.webp','beauty.webp','restaurant.webp'];
   const showcase='<figure class="editorial-design-showcase" data-media-provenance="existing-product-photography"><div class="editorial-design-photo-main"><img src="/nfc-card-website/assets/'+pics[0]+'" alt="'+esc(sampleAlt[0])+'" width="900" height="900" decoding="async" loading="eager"></div><div class="editorial-design-photo-side">'+pics.slice(1).map((file,i)=>'<img src="/nfc-card-website/assets/'+file+'" alt="'+esc(sampleAlt[i+1])+'" width="900" height="900" decoding="async" loading="lazy">').join('')+'</div><figcaption>'+esc(sampleLabel)+'</figcaption></figure>';
   body='<div class="editorial-hero editorial-design-hero">'+body+showcase+'</div>';
@@ -109,7 +124,7 @@ export function renderEditorialPage(key,locale='uk',h={}){
  }
  if(key==='design'){
   const selected=h.selectedEntry||h.selectedProduct?.id||h.entry||'';
-  body+='<section class="editorial-design-bases" aria-labelledby="design-bases-title"><h2 id="design-bases-title">'+esc(page.basesTitle)+'</h2><div class="editorial-base-grid">'+page.bases.map(b=>'<article class="editorial-design-base" data-design-base="'+esc(b.entry)+'"><h3>'+esc(b.title)+'</h3><p>'+esc(b.body)+'</p><p class="design-base-price" data-design-price="'+esc(b.entry)+'">'+esc(designPriceSummary(b.entry,locale))+'</p><a class="button secondary" href="'+esc(url('/services/design/')+'?entry='+encodeURIComponent(b.entry)+'#design-request')+'"'+(selected===b.entry?' aria-current="true"':'')+'>'+esc(c.labels.enquire)+'<span class="sr-only"> · '+esc(b.title)+'</span></a></article>').join('')+'</div></section>'+media('design',locale,c,esc)+'<section class="editorial-design-next prose"><h2>'+esc(c.labels.freeMockup)+'</h2><p>'+esc(c.labels.googleLater)+'</p><a class="button" href="#design-request">'+esc(c.labels.enquire)+'</a></section>';
+  body+='<section class="editorial-design-bases" aria-labelledby="design-bases-title"><h2 id="design-bases-title">'+esc(page.basesTitle)+'</h2><div class="editorial-base-grid">'+page.bases.map(b=>'<article class="editorial-design-base" data-design-base="'+esc(b.entry)+'"><h3>'+esc(b.title)+'</h3><p>'+esc(b.body)+'</p><p class="design-base-price" data-design-price="'+esc(b.entry)+'">'+esc(designPriceSummary(b.entry,locale))+'</p><a class="button secondary" href="'+esc(russian?ukrainianDesignHandoff(b.entry,{base:BASE}):url('/services/design/')+'?entry='+encodeURIComponent(b.entry)+'#design-request')+'"'+(selected===b.entry?' aria-current="true"':'')+(russian?' data-uk-handoff':'')+'>'+esc(russian?russianUIText('designHandoffButton'):c.labels.enquire)+'<span class="sr-only"> · '+esc(b.title)+'</span></a></article>').join('')+'</div></section>'+media('design',locale,c,esc)+'<section class="editorial-design-next prose"><h2>'+esc(c.labels.freeMockup)+'</h2><p>'+esc(c.labels.googleLater)+'</p><a class="button" href="#design-request">'+esc(c.labels.enquire)+'</a></section>';
  }else body+=actions(c,esc,url);
  return '<div class="wrap editorial-page editorial-'+esc(key)+'" data-editorial-page="'+esc(key)+'">'+body+'</div>';
 }

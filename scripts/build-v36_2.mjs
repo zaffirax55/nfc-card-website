@@ -1,3 +1,4 @@
+import {RU_ROUTES,RU_HREFLANG} from '../src/v36_2/ru-routes.mjs';
 /* Explicit RC compiler. No server, network request, publication or original output mutation. */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,6 +30,7 @@ const baseRoutes=['/','/solutions/','/catalog/','/collections/','/collections/go
 const historical=JSON.parse(fs.readFileSync(path.join(root,'refinements/instagram-v18/routes.json'),'utf8')).filter(p=>!p.includes('/reviews/new')).map(p=>p==='/'?'/':p.replace(/\/$/,'')+'/');
 const routes=new Map();
 for(const locale of LOCALES)for(const route of baseRoutes)routes.set(publicPath(locale,route),{locale,route});
+for(const route of RU_ROUTES)routes.set(publicPath('ru',route),{locale:'ru',route});
 for(const route of historical){const locale=route.startsWith('/en/')?'en':route.startsWith('/pl/')?'pl':'uk',localRoute=locale==='uk'?route:route.slice(3)||'/';routes.set(BASE+route,{locale,route:localRoute});}
 fs.mkdirSync(output,{recursive:true});const site=path.join(output,BASE);fs.mkdirSync(site,{recursive:true});
 for(const file of fs.readdirSync(source))if(/\.(mjs|css)$/.test(file)&&file!=='build-config.mjs')fs.copyFileSync(path.join(source,file),path.join(site,file));
@@ -46,7 +48,7 @@ for(const [url,{locale,route}]of routes){
 const fallback=renderStaticDocument('uk','/404/',{config});fs.writeFileSync(path.join(site,'404.html'),fallback);fs.writeFileSync(path.join(output,'404.html'),fallback);
 const robots=isPreview(config)?'User-agent: *\nDisallow: /\n':`User-agent: *\nAllow: /\nDisallow: ${BASE}/review/\nDisallow: ${BASE}/en/review/\nDisallow: ${BASE}/pl/review/\nSitemap: ${PUBLIC_ORIGIN}${BASE}/sitemap.xml\n`;
 for(const dest of [output,site])fs.writeFileSync(path.join(dest,'robots.txt'),robots);
-const xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+indexable.map(({meta})=>`<url><loc>${meta.canonical}</loc>${meta.alternates.map(a=>`<xhtml:link rel="alternate" hreflang="${a.language}" href="${a.href}"/>`).join('')}</url>`).join('')+'</urlset>\n';
+const xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+indexable.map(({meta})=>`<url><loc>${meta.canonical}</loc>${meta.alternates.filter(a=>a.language!==RU_HREFLANG).map(a=>`<xhtml:link rel="alternate" hreflang="${a.language}" href="${a.href}"/>`).join('')}</url>`).join('')+'</urlset>\n';
 fs.writeFileSync(path.join(site,'sitemap.xml'),xml);fs.writeFileSync(path.join(output,'.nojekyll'),'');
 const sourceFiles=[];function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else sourceFiles.push({path:path.relative(root,p),sha256:createHash('sha256').update(fs.readFileSync(p)).digest('hex'),bytes:fs.statSync(p).size});}}walk(source);
 const record={mode,revision:'v36.2',publicationAuthorized:false,legalApproval:mode==='production'?'OWNER_ARTIFACT_HASH_BOUND':'B05_HOLD',fixtureOnly:mode==='production-fixture',intakeEnabled:{v1:!!config.v1Endpoint,v2:config.v2Enabled},localHTTPMustSendNoindexHeader:true,base:BASE,origin:PUBLIC_ORIGIN,routeCount:routes.size,routes:[...routes.keys()].sort(),sitemapRoutes:indexable.map(p=>p.url),legacyRoutesPreserved:historical.every(r=>routes.has(BASE+r)),fullSharedStaticBody:true,canonicalAliases:LEGACY_ALIASES,faqSchemaPolicy:FAQ_SCHEMA_POLICY,quoteSchemaPolicy:QUOTE_SCHEMA_POLICY,ownerPriceAmendment:{pricingRevision:OWNER_UA_PRICING_REVISION,sourcePriceRevision:OWNER_UA_SOURCE_REVISION,ordinaryBrandedUAPairMinor:360000,legacyReceiptProfileRetained:true},contractId:'NFC-CARD-V35-P4-02-CF-01',contractCoreSHA256:'1d347dbb26ee1f09b303eea0bb33a1b27a93131d6361acef720690ac23119f24',sourceFiles,htmlProof};
