@@ -142,22 +142,39 @@ for(const width of widths){
      if(rootState.url!==base+'/'||rootState.lang!=='uk'||!rootState.ruDisabled||rootState.ruLinks!==0)
        errors.push('unsupported RU homepage control or UK URL/language failed '+phase);
    }
+   const expectedRUURL=base+'/ru/solutions/review-card/#product-panel-overview';
+   const readProductTabState=()=>page.locator('[data-reading-navigation="tabs"]').evaluate(shell=>{
+     const selected=[...shell.querySelectorAll('[data-product-tab][aria-selected="true"]')];
+     const panel=document.getElementById('product-panel-overview');
+     return {bound:shell.dataset.bound==='true',active:shell.dataset.activeTab,
+       selectedCount:selected.length,selected:selected[0]?.dataset.productTab,
+       controls:selected[0]?.getAttribute('aria-controls'),
+       panelVisible:!!panel&&!panel.hidden&&getComputedStyle(panel).display!=='none'&&
+         getComputedStyle(panel).visibility!=='hidden'&&panel.getClientRects().length>0};
+   });
+   const overviewSelected=state=>state.bound&&state.active==='overview'&&state.selectedCount===1&&
+     state.selected==='overview'&&state.controls==='product-panel-overview'&&state.panelVisible;
    await page.goto(base+'/solutions/review-card/',{waitUntil:'domcontentloaded'});
+   await page.locator('[data-reading-navigation="tabs"][data-bound="true"]').waitFor({timeout:10000});
+   const beforeRUTabs=await readProductTabState();
+   console.log('RU_PRODUCT_TAB_BEFORE',JSON.stringify(beforeRUTabs));
+   if(!overviewSelected(beforeRUTabs))errors.push('UK product overview tab not ready before RU navigation');
    const ruLink=page.locator('.header a[data-locale="ru"]');
    await ruLink.waitFor({timeout:10000});
    const ruHref=await ruLink.getAttribute('href');
    if(ruHref!=='/nfc-card-website/ru/solutions/review-card/')errors.push('RU product navigation link has wrong destination');
    await ruLink.click();
-   await page.waitForURL(base+'/ru/solutions/review-card/',{timeout:10000});
+   await page.waitForURL(expectedRUURL,{timeout:10000});
    for(const phase of ['initial','reload']){
      if(phase==='reload')await page.reload({waitUntil:'domcontentloaded'});
      await page.waitForFunction(()=>document.documentElement.dataset.uiLanguage==='ru',null,{timeout:10000});
+     await page.locator('[data-reading-navigation="tabs"][data-bound="true"]').waitFor({timeout:10000});
      const ruState={url:page.url(),lang:await page.locator('html').getAttribute('lang'),
-       h1:(await page.locator('h1').textContent()).trim(),
+       h1:(await page.locator('h1').textContent()).trim(),tabs:await readProductTabState(),
        transactionControls:await page.locator('form#product-config, #request-form, [data-testid="submit-request"], input[name="quantity"], input[name="destination"], input[name*="contact"], input[name*="consent"], textarea[name*="contact"]').count()};
      console.log('RU_DESCRIPTION_ROUTE',phase,JSON.stringify(ruState));
-     if(ruState.url!==base+'/ru/solutions/review-card/'||ruState.lang!=='ru'||
-        ruState.h1!==approvedReview.h1||ruState.transactionControls!==0)
+     if(ruState.url!==expectedRUURL||ruState.lang!=='ru'||
+        ruState.h1!==approvedReview.h1||ruState.transactionControls!==0||!overviewSelected(ruState.tabs))
        errors.push('RU descriptive URL/language/approved copy or transaction boundary failed '+phase);
    }
    const ukHandoff=page.locator('#product-config a[data-uk-handoff]');

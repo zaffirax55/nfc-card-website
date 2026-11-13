@@ -573,8 +573,8 @@
     },
     {
       "path": "migration/verify-mobile.mjs",
-      "bytes": 26018,
-      "sha256": "8fb622513b307e9f67ab4e7c565c2b89f2df0f7c9cba850c97cc5d738822e01e"
+      "bytes": 27423,
+      "sha256": "238d00a19f41c39e880626841c20d7acefe71561d3c1786828ec33f7ee249b83"
     },
     {
       "path": "package-lock.json",
