@@ -427,3 +427,42 @@ def test_reviewed_pr3_commit_message_is_only_exempt_in_exact_history():
     extra = ("password" + " = " + repr("synthetic-negative-secret")).encode()
     findings = rg.scan_bytes(path, raw + b"\n" + extra + b"\n", revision)
     assert any(f.rule == "credential-literal" for f in findings)
+
+
+def _reviewed_primary_api_blob():
+    """One historical API blob from the accepted source delivery, not an exemption by path."""
+    blob = "104faf85d14cd3603c5e5789a26b4de25231d1b8"
+    data = rg.git(ROOT, "cat-file", "blob", blob)
+    assert hashlib.sha256(data).hexdigest() == "80845f297d7383174b381a651172d0c2fdc7d629953f647f453bfb9a395debc1"
+    matched = [(i, line) for i, line in enumerate(data.splitlines(), 1)
+               if rg.PATTERNS["credential-literal"].search(line.decode("utf-8"))]
+    assert len(matched) == 1 and matched[0][0] == 39
+    assert hashlib.sha256(matched[0][1].strip()).hexdigest() == "75ddb62862e54661e82143d0791cea8ad0466257688e34df04abf0ed86932afb"
+    assert (b"credentials" + b":" + b"'omit'") in matched[0][1]
+    return "src/v36_2/api-client.mjs", data, matched[0][1]
+
+
+def test_reviewed_primary_api_mode_only_allowed_in_exact_history():
+    path, data, line = _reviewed_primary_api_blob()
+    revision = "deadbeefcafe"  # a twelve-hex-digit historical commit context
+    assert rg.scan_bytes(path, data, revision) == []
+    for context in ("working-tree", "index", "deadbeefcaf", "deadbeefcafe01", "DEADBEEFCAFE"):
+        assert any(f.rule == "credential-literal" for f in rg.scan_bytes(path, data, context))
+    for other_path in ("src/v36_2/other-api.mjs", "tests/test_release_packaging.py"):
+        assert any(f.rule == "credential-literal" for f in rg.scan_bytes(other_path, data, revision))
+
+
+def test_reviewed_primary_api_mode_rejects_modified_bytes_and_new_secret():
+    path, data, line = _reviewed_primary_api_blob()
+    revision = "deadbeefcafe"
+    modified_file = data + b"\n// changed historical blob\n"
+    assert any(f.rule == "credential-literal" for f in rg.scan_bytes(path, modified_file, revision))
+    previous_mode = b"credentials" + b":" + b"'omit'"
+    replacement_mode = b"credentials" + b":" + b"'include'"
+    changed_line = line.replace(previous_mode, replacement_mode, 1)
+    assert changed_line != line
+    assert any(f.rule == "credential-literal" for f in rg.scan_bytes(
+        path, data.replace(line, changed_line, 1), revision))
+    key_name = "api" + "_key"
+    extra_secret = data + ("\nconst " + key_name + " = " + repr("synthetic-test-only") + ";\n").encode("utf-8")
+    assert any(f.rule == "credential-literal" for f in rg.scan_bytes(path, extra_secret, revision))

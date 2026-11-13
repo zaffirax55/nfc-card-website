@@ -798,8 +798,8 @@
     },
     {
       "path": "scripts/release_guard.py",
-      "bytes": 17470,
-      "sha256": "a2ac1f7b2afe97a8482faa0ec677e7595b2c360819c422eaf49cba70783743c5"
+      "bytes": 17797,
+      "sha256": "f28edc0b6c5ab30733fd5817b48ed7723b864622a6f3ec5f4f69296b37e6591f"
     },
     {
       "path": "scripts/run_tests.py",
@@ -3358,8 +3358,8 @@
     },
     {
       "path": "tests/test_release_packaging.py",
-      "bytes": 18539,
-      "sha256": "64a5f77b455a62023b56c48246d157f9837af87ee2db1b74866c56ae93b5c1bd"
+      "bytes": 20890,
+      "sha256": "722b45b61cfcfac4c21e795f182176afd54e5a1d2450219142d89b7e88fa3e03"
     },
     {
       "path": "tests/test_review3d_v26.py",
