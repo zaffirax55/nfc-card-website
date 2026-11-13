@@ -58,8 +58,8 @@
     },
     {
       "path": ".github/workflows/verify-mobile.yml",
-      "bytes": 1329,
-      "sha256": "78c4e73cc0c0899406cdf2f8b735fc68d71e1e4e7d2c40de72bc2d3c81f66b6d"
+      "bytes": 1440,
+      "sha256": "08d7a2ef6b6b7806b088caaa9eb216bc31c899e7bfde129434f4e7f9a16e650e"
     },
     {
       "path": ".gitignore",
