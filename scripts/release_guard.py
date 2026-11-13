@@ -84,6 +84,7 @@ SAFE_HISTORY_FIXTURES: dict[tuple[str, str, str, str], str] = {
     ('src/v36_2/assets/model-viewer.min.js', 'credential-literal', '8367184a607fbe07a78b650c0d359e5ebbd96f7e2b22f95f761f559b63430386', 'f5297f36a4cc24f8dd3534453b5d208479cf3b024b73e7b429dc49ba5997fe8a'): 'Vendored JS Fetch request credentials mode derived from the crossOrigin enum; no authentication secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
     ('src/v36_2/legacy-v36/pages.mjs', 'credential-literal', 'a2214c9d904c3cecba72fe0606fd3e7c06cf5a7e470731da6ffefdcf8b13ec2b', 'c69d8f3d1537648b69d5e4792668ce05f6afc6deebe85a20ba150355766a6cb0'): 'Fetch request credentials option, not a stored secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
     ('src/v36_2/legacy-v36/pages.mjs', 'credential-literal', 'a2214c9d904c3cecba72fe0606fd3e7c06cf5a7e470731da6ffefdcf8b13ec2b', '42fff62a2d917c178ec83a013dcece0a1bc0458648c77cf7167a083d143887bd'): 'Fetch request credentials option, not a stored secret; NFC-BLOCKERS-01 reviewed exact historical blob and line.',
+    ("<commit-message>", "credential-literal", "4a9a06ec46adf9078bf33dafa9d51645dc0a32c3564d483072a5529a5c0bce0f", "e48d50ad399beb193d88a18e527ca026c0f9bd7a819e14ea3e1b92be4859d3e4"): "Exact Git commit message object reviewed for a Fetch mode literal; no secret; NFC-RELEASE-GATE-01.",
 }
 
 PRIVATE_COMPONENTS = {

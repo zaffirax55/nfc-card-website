@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
   "manifest_self_excluded": "Self-hashing is circular; Git commit/release archive seals this manifest.",
-  "file_count_including_manifest": 867,
+  "file_count_including_manifest": 886,
   "release_source": {
     "handoff_archive_sha256": "9cf61bc26214321d296adeae4c63eb21a5b624bfa9f8849797bcb51c66ff5de0",
     "handoff_manifest": "docs/release/v1.0.0/source-handoff-manifest.json",
@@ -48,8 +48,8 @@
     },
     {
       "path": ".github/workflows/publish-optidigital-3d.yml",
-      "bytes": 1325,
-      "sha256": "f751449f7b0eccb5625a187d36015776d35dde5ef0d09eb4002d82a35e00b36a"
+      "bytes": 1350,
+      "sha256": "7658cae984390e30090a7cfa1a737fed2b527c96f5b624efa2bca459340206c8"
     },
     {
       "path": ".github/workflows/verify-3d.yml",
@@ -583,8 +583,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1153,
-      "sha256": "842337a917de190b4fb1706ed74d4f9845f76f90e10b7f46de0082cde0bc59ff"
+      "bytes": 1415,
+      "sha256": "164370eeaa592f4ef8665a062a69e1532ed6dffaf6a15fcb7efa540457d85952"
     },
     {
       "path": "refinements/instagram-v18/ACCEPTANCE_REPORT.md",
@@ -1152,19 +1152,29 @@
       "sha256": "a761169434cf3ff9fc4cc5b57be5ef4c03531e54ef16f29cd167b93f973286a7"
     },
     {
+      "path": "release/NFC_V38_PUBLIC_APPROVAL.json",
+      "bytes": 1337,
+      "sha256": "bb4f8393c6eaafa657c35087583778d194252f0f13e1d560aea1ba68248142f2"
+    },
+    {
       "path": "release/PRODUCTION_ADAPTATIONS.json",
-      "bytes": 13835,
-      "sha256": "073e3dd079fbf6911c927de04eb9803bd2d9c2e8e94734ce66420c0bbe937afc"
+      "bytes": 16134,
+      "sha256": "38918d4ce12254a4afb009694e7e47cfece93abcb149c352e10bc05666c48d9f"
     },
     {
       "path": "release/gateway-release.json",
-      "bytes": 431,
-      "sha256": "477a51bb6b94358b5e7bfa1f99240c85098b62b48470c0be9d94f7777130b9b5"
+      "bytes": 551,
+      "sha256": "e5e794550bd95d9c0469369783e5500b3cbea888e6367cb422d0ac90847825be"
     },
     {
       "path": "release/nfc-card-v36-2-policy.json",
       "bytes": 24140,
       "sha256": "f9196cf0721e2dd8aa47da248150ef978a388611f8ac286cf12d5ef44f6a22c6"
+    },
+    {
+      "path": "release/nfc-card-v38-orders-policy.json",
+      "bytes": 24577,
+      "sha256": "14b72e1e38fbf07c47b041c6a6d73196e6db8b948696f9823bfb496934666ea3"
     },
     {
       "path": "requirements-test.in",
@@ -1188,23 +1198,33 @@
     },
     {
       "path": "scripts/build-public.mjs",
-      "bytes": 3395,
-      "sha256": "d66b2c9f2818ecac5d4df3a3931e0477f0c1a03dbbc5851336af9ecf0635bf4f"
+      "bytes": 3059,
+      "sha256": "52c45143c4904b0e5a3782fcaf89ddc59d933d398184a8b50cb2bc764bf5668d"
     },
     {
       "path": "scripts/build-v36_2.mjs",
-      "bytes": 7346,
-      "sha256": "135fba5145ee56717682498c79321fd0f73d9b6659f024e1974eb4364342a398"
+      "bytes": 7533,
+      "sha256": "4afd7d0f0ad3e5d2807571f893c55effe7fcfdf6490319ade708e7c9f8900df8"
     },
     {
       "path": "scripts/check-gateway-ready.mjs",
-      "bytes": 1893,
-      "sha256": "2110bfd610e83b121875d49f7ef44707c5a88d6e4a7dd9ddb8ae2af3c8b16ac2"
+      "bytes": 1890,
+      "sha256": "e9926002d7cbc57477c9af48a06a49908b2a48f1e88712b61a7671aafbae4fa9"
+    },
+    {
+      "path": "scripts/release-identity.mjs",
+      "bytes": 676,
+      "sha256": "4e828fa0149c05c56beaa9e9a547cdbed68d136d28c6791425683f7664d1d69a"
+    },
+    {
+      "path": "scripts/release-policy-input.mjs",
+      "bytes": 2225,
+      "sha256": "f3cc5f57b49c837cab3df3b4bd48a8199e8922e67ac813720343804e43530939"
     },
     {
       "path": "scripts/release_guard.py",
-      "bytes": 17758,
-      "sha256": "8c981711bc4d9c01cbeb3f6d0c5a5458e6d332a5ac4dc483cf5f3dc3cfca4809"
+      "bytes": 18044,
+      "sha256": "cf282cf99d770f9add26f0cae268434714f65766b275f1fa7540549184d50c55"
     },
     {
       "path": "scripts/run_tests.py",
@@ -3538,13 +3558,13 @@
     },
     {
       "path": "src/v36_2/api-client.mjs",
-      "bytes": 12161,
-      "sha256": "47e9265e7a533ad40a4bf8e15921747dd7ef267626b50ea270ea14367ef098c0"
+      "bytes": 12445,
+      "sha256": "80845f297d7383174b381a651172d0c2fdc7d629953f647f453bfb9a395debc1"
     },
     {
       "path": "src/v36_2/app.mjs",
-      "bytes": 86472,
-      "sha256": "d6fe54ca84c8edb6405c524e51c9e79baefb39c27e96ca1a2c0848d8688762b5"
+      "bytes": 91848,
+      "sha256": "bf519b82a9836a5704742ab8f465184cad2d753874f59fc84a0ae4fc9b20c93e"
     },
     {
       "path": "src/v36_2/assets/IBMPlexMono-OFL.txt",
@@ -3822,6 +3842,11 @@
       "sha256": "ddd9ac1ccea733760800d9342b693c453311a6d9583be5eedea81610abda696b"
     },
     {
+      "path": "src/v36_2/control-context.mjs",
+      "bytes": 2177,
+      "sha256": "8ca7e3f362f55d8ae31521da50ac1727a4a083eb99410cfaf0ec4334265709df"
+    },
+    {
       "path": "src/v36_2/delivery-content.mjs",
       "bytes": 22500,
       "sha256": "6644edb1c89babd48a9b5f95100b4e11bb4fae5d05906694b1eca80e234d54ab"
@@ -3848,8 +3873,8 @@
     },
     {
       "path": "src/v36_2/editorial-view.mjs",
-      "bytes": 14518,
-      "sha256": "8845fbfbb49847ab871b96c25c95bfc2fb3c2f5f40f1681ea41849d2e73aa06b"
+      "bytes": 15880,
+      "sha256": "0064d76c5e5db1612d8b6381dc3c392782e1ea11b156d0fab77affc5b7d80f49"
     },
     {
       "path": "src/v36_2/editorial.css",
@@ -3978,8 +4003,8 @@
     },
     {
       "path": "src/v36_2/media.mjs",
-      "bytes": 105151,
-      "sha256": "ab0173f2192750e00ed4812073e8e846bee30e96bc8ff252b0fef9bf0e277e87"
+      "bytes": 105240,
+      "sha256": "6ce6590e326b925a70d2a6c7058922bf3891964d767e42e537f7ff3c3e7f09ba"
     },
     {
       "path": "src/v36_2/mobile-experience.css",
@@ -3998,8 +4023,8 @@
     },
     {
       "path": "src/v36_2/nfc-3d-integration.mjs",
-      "bytes": 6695,
-      "sha256": "47e166188d44e0a0dd7d1b29d46ed6a0d3b3e13ab33ea3782611d7936a387376"
+      "bytes": 7250,
+      "sha256": "763d5c5e8c3a5b52f6fadcda3ee1dfc3f595357a2833cb289ac137c1871865ea"
     },
     {
       "path": "src/v36_2/owner-structure.css",
@@ -4018,8 +4043,8 @@
     },
     {
       "path": "src/v36_2/policy-digest.mjs",
-      "bytes": 2591,
-      "sha256": "1a1af432a56cf2c38efe8d278778242e75e17c405a41258af78758e2e856734a"
+      "bytes": 2692,
+      "sha256": "825b97c2b9eb9ee561b805d69c71fcc24735172c6b66c005e1449b558505f8d6"
     },
     {
       "path": "src/v36_2/privacy-view.mjs",
@@ -4028,8 +4053,8 @@
     },
     {
       "path": "src/v36_2/product-content-view.mjs",
-      "bytes": 4061,
-      "sha256": "970d9ceeb2691d44b80767c6c505e0ccc4fbe0ed101b70ba7f8cd40ad0606a95"
+      "bytes": 4643,
+      "sha256": "7ec7d6e2caa48424c405ce4e074c98b03af903391a98ef96af9bb2618d56fd36"
     },
     {
       "path": "src/v36_2/product-content.css",
@@ -4048,8 +4073,8 @@
     },
     {
       "path": "src/v36_2/product-navigation.mjs",
-      "bytes": 7510,
-      "sha256": "3a4a043c6bec5e71af68c3ece07fac5176e358a4d4e49e8a50f9e1c384c44c94"
+      "bytes": 7946,
+      "sha256": "b9df8903d3f7bccee6f713b9f5d7f912d7e90f7f12ee8ab5af41b0cf73d234b0"
     },
     {
       "path": "src/v36_2/product-photo-mobile.css",
@@ -4068,13 +4093,23 @@
     },
     {
       "path": "src/v36_2/release-policy.mjs",
-      "bytes": 2699,
-      "sha256": "93b8311359519f6c44506420dc8820f85eec752efcd648996bde92760be52463"
+      "bytes": 4318,
+      "sha256": "4450a8bd8420baddcd870c6048e3dcc35d2a16789f2b226d766216fc1f6fc168"
+    },
+    {
+      "path": "src/v36_2/ru-copy.mjs",
+      "bytes": 69967,
+      "sha256": "eb8931de2aeb8709ed95369fdf26418bed0cf307a37d25922b032f91aa59c3a4"
+    },
+    {
+      "path": "src/v36_2/ru-routes.mjs",
+      "bytes": 5200,
+      "sha256": "8ccdf0becbe1a3f3df889c165e6ae85cd77abcf3949f6afe3177a834a8e326c4"
     },
     {
       "path": "src/v36_2/seo.mjs",
-      "bytes": 16564,
-      "sha256": "546ce75971cdf8febb9dea4de552038d6b0e4f8395b36f00c8751b43b36d2669"
+      "bytes": 17604,
+      "sha256": "8fd621e550533c262ab94efef6f98ad27ae89572f47dbe73532b1c7ec929a435"
     },
     {
       "path": "src/v36_2/shop-design.css",
@@ -4088,13 +4123,13 @@
     },
     {
       "path": "src/v36_2/site-preferences.css",
-      "bytes": 3646,
-      "sha256": "629d590fd9b5f3fd42a17595d55892d733b75b65ed05fe3efda065a9651f587d"
+      "bytes": 4766,
+      "sha256": "7734f83c5f51629b4d185616b92d7b595b0e28e1739c661778ba82f6fa033c20"
     },
     {
       "path": "src/v36_2/site-preferences.mjs",
-      "bytes": 12693,
-      "sha256": "862166b6ccb53d9885e8ee0d51f06722f1ddbb848d4b76b51eb908b01e7b293f"
+      "bytes": 1584,
+      "sha256": "42c16ea840a73ea5fce36ae39b8f79d4ad339f3db0227d4a0ee1706c67744a67"
     },
     {
       "path": "src/v36_2/stage01-r02-r05.css",
@@ -4103,8 +4138,8 @@
     },
     {
       "path": "src/v36_2/static-render.mjs",
-      "bytes": 4104,
-      "sha256": "3cc65450483c99e9cd0e7d2cd934928848bb856d466055a5cbcb43b9f4db21b2"
+      "bytes": 4189,
+      "sha256": "5c174fa03b500e6860e8aacd4a173ae0e8d1ec03f26402c4feb93081320af49f"
     },
     {
       "path": "src/v36_2/styles.css",
@@ -4132,6 +4167,11 @@
       "sha256": "85a866dd6970a2b151375c4748b3df9ce0b3ef1573df7a7de5e29f676ec4d236"
     },
     {
+      "path": "tests/fixtures/nfc-ru-01-supplied-copy.json",
+      "bytes": 92240,
+      "sha256": "7921a4fb60269f5e90466234aec83b1049a997ad70beae9903f428947834c3a3"
+    },
+    {
       "path": "tests/fixtures/nfc-seo-content-01.json",
       "bytes": 9009,
       "sha256": "bfee4cc2b3def00628419b97c5dac245c9cc235bcb2e9442610f70edf8c3ff13"
@@ -4150,6 +4190,16 @@
       "path": "tests/fixtures/nfc-v35-client.json",
       "bytes": 618460,
       "sha256": "3d14e7560bdbfe314eaa948e91e01bfdd5bb116a2319749c281f591a3828dc1a"
+    },
+    {
+      "path": "tests/fixtures/nfc-v38-gateway-status.json",
+      "bytes": 492,
+      "sha256": "e758de74a4c9f4ff3c388b458db59b3211c04c63a5a319c34d383927d0a6a588"
+    },
+    {
+      "path": "tests/release-identity.test.mjs",
+      "bytes": 1203,
+      "sha256": "727dfdd7a287743e0c9fa26071ff74c45159d45dba9dd4c4feeb0ae5aa1c9cd8"
     },
     {
       "path": "tests/staging_inbound_e2e.mjs",
@@ -4298,8 +4348,8 @@
     },
     {
       "path": "tests/v36_2-branded-seo-content.test.mjs",
-      "bytes": 4826,
-      "sha256": "0f64e63a239694804528dfe13e3a1eb64cc2b9b406aee3093259075a11bd77b2"
+      "bytes": 4961,
+      "sha256": "4ea05ed5cc895a09e435bb90229c49e9e8dd89577a20b97577b87e21d64120b4"
     },
     {
       "path": "tests/v36_2-challenge-renewal.test.mjs",
@@ -4312,9 +4362,24 @@
       "sha256": "e5e9f23ef38a4b1d070c2cc9b883f49f098529803f5aa0d9f19804165e0cd450"
     },
     {
+      "path": "tests/v36_2-control-context.test.mjs",
+      "bytes": 3136,
+      "sha256": "04f260f12ab7c0b13cb8f9a0f31db7a3be9c155b8a2308405d0cb21754614352"
+    },
+    {
+      "path": "tests/v36_2-control-transport.test.mjs",
+      "bytes": 2386,
+      "sha256": "e6d2300fa5bc8453fbc4a4562b62c139486daf3eca622c2a10443c35995c6b80"
+    },
+    {
+      "path": "tests/v36_2-designer-provenance.test.mjs",
+      "bytes": 4672,
+      "sha256": "fa6e4201379e1d6ef01c5470688302a5198e402e0bbd01ac7a1d35a9895243a1"
+    },
+    {
       "path": "tests/v36_2-instagram-seo-content.test.mjs",
-      "bytes": 5728,
-      "sha256": "0790d632abe02de12b24016ab324a0d9c3380fb431114cb25577185faa650b50"
+      "bytes": 5863,
+      "sha256": "471837df649004a489ffe704ab5243abc9c1f434697a64675f400d04574a60d4"
     },
     {
       "path": "tests/v36_2-price.test.mjs",
@@ -4322,9 +4387,14 @@
       "sha256": "a1a1dae5c9a5cffecc6d6ca7bc2629dfb24933dbb8db9096cc425085fc718c41"
     },
     {
+      "path": "tests/v36_2-primary-release-provenance.test.mjs",
+      "bytes": 5693,
+      "sha256": "15fc084e01627dd647405545b6da9561f1240ef4c1e2753fa5181c8d3f8bbbf4"
+    },
+    {
       "path": "tests/v36_2-production.test.mjs",
-      "bytes": 5819,
-      "sha256": "c9d899d835ec0a58c1a02f9a99e1f92005fc45e0c9849c49a2e98fba3a7d3b7d"
+      "bytes": 6736,
+      "sha256": "f198f9cc6ac50cd4cce0ee8c04fd1e6f4b760835f1c3119ba067f152e11e653c"
     },
     {
       "path": "tests/v36_2-readiness.test.mjs",
@@ -4332,14 +4402,24 @@
       "sha256": "81d187399dd61aa8020001b65498b360bfc5881c4b1c264b42a0c4263c7d87f4"
     },
     {
+      "path": "tests/v36_2-ru-source.test.mjs",
+      "bytes": 18505,
+      "sha256": "425e1a23ec2cecb6c4459a594a2a065b63ec6688af8de250254a913a6fe88e73"
+    },
+    {
       "path": "tests/v36_2-seo-content.test.mjs",
-      "bytes": 5127,
-      "sha256": "67d045832badd2899484ad93d2596c58c2bfae35607fa27720d68d5e12e23cab"
+      "bytes": 5262,
+      "sha256": "ff6d421d729e0022cd80913d589dc3428437fdccde332c1e4a970c9b957f4e6e"
+    },
+    {
+      "path": "tests/v36_2-v38-contract.test.mjs",
+      "bytes": 9861,
+      "sha256": "24f92cbf296df6b7708cbce5ecec399d34ae450cd2b5bb13e31d6d92e520e781"
     },
     {
       "path": "tools/designer-check.mjs",
-      "bytes": 7023,
-      "sha256": "beb099a850304d937651d1110a19c1e88baf5d4a186f39c73d1f79f135b15058"
+      "bytes": 7104,
+      "sha256": "cfdf0af8683bcf54e4bbed01fc24e80632988eca0e8a3fec9b972681f530aaa2"
     },
     {
       "path": "tools/designer-preview-test.mjs",
@@ -4350,6 +4430,21 @@
       "path": "tools/designer-preview.mjs",
       "bytes": 13346,
       "sha256": "79b0a7e84a179d692c14b8046ce9e8c4fcf05ae4c3e156e4c9daef27fa10d061"
+    },
+    {
+      "path": "tools/designer-provenance.mjs",
+      "bytes": 8324,
+      "sha256": "5c82a2ad63f8d4b05eedb9baa8405eaae5cfeb960a7e09913dccdb8ad99ec365"
+    },
+    {
+      "path": "tools/nfc-primary-release-01-local-reconciliation.json",
+      "bytes": 1945,
+      "sha256": "4a5d63e19ea8f1117a5bac53a3b1b5464f4d5859f6cdc910b4e6844c07735e0c"
+    },
+    {
+      "path": "tools/nfc-ru-01-local-source.json",
+      "bytes": 2054,
+      "sha256": "82d9d2f536e92ac9c8923e6611490ada3cbee4a499b8481089174a43f2df98ce"
     }
   ]
 }
