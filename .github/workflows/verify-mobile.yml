@@ -14,12 +14,16 @@ on:
       - 'migration/verify-mobile.mjs'
       - '.github/workflows/verify-mobile.yml'
       - 'src/v36_2/static-render.mjs'
+  pull_request:
+    branches: [optidigital-3d-preview]
+    paths:
+      - '.github/workflows/verify-mobile.yml'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   mobile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
